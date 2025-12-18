@@ -1,0 +1,116 @@
+{
+  "id": "sack_of_baghdad_1258",
+  "name": "Mongol Sack of Baghdad",
+  "status": "historic",
+  "period": {
+    "start": 1258,
+    "end": 1258
+  },
+  "geography": {
+    "region": "Middle East (Iraq)",
+    "coordinates": [33.3, 44.4]
+  },
+  "participants": {
+    "perpetrators": [
+      "Mongol Empire",
+      "Hulagu Khan",
+      "Ilkhanate forces"
+    ],
+    "victims": [
+      "Abbasid Caliphate",
+      "Baghdad population",
+      "Islamic scholars and scientists"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 200000,
+      "max": 2000000,
+      "population_initial": 1000000,
+      "population_loss_percent": 80.0,
+      "confidence": "low",
+      "note": "Estimates range from 90,000 to 2 million. Mongol sources claim 200,000; Arab historians claim over 1 million. Siege lasted 2 weeks, massacre lasted 7 days. Caliph Al-Musta'sim executed. Death toll includes scholars, scientists, and religious leaders systematically killed."
+    },
+    "scores": {
+      "systematic_intensity": 78,
+      "profit": 80,
+      "ideology": 60,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Deliberate destruction of libraries and cultural institutions. House of Wisdom destroyed. Books thrown into Tigris until river ran black with ink. Irrigation systems destroyed, ending centuries of agricultural prosperity.",
+      "profit": "Massive plunder of Abbasid treasury. Gold, jewels, and artifacts seized. Economic infrastructure deliberately destroyed to prevent recovery.",
+      "ideology": "Mongol ultimatum rejected; punishment was total destruction as per Mongol doctrine. No religious purification motive - Mongols were religiously tolerant.",
+      "complicity": "Christian and Shia minorities assisted Mongols due to grievances with Sunni Caliphate. Neighboring powers did not intervene."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "cultural_destruction",
+    "siege",
+    "medieval",
+    "library_destruction",
+    "end_of_golden_age"
+  ],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Marks the end of the Islamic Golden Age. The House of Wisdom - containing works of mathematics, astronomy, medicine, and philosophy from Greek, Persian, Indian, and Islamic scholars - was destroyed. Survivors reported the Tigris ran black with ink from books and red with blood. Irrigation canals destroyed, turning fertile land to desert. Baghdad would not recover its pre-1258 population until the 20th century. One of history's greatest cultural catastrophes.",
+    "warning_signs": [
+      "Ultimatum rejected by overconfident leadership",
+      "No allies willing to assist",
+      "Previous cities destroyed as examples"
+    ],
+    "root_causes": "Mongol expansion, Abbasid weakness and isolation, Hulagu's personal ambition to end Caliphate"
+  },
+  "sources": [
+    {
+      "title": "The Mongols and the Islamic World: From Conquest to Conversion",
+      "author": "Peter Jackson",
+      "year": 2017
+    },
+    {
+      "title": "The Fall of Baghdad",
+      "author": "William Muir",
+      "year": 1883
+    },
+    {
+      "title": "Genghis Khan and the Making of the Modern World",
+      "author": "Jack Weatherford",
+      "year": 2004
+    }
+  ]
+}
