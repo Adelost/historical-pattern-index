@@ -19,44 +19,44 @@ This project attempts to fix that.
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
 |-------|--------|--------|------|---------|
-| Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Collapse | Partial |
-| Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Industrial | Suppressed |
+| Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Erasure | No |
 | Mongol Conquests | 1206-1368 | 30M-40M | Collapse | No |
+| Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Collapse | Partial |
+| Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | No |
+| Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Collapse | Partial |
+| Dzungar Genocide | 1755-1758 | 480k-600k | Erasure | **Denied** |
+| The Black War (Tasmania) | 1824-1831 | 6k-9k | Erasure | No |
+| French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Collapse | Partial |
+| Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Erasure | Partial |
+| British Opium Trade in China | 1839-1906 | 20k-50k | Profit | No |
+| Great Famine (Ireland) | 1845-1852 | 1M-2M | Profit | Disputed |
 | Taiping Rebellion | 1850-1864 | 20M-30M | Collapse | Suppressed |
+| Circassian Genocide | 1864-1867 | 400k-600k | Erasure | **Denied** |
 | British India Famines (Late Victorian Holocausts) | 1876-1902 | 12M-29M | Industrial | Disputed |
 | Congo Free State | 1885-1908 | 8M-13M | Profit | No |
-| Holodomor (Ukrainian Famine) | 1932-1933 | 4M-8M | Industrial | **Denied** |
-| The Holocaust | 1941-1945 | 6M-6M | Industrial | No |
-| Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Collapse | Partial |
-| Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | Industrial | **Denied** |
-| Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | Disputed |
-| Biafra War & Famine (Nigerian Civil War) | 1967-1970 | 1M-3M | Profit | Partial |
-| French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Collapse | Partial |
-| Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | No |
-| Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | Industrial | No |
-| Cultural Revolution | 1966-1976 | 500k-2M | Industrial | Partial |
-| Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Erasure | Partial |
-| Armenian Genocide | 1915-1923 | 1M-2M | Industrial | **Denied** |
-| Great Famine (Ireland) | 1845-1852 | 1M-2M | Profit | Disputed |
-| Indonesian Mass Killings | 1965-1966 | 500k-1M | Industrial | Partial |
-| Soviet Great Purge (Great Terror) | 1936-1938 | 680k-1M | Industrial | No |
-| Rwandan Genocide | 1994-1994 | 500k-1M | Industrial | No |
-| Greek Genocide (Pontic Greeks) | 1914-1923 | 300k-900k | Industrial | **Denied** |
-| Italian Invasion of Ethiopia | 1935-1941 | 350k-760k | Industrial | Partial |
-| Assyrian Genocide (Seyfo) | 1914-1920 | 250k-750k | Industrial | **Denied** |
-| Circassian Genocide | 1864-1867 | 400k-600k | Erasure | **Denied** |
-| Dzungar Genocide | 1755-1758 | 480k-600k | Erasure | **Denied** |
-| Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Collapse | Partial |
-| Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Erasure | No |
-| Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
-| Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | Chaotic | Disputed |
-| Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | Industrial | Partial |
-| East Timor Genocide | 1975-1999 | 100k-180k | Erasure | No |
-| Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | Industrial | No |
 | Herero and Nama Genocide | 1904-1908 | 65k-100k | Erasure | No |
-| British Opium Trade in China | 1839-1906 | 20k-50k | Profit | No |
+| Assyrian Genocide (Seyfo) | 1914-1920 | 250k-750k | Industrial | **Denied** |
+| Greek Genocide (Pontic Greeks) | 1914-1923 | 300k-900k | Industrial | **Denied** |
+| Armenian Genocide | 1915-1923 | 1M-2M | Industrial | **Denied** |
+| Holodomor (Ukrainian Famine) | 1932-1933 | 4M-8M | Industrial | **Denied** |
+| Italian Invasion of Ethiopia | 1935-1941 | 350k-760k | Industrial | Partial |
+| Soviet Great Purge (Great Terror) | 1936-1938 | 680k-1M | Industrial | No |
+| Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | Chaotic | Disputed |
+| The Holocaust | 1941-1945 | 6M-6M | Industrial | No |
+| Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | Disputed |
+| Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Industrial | Suppressed |
+| Indonesian Mass Killings | 1965-1966 | 500k-1M | Industrial | Partial |
+| Cultural Revolution | 1966-1976 | 500k-2M | Industrial | Partial |
+| Biafra War & Famine (Nigerian Civil War) | 1967-1970 | 1M-3M | Profit | Partial |
+| Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | Industrial | **Denied** |
+| Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | Industrial | No |
+| East Timor Genocide | 1975-1999 | 100k-180k | Erasure | No |
+| Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | Industrial | Partial |
+| Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | Industrial | No |
+| Rwandan Genocide | 1994-1994 | 500k-1M | Industrial | No |
+| Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Collapse | Partial |
+| Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
 | Rohingya Genocide | 2016-2017 | 10k-25k | Erasure | **Denied** |
-| The Black War (Tasmania) | 1824-1831 | 6k-9k | Erasure | No |
 | Uyghur Persecution (Xinjiang) | 2017-2024 | N/A* | Industrial | **Denied** |
 <!-- /STATS:EVENTS_TABLE -->
 

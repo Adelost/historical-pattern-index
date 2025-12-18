@@ -102,8 +102,8 @@ def generate_summary(events, stats):
 
 def generate_events_table(events):
     """Generate main events table."""
-    # Sort by death toll (max), highest first
-    sorted_events = sorted(events, key=lambda e: -e.get("metrics", {}).get("mortality", {}).get("max", 0))
+    # Sort chronologically (by start year) to show historical patterns
+    sorted_events = sorted(events, key=lambda e: e.get("period", {}).get("start", 0))
 
     lines = ["| Event | Period | Deaths | Tier | Denied? |", "|-------|--------|--------|------|---------|"]
 
