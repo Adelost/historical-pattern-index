@@ -1,0 +1,120 @@
+{
+  "id": "timur_conquests_1370",
+  "name": "Timur's Conquests",
+  "status": "historic",
+  "period": {
+    "start": 1370,
+    "end": 1405
+  },
+  "geography": {
+    "region": "Central Asia, Persia, India, Anatolia, Caucasus",
+    "coordinates": [39.65, 66.96]
+  },
+  "participants": {
+    "perpetrators": [
+      "Timurid Empire",
+      "Timur (Tamerlane)",
+      "Timurid armies"
+    ],
+    "victims": [
+      "Persians",
+      "Indians",
+      "Georgians",
+      "Armenians",
+      "Syrians",
+      "Anatolians",
+      "Mamluks"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 15000000,
+      "max": 20000000,
+      "population_initial": 400000000,
+      "population_loss_percent": 5.0,
+      "confidence": "low",
+      "note": "Approximately 5% of world population. Delhi sack (1398): 100,000 killed in one day. Isfahan (1387): 70,000 skulls stacked into towers. Damascus, Aleppo, Baghdad devastated. Systematic massacres documented by contemporary chroniclers including Ibn Khaldun and Ruy González de Clavijo."
+    },
+    "scores": {
+      "systematic_intensity": 67,
+      "profit": 100,
+      "ideology": 60,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Skull towers (minarets) built from victims' heads as terror monuments. Each city given ultimatum: surrender or destruction. Quotas for heads assigned to soldiers.",
+      "profit": "Massive wealth extraction. Artisans forcibly relocated to Samarkand. Treasuries plundered. Trade routes controlled.",
+      "ideology": "Claimed descent from Genghis Khan. Portrayed conquests as restoring Mongol Empire. Also claimed Islamic legitimacy while massacring Muslims.",
+      "complicity": "Soldiers rewarded with plunder. Conquered peoples often collaborated. Scholars and artisans spared if useful."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "military_conquest",
+    "medieval",
+    "terror_strategy",
+    "skull_towers",
+    "empire_building"
+  ],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Terror as state policy, systematized. Skull towers were not spontaneous but ordered - soldiers had quotas. Isfahan: 28 towers of 1,500 skulls each. Delhi: prisoners executed because they slowed march. Yet Timur patronized arts in Samarkand, creating architectural masterpieces. Shows how extreme violence and cultural achievement can coexist in same ruler. Unlike Mongols, Timur's empire fragmented quickly after his death.",
+    "warning_signs": [
+      "Charismatic leader claiming historical mandate",
+      "Military rewarded through plunder",
+      "Terror normalized as strategy"
+    ],
+    "root_causes": "Power vacuum after Mongol decline, Timur's personal ambition, militarized steppe culture, weak fragmented states"
+  },
+  "sources": [
+    {
+      "title": "Tamerlane: Sword of Islam, Conqueror of the World",
+      "author": "Justin Marozzi",
+      "year": 2004
+    },
+    {
+      "title": "The Rise and Rule of Tamerlane",
+      "author": "Beatrice Forbes Manz",
+      "year": 1989
+    },
+    {
+      "title": "Empire of the Steppes: A History of Central Asia",
+      "author": "René Grousset",
+      "year": 1970
+    }
+  ]
+}

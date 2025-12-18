@@ -16,7 +16,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->44 events. 2,166 years of history (149 BCE–present). 164M-278M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->45 events. 2,166 years of history (149 BCE–present). 179M-298M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -24,6 +24,7 @@ This project attempts to fix that.
 | Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Erasure | No |
 | Mongol Conquests | 1206-1368 | 30M-40M | Collapse | No |
 | Mongol Sack of Baghdad | 1258-1258 | 200k-2M | Erasure | No |
+| Timur's Conquests | 1370-1405 | 15M-20M | Collapse | No |
 | Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Collapse | Partial |
 | Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | No |
 | Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Collapse | Partial |
@@ -107,18 +108,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 84% (37/44) |
-| Economic crisis exploited | 50% (22/44) |
-| Dehumanizing rhetoric | 43% (19/44) |
-| Property seizures | 41% (18/44) |
-| Deliberate starvation | 34% (15/44) |
-| Minorities scapegoated | 30% (13/44) |
-| Forced displacement/deportation | 27% (12/44) |
-| Militias and death squads | 20% (9/44) |
-| Media incitement | 20% (9/44) |
-| International inaction | 18% (8/44) |
-| Colonial 'civilizing' justification | 18% (8/44) |
-| Emergency laws/state of exception | 11% (5/44) |
+| Nationalist/ethnic purity ideology | 82% (37/45) |
+| Economic crisis exploited | 49% (22/45) |
+| Dehumanizing rhetoric | 42% (19/45) |
+| Property seizures | 40% (18/45) |
+| Deliberate starvation | 33% (15/45) |
+| Minorities scapegoated | 29% (13/45) |
+| Forced displacement/deportation | 27% (12/45) |
+| Militias and death squads | 20% (9/45) |
+| Media incitement | 20% (9/45) |
+| International inaction | 18% (8/45) |
+| Colonial 'civilizing' justification | 18% (8/45) |
+| Emergency laws/state of exception | 11% (5/45) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 ---
@@ -144,7 +145,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->44<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->45<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges
