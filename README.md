@@ -101,6 +101,25 @@ Rwanda killed 70% of its Tutsi population in 100 days with machetes and radio co
 
 Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieval atrocities are underrepresented. So are inter-African and intra-Asian conflicts before European contact.
 
+**5. The same warning signs repeat.**
+
+<!-- STATS:PATTERNS_TABLE -->
+| Warning Sign Pattern | Frequency |
+|---------------------|-----------|
+| Nationalist/ethnic purity ideology | 40% (17/43) |
+| Dehumanizing rhetoric | 30% (13/43) |
+| Minorities scapegoated | 16% (7/43) |
+| Forced displacement/deportation | 14% (6/43) |
+| Colonial/imperial 'civilizing' claims | 12% (5/43) |
+| Militias and death squads | 9% (4/43) |
+| Land/property seizures | 9% (4/43) |
+| Deliberate starvation policies | 9% (4/43) |
+| State media incitement | 5% (2/43) |
+| International passivity | 5% (2/43) |
+| Legal exclusion escalating | 2% (1/43) |
+| Economic crisis exploited | 2% (1/43) |
+<!-- /STATS:PATTERNS_TABLE -->
+
 ---
 
 ## How It Works
