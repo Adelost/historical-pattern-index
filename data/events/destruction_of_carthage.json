@@ -1,0 +1,74 @@
+{
+  "id": "destruction_of_carthage_146bc",
+  "name": "Destruction of Carthage (Third Punic War)",
+  "status": "historic",
+  "period": { "start": -149, "end": -146 },
+  "geography": {
+    "region": "North Africa / Tunisia",
+    "coordinates": [36.8, 10.3]
+  },
+  "participants": {
+    "perpetrators": ["Roman Republic"],
+    "victims": ["Carthaginians"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 150000,
+      "max": 450000,
+      "population_initial": 500000,
+      "population_loss_percent": 90.0,
+      "confidence": "low",
+      "note": "Estimates vary, but census records suggest 50,000 survivors were enslaved from a population of ~500,000."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": false,
+        "diffused_responsibility": false,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ancient_history", "total_erasure", "urbicide"],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "The archetype of 'Carthaginian Peace'. Shows that 'Total Erasure' is an ancient pattern. High Ideology driven by Cato's propaganda ('Carthago delenda est')."
+  },
+  "sources": [
+    { "title": "The Histories", "author": "Polybius", "year": -146 },
+    { "title": "The Fall of Carthage", "author": "Adrian Goldsworthy", "year": 2006 }
+  ]
+}
