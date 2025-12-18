@@ -18,7 +18,7 @@
       "population_initial": 12500000,
       "population_loss_percent": 15.0,
       "confidence": "medium",
-      "note": "Mortality refers to deaths during the Middle Passage (~12.5M embarked, ~10.7M disembarked). Does not include deaths on plantations or in African raids."
+      "note": "UNDERSTATED FIGURE. Only counts Middle Passage deaths (~12.5M embarked, ~10.7M disembarked). TRUE TOLL much higher: millions more died in African capture raids, coastal holding, and on plantations. Some historians estimate 4-6M died before even boarding ships. Total system deaths possibly 10-15M+. This entry measures transport mortality only."
     },
     "scores": {
       "systematic_intensity": 80,

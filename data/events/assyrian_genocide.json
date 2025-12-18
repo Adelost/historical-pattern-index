@@ -1,0 +1,75 @@
+{
+  "id": "assyrian_genocide_1914",
+  "name": "Assyrian Genocide (Seyfo)",
+  "status": "historic",
+  "period": { "start": 1914, "end": 1920 },
+  "geography": {
+    "region": "Anatolia / Ottoman Empire / Persia",
+    "coordinates": [37.5, 43.0]
+  },
+  "participants": {
+    "perpetrators": ["Ottoman Empire", "Kurdish irregulars"],
+    "victims": ["Assyrian Christians", "Syriac Christians"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 250000,
+      "max": 750000,
+      "population_initial": 600000,
+      "population_loss_percent": 70.0,
+      "confidence": "low",
+      "note": "Called 'Seyfo' (sword) by Assyrians. Occurred alongside Armenian and Greek genocides. Estimates range from 150,000 to 750,000."
+    },
+    "scores": {
+      "systematic_intensity": 70,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ethnic_cleansing", "religious_persecution", "ethno_nationalism"],
+  "denial_status": "denied",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Often overlooked alongside Armenian Genocide. Part of Ottoman campaign to create homogeneous Turkish state. Destroyed ancient Assyrian presence in southeastern Anatolia. Less internationally recognized than Armenian Genocide."
+  },
+  "sources": [
+    { "title": "Year of the Sword", "author": "Joseph Yacoub", "year": 2016 },
+    { "title": "The Thirty-Year Genocide", "author": "Benny Morris & Dror Ze'evi", "year": 2019 }
+  ]
+}

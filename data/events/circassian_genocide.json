@@ -1,0 +1,75 @@
+{
+  "id": "circassian_genocide_1864",
+  "name": "Circassian Genocide",
+  "status": "historic",
+  "period": { "start": 1864, "end": 1867 },
+  "geography": {
+    "region": "Caucasus (Russian Empire)",
+    "coordinates": [44.0, 40.0]
+  },
+  "participants": {
+    "perpetrators": ["Russian Empire", "Russian Army"],
+    "victims": ["Circassian peoples (Adyghe, Ubykh, Abkhaz)"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 400000,
+      "max": 600000,
+      "population_initial": 1500000,
+      "population_loss_percent": 40.0,
+      "confidence": "low",
+      "note": "Up to 1.5 million Circassians killed or expelled. 90% of population removed from homeland. Survivors deported to Ottoman Empire. Many died during forced marches and on overcrowded ships. Russia still does not recognize as genocide."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 20,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ethnic_cleansing", "deportation", "russian_empire", "caucasus", "19th_century"],
+  "denial_status": "denied",
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Largest ethnic cleansing in 19th century Europe. Russia wanted Circassian land for Russian settlers and to secure Caucasus. Entire villages burned, populations force-marched to Ottoman ports. Ubykh language now extinct. Georgia recognizes as genocide; Russia does not. Pattern: settler colonialism within contiguous empire rather than overseas."
+  },
+  "sources": [
+    { "title": "The Circassian Genocide", "author": "Walter Richmond", "year": 2013 },
+    { "title": "The Russian Conquest of the Caucasus", "author": "John F. Baddeley", "year": 1908 }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "uyghur_persecution_2017",
+  "name": "Uyghur Persecution (Xinjiang)",
+  "status": "ongoing",
+  "period": { "start": 2017, "end": 2024 },
+  "geography": {
+    "region": "Central Asia (China/Xinjiang)",
+    "coordinates": [41.0, 85.0]
+  },
+  "participants": {
+    "perpetrators": ["Chinese Communist Party", "Xinjiang regional government"],
+    "victims": ["Uyghurs", "Kazakhs", "Other Turkic Muslims"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 0,
+      "max": 0,
+      "population_initial": 12000000,
+      "population_loss_percent": 0,
+      "confidence": "low",
+      "note": "Mass internment (1-1.8M detained) rather than mass killing. Deaths in camps unknown. Cultural genocide through forced assimilation, sterilization, family separation."
+    },
+    "scores": {
+      "systematic_intensity": 100,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["cultural_genocide", "mass_detention", "surveillance_state", "forced_labor", "ongoing"],
+  "denial_status": "denied",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Industrial-scale detention and cultural erasure using modern surveillance technology. Forced sterilization reducing birth rates by 84%. Global supply chains implicated in forced labor. Declared genocide by US, UK, Canada, Netherlands. China claims 'vocational training'."
+  },
+  "sources": [
+    { "title": "The China Cables", "author": "ICIJ Investigation", "year": 2019 },
+    { "title": "Xinjiang Police Files", "author": "Adrian Zenz", "year": 2022 }
+  ]
+}

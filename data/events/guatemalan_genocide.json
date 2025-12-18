@@ -1,0 +1,75 @@
+{
+  "id": "guatemalan_genocide_1981",
+  "name": "Guatemalan Genocide (Maya)",
+  "status": "historic",
+  "period": { "start": 1981, "end": 1983 },
+  "geography": {
+    "region": "Central America (Guatemala)",
+    "coordinates": [15.5, -90.3]
+  },
+  "participants": {
+    "perpetrators": ["Guatemalan Army", "Civil patrols (PAC)", "US Government (support)"],
+    "victims": ["Maya peoples (Ixil, Kiche, Qeqchi, others)"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 100000,
+      "max": 200000,
+      "population_initial": 6000000,
+      "population_loss_percent": 2.5,
+      "confidence": "medium",
+      "note": "CEH Truth Commission documented 200,000 deaths/disappearances during civil war (1960-1996). 83% of identified victims were Maya. 93% of atrocities committed by state forces. Genocide phase concentrated in 1981-1983 under Rios Montt."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["cold_war", "us_backed", "indigenous", "counterinsurgency", "latin_america"],
+  "denial_status": "partial",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "US-backed genocide during Cold War. Reagan praised Rios Montt as 'a man of great personal integrity.' Scorched earth policy destroyed 626 villages. Maya targeted as 'internal enemy' regardless of guerrilla involvement. Rios Montt convicted of genocide in 2013 (overturned on technicality). Shows how anti-communism justified ethnic extermination."
+  },
+  "sources": [
+    { "title": "Guatemala: Memory of Silence (CEH Report)", "author": "Commission for Historical Clarification", "year": 1999 },
+    { "title": "I, Rigoberta Menchu", "author": "Rigoberta Menchu", "year": 1983 }
+  ]
+}

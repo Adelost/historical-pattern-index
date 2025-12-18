@@ -1,0 +1,75 @@
+{
+  "id": "east_timor_genocide_1975",
+  "name": "East Timor Genocide",
+  "status": "historic",
+  "period": { "start": 1975, "end": 1999 },
+  "geography": {
+    "region": "Southeast Asia (East Timor)",
+    "coordinates": [-8.5, 125.5]
+  },
+  "participants": {
+    "perpetrators": ["Indonesian military", "Suharto regime"],
+    "victims": ["East Timorese population"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 100000,
+      "max": 180000,
+      "population_initial": 680000,
+      "population_loss_percent": 25.0,
+      "confidence": "medium",
+      "note": "Deaths from military action, famine, and disease during 24-year occupation. UN CAVR commission documented systematic violations."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 60,
+      "ideology": 60,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["occupation", "cold_war", "western_complicity", "anti_communist"],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Invasion occurred day after US President Ford visited Jakarta. Western powers armed Indonesia and blocked UN action. Up to 25% of population killed. Independence finally achieved in 2002 after UN intervention."
+  },
+  "sources": [
+    { "title": "Chega! Final Report of the CAVR", "author": "UN Commission for Reception, Truth and Reconciliation", "year": 2005 },
+    { "title": "East Timor: A Nation's Bitter Dawn", "author": "John Martinkus", "year": 2001 }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "id": "soviet_great_purge_1936",
+  "name": "Soviet Great Purge (Great Terror)",
+  "status": "historic",
+  "period": { "start": 1936, "end": 1938 },
+  "geography": {
+    "region": "Soviet Union",
+    "coordinates": [55.75, 37.62]
+  },
+  "participants": {
+    "perpetrators": ["NKVD", "Stalin regime", "Soviet Communist Party"],
+    "victims": ["Political dissidents", "Military officers", "Ethnic minorities", "Random citizens"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 680000,
+      "max": 1200000,
+      "population_initial": 170000000,
+      "population_loss_percent": 0.6,
+      "confidence": "medium",
+      "note": "Official records show 681,692 executions 1937-38. Additional deaths in Gulag camps. Broader Stalin-era repression killed millions more."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["politicide", "show_trials", "totalitarianism", "paranoia"],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "State terror turned inward. Execution quotas sent to regions. Show trials of 'enemies of the people'. Destroyed Soviet military leadership before WWII. NKVD Order 00447 set targets by category. Perpetrators later purged themselves."
+  },
+  "sources": [
+    { "title": "The Great Terror: A Reassessment", "author": "Robert Conquest", "year": 1990 },
+    { "title": "The Road to Terror", "author": "J. Arch Getty & Oleg Naumov", "year": 1999 }
+  ]
+}

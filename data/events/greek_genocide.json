@@ -1,0 +1,75 @@
+{
+  "id": "greek_genocide_1914",
+  "name": "Greek Genocide (Pontic Greeks)",
+  "status": "historic",
+  "period": { "start": 1914, "end": 1923 },
+  "geography": {
+    "region": "Anatolia / Ottoman Empire",
+    "coordinates": [41.0, 36.0]
+  },
+  "participants": {
+    "perpetrators": ["Ottoman Empire", "Turkish Nationalists"],
+    "victims": ["Pontic Greeks", "Anatolian Greeks"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 300000,
+      "max": 900000,
+      "population_initial": 1500000,
+      "population_loss_percent": 50.0,
+      "confidence": "medium",
+      "note": "Part of broader Christian genocide alongside Armenians and Assyrians. Many died in labor battalions and death marches."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ethnic_cleansing", "death_marches", "labor_battalions", "ethno_nationalism"],
+  "denial_status": "denied",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Concurrent with Armenian Genocide, same perpetrators and methods. Greeks had lived in Anatolia for 3000 years. Population exchanges after 1923 completed the ethnic cleansing. Recognized by Greece, Cyprus, and several US states."
+  },
+  "sources": [
+    { "title": "The Thirty-Year Genocide", "author": "Benny Morris & Dror Ze'evi", "year": 2019 },
+    { "title": "Not Even My Name", "author": "Thea Halo", "year": 2000 }
+  ]
+}
