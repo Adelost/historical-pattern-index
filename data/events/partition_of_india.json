@@ -2,14 +2,29 @@
   "id": "partition_of_india_1947",
   "name": "Partition of India",
   "status": "historic",
-  "period": { "start": 1947, "end": 1948 },
+  "period": {
+    "start": 1947,
+    "end": 1948
+  },
   "geography": {
     "region": "South Asia (India/Pakistan)",
-    "coordinates": [30.0, 74.0]
+    "coordinates": [
+      30.0,
+      74.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Hindu mobs", "Muslim mobs", "Sikh mobs", "British colonial administration (indirect)"],
-    "victims": ["Muslims", "Hindus", "Sikhs"]
+    "perpetrators": [
+      "Hindu mobs",
+      "Muslim mobs",
+      "Sikh mobs",
+      "British colonial administration (indirect)"
+    ],
+    "victims": [
+      "Muslims",
+      "Hindus",
+      "Sikhs"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +36,7 @@
       "note": "Estimates range from 200k to 2M killed. 14-18 million displaced - largest mass migration in history. Violence was multi-directional across religious lines."
     },
     "scores": {
-      "systematic_intensity": 50,
+      "systematic_intensity": 56,
       "profit": 40,
       "ideology": 100,
       "complicity": 100
@@ -36,8 +51,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +76,27 @@
       }
     }
   },
-  "tags": ["religious_violence", "ethnic_cleansing", "decolonization", "mass_migration"],
+  "tags": [
+    "religious_violence",
+    "ethnic_cleansing",
+    "decolonization",
+    "mass_migration"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "CHAOTIC ATROCITY",
     "pattern_note": "Rushed British withdrawal (Mountbatten moved date up by 10 months) left no time for orderly transition. Radcliffe Line drawn in 6 weeks by lawyer who'd never been to India. Violence was communal and chaotic rather than state-directed. Legacy: Kashmir conflict, 3 India-Pakistan wars, ongoing nuclear tensions."
   },
   "sources": [
-    { "title": "Midnight's Furies: The Deadly Legacy of India's Partition", "author": "Nisid Hajari", "year": 2015 },
-    { "title": "The Great Partition", "author": "Yasmin Khan", "year": 2007 }
+    {
+      "title": "Midnight's Furies: The Deadly Legacy of India's Partition",
+      "author": "Nisid Hajari",
+      "year": 2015
+    },
+    {
+      "title": "The Great Partition",
+      "author": "Yasmin Khan",
+      "year": 2007
+    }
   ]
 }

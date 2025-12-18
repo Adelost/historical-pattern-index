@@ -2,14 +2,29 @@
   "id": "the_holocaust_1941",
   "name": "The Holocaust",
   "status": "historic",
-  "period": { "start": 1941, "end": 1945 },
+  "period": {
+    "start": 1941,
+    "end": 1945
+  },
   "geography": {
     "region": "Europe",
-    "coordinates": [52.0, 20.0]
+    "coordinates": [
+      52.0,
+      20.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Nazi Germany", "Axis Collaborators"],
-    "victims": ["Jews", "Roma", "LGBTQ+", "Disabled", "Political Dissidents"]
+    "perpetrators": [
+      "Nazi Germany",
+      "Axis Collaborators"
+    ],
+    "victims": [
+      "Jews",
+      "Roma",
+      "LGBTQ+",
+      "Disabled",
+      "Political Dissidents"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +36,7 @@
       "note": "Jewish victims only. Total Holocaust deaths (including Roma, disabled, POWs, political prisoners) estimated at 11-17M."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 100,
       "profit": 60,
       "ideology": 100,
       "complicity": 80
@@ -36,8 +51,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": false
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +76,26 @@
       }
     }
   },
-  "tags": ["industrial_genocide", "ideology_driven", "state_sponsored"],
+  "tags": [
+    "industrial_genocide",
+    "ideology_driven",
+    "state_sponsored"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute."
   },
   "sources": [
-    { "title": "The Destruction of the European Jews", "author": "Raul Hilberg", "year": 1961 },
-    { "title": "Bloodlands", "author": "Timothy Snyder", "year": 2010 }
+    {
+      "title": "The Destruction of the European Jews",
+      "author": "Raul Hilberg",
+      "year": 1961
+    },
+    {
+      "title": "Bloodlands",
+      "author": "Timothy Snyder",
+      "year": 2010
+    }
   ]
 }

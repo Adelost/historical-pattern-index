@@ -2,14 +2,26 @@
   "id": "british_india_famines_1876",
   "name": "British India Famines (Late Victorian Holocausts)",
   "status": "historic",
-  "period": { "start": 1876, "end": 1902 },
+  "period": {
+    "start": 1876,
+    "end": 1902
+  },
   "geography": {
     "region": "South Asia (British India)",
-    "coordinates": [20.0, 78.0]
+    "coordinates": [
+      20.0,
+      78.0
+    ]
   },
   "participants": {
-    "perpetrators": ["British Raj", "British East India Company legacy policies"],
-    "victims": ["Indian peasants", "Rural population"]
+    "perpetrators": [
+      "British Raj",
+      "British East India Company legacy policies"
+    ],
+    "victims": [
+      "Indian peasants",
+      "Rural population"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Includes Great Famine 1876-78 (5-10M), 1896-97 famine (5M+), 1899-1900 famine (1M+). Grain exports continued during famines. Mike Davis documents this in 'Late Victorian Holocausts'."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 80,
       "ideology": 60,
       "complicity": 80
@@ -36,8 +48,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,28 @@
       }
     }
   },
-  "tags": ["famine_as_weapon", "colonialism", "profit_driven", "british_empire", "laissez_faire"],
+  "tags": [
+    "famine_as_weapon",
+    "colonialism",
+    "profit_driven",
+    "british_empire",
+    "laissez_faire"
+  ],
   "denial_status": "disputed",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Railways built to export grain, not feed Indians. Taxes collected during starvation. Viceroy Lytton held Delhi Durbar feast while millions died. Free market ideology ('don't interfere with markets') used to justify inaction. Parallels with Irish Famine - same empire, same ideology, same result."
   },
   "sources": [
-    { "title": "Late Victorian Holocausts: El Nino Famines and the Making of the Third World", "author": "Mike Davis", "year": 2001 },
-    { "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II", "author": "Madhusree Mukerjee", "year": 2010 }
+    {
+      "title": "Late Victorian Holocausts: El Nino Famines and the Making of the Third World",
+      "author": "Mike Davis",
+      "year": 2001
+    },
+    {
+      "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II",
+      "author": "Madhusree Mukerjee",
+      "year": 2010
+    }
   ]
 }

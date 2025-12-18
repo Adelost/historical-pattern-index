@@ -2,14 +2,32 @@
   "id": "soviet_deportations_1943",
   "name": "Soviet Ethnic Deportations",
   "status": "historic",
-  "period": { "start": 1943, "end": 1944 },
+  "period": {
+    "start": 1943,
+    "end": 1944
+  },
   "geography": {
     "region": "Soviet Union (Caucasus/Crimea/Central Asia)",
-    "coordinates": [43.0, 45.0]
+    "coordinates": [
+      43.0,
+      45.0
+    ]
   },
   "participants": {
-    "perpetrators": ["NKVD", "Stalin regime", "Soviet government"],
-    "victims": ["Chechens", "Ingush", "Crimean Tatars", "Kalmyks", "Balkars", "Karachays", "Meskhetian Turks"]
+    "perpetrators": [
+      "NKVD",
+      "Stalin regime",
+      "Soviet government"
+    ],
+    "victims": [
+      "Chechens",
+      "Ingush",
+      "Crimean Tatars",
+      "Kalmyks",
+      "Balkars",
+      "Karachays",
+      "Meskhetian Turks"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +39,7 @@
       "note": "Entire ethnic groups deported in days. Chechens/Ingush: 500k deported, 25% died. Crimean Tatars: 200k deported, 46% died within 2 years. Accused collectively of Nazi collaboration."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 80,
       "complicity": 100
@@ -36,8 +54,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +79,27 @@
       }
     }
   },
-  "tags": ["ethnic_cleansing", "collective_punishment", "forced_deportation", "stalinist"],
+  "tags": [
+    "ethnic_cleansing",
+    "collective_punishment",
+    "forced_deportation",
+    "stalinist"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "Operation Lentil deported entire Chechen nation in 3 days using 12,000 trucks. Collective punishment for alleged collaboration with Nazis. Erased from maps - Chechnya ceased to exist as administrative unit until 1957. European Parliament recognized Crimean Tatar deportation as genocide (2019)."
   },
   "sources": [
-    { "title": "The Punished Peoples", "author": "Aleksandr Nekrich", "year": 1978 },
-    { "title": "Stalin's Genocides", "author": "Norman Naimark", "year": 2010 }
+    {
+      "title": "The Punished Peoples",
+      "author": "Aleksandr Nekrich",
+      "year": 1978
+    },
+    {
+      "title": "Stalin's Genocides",
+      "author": "Norman Naimark",
+      "year": 2010
+    }
   ]
 }

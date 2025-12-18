@@ -2,14 +2,25 @@
   "id": "tasmania_black_war_1824",
   "name": "The Black War (Tasmania)",
   "status": "historic",
-  "period": { "start": 1824, "end": 1831 },
+  "period": {
+    "start": 1824,
+    "end": 1831
+  },
   "geography": {
     "region": "Oceania / Tasmania",
-    "coordinates": [-42.0, 147.0]
+    "coordinates": [
+      -42.0,
+      147.0
+    ]
   },
   "participants": {
-    "perpetrators": ["British Settlers", "British Military"],
-    "victims": ["Palawa (Tasmanian Aborigines)"]
+    "perpetrators": [
+      "British Settlers",
+      "British Military"
+    ],
+    "victims": [
+      "Palawa (Tasmanian Aborigines)"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -20,7 +31,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 80,
       "ideology": 40,
       "complicity": 80
@@ -35,8 +46,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -61,14 +71,26 @@
       }
     }
   },
-  "tags": ["settler_colonialism", "total_erasure", "land_theft"],
+  "tags": [
+    "settler_colonialism",
+    "total_erasure",
+    "land_theft"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "Extremely low absolute numbers but near-total extinction. Driven by land seizure (Profit) rather than purity ideology."
   },
   "sources": [
-    { "title": "The Fatal Shore", "author": "Robert Hughes", "year": 1987 },
-    { "title": "Tasmanian Aborigines: A History Since 1803", "author": "Lyndall Ryan", "year": 2012 }
+    {
+      "title": "The Fatal Shore",
+      "author": "Robert Hughes",
+      "year": 1987
+    },
+    {
+      "title": "Tasmanian Aborigines: A History Since 1803",
+      "author": "Lyndall Ryan",
+      "year": 2012
+    }
   ]
 }

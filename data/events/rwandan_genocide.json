@@ -2,14 +2,27 @@
   "id": "rwandan_genocide_1994",
   "name": "Rwandan Genocide",
   "status": "historic",
-  "period": { "start": 1994, "end": 1994 },
+  "period": {
+    "start": 1994,
+    "end": 1994
+  },
   "geography": {
     "region": "Central Africa (Rwanda)",
-    "coordinates": [-2.0, 30.0]
+    "coordinates": [
+      -2.0,
+      30.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Hutu extremists", "Interahamwe militia", "Rwandan government"],
-    "victims": ["Tutsi", "Moderate Hutu"]
+    "perpetrators": [
+      "Hutu extremists",
+      "Interahamwe militia",
+      "Rwandan government"
+    ],
+    "victims": [
+      "Tutsi",
+      "Moderate Hutu"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +34,7 @@
       "note": "Approximately 70% of Rwanda's Tutsi population killed in ~100 days."
     },
     "scores": {
-      "systematic_intensity": 60,
+      "systematic_intensity": 67,
       "profit": 0,
       "ideology": 100,
       "complicity": 80
@@ -36,8 +49,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +74,27 @@
       }
     }
   },
-  "tags": ["ideology_driven", "rapid_genocide", "radio_propaganda", "neighbor_violence"],
+  "tags": [
+    "ideology_driven",
+    "rapid_genocide",
+    "radio_propaganda",
+    "neighbor_violence"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Challenges the '>5 years' criterion - extreme intensity achieved in only 100 days. RTLM radio coordinated killings. ID cards marked ethnicity enabling systematic targeting. Demonstrates ideology can mobilize faster than bureaucracy."
   },
   "sources": [
-    { "title": "We Wish to Inform You That Tomorrow We Will Be Killed with Our Families", "author": "Philip Gourevitch", "year": 1998 },
-    { "title": "Leave None to Tell the Story", "author": "Human Rights Watch", "year": 1999 }
+    {
+      "title": "We Wish to Inform You That Tomorrow We Will Be Killed with Our Families",
+      "author": "Philip Gourevitch",
+      "year": 1998
+    },
+    {
+      "title": "Leave None to Tell the Story",
+      "author": "Human Rights Watch",
+      "year": 1999
+    }
   ]
 }

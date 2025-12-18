@@ -2,14 +2,26 @@
   "id": "tigray_war_2020",
   "name": "Tigray War",
   "status": "historic",
-  "period": { "start": 2020, "end": 2022 },
+  "period": {
+    "start": 2020,
+    "end": 2022
+  },
   "geography": {
     "region": "East Africa (Ethiopia)",
-    "coordinates": [14.0, 38.5]
+    "coordinates": [
+      14.0,
+      38.5
+    ]
   },
   "participants": {
-    "perpetrators": ["Ethiopian National Defense Force", "Eritrean Defence Forces", "Amhara militia"],
-    "victims": ["Tigrayan people"]
+    "perpetrators": [
+      "Ethiopian National Defense Force",
+      "Eritrean Defence Forces",
+      "Amhara militia"
+    ],
+    "victims": [
+      "Tigrayan people"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Ghent University estimated 300-500k deaths. Most from starvation due to aid blockade. Mass rape documented as weapon of war. Peace agreement signed Nov 2022."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 80,
       "complicity": 80
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +73,28 @@
       }
     }
   },
-  "tags": ["ethnic_cleansing", "siege_warfare", "mass_rape", "21st_century", "aid_blockade"],
+  "tags": [
+    "ethnic_cleansing",
+    "siege_warfare",
+    "mass_rape",
+    "21st_century",
+    "aid_blockade"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Deadliest conflict of 21st century by some estimates. Aid deliberately blocked creating famine conditions. Communications blackout prevented documentation. Despite occurring during social media age, received minimal Western attention compared to Ukraine war that began same period."
   },
   "sources": [
-    { "title": "Report of the International Commission of Human Rights Experts on Ethiopia", "author": "UN Human Rights Council", "year": 2022 },
-    { "title": "Tigray: Atlas of the Humanitarian Situation", "author": "Ghent University", "year": 2022 }
+    {
+      "title": "Report of the International Commission of Human Rights Experts on Ethiopia",
+      "author": "UN Human Rights Council",
+      "year": 2022
+    },
+    {
+      "title": "Tigray: Atlas of the Humanitarian Situation",
+      "author": "Ghent University",
+      "year": 2022
+    }
   ]
 }

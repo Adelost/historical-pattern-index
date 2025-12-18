@@ -2,14 +2,26 @@
   "id": "great_leap_forward_1958",
   "name": "Great Leap Forward (Chinese Famine)",
   "status": "historic",
-  "period": { "start": 1958, "end": 1962 },
+  "period": {
+    "start": 1958,
+    "end": 1962
+  },
   "geography": {
     "region": "East Asia (China)",
-    "coordinates": [35.0, 105.0]
+    "coordinates": [
+      35.0,
+      105.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Chinese Communist Party", "Mao Zedong"],
-    "victims": ["Chinese peasants", "Rural population"]
+    "perpetrators": [
+      "Chinese Communist Party",
+      "Mao Zedong"
+    ],
+    "victims": [
+      "Chinese peasants",
+      "Rural population"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Largest famine in human history. Estimates vary enormously due to CCP secrecy. Most historians estimate 30-45 million. Grain exports continued during the famine."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 80,
       "ideology": 80,
       "complicity": 60
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,28 @@
       }
     }
   },
-  "tags": ["famine_as_weapon", "communism", "collectivization", "censorship", "asian_perpetrator"],
+  "tags": [
+    "famine_as_weapon",
+    "communism",
+    "collectivization",
+    "censorship",
+    "asian_perpetrator"
+  ],
   "denial_status": "suppressed",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "History's deadliest famine. Grain quotas enforced while millions starved - local officials lied about yields to meet targets. Challenges genocide definition: was it murder or criminal negligence? Either way, policy continued despite known deaths. Still censored in China."
   },
   "sources": [
-    { "title": "Mao's Great Famine", "author": "Frank Dikotter", "year": 2010 },
-    { "title": "Tombstone: The Great Chinese Famine", "author": "Yang Jisheng", "year": 2008 }
+    {
+      "title": "Mao's Great Famine",
+      "author": "Frank Dikotter",
+      "year": 2010
+    },
+    {
+      "title": "Tombstone: The Great Chinese Famine",
+      "author": "Yang Jisheng",
+      "year": 2008
+    }
   ]
 }

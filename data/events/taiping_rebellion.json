@@ -2,14 +2,27 @@
   "id": "taiping_rebellion_1850",
   "name": "Taiping Rebellion",
   "status": "historic",
-  "period": { "start": 1850, "end": 1864 },
+  "period": {
+    "start": 1850,
+    "end": 1864
+  },
   "geography": {
     "region": "East Asia (Southern China)",
-    "coordinates": [30.0, 115.0]
+    "coordinates": [
+      30.0,
+      115.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Qing Dynasty", "Taiping Heavenly Kingdom", "Regional militias"],
-    "victims": ["Chinese civilians", "Both sides' populations"]
+    "perpetrators": [
+      "Qing Dynasty",
+      "Taiping Heavenly Kingdom",
+      "Regional militias"
+    ],
+    "victims": [
+      "Chinese civilians",
+      "Both sides' populations"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +34,7 @@
       "note": "Second deadliest conflict in human history after WWII. Some estimates reach 70-100 million when including famine and disease. Entire regions depopulated. Both sides committed mass atrocities."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 60,
       "ideology": 100,
       "complicity": 60
@@ -36,8 +49,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -63,13 +75,27 @@
     }
   },
   "denial_status": "suppressed",
-  "tags": ["civil_war", "religious_conflict", "millenarian", "chinese_history", "mass_atrocity"],
+  "tags": [
+    "civil_war",
+    "religious_conflict",
+    "millenarian",
+    "chinese_history",
+    "mass_atrocity"
+  ],
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
     "pattern_note": "Christian-inspired millenarian movement vs Qing dynasty. Hong Xiuquan believed he was Jesus's brother. Taiping banned private property, opium, foot-binding - radical utopianism. Both sides massacred cities. Nanjing changed hands with mass killings each time. Shows how ideological civil wars produce extreme casualties. Rarely taught in West; sensitive in China."
   },
   "sources": [
-    { "title": "God's Chinese Son: The Taiping Heavenly Kingdom of Hong Xiuquan", "author": "Jonathan Spence", "year": 1996 },
-    { "title": "Autumn in the Heavenly Kingdom", "author": "Stephen Platt", "year": 2012 }
+    {
+      "title": "God's Chinese Son: The Taiping Heavenly Kingdom of Hong Xiuquan",
+      "author": "Jonathan Spence",
+      "year": 1996
+    },
+    {
+      "title": "Autumn in the Heavenly Kingdom",
+      "author": "Stephen Platt",
+      "year": 2012
+    }
   ]
 }

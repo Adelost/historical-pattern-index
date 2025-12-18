@@ -2,14 +2,25 @@
   "id": "british_opium_trade_1839",
   "name": "British Opium Trade in China",
   "status": "historic",
-  "period": { "start": 1839, "end": 1906 },
+  "period": {
+    "start": 1839,
+    "end": 1906
+  },
   "geography": {
     "region": "East Asia (China)",
-    "coordinates": [30.0, 115.0]
+    "coordinates": [
+      30.0,
+      115.0
+    ]
   },
   "participants": {
-    "perpetrators": ["British Empire", "British East India Company"],
-    "victims": ["Chinese population"]
+    "perpetrators": [
+      "British Empire",
+      "British East India Company"
+    ],
+    "victims": [
+      "Chinese population"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +32,7 @@
       "note": "Direct war deaths low (~20-50k across both Opium Wars). True harm was addiction: 10-15 million addicts by 1900, economic devastation, societal breakdown. Contributed to instability leading to Taiping Rebellion (20-30M dead). Mortality figures vastly understate actual harm."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 80,
       "ideology": 40,
       "complicity": 80
@@ -36,8 +47,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +72,28 @@
       }
     }
   },
-  "tags": ["imperialism", "drug_trade", "profit_driven", "forced_markets", "unequal_treaties"],
+  "tags": [
+    "imperialism",
+    "drug_trade",
+    "profit_driven",
+    "forced_markets",
+    "unequal_treaties"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "State-sponsored drug trafficking enforced by military. Britain grew opium in India, forced China to accept imports via gunboat diplomacy. When China resisted, Royal Navy attacked. Resulted in 'unequal treaties', Hong Kong cession, and millions of addicts. Highest profit score in dataset - pure extraction with ideological cover ('free trade'). Shows how economic violence can devastate without high direct mortality."
   },
   "sources": [
-    { "title": "The Opium War: Drugs, Dreams and the Making of Modern China", "author": "Julia Lovell", "year": 2011 },
-    { "title": "Imperial Twilight: The Opium War and the End of China's Last Golden Age", "author": "Stephen Platt", "year": 2018 }
+    {
+      "title": "The Opium War: Drugs, Dreams and the Making of Modern China",
+      "author": "Julia Lovell",
+      "year": 2011
+    },
+    {
+      "title": "Imperial Twilight: The Opium War and the End of China's Last Golden Age",
+      "author": "Stephen Platt",
+      "year": 2018
+    }
   ]
 }

@@ -2,14 +2,27 @@
   "id": "darfur_genocide_2003",
   "name": "Darfur Genocide",
   "status": "historic",
-  "period": { "start": 2003, "end": 2008 },
+  "period": {
+    "start": 2003,
+    "end": 2008
+  },
   "geography": {
     "region": "Northeast Africa (Sudan, Darfur region)",
-    "coordinates": [13.5, 25.0]
+    "coordinates": [
+      13.5,
+      25.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Sudanese government", "Janjaweed militia"],
-    "victims": ["Fur people", "Zaghawa people", "Masalit people"]
+    "perpetrators": [
+      "Sudanese government",
+      "Janjaweed militia"
+    ],
+    "victims": [
+      "Fur people",
+      "Zaghawa people",
+      "Masalit people"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +34,7 @@
       "note": "UN estimates 300,000. 2.7 million displaced. First ICC arrest warrant for sitting head of state (Omar al-Bashir, 2009). Violence continues at lower levels. Main genocide phase 2003-2008."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 100,
       "complicity": 100
@@ -36,8 +49,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +74,28 @@
       }
     }
   },
-  "tags": ["ideology_driven", "ethnic_cleansing", "arab_supremacism", "icc", "post_2000"],
+  "tags": [
+    "ideology_driven",
+    "ethnic_cleansing",
+    "arab_supremacism",
+    "icc",
+    "post_2000"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "First genocide of 21st century. Arab supremacist ideology - Janjaweed ('devils on horseback') armed by Khartoum. Villages burned, wells poisoned, women systematically raped. China and Russia blocked UN intervention (oil interests). ICC issued arrest warrant for al-Bashir - first for sitting president. Shows genocide can happen under international scrutiny with impunity."
   },
   "sources": [
-    { "title": "Darfur: A New History of a Long War", "author": "Julie Flint & Alex de Waal", "year": 2008 },
-    { "title": "The Devil Came on Horseback", "author": "Brian Steidle", "year": 2007 }
+    {
+      "title": "Darfur: A New History of a Long War",
+      "author": "Julie Flint & Alex de Waal",
+      "year": 2008
+    },
+    {
+      "title": "The Devil Came on Horseback",
+      "author": "Brian Steidle",
+      "year": 2007
+    }
   ]
 }

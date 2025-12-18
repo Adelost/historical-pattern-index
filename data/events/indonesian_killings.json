@@ -2,14 +2,28 @@
   "id": "indonesian_killings_1965",
   "name": "Indonesian Mass Killings",
   "status": "historic",
-  "period": { "start": 1965, "end": 1966 },
+  "period": {
+    "start": 1965,
+    "end": 1966
+  },
   "geography": {
     "region": "Southeast Asia (Indonesia)",
-    "coordinates": [-6.2, 106.8]
+    "coordinates": [
+      -6.2,
+      106.8
+    ]
   },
   "participants": {
-    "perpetrators": ["Indonesian Army", "Civilian militias", "Islamic groups"],
-    "victims": ["Alleged communists (PKI)", "Ethnic Chinese", "Leftists"]
+    "perpetrators": [
+      "Indonesian Army",
+      "Civilian militias",
+      "Islamic groups"
+    ],
+    "victims": [
+      "Alleged communists (PKI)",
+      "Ethnic Chinese",
+      "Leftists"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +35,7 @@
       "note": "CIA described it as 'one of the worst mass murders of the 20th century'. Estimates range from 500,000 to 3 million. US and UK provided support."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 78,
       "profit": 40,
       "ideology": 80,
       "complicity": 100
@@ -36,8 +50,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +75,27 @@
       }
     }
   },
-  "tags": ["anti_communist", "cold_war", "western_complicity", "politicide"],
+  "tags": [
+    "anti_communist",
+    "cold_war",
+    "western_complicity",
+    "politicide"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Cold War politicide with Western backing. US provided kill lists and equipment. Created Suharto's 'New Order' regime. Documentary 'The Act of Killing' (2012) exposed perpetrators who remain unpunished. Still taboo subject in Indonesia."
   },
   "sources": [
-    { "title": "The Jakarta Method", "author": "Vincent Bevins", "year": 2020 },
-    { "title": "The Army and the Indonesian Genocide", "author": "Jess Melvin", "year": 2018 }
+    {
+      "title": "The Jakarta Method",
+      "author": "Vincent Bevins",
+      "year": 2020
+    },
+    {
+      "title": "The Army and the Indonesian Genocide",
+      "author": "Jess Melvin",
+      "year": 2018
+    }
   ]
 }

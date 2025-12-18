@@ -2,14 +2,25 @@
   "id": "spanish_americas_1492",
   "name": "Colonization of the Americas (Initial Phase)",
   "status": "historic",
-  "period": { "start": 1492, "end": 1600 },
+  "period": {
+    "start": 1492,
+    "end": 1600
+  },
   "geography": {
     "region": "Americas",
-    "coordinates": [10.0, -75.0]
+    "coordinates": [
+      10.0,
+      -75.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Spanish Empire", "Conquistadors"],
-    "victims": ["Indigenous Peoples of the Americas"]
+    "perpetrators": [
+      "Spanish Empire",
+      "Conquistadors"
+    ],
+    "victims": [
+      "Indigenous Peoples of the Americas"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -20,7 +31,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 100,
       "ideology": 80,
       "complicity": 60
@@ -35,8 +46,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -61,14 +71,26 @@
       }
     }
   },
-  "tags": ["continental_collapse", "disease_multiplier", "resource_extraction"],
+  "tags": [
+    "continental_collapse",
+    "disease_multiplier",
+    "resource_extraction"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
     "pattern_note": "Biological warfare is distinct from intentional germ warfare. Systemic intensity comes from Encomienda (labor) and Requerimiento."
   },
   "sources": [
-    { "title": "The Great Dying", "author": "Koch et al.", "year": 2019 },
-    { "title": "Open Veins of Latin America", "author": "Eduardo Galeano", "year": 1971 }
+    {
+      "title": "The Great Dying",
+      "author": "Koch et al.",
+      "year": 2019
+    },
+    {
+      "title": "Open Veins of Latin America",
+      "author": "Eduardo Galeano",
+      "year": 1971
+    }
   ]
 }

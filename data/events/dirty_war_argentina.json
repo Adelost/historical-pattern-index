@@ -2,14 +2,29 @@
   "id": "dirty_war_argentina_1976",
   "name": "Dirty War (Argentina)",
   "status": "historic",
-  "period": { "start": 1976, "end": 1983 },
+  "period": {
+    "start": 1976,
+    "end": 1983
+  },
   "geography": {
     "region": "South America (Argentina)",
-    "coordinates": [-34.6, -58.4]
+    "coordinates": [
+      -34.6,
+      -58.4
+    ]
   },
   "participants": {
-    "perpetrators": ["Argentine military junta", "National Reorganization Process"],
-    "victims": ["Political dissidents", "Leftists", "Students", "Union members", "Journalists"]
+    "perpetrators": [
+      "Argentine military junta",
+      "National Reorganization Process"
+    ],
+    "victims": [
+      "Political dissidents",
+      "Leftists",
+      "Students",
+      "Union members",
+      "Journalists"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +36,7 @@
       "note": "Official estimate: 9,000. Human rights groups: 30,000 'desaparecidos' (disappeared). Many thrown alive from planes into ocean ('death flights'). Babies stolen from detained mothers."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 80,
       "complicity": 80
@@ -36,8 +51,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +76,28 @@
       }
     }
   },
-  "tags": ["state_terrorism", "disappearances", "cold_war", "operation_condor", "death_flights"],
+  "tags": [
+    "state_terrorism",
+    "disappearances",
+    "cold_war",
+    "operation_condor",
+    "death_flights"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Part of US-backed Operation Condor across South America. 'Disappearance' as method - bodies never found, plausible deniability. Mothers of Plaza de Mayo still march weekly. Transitional justice model: trials resumed 2006 after amnesty laws overturned. ~500 stolen babies still being identified via DNA."
   },
   "sources": [
-    { "title": "Nunca Más (Never Again)", "author": "CONADEP", "year": 1984 },
-    { "title": "A Lexicon of Terror", "author": "Marguerite Feitlowitz", "year": 1998 }
+    {
+      "title": "Nunca Más (Never Again)",
+      "author": "CONADEP",
+      "year": 1984
+    },
+    {
+      "title": "A Lexicon of Terror",
+      "author": "Marguerite Feitlowitz",
+      "year": 1998
+    }
   ]
 }

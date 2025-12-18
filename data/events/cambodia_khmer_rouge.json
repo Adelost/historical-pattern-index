@@ -2,14 +2,28 @@
   "id": "cambodia_khmer_rouge_1975",
   "name": "Cambodian Genocide (Khmer Rouge)",
   "status": "historic",
-  "period": { "start": 1975, "end": 1979 },
+  "period": {
+    "start": 1975,
+    "end": 1979
+  },
   "geography": {
     "region": "Southeast Asia",
-    "coordinates": [12.5, 104.9]
+    "coordinates": [
+      12.5,
+      104.9
+    ]
   },
   "participants": {
-    "perpetrators": ["Khmer Rouge (CPK)", "Pol Pot Regime"],
-    "victims": ["Urban Population ('New People')", "Intellectuals", "Ethnic Minorities (Cham, Vietnamese, Chinese)", "Religious Groups"]
+    "perpetrators": [
+      "Khmer Rouge (CPK)",
+      "Pol Pot Regime"
+    ],
+    "victims": [
+      "Urban Population ('New People')",
+      "Intellectuals",
+      "Ethnic Minorities (Cham, Vietnamese, Chinese)",
+      "Religious Groups"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +35,7 @@
       "note": "Deaths from execution, starvation, and forced labor."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 100,
       "profit": 60,
       "ideology": 100,
       "complicity": 60
@@ -36,8 +50,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": false
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +75,26 @@
       }
     }
   },
-  "tags": ["autogenocide", "agrarian_utopia", "ideology_driven"],
+  "tags": [
+    "autogenocide",
+    "agrarian_utopia",
+    "ideology_driven"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "A non-European example of Tier 2. Matches the Holocaust profile (Ideology=100, Intensity=90) but driven by agrarian communism rather than race. Proves that systematic patterns are universal."
   },
   "sources": [
-    { "title": "The Pol Pot Regime", "author": "Ben Kiernan", "year": 1996 },
-    { "title": "Voices from S-21", "author": "David Chandler", "year": 1999 }
+    {
+      "title": "The Pol Pot Regime",
+      "author": "Ben Kiernan",
+      "year": 1996
+    },
+    {
+      "title": "Voices from S-21",
+      "author": "David Chandler",
+      "year": 1999
+    }
   ]
 }

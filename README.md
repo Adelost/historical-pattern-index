@@ -68,6 +68,8 @@ This project attempts to fix that.
 | Tigray War | 2020-2022 | 300k-500k | Industrial | **Denied** |
 <!-- /STATS:EVENTS_TABLE -->
 
+**[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)** — includes map view, timeline, and detailed score breakdowns for each event.
+
 Full dataset: [`/data/events/`](data/events/)
 
 ---

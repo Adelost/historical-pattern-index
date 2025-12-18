@@ -2,14 +2,26 @@
   "id": "herero_nama_genocide_1904",
   "name": "Herero and Nama Genocide",
   "status": "historic",
-  "period": { "start": 1904, "end": 1908 },
+  "period": {
+    "start": 1904,
+    "end": 1908
+  },
   "geography": {
     "region": "Southern Africa (German South West Africa)",
-    "coordinates": [-22.0, 17.0]
+    "coordinates": [
+      -22.0,
+      17.0
+    ]
   },
   "participants": {
-    "perpetrators": ["German Empire", "Schutztruppe"],
-    "victims": ["Herero people", "Nama people"]
+    "perpetrators": [
+      "German Empire",
+      "Schutztruppe"
+    ],
+    "victims": [
+      "Herero people",
+      "Nama people"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -20,7 +32,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 100,
       "profit": 80,
       "ideology": 60,
       "complicity": 60
@@ -35,8 +47,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": false
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": true,
@@ -61,14 +72,27 @@
       }
     }
   },
-  "tags": ["colonialism", "total_erasure", "concentration_camps", "extermination_order"],
+  "tags": [
+    "colonialism",
+    "total_erasure",
+    "concentration_camps",
+    "extermination_order"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "First genocide of the 20th century. General von Trotha's Vernichtungsbefehl (extermination order) explicitly commanded annihilation. Survivors driven into Omaheke Desert to die. Concentration camps with 45% mortality rate."
   },
   "sources": [
-    { "title": "Germany's Genocide of the Herero", "author": "Jeremy Sarkin", "year": 2011 },
-    { "title": "The Kaiser's Holocaust", "author": "David Olusoga & Casper Erichsen", "year": 2010 }
+    {
+      "title": "Germany's Genocide of the Herero",
+      "author": "Jeremy Sarkin",
+      "year": 2011
+    },
+    {
+      "title": "The Kaiser's Holocaust",
+      "author": "David Olusoga & Casper Erichsen",
+      "year": 2010
+    }
   ]
 }

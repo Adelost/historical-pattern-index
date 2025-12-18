@@ -2,14 +2,26 @@
   "id": "spanish_conquest_yucatan_1562",
   "name": "Spanish Conquest of Yucatán (Cultural Erasure)",
   "status": "historic",
-  "period": { "start": 1527, "end": 1570 },
+  "period": {
+    "start": 1527,
+    "end": 1570
+  },
   "geography": {
     "region": "Central America / Mexico",
-    "coordinates": [20.0, -89.0]
+    "coordinates": [
+      20.0,
+      -89.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Spanish Empire", "Franciscan Order", "Diego de Landa"],
-    "victims": ["Maya Civilization"]
+    "perpetrators": [
+      "Spanish Empire",
+      "Franciscan Order",
+      "Diego de Landa"
+    ],
+    "victims": [
+      "Maya Civilization"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Mortality driven by war and disease. The unique aspect is 'Epistemicide' (destruction of knowledge) via the Auto-da-fé of Maní (1562) where 27 codices and 5000 idols were burned."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 100,
       "ideology": 60,
       "complicity": 60
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,27 @@
       }
     }
   },
-  "tags": ["cultural_erasure", "epistemicide", "colonialism", "religious_persecution"],
+  "tags": [
+    "cultural_erasure",
+    "epistemicide",
+    "colonialism",
+    "religious_persecution"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
     "pattern_note": "A prime example of 'Epistemicide'. Shows that Ideology (Religion) combined with Profit (Encomienda) can lead to the total destruction of recorded history, distinct from biological extinction."
   },
   "sources": [
-    { "title": "Relación de las cosas de Yucatán", "author": "Diego de Landa", "year": 1566 },
-    { "title": "Ambivalent Conquests", "author": "Inga Clendinnen", "year": 1987 }
+    {
+      "title": "Relación de las cosas de Yucatán",
+      "author": "Diego de Landa",
+      "year": 1566
+    },
+    {
+      "title": "Ambivalent Conquests",
+      "author": "Inga Clendinnen",
+      "year": 1987
+    }
   ]
 }

@@ -2,14 +2,25 @@
   "id": "congo_free_state_1885",
   "name": "Congo Free State",
   "status": "historic",
-  "period": { "start": 1885, "end": 1908 },
+  "period": {
+    "start": 1885,
+    "end": 1908
+  },
   "geography": {
     "region": "Central Africa",
-    "coordinates": [-2.0, 22.0]
+    "coordinates": [
+      -2.0,
+      22.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Force Publique", "King Leopold II (Private Fiefdom)"],
-    "victims": ["Congolese Population"]
+    "perpetrators": [
+      "Force Publique",
+      "King Leopold II (Private Fiefdom)"
+    ],
+    "victims": [
+      "Congolese Population"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -20,7 +31,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 60,
+      "systematic_intensity": 56,
       "profit": 100,
       "ideology": 20,
       "complicity": 80
@@ -35,8 +46,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -61,15 +71,31 @@
       }
     }
   },
-  "tags": ["profit_driven", "colonialism", "rubber"],
+  "tags": [
+    "profit_driven",
+    "colonialism",
+    "rubber"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "Driven purely by extraction. Propaganda marked False because they didn't try to convince the victims, they just enslaved them."
   },
   "sources": [
-    { "title": "King Leopold's Ghost", "author": "Adam Hochschild", "year": 1998 },
-    { "title": "Red Rubber: The Story of the Rubber Slave Trade", "author": "E.D. Morel", "year": 1906 },
-    { "title": "The Congo: From Leopold to Kabila", "author": "Georges Nzongola-Ntalaja", "year": 2002 }
+    {
+      "title": "King Leopold's Ghost",
+      "author": "Adam Hochschild",
+      "year": 1998
+    },
+    {
+      "title": "Red Rubber: The Story of the Rubber Slave Trade",
+      "author": "E.D. Morel",
+      "year": 1906
+    },
+    {
+      "title": "The Congo: From Leopold to Kabila",
+      "author": "Georges Nzongola-Ntalaja",
+      "year": 2002
+    }
   ]
 }

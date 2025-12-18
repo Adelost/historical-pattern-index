@@ -2,14 +2,26 @@
   "id": "dzungar_genocide_1755",
   "name": "Dzungar Genocide",
   "status": "historic",
-  "period": { "start": 1755, "end": 1758 },
+  "period": {
+    "start": 1755,
+    "end": 1758
+  },
   "geography": {
     "region": "Central Asia (Dzungaria, modern Xinjiang)",
-    "coordinates": [44.0, 85.0]
+    "coordinates": [
+      44.0,
+      85.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Qing Dynasty", "Qianlong Emperor", "Qing military"],
-    "victims": ["Dzungar people (Oirat Mongols)"]
+    "perpetrators": [
+      "Qing Dynasty",
+      "Qianlong Emperor",
+      "Qing military"
+    ],
+    "victims": [
+      "Dzungar people (Oirat Mongols)"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Near-total destruction of Dzungar people. Qianlong explicitly ordered extermination. Survivors fled to Russia or were enslaved. Smallpox epidemic killed many survivors. Region repopulated with Han, Uyghur, and other groups. One of history's most complete genocides."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 100,
       "complicity": 100
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -63,13 +74,27 @@
     }
   },
   "denial_status": "denied",
-  "tags": ["genocide", "ethnic_cleansing", "qing_dynasty", "central_asia", "total_destruction"],
+  "tags": [
+    "genocide",
+    "ethnic_cleansing",
+    "qing_dynasty",
+    "central_asia",
+    "total_destruction"
+  ],
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "One of the most complete genocides in history - 80% of an entire people killed in 3 years. Qianlong Emperor's own words: 'Show no mercy at all to these rebels. Only the old and weak should be saved.' Dzungars were last nomadic empire to challenge Qing. Their elimination opened Xinjiang for settlement. Critical context for understanding current Uyghur situation in same region."
   },
   "sources": [
-    { "title": "The Qing Empire and the Opium War", "author": "Mao Haijian", "year": 2016 },
-    { "title": "China's Last Empire: The Great Qing", "author": "William Rowe", "year": 2009 }
+    {
+      "title": "The Qing Empire and the Opium War",
+      "author": "Mao Haijian",
+      "year": 2016
+    },
+    {
+      "title": "China's Last Empire: The Great Qing",
+      "author": "William Rowe",
+      "year": 2009
+    }
   ]
 }

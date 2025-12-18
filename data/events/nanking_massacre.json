@@ -2,14 +2,25 @@
   "id": "nanking_massacre_1937",
   "name": "Nanking Massacre (Rape of Nanking)",
   "status": "historic",
-  "period": { "start": 1937, "end": 1938 },
+  "period": {
+    "start": 1937,
+    "end": 1938
+  },
   "geography": {
     "region": "East Asia (China)",
-    "coordinates": [32.0, 118.8]
+    "coordinates": [
+      32.0,
+      118.8
+    ]
   },
   "participants": {
-    "perpetrators": ["Imperial Japanese Army"],
-    "victims": ["Chinese civilians", "Chinese POWs"]
+    "perpetrators": [
+      "Imperial Japanese Army"
+    ],
+    "victims": [
+      "Chinese civilians",
+      "Chinese POWs"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +32,7 @@
       "note": "Occurred over approximately 6 weeks. Estimates vary widely - China claims 300,000+, some Japanese historians dispute figures."
     },
     "scores": {
-      "systematic_intensity": 40,
+      "systematic_intensity": 44,
       "profit": 20,
       "ideology": 80,
       "complicity": 80
@@ -36,8 +47,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +72,28 @@
       }
     }
   },
-  "tags": ["war_crime", "military_atrocity", "rape", "denial", "asian_perpetrator"],
+  "tags": [
+    "war_crime",
+    "military_atrocity",
+    "rape",
+    "denial",
+    "asian_perpetrator"
+  ],
   "denial_status": "disputed",
   "analysis": {
     "tier": "CHAOTIC ATROCITY",
     "pattern_note": "Lower systematic intensity despite massive death toll - this was chaotic military violence rather than bureaucratic genocide. Shows that industrial organization isn't required for mass death. Still denied/minimized in Japan, creating ongoing diplomatic tensions with China."
   },
   "sources": [
-    { "title": "The Rape of Nanking", "author": "Iris Chang", "year": 1997 },
-    { "title": "The Nanjing Massacre in History and Historiography", "author": "Joshua Fogel", "year": 2000 }
+    {
+      "title": "The Rape of Nanking",
+      "author": "Iris Chang",
+      "year": 1997
+    },
+    {
+      "title": "The Nanjing Massacre in History and Historiography",
+      "author": "Joshua Fogel",
+      "year": 2000
+    }
   ]
 }

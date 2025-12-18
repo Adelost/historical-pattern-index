@@ -2,14 +2,27 @@
   "id": "uyghur_persecution_2017",
   "name": "Uyghur Persecution (Xinjiang)",
   "status": "ongoing",
-  "period": { "start": 2017, "end": 2024 },
+  "period": {
+    "start": 2017,
+    "end": 2024
+  },
   "geography": {
     "region": "Central Asia (China/Xinjiang)",
-    "coordinates": [41.0, 85.0]
+    "coordinates": [
+      41.0,
+      85.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Chinese Communist Party", "Xinjiang regional government"],
-    "victims": ["Uyghurs", "Kazakhs", "Other Turkic Muslims"]
+    "perpetrators": [
+      "Chinese Communist Party",
+      "Xinjiang regional government"
+    ],
+    "victims": [
+      "Uyghurs",
+      "Kazakhs",
+      "Other Turkic Muslims"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -36,8 +49,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": true
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +74,28 @@
       }
     }
   },
-  "tags": ["cultural_genocide", "mass_detention", "surveillance_state", "forced_labor", "ongoing"],
+  "tags": [
+    "cultural_genocide",
+    "mass_detention",
+    "surveillance_state",
+    "forced_labor",
+    "ongoing"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Industrial-scale detention and cultural erasure using modern surveillance technology. Forced sterilization reducing birth rates by 84%. Global supply chains implicated in forced labor. Declared genocide by US, UK, Canada, Netherlands. China claims 'vocational training'."
   },
   "sources": [
-    { "title": "The China Cables", "author": "ICIJ Investigation", "year": 2019 },
-    { "title": "Xinjiang Police Files", "author": "Adrian Zenz", "year": 2022 }
+    {
+      "title": "The China Cables",
+      "author": "ICIJ Investigation",
+      "year": 2019
+    },
+    {
+      "title": "Xinjiang Police Files",
+      "author": "Adrian Zenz",
+      "year": 2022
+    }
   ]
 }

@@ -2,14 +2,27 @@
   "id": "holodomor_1932",
   "name": "Holodomor (Ukrainian Famine)",
   "status": "historic",
-  "period": { "start": 1932, "end": 1933 },
+  "period": {
+    "start": 1932,
+    "end": 1933
+  },
   "geography": {
     "region": "Eastern Europe (Soviet Ukraine)",
-    "coordinates": [49.0, 32.0]
+    "coordinates": [
+      49.0,
+      32.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Soviet Union", "Stalin regime", "NKVD"],
-    "victims": ["Ukrainian peasants", "Kulaks"]
+    "perpetrators": [
+      "Soviet Union",
+      "Stalin regime",
+      "NKVD"
+    ],
+    "victims": [
+      "Ukrainian peasants",
+      "Kulaks"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +34,7 @@
       "note": "Estimates vary widely. Soviet archives were sealed. Some historians count 3.5M, others up to 10M including birth deficit."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 60,
       "ideology": 80,
       "complicity": 80
@@ -36,8 +49,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +74,27 @@
       }
     }
   },
-  "tags": ["famine_as_weapon", "communism", "collectivization", "denial"],
+  "tags": [
+    "famine_as_weapon",
+    "communism",
+    "collectivization",
+    "denial"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Grain quotas enforced while millions starved. Blacklisted villages sealed off. Demonstrates how ideology ('destroy the kulaks as a class') combined with economic extraction (grain exports) creates famine. Still denied by Russia."
   },
   "sources": [
-    { "title": "Bloodlands: Europe Between Hitler and Stalin", "author": "Timothy Snyder", "year": 2010 },
-    { "title": "Red Famine: Stalin's War on Ukraine", "author": "Anne Applebaum", "year": 2017 }
+    {
+      "title": "Bloodlands: Europe Between Hitler and Stalin",
+      "author": "Timothy Snyder",
+      "year": 2010
+    },
+    {
+      "title": "Red Famine: Stalin's War on Ukraine",
+      "author": "Anne Applebaum",
+      "year": 2017
+    }
   ]
 }

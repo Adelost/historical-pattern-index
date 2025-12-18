@@ -2,14 +2,26 @@
   "id": "assyrian_genocide_1914",
   "name": "Assyrian Genocide (Seyfo)",
   "status": "historic",
-  "period": { "start": 1914, "end": 1920 },
+  "period": {
+    "start": 1914,
+    "end": 1920
+  },
   "geography": {
     "region": "Anatolia / Ottoman Empire / Persia",
-    "coordinates": [37.5, 43.0]
+    "coordinates": [
+      37.5,
+      43.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Ottoman Empire", "Kurdish irregulars"],
-    "victims": ["Assyrian Christians", "Syriac Christians"]
+    "perpetrators": [
+      "Ottoman Empire",
+      "Kurdish irregulars"
+    ],
+    "victims": [
+      "Assyrian Christians",
+      "Syriac Christians"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Called 'Seyfo' (sword) by Assyrians. Occurred alongside Armenian and Greek genocides. Estimates range from 150,000 to 750,000."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 78,
       "profit": 40,
       "ideology": 100,
       "complicity": 80
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,26 @@
       }
     }
   },
-  "tags": ["ethnic_cleansing", "religious_persecution", "ethno_nationalism"],
+  "tags": [
+    "ethnic_cleansing",
+    "religious_persecution",
+    "ethno_nationalism"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Often overlooked alongside Armenian Genocide. Part of Ottoman campaign to create homogeneous Turkish state. Destroyed ancient Assyrian presence in southeastern Anatolia. Less internationally recognized than Armenian Genocide."
   },
   "sources": [
-    { "title": "Year of the Sword", "author": "Joseph Yacoub", "year": 2016 },
-    { "title": "The Thirty-Year Genocide", "author": "Benny Morris & Dror Ze'evi", "year": 2019 }
+    {
+      "title": "Year of the Sword",
+      "author": "Joseph Yacoub",
+      "year": 2016
+    },
+    {
+      "title": "The Thirty-Year Genocide",
+      "author": "Benny Morris & Dror Ze'evi",
+      "year": 2019
+    }
   ]
 }

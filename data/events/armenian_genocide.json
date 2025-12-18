@@ -2,14 +2,27 @@
   "id": "armenian_genocide_1915",
   "name": "Armenian Genocide",
   "status": "historic",
-  "period": { "start": 1915, "end": 1923 },
+  "period": {
+    "start": 1915,
+    "end": 1923
+  },
   "geography": {
     "region": "Anatolia / Ottoman Empire",
-    "coordinates": [39.0, 35.0]
+    "coordinates": [
+      39.0,
+      35.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Ottoman Empire", "Young Turks (Committee of Union and Progress)"],
-    "victims": ["Armenians", "Assyrians", "Greeks"]
+    "perpetrators": [
+      "Ottoman Empire",
+      "Young Turks (Committee of Union and Progress)"
+    ],
+    "victims": [
+      "Armenians",
+      "Assyrians",
+      "Greeks"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -36,8 +49,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": true
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +74,27 @@
       }
     }
   },
-  "tags": ["ideology_driven", "death_marches", "denial", "ethno_nationalism"],
+  "tags": [
+    "ideology_driven",
+    "death_marches",
+    "denial",
+    "ethno_nationalism"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "The 'prototype' for 20th century genocide. Tehcir Law legalized deportations. Death marches into Syrian desert. Hitler reportedly said 'Who remembers the Armenians?' Still denied by Turkey - demonstrates how denial enables repetition."
   },
   "sources": [
-    { "title": "The Burning Tigris", "author": "Peter Balakian", "year": 2003 },
-    { "title": "A Shameful Act", "author": "Taner Akcam", "year": 2006 }
+    {
+      "title": "The Burning Tigris",
+      "author": "Peter Balakian",
+      "year": 2003
+    },
+    {
+      "title": "A Shameful Act",
+      "author": "Taner Akcam",
+      "year": 2006
+    }
   ]
 }

@@ -2,14 +2,29 @@
   "id": "second_congo_war_1998",
   "name": "Second Congo War (Africa's World War)",
   "status": "historic",
-  "period": { "start": 1998, "end": 2003 },
+  "period": {
+    "start": 1998,
+    "end": 2003
+  },
   "geography": {
     "region": "Central Africa (Democratic Republic of Congo)",
-    "coordinates": [-2.5, 23.5]
+    "coordinates": [
+      -2.5,
+      23.5
+    ]
   },
   "participants": {
-    "perpetrators": ["Rwanda", "Uganda", "Various militias", "DRC government forces", "Zimbabwe", "Angola"],
-    "victims": ["Congolese civilians"]
+    "perpetrators": [
+      "Rwanda",
+      "Uganda",
+      "Various militias",
+      "DRC government forces",
+      "Zimbabwe",
+      "Angola"
+    ],
+    "victims": [
+      "Congolese civilians"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +36,7 @@
       "note": "Deadliest conflict since WWII. Most deaths from disease and starvation caused by displacement. 9 African nations involved. Conflict over minerals (coltan, diamonds, gold) fueled by global electronics demand."
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 67,
       "profit": 100,
       "ideology": 80,
       "complicity": 100
@@ -36,8 +51,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +76,28 @@
       }
     }
   },
-  "tags": ["resource_war", "proxy_war", "african_conflict", "minerals", "post_cold_war"],
+  "tags": [
+    "resource_war",
+    "proxy_war",
+    "african_conflict",
+    "minerals",
+    "post_cold_war"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
     "pattern_note": "Deadliest conflict since WWII but barely known in West. 'Coltan war' - your phone may contain minerals mined by forced labor during this conflict. Multiple perpetrators make attribution complex. Shows how resource extraction creates mass death even without explicit genocide policy. Ongoing instability in eastern DRC traces directly to this war."
   },
   "sources": [
-    { "title": "Dancing in the Glory of Monsters: The Collapse of the Congo and the Great War of Africa", "author": "Jason Stearns", "year": 2011 },
-    { "title": "Africa's World War: Congo, the Rwandan Genocide, and the Making of a Continental Catastrophe", "author": "Gerard Prunier", "year": 2009 }
+    {
+      "title": "Dancing in the Glory of Monsters: The Collapse of the Congo and the Great War of Africa",
+      "author": "Jason Stearns",
+      "year": 2011
+    },
+    {
+      "title": "Africa's World War: Congo, the Rwandan Genocide, and the Making of a Continental Catastrophe",
+      "author": "Gerard Prunier",
+      "year": 2009
+    }
   ]
 }

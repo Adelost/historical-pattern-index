@@ -2,14 +2,26 @@
   "id": "guatemalan_genocide_1981",
   "name": "Guatemalan Genocide (Maya)",
   "status": "historic",
-  "period": { "start": 1981, "end": 1983 },
+  "period": {
+    "start": 1981,
+    "end": 1983
+  },
   "geography": {
     "region": "Central America (Guatemala)",
-    "coordinates": [15.5, -90.3]
+    "coordinates": [
+      15.5,
+      -90.3
+    ]
   },
   "participants": {
-    "perpetrators": ["Guatemalan Army", "Civil patrols (PAC)", "US Government (support)"],
-    "victims": ["Maya peoples (Ixil, Kiche, Qeqchi, others)"]
+    "perpetrators": [
+      "Guatemalan Army",
+      "Civil patrols (PAC)",
+      "US Government (support)"
+    ],
+    "victims": [
+      "Maya peoples (Ixil, Kiche, Qeqchi, others)"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "CEH Truth Commission documented 200,000 deaths/disappearances during civil war (1960-1996). 83% of identified victims were Maya. 93% of atrocities committed by state forces. Genocide phase concentrated in 1981-1983 under Rios Montt."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 40,
       "ideology": 100,
       "complicity": 100
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +73,28 @@
       }
     }
   },
-  "tags": ["cold_war", "us_backed", "indigenous", "counterinsurgency", "latin_america"],
+  "tags": [
+    "cold_war",
+    "us_backed",
+    "indigenous",
+    "counterinsurgency",
+    "latin_america"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "US-backed genocide during Cold War. Reagan praised Rios Montt as 'a man of great personal integrity.' Scorched earth policy destroyed 626 villages. Maya targeted as 'internal enemy' regardless of guerrilla involvement. Rios Montt convicted of genocide in 2013 (overturned on technicality). Shows how anti-communism justified ethnic extermination."
   },
   "sources": [
-    { "title": "Guatemala: Memory of Silence (CEH Report)", "author": "Commission for Historical Clarification", "year": 1999 },
-    { "title": "I, Rigoberta Menchu", "author": "Rigoberta Menchu", "year": 1983 }
+    {
+      "title": "Guatemala: Memory of Silence (CEH Report)",
+      "author": "Commission for Historical Clarification",
+      "year": 1999
+    },
+    {
+      "title": "I, Rigoberta Menchu",
+      "author": "Rigoberta Menchu",
+      "year": 1983
+    }
   ]
 }

@@ -2,14 +2,26 @@
   "id": "greek_genocide_1914",
   "name": "Greek Genocide (Pontic Greeks)",
   "status": "historic",
-  "period": { "start": 1914, "end": 1923 },
+  "period": {
+    "start": 1914,
+    "end": 1923
+  },
   "geography": {
     "region": "Anatolia / Ottoman Empire",
-    "coordinates": [41.0, 36.0]
+    "coordinates": [
+      41.0,
+      36.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Ottoman Empire", "Turkish Nationalists"],
-    "victims": ["Pontic Greeks", "Anatolian Greeks"]
+    "perpetrators": [
+      "Ottoman Empire",
+      "Turkish Nationalists"
+    ],
+    "victims": [
+      "Pontic Greeks",
+      "Anatolian Greeks"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Part of broader Christian genocide alongside Armenians and Assyrians. Many died in labor battalions and death marches."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 89,
       "profit": 40,
       "ideology": 100,
       "complicity": 80
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,27 @@
       }
     }
   },
-  "tags": ["ethnic_cleansing", "death_marches", "labor_battalions", "ethno_nationalism"],
+  "tags": [
+    "ethnic_cleansing",
+    "death_marches",
+    "labor_battalions",
+    "ethno_nationalism"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Concurrent with Armenian Genocide, same perpetrators and methods. Greeks had lived in Anatolia for 3000 years. Population exchanges after 1923 completed the ethnic cleansing. Recognized by Greece, Cyprus, and several US states."
   },
   "sources": [
-    { "title": "The Thirty-Year Genocide", "author": "Benny Morris & Dror Ze'evi", "year": 2019 },
-    { "title": "Not Even My Name", "author": "Thea Halo", "year": 2000 }
+    {
+      "title": "The Thirty-Year Genocide",
+      "author": "Benny Morris & Dror Ze'evi",
+      "year": 2019
+    },
+    {
+      "title": "Not Even My Name",
+      "author": "Thea Halo",
+      "year": 2000
+    }
   ]
 }

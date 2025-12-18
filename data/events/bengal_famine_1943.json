@@ -2,14 +2,26 @@
   "id": "bengal_famine_1943",
   "name": "Bengal Famine of 1943",
   "status": "historic",
-  "period": { "start": 1943, "end": 1944 },
+  "period": {
+    "start": 1943,
+    "end": 1944
+  },
   "geography": {
     "region": "South Asia (British India, Bengal)",
-    "coordinates": [22.5, 88.3]
+    "coordinates": [
+      22.5,
+      88.3
+    ]
   },
   "participants": {
-    "perpetrators": ["British Raj", "Churchill War Cabinet"],
-    "victims": ["Bengali civilians", "Rural poor"]
+    "perpetrators": [
+      "British Raj",
+      "Churchill War Cabinet"
+    ],
+    "victims": [
+      "Bengali civilians",
+      "Rural poor"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "Deaths from starvation and disease during WWII. Rice exports continued. Churchill rejected relief ships. His quote: 'Indians breeding like rabbits.' Separate from British India Famines (1876-1902)."
     },
     "scores": {
-      "systematic_intensity": 60,
+      "systematic_intensity": 67,
       "profit": 60,
       "ideology": 40,
       "complicity": 100
@@ -36,8 +48,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,28 @@
       }
     }
   },
-  "tags": ["famine_as_weapon", "colonialism", "british_empire", "wwii", "churchill"],
+  "tags": [
+    "famine_as_weapon",
+    "colonialism",
+    "british_empire",
+    "wwii",
+    "churchill"
+  ],
   "denial_status": "disputed",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "Churchill's famine. Rice diverted for war effort and exports while millions starved. Relief ships denied. 'Denial policy' destroyed boats and rice stocks to prevent Japanese use. Churchill blamed Indians for 'breeding like rabbits.' Distinct from 1876-1902 famines - this was WWII-era with Churchill directly responsible. Still politically sensitive in UK."
   },
   "sources": [
-    { "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II", "author": "Madhusree Mukerjee", "year": 2010 },
-    { "title": "Hungry Bengal: War, Famine and the End of Empire", "author": "Janam Mukherjee", "year": 2015 }
+    {
+      "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II",
+      "author": "Madhusree Mukerjee",
+      "year": 2010
+    },
+    {
+      "title": "Hungry Bengal: War, Famine and the End of Empire",
+      "author": "Janam Mukherjee",
+      "year": 2015
+    }
   ]
 }

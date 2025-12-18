@@ -2,14 +2,25 @@
   "id": "east_timor_genocide_1975",
   "name": "East Timor Genocide",
   "status": "historic",
-  "period": { "start": 1975, "end": 1999 },
+  "period": {
+    "start": 1975,
+    "end": 1999
+  },
   "geography": {
     "region": "Southeast Asia (East Timor)",
-    "coordinates": [-8.5, 125.5]
+    "coordinates": [
+      -8.5,
+      125.5
+    ]
   },
   "participants": {
-    "perpetrators": ["Indonesian military", "Suharto regime"],
-    "victims": ["East Timorese population"]
+    "perpetrators": [
+      "Indonesian military",
+      "Suharto regime"
+    ],
+    "victims": [
+      "East Timorese population"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +32,7 @@
       "note": "Deaths from military action, famine, and disease during 24-year occupation. UN CAVR commission documented systematic violations."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 78,
       "profit": 60,
       "ideology": 60,
       "complicity": 100
@@ -36,8 +47,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +72,27 @@
       }
     }
   },
-  "tags": ["occupation", "cold_war", "western_complicity", "anti_communist"],
+  "tags": [
+    "occupation",
+    "cold_war",
+    "western_complicity",
+    "anti_communist"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "Invasion occurred day after US President Ford visited Jakarta. Western powers armed Indonesia and blocked UN action. Up to 25% of population killed. Independence finally achieved in 2002 after UN intervention."
   },
   "sources": [
-    { "title": "Chega! Final Report of the CAVR", "author": "UN Commission for Reception, Truth and Reconciliation", "year": 2005 },
-    { "title": "East Timor: A Nation's Bitter Dawn", "author": "John Martinkus", "year": 2001 }
+    {
+      "title": "Chega! Final Report of the CAVR",
+      "author": "UN Commission for Reception, Truth and Reconciliation",
+      "year": 2005
+    },
+    {
+      "title": "East Timor: A Nation's Bitter Dawn",
+      "author": "John Martinkus",
+      "year": 2001
+    }
   ]
 }

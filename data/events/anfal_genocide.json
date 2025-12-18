@@ -2,14 +2,28 @@
   "id": "anfal_genocide_1986",
   "name": "Anfal Campaign (Kurdish Genocide)",
   "status": "historic",
-  "period": { "start": 1986, "end": 1989 },
+  "period": {
+    "start": 1986,
+    "end": 1989
+  },
   "geography": {
     "region": "Middle East (Iraq/Kurdistan)",
-    "coordinates": [36.2, 44.0]
+    "coordinates": [
+      36.2,
+      44.0
+    ]
   },
   "participants": {
-    "perpetrators": ["Iraqi Ba'ath Party", "Saddam Hussein regime", "Iraqi Army"],
-    "victims": ["Kurdish people", "Assyrians", "Other minorities"]
+    "perpetrators": [
+      "Iraqi Ba'ath Party",
+      "Saddam Hussein regime",
+      "Iraqi Army"
+    ],
+    "victims": [
+      "Kurdish people",
+      "Assyrians",
+      "Other minorities"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +35,7 @@
       "note": "Included Halabja chemical attack (5,000 killed in single day). 4,000+ villages destroyed. Up to 182,000 'disappeared' per Kurdish estimates."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 100,
       "profit": 40,
       "ideology": 80,
       "complicity": 80
@@ -36,8 +50,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": false
+        "biological_warfare": true
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +75,27 @@
       }
     }
   },
-  "tags": ["chemical_weapons", "ethnic_cleansing", "arab_nationalism", "village_destruction"],
+  "tags": [
+    "chemical_weapons",
+    "ethnic_cleansing",
+    "arab_nationalism",
+    "village_destruction"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Named after Quranic chapter meaning 'spoils of war'. First use of chemical weapons against civilian population since WWI. Iraqi High Tribunal ruled it genocide in 2006. 'Chemical Ali' (Ali Hassan al-Majid) executed 2010. Western powers largely silent during campaign due to Iran-Iraq War alignment."
   },
   "sources": [
-    { "title": "Genocide in Iraq: The Anfal Campaign Against the Kurds", "author": "Human Rights Watch", "year": 1993 },
-    { "title": "Anfal: The Kurdish Genocide in Iraq", "author": "Choman Hardi", "year": 2011 }
+    {
+      "title": "Genocide in Iraq: The Anfal Campaign Against the Kurds",
+      "author": "Human Rights Watch",
+      "year": 1993
+    },
+    {
+      "title": "Anfal: The Kurdish Genocide in Iraq",
+      "author": "Choman Hardi",
+      "year": 2011
+    }
   ]
 }

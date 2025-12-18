@@ -27,11 +27,11 @@ All scores are derived from **binary checklists**. Each item is either true (1) 
 Score = (items checked / total items) × 100
 ```
 
-Example: If 8 of 10 systematic intensity items are true, the score is 80%.
+Example: If 8 of 9 systematic intensity items are true, the score is 89%.
 
 ---
 
-## 1. Systematic Intensity (10 items)
+## 1. Systematic Intensity (9 items)
 
 Measures organization, state involvement, and infrastructure of violence.
 
@@ -46,9 +46,10 @@ Measures organization, state involvement, and infrastructure of violence.
 | `property_seizure` | Was property or land systematically confiscated? |
 | `identification` | Were registry/ID systems used to identify victims? |
 | `biological_warfare` | Was starvation, disease, or sterilization used as a weapon? |
-| `duration_over_5y` | Did the system persist continuously for more than 5 years? |
 
 **Note**: `biological_warfare` is interpreted broadly to include deliberate famine and disease spread, not just laboratory pathogens.
+
+**Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less—and from a prevention standpoint, rapid genocides are more dangerous because there's less time to intervene.
 
 ---
 
@@ -126,13 +127,11 @@ Events are classified into tiers based on their score profile:
 
 1. **Equal weighting**: All items count equally. "Infrastructure for killing" probably matters more than "propaganda," but we lack objective criteria for differential weighting.
 
-2. **Duration threshold**: The ">5 years" cutoff is arbitrary. Rwanda killed 800,000 in 100 days—duration doesn't capture intensity.
+2. **Biological warfare ambiguity**: Broad interpretation (includes famine) may overclaim. Narrow interpretation (pathogens only) undercounts.
 
-3. **Biological warfare ambiguity**: Broad interpretation (includes famine) may overclaim. Narrow interpretation (pathogens only) undercounts.
+3. **Ideology clustering**: Most events score 60-100% on ideology because perpetrators almost always claim "higher purpose." The scale doesn't differentiate well at the high end.
 
-4. **Ideology clustering**: Most events score 60-100% on ideology because perpetrators almost always claim "higher purpose." The scale doesn't differentiate well at the high end.
-
-5. **Source language bias**: English-language academic sources are overrepresented.
+4. **Source language bias**: English-language academic sources are overrepresented.
 
 ---
 

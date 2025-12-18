@@ -2,14 +2,30 @@
   "id": "cultural_revolution_1966",
   "name": "Cultural Revolution",
   "status": "historic",
-  "period": { "start": 1966, "end": 1976 },
+  "period": {
+    "start": 1966,
+    "end": 1976
+  },
   "geography": {
     "region": "East Asia (China)",
-    "coordinates": [39.9, 116.4]
+    "coordinates": [
+      39.9,
+      116.4
+    ]
   },
   "participants": {
-    "perpetrators": ["Mao Zedong", "Red Guards", "Gang of Four", "CCP radicals"],
-    "victims": ["Intellectuals", "Capitalist roaders", "Traditional culture", "Religious groups"]
+    "perpetrators": [
+      "Mao Zedong",
+      "Red Guards",
+      "Gang of Four",
+      "CCP radicals"
+    ],
+    "victims": [
+      "Intellectuals",
+      "Capitalist roaders",
+      "Traditional culture",
+      "Religious groups"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +37,7 @@
       "note": "Estimates vary wildly from 500k to 8M. Separate from Great Leap Forward famine. Deaths from factional violence, persecution, suicide, and struggle sessions."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 78,
       "profit": 0,
       "ideology": 100,
       "complicity": 100
@@ -36,8 +52,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +77,27 @@
       }
     }
   },
-  "tags": ["ideology_driven", "cultural_destruction", "class_warfare", "youth_mobilization"],
+  "tags": [
+    "ideology_driven",
+    "cultural_destruction",
+    "class_warfare",
+    "youth_mobilization"
+  ],
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Mao mobilized youth against 'Four Olds' (customs, culture, habits, ideas). Destroyed temples, artifacts, books. Sent millions to countryside for 're-education'. Officially condemned by CCP (1981) as 'grave error' but detailed discussion still censored."
   },
   "sources": [
-    { "title": "The Cultural Revolution: A People's History", "author": "Frank Dikötter", "year": 2016 },
-    { "title": "Mao's Last Revolution", "author": "Roderick MacFarquhar & Michael Schoenhals", "year": 2006 }
+    {
+      "title": "The Cultural Revolution: A People's History",
+      "author": "Frank Dikötter",
+      "year": 2016
+    },
+    {
+      "title": "Mao's Last Revolution",
+      "author": "Roderick MacFarquhar & Michael Schoenhals",
+      "year": 2006
+    }
   ]
 }

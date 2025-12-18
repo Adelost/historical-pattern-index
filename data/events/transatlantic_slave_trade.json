@@ -2,14 +2,26 @@
   "id": "transatlantic_slave_trade_1500",
   "name": "Trans-Atlantic Slave Trade",
   "status": "historic",
-  "period": { "start": 1501, "end": 1867 },
+  "period": {
+    "start": 1501,
+    "end": 1867
+  },
   "geography": {
     "region": "Atlantic / Africa / Americas",
-    "coordinates": [0.0, -30.0]
+    "coordinates": [
+      0.0,
+      -30.0
+    ]
   },
   "participants": {
-    "perpetrators": ["European Colonial Powers", "African Slave Traders", "American Plantation Owners"],
-    "victims": ["Enslaved West & Central Africans"]
+    "perpetrators": [
+      "European Colonial Powers",
+      "African Slave Traders",
+      "American Plantation Owners"
+    ],
+    "victims": [
+      "Enslaved West & Central Africans"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +33,7 @@
       "note": "UNDERSTATED FIGURE. Only counts Middle Passage deaths (~12.5M embarked, ~10.7M disembarked). TRUE TOLL much higher: millions more died in African capture raids, coastal holding, and on plantations. Some historians estimate 4-6M died before even boarding ships. Total system deaths possibly 10-15M+. This entry measures transport mortality only."
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 89,
       "profit": 100,
       "ideology": 20,
       "complicity": 100
@@ -36,8 +48,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +73,27 @@
       }
     }
   },
-  "tags": ["chattel_slavery", "profit_driven", "global_trade", "middle_passage"],
+  "tags": [
+    "chattel_slavery",
+    "profit_driven",
+    "global_trade",
+    "middle_passage"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "The definitive example of Profit-Driven Attrition. Ideology score is low (20%) because racism was often a consequence of the system, not the initial driver, though religious justification ('saving souls') was used."
   },
   "sources": [
-    { "title": "The Slave Trade: The Story of the Atlantic Slave Trade: 1440-1870", "author": "Hugh Thomas", "year": 1997 },
-    { "title": "Trans-Atlantic Slave Trade Database", "author": "Eltis et al.", "year": 2020 }
+    {
+      "title": "The Slave Trade: The Story of the Atlantic Slave Trade: 1440-1870",
+      "author": "Hugh Thomas",
+      "year": 1997
+    },
+    {
+      "title": "Trans-Atlantic Slave Trade Database",
+      "author": "Eltis et al.",
+      "year": 2020
+    }
   ]
 }

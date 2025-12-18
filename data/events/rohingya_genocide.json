@@ -2,14 +2,25 @@
   "id": "rohingya_genocide_2016",
   "name": "Rohingya Genocide",
   "status": "ongoing",
-  "period": { "start": 2016, "end": 2017 },
+  "period": {
+    "start": 2016,
+    "end": 2017
+  },
   "geography": {
     "region": "Southeast Asia (Myanmar/Rakhine State)",
-    "coordinates": [20.5, 92.8]
+    "coordinates": [
+      20.5,
+      92.8
+    ]
   },
   "participants": {
-    "perpetrators": ["Myanmar military (Tatmadaw)", "Buddhist nationalist militias"],
-    "victims": ["Rohingya Muslims"]
+    "perpetrators": [
+      "Myanmar military (Tatmadaw)",
+      "Buddhist nationalist militias"
+    ],
+    "victims": [
+      "Rohingya Muslims"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +32,7 @@
       "note": "Direct killings relatively low but 700,000+ forced to flee to Bangladesh. UN fact-finding mission concluded genocidal intent."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 20,
       "ideology": 100,
       "complicity": 80
@@ -36,8 +47,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": false,
@@ -62,14 +72,27 @@
       }
     }
   },
-  "tags": ["ethnic_cleansing", "religious_persecution", "statelessness", "ongoing"],
+  "tags": [
+    "ethnic_cleansing",
+    "religious_persecution",
+    "statelessness",
+    "ongoing"
+  ],
   "denial_status": "denied",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "Rohingya denied citizenship since 1982. Systematic campaign of murder, rape, and village burning. ICJ ordered Myanmar to prevent genocide (2020). Demonstrates how statelessness enables persecution - no legal protection, no home to return to."
   },
   "sources": [
-    { "title": "UN Fact-Finding Mission on Myanmar", "author": "United Nations Human Rights Council", "year": 2018 },
-    { "title": "Myanmar's Enemy Within", "author": "Francis Wade", "year": 2017 }
+    {
+      "title": "UN Fact-Finding Mission on Myanmar",
+      "author": "United Nations Human Rights Council",
+      "year": 2018
+    },
+    {
+      "title": "Myanmar's Enemy Within",
+      "author": "Francis Wade",
+      "year": 2017
+    }
   ]
 }

@@ -2,14 +2,25 @@
   "id": "great_famine_ireland_1845",
   "name": "Great Famine (Ireland)",
   "status": "historic",
-  "period": { "start": 1845, "end": 1852 },
+  "period": {
+    "start": 1845,
+    "end": 1852
+  },
   "geography": {
     "region": "Western Europe / Ireland",
-    "coordinates": [53.1, -8.1]
+    "coordinates": [
+      53.1,
+      -8.1
+    ]
   },
   "participants": {
-    "perpetrators": ["British Government (Whig Ministry)", "Landlord Class"],
-    "victims": ["Irish Peasantry (Tenant Farmers)"]
+    "perpetrators": [
+      "British Government (Whig Ministry)",
+      "Landlord Class"
+    ],
+    "victims": [
+      "Irish Peasantry (Tenant Farmers)"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +32,7 @@
       "note": "Approx 1M died, another 1M emigrated. Mortality driven by blight but exacerbated by continued food exports and laissez-faire policy."
     },
     "scores": {
-      "systematic_intensity": 60,
+      "systematic_intensity": 56,
       "profit": 80,
       "ideology": 40,
       "complicity": 60
@@ -36,8 +47,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": true
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +72,27 @@
       }
     }
   },
-  "tags": ["profit_driven", "laissez_faire", "structural_violence", "famine"],
+  "tags": [
+    "profit_driven",
+    "laissez_faire",
+    "structural_violence",
+    "famine"
+  ],
   "denial_status": "disputed",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "Classic example of 'Structural Violence'. Not a genocide by gas chamber, but by market dogma (Laissez-faire). Food was exported while people starved. High Profit Score meets moderate Ideology (Providentialism)."
   },
   "sources": [
-    { "title": "The Great Hunger", "author": "Cecil Woodham-Smith", "year": 1962 },
-    { "title": "Black '47 and Beyond", "author": "Cormac Ó Gráda", "year": 1999 }
+    {
+      "title": "The Great Hunger",
+      "author": "Cecil Woodham-Smith",
+      "year": 1962
+    },
+    {
+      "title": "Black '47 and Beyond",
+      "author": "Cormac Ó Gráda",
+      "year": 1999
+    }
   ]
 }

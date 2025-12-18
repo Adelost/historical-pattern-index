@@ -2,14 +2,24 @@
   "id": "yazidi_genocide_2014",
   "name": "Yazidi Genocide",
   "status": "historic",
-  "period": { "start": 2014, "end": 2017 },
+  "period": {
+    "start": 2014,
+    "end": 2017
+  },
   "geography": {
     "region": "Middle East (Iraq/Syria)",
-    "coordinates": [36.4, 41.8]
+    "coordinates": [
+      36.4,
+      41.8
+    ]
   },
   "participants": {
-    "perpetrators": ["Islamic State (ISIS/ISIL)"],
-    "victims": ["Yazidi people"]
+    "perpetrators": [
+      "Islamic State (ISIS/ISIL)"
+    ],
+    "victims": [
+      "Yazidi people"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -21,7 +31,7 @@
       "note": "UN documented ~5,000 killed, 10,000+ women/girls enslaved. 400,000+ displaced. Yazidis call it '74th Ferman' (decree) - referencing 74 historical persecutions."
     },
     "scores": {
-      "systematic_intensity": 80,
+      "systematic_intensity": 89,
       "profit": 40,
       "ideology": 100,
       "complicity": 60
@@ -36,8 +46,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": {
         "direct_revenue": true,
@@ -62,14 +71,27 @@
       }
     }
   },
-  "tags": ["religious_persecution", "sexual_slavery", "isis", "ongoing_effects"],
+  "tags": [
+    "religious_persecution",
+    "sexual_slavery",
+    "isis",
+    "ongoing_effects"
+  ],
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
     "pattern_note": "ISIS explicitly targeted Yazidis as 'devil worshippers'. Sexual slavery systematized with religious justification. Nadia Murad (survivor) won Nobel Peace Prize 2018. Despite relatively low death toll, meets genocide criteria through intent to destroy group via enslavement and forced conversion."
   },
   "sources": [
-    { "title": "They Came to Destroy: ISIS Crimes Against the Yazidis", "author": "UN Human Rights Council", "year": 2016 },
-    { "title": "The Last Girl", "author": "Nadia Murad", "year": 2017 }
+    {
+      "title": "They Came to Destroy: ISIS Crimes Against the Yazidis",
+      "author": "UN Human Rights Council",
+      "year": 2016
+    },
+    {
+      "title": "The Last Girl",
+      "author": "Nadia Murad",
+      "year": 2017
+    }
   ]
 }

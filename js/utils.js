@@ -31,21 +31,64 @@ export const THEME = {
 
 // --- UTILS (Pure Functions) ---
 export const Utils = {
-    formatNum: (n) => n ? n.toLocaleString() : '0',
-    formatMillions: (n) => n ? (n / 1000000).toFixed(1) + 'M' : '?',
+    formatNum: (n) => n ? n.toLocaleString() : 'N/A',
+
+    formatDeaths: (min, max) => {
+        if (!min && !max) return 'N/A';
+        const formatM = (n) => {
+            if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+            if (n >= 1000) return (n / 1000).toFixed(0) + 'k';
+            return n.toLocaleString();
+        };
+        if (min === max) return formatM(max);
+        return `${formatM(min)}–${formatM(max)}`;
+    },
+
+    formatDuration: (start, end) => {
+        const years = Math.abs(end - start);
+        if (years === 0) return '< 1 year';
+        if (years === 1) return '1 year';
+        return `${years} years`;
+    },
+
     getTheme: (tierName) => THEME.tiers[tierName] || THEME.default,
 
     // Logic for filtering
     matches: (event, filters) => {
-        const { period, tier, region } = filters;
+        const { period, tier, denial } = filters;
         const { start } = event.period;
 
-        if (period === 'ancient' && start > 500) return false;
+        if (period === 'ancient' && start >= 500) return false;
+        if (period === 'medieval' && (start < 500 || start >= 1500)) return false;
         if (period === 'colonial' && (start < 1500 || start >= 1900)) return false;
         if (period === 'modern' && start < 1900) return false;
         if (tier !== 'all' && event.analysis.tier !== tier) return false;
-        if (region !== 'all' && !event.geography.region.includes(region)) return false;
+        if (denial !== 'all' && event.denial_status !== denial) return false;
 
         return true;
+    },
+
+    // Calculate statistics from events
+    calcStats: (events) => {
+        const years = events.map(e => [e.period.start, e.period.end]).flat();
+        const minYear = Math.min(...years);
+        const maxYear = Math.max(...years);
+
+        let totalDeathsMin = 0;
+        let totalDeathsMax = 0;
+        events.forEach(e => {
+            totalDeathsMin += e.metrics.mortality.min || 0;
+            totalDeathsMax += e.metrics.mortality.max || 0;
+        });
+
+        const denied = events.filter(e => e.denial_status === 'denied').length;
+
+        return {
+            count: events.length,
+            years: maxYear - minYear,
+            deathsMin: totalDeathsMin,
+            deathsMax: totalDeathsMax,
+            denied
+        };
     }
 };
