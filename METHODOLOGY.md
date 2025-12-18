@@ -4,6 +4,21 @@ This document explains how HPI scores are calculated.
 
 ---
 
+## Historical Scope
+
+This index covers events from 146 BCE to present.
+
+**Lower bound (146 BCE)**: The Destruction of Carthage is chosen because:
+1. Documentation becomes unreliable before classical antiquity
+2. Pre-Roman events lack the mortality estimates our methodology requires
+3. The framework assumes state capacity (policy, infrastructure) that ancient societies lacked
+
+**Upper bound (present - 10 years)**: Events need at least a decade of scholarly analysis before inclusion. Death tolls stabilize, archives open, and political dust settles.
+
+Events outside this scope are not excluded for being "less important"—they're excluded because our methodology cannot score them reliably.
+
+---
+
 ## Core Principle
 
 All scores are derived from **binary checklists**. Each item is either true (1) or false (0), verified against academic sources. No subjective weighting.
