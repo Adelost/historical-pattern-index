@@ -20,7 +20,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 70,
+      "systematic_intensity": 60,
       "profit": 100,
       "ideology": 20,
       "complicity": 80
@@ -37,13 +37,34 @@
         "identification": false,
         "biological_warfare": false,
         "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": false,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
       }
     }
   },
   "tags": ["profit_driven", "colonialism", "rubber"],
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "Driven purely by extraction. 'Propaganda' marked False because they didn't try to convince the victims, they just enslaved them. Complicity high due to international trade integration."
+    "pattern_note": "Driven purely by extraction. 'Propaganda' marked False because they didn't try to convince the victims, they just enslaved them."
   },
   "sources": [
     { "title": "King Leopold's Ghost", "author": "Adam Hochschild", "year": 1998 }

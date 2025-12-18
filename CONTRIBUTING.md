@@ -11,17 +11,16 @@ Thank you for your interest in contributing to HPI. This is a data-driven projec
 ## How to Add an Event
 
 1.  **Fork the Repository.**
-2.  **Create a JSON file** in `data/events/` following the naming convention `event_name_year.json` (e.g., `congo_free_state_1885.json`).
-3.  **Use the Schema:** Ensure your JSON matches `data/schema.json`.
-4.  **Fill in Metrics:**
-    *   Use the checklists in `docs/methodology.md` to calculate scores.
-    *   Provide `min` and `max` estimates for mortality.
-5.  **Cite Sources:** Include author, title, and year for your data.
-6.  **Submit a Pull Request.**
+2.  **Copy the Template:** Copy `data/events/_template.json` to a new file named `event_name_year.json`.
+3.  **Fill in the Data:**
+    *   **Scores must match Breakdowns:** If you check 7 boxes in `breakdowns.systematic_intensity`, your score MUST be 70.
+    *   **Use Range Estimates:** Always provide `min` and `max` for mortality if uncertain.
+4.  **Validate:** Ensure your JSON matches `data/schema.json`.
+5.  **Submit a Pull Request.**
 
 ## Review Process
 
 Pull requests will be reviewed for:
 *   **Source Verification:** Does the source support the data?
-*   **Methodological Consistency:** Were the scores calculated correctly according to the checklist?
-*   **JSON Validity:** Does it pass the schema check?
+*   **Methodological Consistency:** Do the scores mathematically match the checklist?
+*   **JSON Validity:** Does it pass the automated tests?

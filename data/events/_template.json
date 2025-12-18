@@ -37,6 +37,27 @@
         "identification": false,
         "biological_warfare": false,
         "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": false,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": false,
+        "euphemisms": false,
+        "diffused_responsibility": false,
+        "silence": false
       }
     }
   },

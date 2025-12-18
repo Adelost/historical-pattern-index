@@ -23,7 +23,7 @@
       "systematic_intensity": 80,
       "profit": 80,
       "ideology": 40,
-      "complicity": 90
+      "complicity": 80
     },
     "breakdowns": {
       "systematic_intensity": {
@@ -37,13 +37,34 @@
         "identification": false,
         "biological_warfare": false,
         "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": false,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": true
       }
     }
   },
   "tags": ["settler_colonialism", "total_erasure", "land_theft"],
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "Extremely low absolute numbers but near-total extinction. Highlights the danger of linear scales hiding absolute erasures. 'Black Line' operation demonstrates state infrastructure."
+    "pattern_note": "Extremely low absolute numbers but near-total extinction. Driven by land seizure (Profit) rather than purity ideology."
   },
   "sources": [
     { "title": "The Fatal Shore", "author": "Robert Hughes", "year": 1987 },

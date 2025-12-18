@@ -76,10 +76,44 @@
                 "identification": { "type": "boolean" },
                 "biological_warfare": { "type": "boolean" },
                 "duration_over_5y": { "type": "boolean" }
-              }
+              },
+              "required": ["policy", "state_involvement", "infrastructure"]
+            },
+            "profit": {
+              "type": "object",
+              "properties": {
+                "direct_revenue": { "type": "boolean" },
+                "resource_extraction": { "type": "boolean" },
+                "forced_labor": { "type": "boolean" },
+                "economic_dependence": { "type": "boolean" },
+                "market_integration": { "type": "boolean" }
+              },
+              "required": ["direct_revenue", "resource_extraction", "forced_labor"]
+            },
+            "ideology": {
+              "type": "object",
+              "properties": {
+                "purity_ideal": { "type": "boolean" },
+                "historical_claim": { "type": "boolean" },
+                "higher_purpose": { "type": "boolean" },
+                "victim_narrative": { "type": "boolean" },
+                "utopianism": { "type": "boolean" }
+              },
+              "required": ["purity_ideal", "historical_claim"]
+            },
+            "complicity": {
+              "type": "object",
+              "properties": {
+                "distance": { "type": "boolean" },
+                "benefit": { "type": "boolean" },
+                "euphemisms": { "type": "boolean" },
+                "diffused_responsibility": { "type": "boolean" },
+                "silence": { "type": "boolean" }
+              },
+              "required": ["distance", "benefit", "euphemisms"]
             }
           },
-          "required": ["systematic_intensity"]
+          "required": ["systematic_intensity", "profit", "ideology", "complicity"]
         }
       },
       "required": ["mortality", "scores", "breakdowns"]

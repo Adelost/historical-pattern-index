@@ -20,10 +20,10 @@
       "confidence": "high"
     },
     "scores": {
-      "systematic_intensity": 100,
+      "systematic_intensity": 90,
       "profit": 40,
       "ideology": 100,
-      "complicity": 60
+      "complicity": 80
     },
     "breakdowns": {
       "systematic_intensity": {
@@ -37,13 +37,34 @@
         "identification": true,
         "biological_warfare": true,
         "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
       }
     }
   },
   "tags": ["industrial_genocide", "ideology_driven", "state_sponsored"],
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "The reference point for maximum systematic intensity. 100% checklist match: State policy, infrastructure (camps), ID systems (tattoos/punchcards)."
+    "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute."
   },
   "sources": [
     { "title": "The Destruction of the European Jews", "author": "Raul Hilberg", "year": 1961 },

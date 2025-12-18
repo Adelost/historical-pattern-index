@@ -25,6 +25,7 @@ jobs:
         run: npm install -g ajv-cli
 
       - name: Validate Events against Schema
+        # Validate all JSON files in data/events/ EXCEPT those starting with underscore (_)
         run: |
-          echo "Validating all event files against data/schema.json..."
-          ajv validate -s data/schema.json -d "data/events/*.json"
+          echo "Validating event files..."
+          ajv validate -s data/schema.json -d "data/events/[!_]*.json"

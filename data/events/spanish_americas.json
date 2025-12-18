@@ -20,10 +20,10 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 60,
-      "profit": 90,
+      "systematic_intensity": 70,
+      "profit": 100,
       "ideology": 80,
-      "complicity": 50
+      "complicity": 60
     },
     "breakdowns": {
       "systematic_intensity": {
@@ -37,13 +37,34 @@
         "identification": false,
         "biological_warfare": false,
         "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": false
       }
     }
   },
   "tags": ["continental_collapse", "disease_multiplier", "resource_extraction"],
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Biological warfare is marked 'False' as distinct from intentional germ warfare, though disease was the primary killer. Systemic intensity comes from Encomienda (labor) and Requerimiento (legal/religious)."
+    "pattern_note": "Biological warfare is distinct from intentional germ warfare. Systemic intensity comes from Encomienda (labor) and Requerimiento."
   },
   "sources": [
     { "title": "The Great Dying", "author": "Koch et al.", "year": 2019 },
