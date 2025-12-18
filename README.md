@@ -122,6 +122,15 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 | Emergency laws/state of exception | 11% (5/45) |
 <!-- /STATS:PATTERNS_TABLE -->
 
+**6. Different mechanisms, different warning signs.**
+
+| Event Type | Dehumanizing Rhetoric |
+|------------|----------------------|
+| Total Erasure (ethnic cleansing) | 60% |
+| Profit-Driven Attrition | 33% |
+
+Ideological atrocities need propaganda to mobilize killers. Profit-driven atrocities need silence and distance.
+
 ---
 
 ## How It Works
