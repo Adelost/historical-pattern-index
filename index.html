@@ -75,6 +75,48 @@
             display: none;
         }
 
+        .controls-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            align-items: center;
+        }
+
+        .filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        select {
+            background: var(--bg-color);
+            color: var(--text-primary);
+            border: 1px solid #334155;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-download {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            opacity: 0.9;
+        }
+
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,6 +189,34 @@
     <main>
         <div id="errorDisplay" class="error-message"></div>
         
+        <!-- Controls -->
+        <div class="controls-container">
+            <div class="filters">
+                <select id="filterPeriod" onchange="filterData()">
+                    <option value="all">All Periods</option>
+                    <option value="ancient">Ancient (< 500 AD)</option>
+                    <option value="colonial">Colonial (1500-1900)</option>
+                    <option value="modern">Modern (1900-Present)</option>
+                </select>
+                <select id="filterTier" onchange="filterData()">
+                    <option value="all">All Tiers</option>
+                    <option value="TOTAL ERASURE">Total Erasure</option>
+                    <option value="INDUSTRIAL MEGA-EVENT">Industrial Mega-Event</option>
+                    <option value="CONTINENTAL COLLAPSE">Continental Collapse</option>
+                    <option value="PROFIT-DRIVEN ATTRITION">Profit-Driven Attrition</option>
+                </select>
+                <select id="filterRegion" onchange="filterData()">
+                    <option value="all">All Regions</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+            <button onclick="downloadData()" class="btn-download">⬇ Download JSON</button>
+        </div>
+
         <div class="chart-container">
             <canvas id="hpiChart"></canvas>
         </div>
@@ -160,6 +230,9 @@
     </footer>
 
     <script>
+        let allEvents = [];
+        let chartInstance = null;
+
         function getSafeClassName(tier) {
             return 'tier-' + tier.toLowerCase().replace(/[\s\.]+/g, '-');
         }
@@ -172,39 +245,55 @@
             return '#8b5cf6';
         }
 
-        async function init() {
-            const errorDisplay = document.getElementById('errorDisplay');
-            const listContainer = document.getElementById('eventList');
+        function downloadData() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(allEvents, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "hpi_dataset.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
 
-            try {
-                const indexResponse = await fetch('data/index.json');
-                if (!indexResponse.ok) throw new Error('Failed to load data index');
-                const fileList = await indexResponse.json();
+        function filterData() {
+            const period = document.getElementById('filterPeriod').value;
+            const tier = document.getElementById('filterTier').value;
+            const region = document.getElementById('filterRegion').value;
 
-                const events = [];
-                for (const file of fileList) {
-                    try {
-                        const response = await fetch(file);
-                        if (!response.ok) throw new Error(`Failed to load ${file}`);
-                        events.push(await response.json());
-                    } catch (e) {
-                        console.error(e);
-                    }
-                }
+            const filtered = allEvents.filter(e => {
+                // Period Filter
+                if (period === 'ancient' && e.period.start > 500) return false;
+                if (period === 'colonial' && (e.period.start < 1500 || e.period.start >= 1900)) return false;
+                if (period === 'modern' && e.period.start < 1900) return false;
 
-                if (events.length === 0) throw new Error('No valid events found');
+                // Tier Filter
+                if (tier !== 'all' && e.analysis.tier !== tier) return false;
 
-                // Render Chart
-                const chartData = events.map(event => ({
-                    x: Math.max(1, event.metrics.mortality.max),
-                    y: event.metrics.scores.systematic_intensity,
-                    label: event.name,
-                    tier: event.analysis.tier,
-                    raw: event
-                }));
+                // Region Filter (Simple string match)
+                if (region !== 'all' && !e.geography.region.includes(region)) return false;
 
+                return true;
+            });
+
+            renderDashboard(filtered);
+        }
+
+        function renderDashboard(events) {
+            // Update Chart
+            const chartData = events.map(event => ({
+                x: Math.max(1, event.metrics.mortality.max),
+                y: event.metrics.scores.systematic_intensity,
+                label: event.name,
+                tier: event.analysis.tier,
+                raw: event
+            }));
+
+            if (chartInstance) {
+                chartInstance.data.datasets[0].data = chartData;
+                chartInstance.update();
+            } else {
                 const ctx = document.getElementById('hpiChart').getContext('2d');
-                new Chart(ctx, {
+                chartInstance = new Chart(ctx, {
                     type: 'scatter',
                     data: {
                         datasets: [{
@@ -249,59 +338,92 @@
                         }
                     }
                 });
+            }
 
-                // Render Cards Safely
-                events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
-                    const card = document.createElement('div');
-                    const tierClass = getSafeClassName(event.analysis.tier);
-                    card.className = `event-card ${tierClass}`;
-                    card.style.borderColor = getTierColor(event.analysis.tier);
+            // Update Cards
+            const listContainer = document.getElementById('eventList');
+            listContainer.innerHTML = '';
+            
+            if (events.length === 0) {
+                listContainer.innerHTML = '<p style="color:var(--text-secondary); grid-column: 1/-1; text-align:center;">No events match these filters.</p>';
+                return;
+            }
 
-                    const badge = document.createElement('span');
-                    badge.className = 'tier-badge';
-                    badge.textContent = event.analysis.tier;
-                    badge.style.color = getTierColor(event.analysis.tier);
-                    badge.style.border = `1px solid ${getTierColor(event.analysis.tier)}`;
+            events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
+                const card = document.createElement('div');
+                const tierClass = getSafeClassName(event.analysis.tier);
+                card.className = `event-card ${tierClass}`;
+                card.style.borderColor = getTierColor(event.analysis.tier);
 
-                    const title = document.createElement('h3');
-                    title.textContent = event.name;
+                const badge = document.createElement('span');
+                badge.className = 'tier-badge';
+                badge.textContent = event.analysis.tier;
+                badge.style.color = getTierColor(event.analysis.tier);
+                badge.style.border = `1px solid ${getTierColor(event.analysis.tier)}`;
 
-                    const meta = document.createElement('div');
-                    meta.style.fontSize = '0.85rem';
-                    meta.style.color = '#94a3b8';
-                    meta.style.marginBottom = '0.5rem';
-                    meta.textContent = `${event.geography?.region || 'Unknown'} • ${event.period.start}-${event.period.end}`;
+                const title = document.createElement('h3');
+                title.textContent = event.name;
 
-                    const stats = document.createElement('div');
-                    stats.className = 'stats';
-                    stats.innerHTML = `
-                        <div class="stat-item">
-                            <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
-                            Max Deaths
-                            <div style="font-size: 0.7em; color: #64748b;">(Init: ${((event.metrics.mortality.population_initial || 0)/1000000).toFixed(1)}M)</div>
-                        </div>
-                        <div class="stat-item">
-                            <strong>${event.metrics.scores.systematic_intensity}%</strong>
-                            Intensity
-                        </div>
-                        <div class="stat-item">
-                            <strong>${event.metrics.scores.profit}%</strong>
-                            Profit
-                        </div>
-                    `;
+                const meta = document.createElement('div');
+                meta.style.fontSize = '0.85rem';
+                meta.style.color = '#94a3b8';
+                meta.style.marginBottom = '0.5rem';
+                meta.textContent = `${event.geography?.region || 'Unknown'} • ${event.period.start}-${event.period.end}`;
 
-                    const note = document.createElement('p');
-                    note.style.color = '#cbd5e1';
-                    note.style.fontSize = '0.95rem';
-                    note.textContent = event.analysis.pattern_note;
+                const stats = document.createElement('div');
+                stats.className = 'stats';
+                stats.innerHTML = `
+                    <div class="stat-item">
+                        <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
+                        Max Deaths
+                        <div style="font-size: 0.7em; color: #64748b;">(Init: ${((event.metrics.mortality.population_initial || 0)/1000000).toFixed(1)}M)</div>
+                    </div>
+                    <div class="stat-item">
+                        <strong>${event.metrics.scores.systematic_intensity}%</strong>
+                        Intensity
+                    </div>
+                    <div class="stat-item">
+                        <strong>${event.metrics.scores.profit}%</strong>
+                        Profit
+                    </div>
+                `;
 
-                    card.appendChild(badge);
-                    card.appendChild(title);
-                    card.appendChild(meta);
-                    card.appendChild(stats);
-                    card.appendChild(note);
-                    listContainer.appendChild(card);
-                });
+                const note = document.createElement('p');
+                note.style.color = '#cbd5e1';
+                note.style.fontSize = '0.95rem';
+                note.textContent = event.analysis.pattern_note;
+
+                card.appendChild(badge);
+                card.appendChild(title);
+                card.appendChild(meta);
+                card.appendChild(stats);
+                card.appendChild(note);
+                listContainer.appendChild(card);
+            });
+        }
+
+        async function init() {
+            const errorDisplay = document.getElementById('errorDisplay');
+            
+            try {
+                const indexResponse = await fetch('data/index.json');
+                if (!indexResponse.ok) throw new Error('Failed to load data index');
+                const fileList = await indexResponse.json();
+
+                for (const file of fileList) {
+                    try {
+                        const response = await fetch(file);
+                        if (!response.ok) throw new Error(`Failed to load ${file}`);
+                        allEvents.push(await response.json());
+                    } catch (e) {
+                        console.error(e);
+                    }
+                }
+
+                if (allEvents.length === 0) throw new Error('No valid events found');
+                
+                // Initial Render
+                renderDashboard(allEvents);
 
             } catch (e) {
                 errorDisplay.textContent = `Error: ${e.message}`;
