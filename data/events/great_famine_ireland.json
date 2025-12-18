@@ -1,0 +1,74 @@
+{
+  "id": "great_famine_ireland_1845",
+  "name": "Great Famine (Ireland)",
+  "status": "historic",
+  "period": { "start": 1845, "end": 1852 },
+  "geography": {
+    "region": "Western Europe / Ireland",
+    "coordinates": [53.1, -8.1]
+  },
+  "participants": {
+    "perpetrators": ["British Government (Whig Ministry)", "Landlord Class"],
+    "victims": ["Irish Peasantry (Tenant Farmers)"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1000000,
+      "max": 1500000,
+      "population_initial": 8200000,
+      "population_loss_percent": 25.0,
+      "confidence": "high",
+      "note": "Approx 1M died, another 1M emigrated. Mortality driven by blight but exacerbated by continued food exports and laissez-faire policy."
+    },
+    "scores": {
+      "systematic_intensity": 50,
+      "profit": 90,
+      "ideology": 60,
+      "complicity": 70
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["profit_driven", "laissez_faire", "structural_violence", "famine"],
+  "analysis": {
+    "tier": "PROFIT-DRIVEN ATTRITION",
+    "pattern_note": "Classic example of 'Structural Violence'. Not a genocide by gas chamber, but by market dogma (Laissez-faire). Food was exported while people starved. High Profit Score meets moderate Ideology (Providentialism)."
+  },
+  "sources": [
+    { "title": "The Great Hunger", "author": "Cecil Woodham-Smith", "year": 1962 },
+    { "title": "Black '47 and Beyond", "author": "Cormac Ó Gráda", "year": 1999 }
+  ]
+}
