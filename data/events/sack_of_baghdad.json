@@ -8,7 +8,10 @@
   },
   "geography": {
     "region": "Middle East (Iraq)",
-    "coordinates": [33.3, 44.4]
+    "coordinates": [
+      33.3,
+      44.4
+    ]
   },
   "participants": {
     "perpetrators": [

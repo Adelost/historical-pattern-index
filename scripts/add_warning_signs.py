@@ -350,30 +350,29 @@ CAUSES = {
         ],
         "root_causes": "ISIS jihadism, religious intolerance, state collapse in Iraq/Syria"
     },
-    "rohingya_genocide": {
+    "sack_of_baghdad": {
         "warning_signs": [
-            "Citizenship stripped from minority",
-            "Buddhist nationalist monks inciting",
-            "Social media spreading hate"
+            "Ultimatum rejected by overconfident leadership",
+            "No allies willing to assist",
+            "Previous cities destroyed as examples"
         ],
-        "root_causes": "Buddhist nationalism, military power, historical discrimination, Islamophobia"
+        "root_causes": "Mongol expansion, Abbasid weakness and isolation, Hulagu's personal ambition to end Caliphate"
     },
-    "uyghur_persecution": {
+    "timur_conquests": {
         "warning_signs": [
-            "Mass surveillance infrastructure",
-            "'Re-education' camps for minority",
-            "'Counter-terrorism' justifying repression",
-            "Cultural and religious practices banned"
+            "Charismatic leader claiming historical mandate",
+            "Military rewarded through plunder",
+            "Terror normalized as strategy"
         ],
-        "root_causes": "Han nationalism, Xinjiang development goals, security state expansion, Islamophobia"
+        "root_causes": "Power vacuum after Mongol decline, Timur's personal ambition, militarized steppe culture, weak fragmented states"
     },
-    "tigray_war": {
+    "nakba_1948": {
         "warning_signs": [
-            "Political party excluded from power",
-            "Communications and aid blocked",
-            "Ethnic militias mobilized"
+            "Ethnic nationalism seeking homogeneous state",
+            "Militias operating before state formation",
+            "Displacement as military strategy"
         ],
-        "root_causes": "TPLF-federal government conflict, ethnic federalism tensions, Eritrean involvement"
+        "root_causes": "Zionist settler colonialism, British withdrawal, Arab-Israeli conflict, UN partition plan rejection"
     }
 }
 

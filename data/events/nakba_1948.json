@@ -89,7 +89,13 @@
       "ECONOMIC_CRISIS",
       "ETHNIC_NATIONALISM",
       "PROPERTY_SEIZURE"
-    ]
+    ],
+    "warning_signs": [
+      "Ethnic nationalism seeking homogeneous state",
+      "Militias operating before state formation",
+      "Displacement as military strategy"
+    ],
+    "root_causes": "Zionist settler colonialism, British withdrawal, Arab-Israeli conflict, UN partition plan rejection"
   },
   "sources": [
     {
