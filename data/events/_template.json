@@ -13,9 +13,9 @@
   },
   "metrics": {
     "mortality": {
-      "min": 0,
-      "max": 0,
-      "population_initial": 0,
+      "min": 1,
+      "max": 1,
+      "population_initial": 1,
       "population_loss_percent": 0.0,
       "confidence": "medium"
     },
@@ -37,36 +37,15 @@
         "identification": false,
         "biological_warfare": false,
         "duration_over_5y": false
-      },
-      "profit": {
-        "direct_revenue": false,
-        "resource_extraction": false,
-        "forced_labor": false,
-        "economic_dependence": false,
-        "market_integration": false
-      },
-      "ideology": {
-        "purity_ideal": false,
-        "historical_claim": false,
-        "higher_purpose": false,
-        "victim_narrative": false,
-        "utopianism": false
-      },
-      "complicity": {
-        "distance": false,
-        "benefit": false,
-        "euphemisms": false,
-        "diffused_responsibility": false,
-        "silence": false
       }
     }
   },
   "tags": [],
   "analysis": {
-    "tier": "TIER_NAME",
-    "pattern_note": ""
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "A concise note about the recurring pattern observed here."
   },
   "sources": [
-    { "author": "", "title": "", "year": 0 }
+    { "author": "Author Name", "title": "Reference Book", "year": 2000 }
   ]
 }

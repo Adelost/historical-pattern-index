@@ -149,6 +149,20 @@ All events are stored as JSON files in `/data/events/`. We use strict schemas to
 }
 ```
 
+## ⚠️ Limitations & Known Biases
+
+This framework is a work in progress. We acknowledge the following limitations:
+
+* **Small Sample Size:** The current dataset contains only 4 events, which is insufficient for robust pattern analysis.
+* **Geographic Skew:** Current events are skewed toward European colonial perpetrators. Contributions covering other regions (Asia, Africa, Middle East) are especially welcome.
+* **Equal Weighting:** All checklist items are weighted equally (1 item = 10% or 20% of score). This is a simplification—"infrastructure for killing" may be more significant than "propaganda," but we lack objective criteria to weight them differently.
+* **Arbitrary Thresholds:** The ">5 years" duration threshold is a pragmatic choice, not a scientifically derived cutoff.
+* **Definitional Ambiguity:** Some checklist items (e.g., "biological warfare") may be interpreted differently. We define it broadly to include deliberate starvation and disease, but this is debatable.
+
+**HPI does not claim to be a perfect measure of historical atrocities. It is a structured framework for comparison, open to refinement.**
+
+---
+
 ## 🤝 Contributing
 This is a data project, not a forum for political debate.
 

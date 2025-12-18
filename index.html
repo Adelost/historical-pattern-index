@@ -12,10 +12,10 @@
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
             --accent: #38bdf8;
-            --tier-1: #ef4444; /* Red */
-            --tier-2: #f97316; /* Orange */
-            --tier-3: #eab308; /* Yellow */
-            --tier-4: #8b5cf6; /* Purple */
+            --tier-1: #ef4444;
+            --tier-2: #f97316;
+            --tier-3: #eab308;
+            --tier-4: #8b5cf6;
         }
 
         body {
@@ -58,11 +58,21 @@
             background-color: var(--card-bg);
             border-radius: 12px;
             padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             position: relative;
             height: 60vh;
             min-height: 400px;
+        }
+
+        .error-message {
+            background-color: rgba(239, 68, 68, 0.1);
+            color: var(--tier-1);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--tier-1);
+            margin-bottom: 1rem;
+            display: none;
         }
 
         .info-grid {
@@ -78,10 +88,6 @@
             padding: 1.5rem;
             border-left: 4px solid var(--accent);
             transition: transform 0.2s;
-        }
-
-        .event-card:hover {
-            transform: translateY(-2px);
         }
 
         .event-card h3 {
@@ -123,11 +129,11 @@
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
 
-        /* Tier Colors */
-        .tier-TOTAL.ERASURE { background-color: rgba(239, 68, 68, 0.2); color: var(--tier-1); border-color: var(--tier-1); }
-        .tier-INDUSTRIAL.MEGA-EVENT { background-color: rgba(249, 115, 22, 0.2); color: var(--tier-2); border-color: var(--tier-2); }
-        .tier-CONTINENTAL.COLLAPSE { background-color: rgba(234, 179, 8, 0.2); color: var(--tier-3); border-color: var(--tier-3); }
-        .tier-PROFIT-DRIVEN.ATTRITION { background-color: rgba(139, 92, 246, 0.2); color: var(--tier-4); border-color: var(--tier-4); }
+        /* Corrected Tier Classes */
+        .tier-total-erasure { background-color: rgba(239, 68, 68, 0.2); color: var(--tier-1); border-color: var(--tier-1); }
+        .tier-industrial-mega-event { background-color: rgba(249, 115, 22, 0.2); color: var(--tier-2); border-color: var(--tier-2); }
+        .tier-continental-collapse { background-color: rgba(234, 179, 8, 0.2); color: var(--tier-3); border-color: var(--tier-3); }
+        .tier-profit-driven-attrition { background-color: rgba(139, 92, 246, 0.2); color: var(--tier-4); border-color: var(--tier-4); }
 
     </style>
 </head>
@@ -139,13 +145,13 @@
     </header>
 
     <main>
+        <div id="errorDisplay" class="error-message"></div>
+        
         <div class="chart-container">
             <canvas id="hpiChart"></canvas>
         </div>
 
-        <div id="eventList" class="info-grid">
-            <!-- Event cards will be injected here -->
-        </div>
+        <div id="eventList" class="info-grid"></div>
     </main>
 
     <footer>
@@ -154,105 +160,125 @@
     </footer>
 
     <script>
+        function getSafeClassName(tier) {
+            return 'tier-' + tier.toLowerCase().replace(/[\s\.]+/g, '-');
+        }
+
+        function getTierColor(tier) {
+            const t = tier.toLowerCase();
+            if (t.includes('erasure')) return '#ef4444';
+            if (t.includes('industrial')) return '#f97316';
+            if (t.includes('continental')) return '#eab308';
+            return '#8b5cf6';
+        }
+
         async function init() {
-            // 1. Fetch the index
-            const indexResponse = await fetch('data/index.json');
-            const fileList = await indexResponse.json();
+            const errorDisplay = document.getElementById('errorDisplay');
+            const listContainer = document.getElementById('eventList');
 
-            // 2. Fetch all event files
-            const events = await Promise.all(fileList.map(async file => {
-                const response = await fetch(file);
-                return response.json();
-            }));
+            try {
+                const indexResponse = await fetch('data/index.json');
+                if (!indexResponse.ok) throw new Error('Failed to load data index');
+                const fileList = await indexResponse.json();
 
-            // 3. Prepare data for Chart.js
-            const chartData = events.map(event => ({
-                x: event.metrics.mortality.max, // Logarithmic X
-                y: event.metrics.scores.systematic_intensity, // Linear Y
-                label: event.name,
-                tier: event.analysis.tier,
-                raw: event
-            }));
-
-            // 4. Render Chart
-            const ctx = document.getElementById('hpiChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'scatter',
-                data: {
-                    datasets: [{
-                        label: 'Historical Events',
-                        data: chartData,
-                        backgroundColor: (ctx) => {
-                            const tier = ctx.raw?.tier;
-                            if (tier?.includes('ERASURE')) return '#ef4444';
-                            if (tier?.includes('INDUSTRIAL')) return '#f97316';
-                            if (tier?.includes('CONTINENTAL')) return '#eab308';
-                            return '#8b5cf6'; // Profit driven
-                        },
-                        pointRadius: 8,
-                        pointHoverRadius: 12
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return context.raw.label;
-                                },
-                                afterLabel: function(context) {
-                                    const e = context.raw.raw;
-                                    return [
-                                        `Deaths: ${e.metrics.mortality.max.toLocaleString()}`,
-                                        `Intensity: ${e.metrics.scores.systematic_intensity}%`,
-                                        `Type: ${e.analysis.tier}`
-                                    ];
-                                }
-                            }
-                        },
-                        legend: { display: false },
-                        annotation: {
-                            // Future: Add background quadrants here
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'logarithmic',
-                            title: { display: true, text: 'Mortality Volume (Logarithmic Scale)', color: '#94a3b8' },
-                            grid: { color: '#334155' },
-                            ticks: { color: '#94a3b8' }
-                        },
-                        y: {
-                            min: 0,
-                            max: 105,
-                            title: { display: true, text: 'Systematic Intensity Score (%)', color: '#94a3b8' },
-                            grid: { color: '#334155' },
-                            ticks: { color: '#94a3b8' }
-                        }
+                const events = [];
+                for (const file of fileList) {
+                    try {
+                        const response = await fetch(file);
+                        if (!response.ok) throw new Error(`Failed to load ${file}`);
+                        events.push(await response.json());
+                    } catch (e) {
+                        console.error(e);
                     }
                 }
-            });
 
-            // 5. Render Cards
-            const listContainer = document.getElementById('eventList');
-            events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
-                const card = document.createElement('div');
-                card.className = `event-card tier-${event.analysis.tier.replace(' ', '.')}`;
-                card.style.borderColor = getTierColor(event.analysis.tier);
-                
-                card.innerHTML = `
-                    <span class="tier-badge" style="color:${getTierColor(event.analysis.tier)}; border: 1px solid ${getTierColor(event.analysis.tier)}">${event.analysis.tier}</span>
-                    <h3>${event.name}</h3>
-                    <div style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem;">
-                        ${event.geography?.region || 'Unknown Region'} • ${event.period.start}-${event.period.end}
-                    </div>
-                    <div class="stats">
+                if (events.length === 0) throw new Error('No valid events found');
+
+                // Render Chart
+                const chartData = events.map(event => ({
+                    x: Math.max(1, event.metrics.mortality.max),
+                    y: event.metrics.scores.systematic_intensity,
+                    label: event.name,
+                    tier: event.analysis.tier,
+                    raw: event
+                }));
+
+                const ctx = document.getElementById('hpiChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'scatter',
+                    data: {
+                        datasets: [{
+                            data: chartData,
+                            backgroundColor: (ctx) => getTierColor(ctx.raw?.tier || ''),
+                            pointRadius: 8,
+                            pointHoverRadius: 12
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => ctx.raw.label,
+                                    afterLabel: (ctx) => {
+                                        const e = ctx.raw.raw;
+                                        return [
+                                            `Deaths: ${e.metrics.mortality.max.toLocaleString()}`,
+                                            `Intensity: ${e.metrics.scores.systematic_intensity}%`,
+                                            `Type: ${e.analysis.tier}`
+                                        ];
+                                    }
+                                }
+                            },
+                            legend: { display: false }
+                        },
+                        scales: {
+                            x: {
+                                type: 'logarithmic',
+                                title: { display: true, text: 'Max Mortality (Log Scale)', color: '#94a3b8' },
+                                grid: { color: '#334155' },
+                                ticks: { color: '#94a3b8' }
+                            },
+                            y: {
+                                min: 0, max: 105,
+                                title: { display: true, text: 'Systematic Intensity (%)', color: '#94a3b8' },
+                                grid: { color: '#334155' },
+                                ticks: { color: '#94a3b8' }
+                            }
+                        }
+                    }
+                });
+
+                // Render Cards Safely
+                events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
+                    const card = document.createElement('div');
+                    const tierClass = getSafeClassName(event.analysis.tier);
+                    card.className = `event-card ${tierClass}`;
+                    card.style.borderColor = getTierColor(event.analysis.tier);
+
+                    const badge = document.createElement('span');
+                    badge.className = 'tier-badge';
+                    badge.textContent = event.analysis.tier;
+                    badge.style.color = getTierColor(event.analysis.tier);
+                    badge.style.border = `1px solid ${getTierColor(event.analysis.tier)}`;
+
+                    const title = document.createElement('h3');
+                    title.textContent = event.name;
+
+                    const meta = document.createElement('div');
+                    meta.style.fontSize = '0.85rem';
+                    meta.style.color = '#94a3b8';
+                    meta.style.marginBottom = '0.5rem';
+                    meta.textContent = `${event.geography?.region || 'Unknown'} • ${event.period.start}-${event.period.end}`;
+
+                    const stats = document.createElement('div');
+                    stats.className = 'stats';
+                    stats.innerHTML = `
                         <div class="stat-item">
                             <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
                             Max Deaths
-                            <div style="font-size: 0.7em; color: #64748b;">(Init: ${(event.metrics.mortality.population_initial/1000000).toFixed(1)}M)</div>
+                            <div style="font-size: 0.7em; color: #64748b;">(Init: ${((event.metrics.mortality.population_initial || 0)/1000000).toFixed(1)}M)</div>
                         </div>
                         <div class="stat-item">
                             <strong>${event.metrics.scores.systematic_intensity}%</strong>
@@ -260,20 +286,27 @@
                         </div>
                         <div class="stat-item">
                             <strong>${event.metrics.scores.profit}%</strong>
-                            Profit Score
+                            Profit
                         </div>
-                    </div>
-                    <p style="color: #cbd5e1; font-size: 0.95rem;">${event.analysis.pattern_note}</p>
-                `;
-                listContainer.appendChild(card);
-            });
-        }
+                    `;
 
-        function getTierColor(tier) {
-            if (tier?.includes('ERASURE')) return '#ef4444';
-            if (tier?.includes('INDUSTRIAL')) return '#f97316';
-            if (tier?.includes('CONTINENTAL')) return '#eab308';
-            return '#8b5cf6';
+                    const note = document.createElement('p');
+                    note.style.color = '#cbd5e1';
+                    note.style.fontSize = '0.95rem';
+                    note.textContent = event.analysis.pattern_note;
+
+                    card.appendChild(badge);
+                    card.appendChild(title);
+                    card.appendChild(meta);
+                    card.appendChild(stats);
+                    card.appendChild(note);
+                    listContainer.appendChild(card);
+                });
+
+            } catch (e) {
+                errorDisplay.textContent = `Error: ${e.message}`;
+                errorDisplay.style.display = 'block';
+            }
         }
 
         init();

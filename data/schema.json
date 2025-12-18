@@ -27,7 +27,8 @@
           "minItems": 2,
           "maxItems": 2
         }
-      }
+      },
+      "required": ["region"]
     },
     "participants": {
       "type": "object",
@@ -42,21 +43,21 @@
         "mortality": {
           "type": "object",
           "properties": {
-            "min": { "type": "integer" },
-            "max": { "type": "integer" },
-            "population_initial": { "type": "integer" },
-            "population_loss_percent": { "type": "number" },
+            "min": { "type": "integer", "minimum": 0 },
+            "max": { "type": "integer", "minimum": 1 },
+            "population_initial": { "type": "integer", "minimum": 1 },
+            "population_loss_percent": { "type": "number", "minimum": 0, "maximum": 100 },
             "confidence": { "type": "string", "enum": ["low", "medium", "high"] }
           },
-          "required": ["min", "max", "population_loss_percent"]
+          "required": ["min", "max", "population_initial", "population_loss_percent"]
         },
         "scores": {
           "type": "object",
           "properties": {
-            "systematic_intensity": { "type": "integer" },
-            "profit": { "type": "integer" },
-            "ideology": { "type": "integer" },
-            "complicity": { "type": "integer" }
+            "systematic_intensity": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "profit": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "ideology": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "complicity": { "type": "integer", "minimum": 0, "maximum": 100 }
           },
           "required": ["systematic_intensity", "profit", "ideology", "complicity"]
         },
@@ -65,55 +66,10 @@
           "properties": {
             "systematic_intensity": {
               "type": "object",
-              "properties": {
-                "policy": { "type": "boolean" },
-                "state_involvement": { "type": "boolean" },
-                "infrastructure": { "type": "boolean" },
-                "propaganda": { "type": "boolean" },
-                "broad_targeting": { "type": "boolean" },
-                "cultural_ban": { "type": "boolean" },
-                "property_seizure": { "type": "boolean" },
-                "identification": { "type": "boolean" },
-                "biological_warfare": { "type": "boolean" },
-                "duration_over_5y": { "type": "boolean" }
-              },
-              "required": ["policy", "state_involvement", "infrastructure"]
-            },
-            "profit": {
-              "type": "object",
-              "properties": {
-                "direct_revenue": { "type": "boolean" },
-                "resource_extraction": { "type": "boolean" },
-                "forced_labor": { "type": "boolean" },
-                "economic_dependence": { "type": "boolean" },
-                "market_integration": { "type": "boolean" }
-              },
-              "required": ["direct_revenue", "resource_extraction", "forced_labor"]
-            },
-            "ideology": {
-              "type": "object",
-              "properties": {
-                "purity_ideal": { "type": "boolean" },
-                "historical_claim": { "type": "boolean" },
-                "higher_purpose": { "type": "boolean" },
-                "victim_narrative": { "type": "boolean" },
-                "utopianism": { "type": "boolean" }
-              },
-              "required": ["purity_ideal", "historical_claim"]
-            },
-            "complicity": {
-              "type": "object",
-              "properties": {
-                "distance": { "type": "boolean" },
-                "benefit": { "type": "boolean" },
-                "euphemisms": { "type": "boolean" },
-                "diffused_responsibility": { "type": "boolean" },
-                "silence": { "type": "boolean" }
-              },
-              "required": ["distance", "benefit", "euphemisms"]
+              "additionalProperties": { "type": "boolean" }
             }
           },
-          "required": ["systematic_intensity", "profit", "ideology", "complicity"]
+          "required": ["systematic_intensity"]
         }
       },
       "required": ["mortality", "scores", "breakdowns"]
@@ -124,7 +80,8 @@
       "properties": {
         "tier": { "type": "string" },
         "pattern_note": { "type": "string" }
-      }
+      },
+      "required": ["tier", "pattern_note"]
     },
     "sources": {
       "type": "array",
@@ -139,5 +96,5 @@
       }
     }
   },
-  "required": ["id", "name", "status", "period", "metrics", "sources"]
+  "required": ["id", "name", "status", "period", "metrics", "analysis", "sources"]
 }

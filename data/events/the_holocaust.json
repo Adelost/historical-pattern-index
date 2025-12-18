@@ -13,15 +13,16 @@
   },
   "metrics": {
     "mortality": {
-      "min": 11000000,
-      "max": 17000000,
-      "population_initial": 18000000,
-      "population_loss_percent": 60.0,
-      "confidence": "high"
+      "min": 5700000,
+      "max": 6000000,
+      "population_initial": 9500000,
+      "population_loss_percent": 63.0,
+      "confidence": "high",
+      "note": "Jewish victims only. Total Holocaust deaths (including Roma, disabled, POWs, political prisoners) estimated at 11-17M."
     },
     "scores": {
       "systematic_intensity": 90,
-      "profit": 40,
+      "profit": 60,
       "ideology": 100,
       "complicity": 80
     },
@@ -42,7 +43,7 @@
         "direct_revenue": true,
         "resource_extraction": false,
         "forced_labor": true,
-        "economic_dependence": false,
+        "economic_dependence": true,
         "market_integration": false
       },
       "ideology": {
