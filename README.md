@@ -1,6 +1,10 @@
 # Historical Pattern Index
 
+**We notice genocides. We overlook "market forces." This project tracks both.**
+
 [View interactive map](https://adelost.github.io/historical-pattern-index/) ・ [Methodology](METHODOLOGY.md)
+
+---
 
 The deadliest conflict since World War II killed 5.4 million people.
 
