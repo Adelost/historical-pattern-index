@@ -8,6 +8,16 @@ Thank you for your interest in contributing to HPI. This is a data-driven projec
 2.  **Data Over Narrative:** We focus on measurable mechanics (e.g., "Was language banned?") rather than descriptions of suffering.
 3.  **Transparency:** All sources must be cited.
 
+## Scope & Data Stability (The "10-Year Guideline")
+
+To maintain scientific integrity, HPI prioritizes **data stability** over speed.
+
+*   **Historical Consensus:** We prioritize events where the "fog of war" has lifted and academic consensus has formed.
+*   **Ongoing/Recent Conflicts:** We exercise extreme caution with events occurring within the last **10 years**.
+    *   If mortality estimates fluctuate wildly (e.g., in active war zones), the HPI score cannot be reliably calculated.
+    *   If factual claims (checklist items) are currently subject to active litigation (e.g., pending ICJ rulings) or intense information warfare, the event will likely be **rejected or marked as 'disputed'** until independent verification is available.
+    *   **We do not use "Breaking News" as sources.** Only reports from established international bodies (UN, Human Rights Watch, Amnesty) or peer-reviewed academic studies are accepted for recent events.
+
 ## How to Add an Event
 
 1.  **Fork the Repository.**
