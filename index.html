@@ -88,6 +88,75 @@
             -webkit-background-clip: text;
         }
 
+        /* --- About Scores --- */
+        .about-scores {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-scores details {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+        }
+
+        .about-scores summary {
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            list-style: none;
+        }
+
+        .about-scores summary::-webkit-details-marker { display: none; }
+
+        .about-scores summary:hover { color: var(--text-main); }
+
+        .about-scores .chevron {
+            transition: transform 0.2s;
+            width: 16px;
+            height: 16px;
+        }
+
+        .about-scores details[open] .chevron {
+            transform: rotate(180deg);
+        }
+
+        .about-scores .scores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            padding: 0 1.25rem 1.25rem;
+        }
+
+        .about-scores .score-explain {
+            padding: 0.75rem;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .about-scores .score-explain h4 {
+            margin: 0 0 0.25rem 0;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-scores .score-explain .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .about-scores .score-explain p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
         /* --- View Tabs --- */
         .view-tabs {
             display: flex;
@@ -682,6 +751,36 @@
                 <div class="number" id="stat-denied">--</div>
                 <div class="label">Still Officially Denied</div>
             </div>
+        </div>
+
+        <!-- About Scores -->
+        <div class="about-scores">
+            <details>
+                <summary>
+                    <span>How are events scored?</span>
+                    <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </summary>
+                <div class="scores-grid">
+                    <div class="score-explain">
+                        <h4><span class="dot" style="background: #ef4444;"></span>Systematic Intensity</h4>
+                        <p>Organization, infrastructure, state involvement. How bureaucratically planned was it?</p>
+                    </div>
+                    <div class="score-explain">
+                        <h4><span class="dot" style="background: #a78bfa;"></span>Profit Motive</h4>
+                        <p>Economic extraction as primary driver. Was wealth the goal?</p>
+                    </div>
+                    <div class="score-explain">
+                        <h4><span class="dot" style="background: #38bdf8;"></span>Ideology</h4>
+                        <p>Ethnic, religious, or political "purification" as goal. Was purity the vision?</p>
+                    </div>
+                    <div class="score-explain">
+                        <h4><span class="dot" style="background: #4ade80;"></span>Complicity</h4>
+                        <p>How society enabled it. Did ordinary people benefit or look away?</p>
+                    </div>
+                </div>
+            </details>
         </div>
 
         <!-- View Tabs -->
