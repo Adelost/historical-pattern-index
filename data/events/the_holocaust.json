@@ -1,0 +1,28 @@
+{
+  "id": "the_holocaust_1941",
+  "name": "The Holocaust",
+  "period": { "start": 1941, "end": 1945 },
+  "metrics": {
+    "mortality": {
+      "min": 11000000,
+      "max": 17000000,
+      "population_loss_percent": 60.0,
+      "confidence": "high"
+    },
+    "scores": {
+      "systematic_intensity": 100,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 60
+    }
+  },
+  "tags": ["industrial_genocide", "ideology_driven", "state_sponsored"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "The reference point for maximum systematic intensity (bureaucracy, infrastructure, intent). High documentation."
+  },
+  "sources": [
+    { "title": "The Destruction of the European Jews", "author": "Raul Hilberg", "year": 1961 },
+    { "title": "Bloodlands", "author": "Timothy Snyder", "year": 2010 }
+  ]
+}

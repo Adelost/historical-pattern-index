@@ -1,0 +1,28 @@
+{
+  "id": "tasmania_black_war_1824",
+  "name": "The Black War (Tasmania)",
+  "period": { "start": 1824, "end": 1831 },
+  "metrics": {
+    "mortality": {
+      "min": 6000,
+      "max": 9000,
+      "population_loss_percent": 99.0,
+      "confidence": "medium"
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 80,
+      "ideology": 40,
+      "complicity": 90
+    }
+  },
+  "tags": ["settler_colonialism", "total_erasure", "land_theft"],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Extremely low absolute numbers but near-total extinction. Highlights the danger of linear scales hiding absolute erasures."
+  },
+  "sources": [
+    { "title": "The Fatal Shore", "author": "Robert Hughes", "year": 1987 },
+    { "title": "Tasmanian Aborigines: A History Since 1803", "author": "Lyndall Ryan", "year": 2012 }
+  ]
+}
