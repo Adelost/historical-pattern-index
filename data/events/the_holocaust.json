@@ -1,11 +1,21 @@
 {
   "id": "the_holocaust_1941",
   "name": "The Holocaust",
+  "status": "historic",
   "period": { "start": 1941, "end": 1945 },
+  "geography": {
+    "region": "Europe",
+    "coordinates": [52.0, 20.0]
+  },
+  "participants": {
+    "perpetrators": ["Nazi Germany", "Axis Collaborators"],
+    "victims": ["Jews", "Roma", "LGBTQ+", "Disabled", "Political Dissidents"]
+  },
   "metrics": {
     "mortality": {
       "min": 11000000,
       "max": 17000000,
+      "population_initial": 18000000,
       "population_loss_percent": 60.0,
       "confidence": "high"
     },
@@ -14,12 +24,26 @@
       "profit": 40,
       "ideology": 100,
       "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": false
+      }
     }
   },
   "tags": ["industrial_genocide", "ideology_driven", "state_sponsored"],
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "The reference point for maximum systematic intensity (bureaucracy, infrastructure, intent). High documentation."
+    "pattern_note": "The reference point for maximum systematic intensity. 100% checklist match: State policy, infrastructure (camps), ID systems (tattoos/punchcards)."
   },
   "sources": [
     { "title": "The Destruction of the European Jews", "author": "Raul Hilberg", "year": 1961 },

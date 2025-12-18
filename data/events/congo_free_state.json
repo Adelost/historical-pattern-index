@@ -1,11 +1,21 @@
 {
   "id": "congo_free_state_1885",
   "name": "Congo Free State",
+  "status": "historic",
   "period": { "start": 1885, "end": 1908 },
+  "geography": {
+    "region": "Central Africa",
+    "coordinates": [-2.0, 22.0]
+  },
+  "participants": {
+    "perpetrators": ["Force Publique", "King Leopold II (Private Fiefdom)"],
+    "victims": ["Congolese Population"]
+  },
   "metrics": {
     "mortality": {
       "min": 8000000,
       "max": 13000000,
+      "population_initial": 20000000,
       "population_loss_percent": 50,
       "confidence": "medium"
     },
@@ -14,14 +24,28 @@
       "profit": 100,
       "ideology": 20,
       "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": false,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      }
     }
   },
   "tags": ["profit_driven", "colonialism", "rubber"],
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "High profit/complicity scores indicate risk for modern supply chains."
+    "pattern_note": "Driven purely by extraction. 'Propaganda' marked False because they didn't try to convince the victims, they just enslaved them. Complicity high due to international trade integration."
   },
   "sources": [
-    { "title": "King Leopold's Ghost", "author": "Adam Hochschild" }
+    { "title": "King Leopold's Ghost", "author": "Adam Hochschild", "year": 1998 }
   ]
 }

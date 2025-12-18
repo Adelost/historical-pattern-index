@@ -1,11 +1,21 @@
 {
   "id": "spanish_americas_1492",
   "name": "Colonization of the Americas (Initial Phase)",
+  "status": "historic",
   "period": { "start": 1492, "end": 1600 },
+  "geography": {
+    "region": "Americas",
+    "coordinates": [10.0, -75.0]
+  },
+  "participants": {
+    "perpetrators": ["Spanish Empire", "Conquistadors"],
+    "victims": ["Indigenous Peoples of the Americas"]
+  },
   "metrics": {
     "mortality": {
       "min": 50000000,
       "max": 56000000,
+      "population_initial": 60000000,
       "population_loss_percent": 90.0,
       "confidence": "medium"
     },
@@ -14,12 +24,26 @@
       "profit": 90,
       "ideology": 80,
       "complicity": 50
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      }
     }
   },
   "tags": ["continental_collapse", "disease_multiplier", "resource_extraction"],
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Demonstrates the multiplier effect of disease combined with systemic labor exploitation (Encomienda)."
+    "pattern_note": "Biological warfare is marked 'False' as distinct from intentional germ warfare, though disease was the primary killer. Systemic intensity comes from Encomienda (labor) and Requerimiento (legal/religious)."
   },
   "sources": [
     { "title": "The Great Dying", "author": "Koch et al.", "year": 2019 },

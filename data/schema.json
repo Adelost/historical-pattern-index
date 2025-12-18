@@ -2,13 +2,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
-    "id": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "status": {
       "type": "string",
-      "description": "Unique identifier for the event (e.g., congo_free_state_1885)"
-    },
-    "name": {
-      "type": "string",
-      "description": "Display name of the event"
+      "enum": ["historic", "ongoing", "disputed"],
+      "default": "historic"
     },
     "period": {
       "type": "object",
@@ -18,6 +17,25 @@
       },
       "required": ["start", "end"]
     },
+    "geography": {
+      "type": "object",
+      "properties": {
+        "region": { "type": "string" },
+        "coordinates": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        }
+      }
+    },
+    "participants": {
+      "type": "object",
+      "properties": {
+        "perpetrators": { "type": "array", "items": { "type": "string" } },
+        "victims": { "type": "array", "items": { "type": "string" } }
+      }
+    },
     "metrics": {
       "type": "object",
       "properties": {
@@ -26,6 +44,7 @@
           "properties": {
             "min": { "type": "integer" },
             "max": { "type": "integer" },
+            "population_initial": { "type": "integer" },
             "population_loss_percent": { "type": "number" },
             "confidence": { "type": "string", "enum": ["low", "medium", "high"] }
           },
@@ -34,20 +53,38 @@
         "scores": {
           "type": "object",
           "properties": {
-            "systematic_intensity": { "type": "integer", "minimum": 0, "maximum": 100 },
-            "profit": { "type": "integer", "minimum": 0, "maximum": 100 },
-            "ideology": { "type": "integer", "minimum": 0, "maximum": 100 },
-            "complicity": { "type": "integer", "minimum": 0, "maximum": 100 }
+            "systematic_intensity": { "type": "integer" },
+            "profit": { "type": "integer" },
+            "ideology": { "type": "integer" },
+            "complicity": { "type": "integer" }
           },
           "required": ["systematic_intensity", "profit", "ideology", "complicity"]
+        },
+        "breakdowns": {
+          "type": "object",
+          "properties": {
+            "systematic_intensity": {
+              "type": "object",
+              "properties": {
+                "policy": { "type": "boolean" },
+                "state_involvement": { "type": "boolean" },
+                "infrastructure": { "type": "boolean" },
+                "propaganda": { "type": "boolean" },
+                "broad_targeting": { "type": "boolean" },
+                "cultural_ban": { "type": "boolean" },
+                "property_seizure": { "type": "boolean" },
+                "identification": { "type": "boolean" },
+                "biological_warfare": { "type": "boolean" },
+                "duration_over_5y": { "type": "boolean" }
+              }
+            }
+          },
+          "required": ["systematic_intensity"]
         }
       },
-      "required": ["mortality", "scores"]
+      "required": ["mortality", "scores", "breakdowns"]
     },
-    "tags": {
-      "type": "array",
-      "items": { "type": "string" }
-    },
+    "tags": { "type": "array", "items": { "type": "string" } },
     "analysis": {
       "type": "object",
       "properties": {
@@ -68,5 +105,5 @@
       }
     }
   },
-  "required": ["id", "name", "period", "metrics", "sources"]
+  "required": ["id", "name", "status", "period", "metrics", "sources"]
 }

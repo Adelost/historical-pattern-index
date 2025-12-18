@@ -1,19 +1,43 @@
 {
   "id": "event_unique_id",
   "name": "Event Name",
+  "status": "historic",
   "period": { "start": 0, "end": 0 },
+  "geography": {
+    "region": "Continent/Region",
+    "coordinates": [0.0, 0.0] 
+  },
+  "participants": {
+    "perpetrators": ["Group A"],
+    "victims": ["Group B"]
+  },
   "metrics": {
     "mortality": {
       "min": 0,
       "max": 0,
+      "population_initial": 0,
       "population_loss_percent": 0.0,
-      "confidence": "low/medium/high"
+      "confidence": "medium"
     },
     "scores": {
       "systematic_intensity": 0,
       "profit": 0,
       "ideology": 0,
       "complicity": 0
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": false,
+        "state_involvement": false,
+        "infrastructure": false,
+        "propaganda": false,
+        "broad_targeting": false,
+        "cultural_ban": false,
+        "property_seizure": false,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      }
     }
   },
   "tags": [],

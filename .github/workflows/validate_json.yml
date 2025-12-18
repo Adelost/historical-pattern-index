@@ -1,0 +1,30 @@
+name: Validate HPI Data
+
+on:
+  push:
+    branches: [ master, main ]
+    paths:
+      - 'data/**'
+  pull_request:
+    branches: [ master, main ]
+    paths:
+      - 'data/**'
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install JSON Schema Validator
+        run: npm install -g ajv-cli
+
+      - name: Validate Events against Schema
+        run: |
+          echo "Validating all event files against data/schema.json..."
+          ajv validate -s data/schema.json -d "data/events/*.json"
