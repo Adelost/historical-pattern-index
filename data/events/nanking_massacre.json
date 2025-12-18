@@ -1,0 +1,74 @@
+{
+  "id": "nanking_massacre_1937",
+  "name": "Nanking Massacre (Rape of Nanking)",
+  "status": "historic",
+  "period": { "start": 1937, "end": 1938 },
+  "geography": {
+    "region": "East Asia (China)",
+    "coordinates": [32.0, 118.8]
+  },
+  "participants": {
+    "perpetrators": ["Imperial Japanese Army"],
+    "victims": ["Chinese civilians", "Chinese POWs"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 200000,
+      "max": 300000,
+      "population_initial": 600000,
+      "population_loss_percent": 40.0,
+      "confidence": "medium",
+      "note": "Occurred over approximately 6 weeks. Estimates vary widely - China claims 300,000+, some Japanese historians dispute figures."
+    },
+    "scores": {
+      "systematic_intensity": 40,
+      "profit": 20,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": false,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": false,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["war_crime", "military_atrocity", "rape", "denial", "asian_perpetrator"],
+  "analysis": {
+    "tier": "CHAOTIC ATROCITY",
+    "pattern_note": "Lower systematic intensity despite massive death toll - this was chaotic military violence rather than bureaucratic genocide. Shows that industrial organization isn't required for mass death. Still denied/minimized in Japan, creating ongoing diplomatic tensions with China."
+  },
+  "sources": [
+    { "title": "The Rape of Nanking", "author": "Iris Chang", "year": 1997 },
+    { "title": "The Nanjing Massacre in History and Historiography", "author": "Joshua Fogel", "year": 2000 }
+  ]
+}

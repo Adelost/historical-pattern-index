@@ -1,0 +1,74 @@
+{
+  "id": "bosnian_genocide_1992",
+  "name": "Bosnian Genocide (including Srebrenica)",
+  "status": "historic",
+  "period": { "start": 1992, "end": 1995 },
+  "geography": {
+    "region": "Southeastern Europe (Bosnia and Herzegovina)",
+    "coordinates": [44.0, 18.0]
+  },
+  "participants": {
+    "perpetrators": ["Republika Srpska", "VRS (Army of Republika Srpska)", "Serbian paramilitaries"],
+    "victims": ["Bosniak Muslims", "Bosnian Croats"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 100000,
+      "max": 110000,
+      "population_initial": 1900000,
+      "population_loss_percent": 5.0,
+      "confidence": "high",
+      "note": "Includes Srebrenica massacre (8,000+ men and boys in July 1995). 2.2 million displaced. Well-documented due to ICTY prosecutions."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 0,
+      "ideology": 100,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["ethnic_cleansing", "ideology_driven", "concentration_camps", "post_cold_war"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "First genocide in Europe since WWII. Coined term 'ethnic cleansing'. UN peacekeepers present at Srebrenica but failed to prevent massacre. ICTY prosecutions established legal precedents. Demonstrates genocide can happen in modern Europe with international observers watching."
+  },
+  "sources": [
+    { "title": "Srebrenica: Record of a War Crime", "author": "Jan Willem Honig", "year": 1996 },
+    { "title": "The War in Bosnia-Herzegovina: Ethnic Conflict and International Intervention", "author": "Steven Burg", "year": 1999 }
+  ]
+}

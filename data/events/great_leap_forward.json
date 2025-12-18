@@ -1,0 +1,74 @@
+{
+  "id": "great_leap_forward_1958",
+  "name": "Great Leap Forward (Chinese Famine)",
+  "status": "historic",
+  "period": { "start": 1958, "end": 1962 },
+  "geography": {
+    "region": "East Asia (China)",
+    "coordinates": [35.0, 105.0]
+  },
+  "participants": {
+    "perpetrators": ["Chinese Communist Party", "Mao Zedong"],
+    "victims": ["Chinese peasants", "Rural population"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 15000000,
+      "max": 55000000,
+      "population_initial": 650000000,
+      "population_loss_percent": 5.0,
+      "confidence": "low",
+      "note": "Largest famine in human history. Estimates vary enormously due to CCP secrecy. Most historians estimate 30-45 million. Grain exports continued during the famine."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 80,
+      "ideology": 80,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": false,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": false,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["famine_as_weapon", "communism", "collectivization", "censorship", "asian_perpetrator"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "History's deadliest famine. Grain quotas enforced while millions starved - local officials lied about yields to meet targets. Challenges genocide definition: was it murder or criminal negligence? Either way, policy continued despite known deaths. Still censored in China."
+  },
+  "sources": [
+    { "title": "Mao's Great Famine", "author": "Frank Dikotter", "year": 2010 },
+    { "title": "Tombstone: The Great Chinese Famine", "author": "Yang Jisheng", "year": 2008 }
+  ]
+}
