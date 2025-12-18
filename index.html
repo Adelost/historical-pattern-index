@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPI - Historical Pattern Index</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --tier-1: #ef4444; /* Red */
+            --tier-2: #f97316; /* Orange */
+            --tier-3: #eab308; /* Yellow */
+            --tier-4: #8b5cf6; /* Purple */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem 1rem;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+
+        main {
+            width: 100%;
+            max-width: 1000px;
+            padding: 1rem;
+        }
+
+        .chart-container {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-bottom: 2rem;
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .event-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            transition: transform 0.2s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .event-card h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.25rem;
+        }
+
+        .stats {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .stat-item strong {
+            color: var(--text-primary);
+            display: block;
+        }
+
+        .tier-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            text-align: center;
+        }
+
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* Tier Colors */
+        .tier-TOTAL.ERASURE { background-color: rgba(239, 68, 68, 0.2); color: var(--tier-1); border-color: var(--tier-1); }
+        .tier-INDUSTRIAL.MEGA-EVENT { background-color: rgba(249, 115, 22, 0.2); color: var(--tier-2); border-color: var(--tier-2); }
+        .tier-CONTINENTAL.COLLAPSE { background-color: rgba(234, 179, 8, 0.2); color: var(--tier-3); border-color: var(--tier-3); }
+        .tier-PROFIT-DRIVEN.ATTRITION { background-color: rgba(139, 92, 246, 0.2); color: var(--tier-4); border-color: var(--tier-4); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Historical Pattern Index</h1>
+        <div class="subtitle">Quantifying systemic mechanics of mass mortality and cultural erasure.</div>
+    </header>
+
+    <main>
+        <div class="chart-container">
+            <canvas id="hpiChart"></canvas>
+        </div>
+
+        <div id="eventList" class="info-grid">
+            <!-- Event cards will be injected here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>HPI is an open-source project. <a href="https://github.com/adelost/historical-pattern-index">Contribute on GitHub</a>.</p>
+        <p>"History without opinions. Just data."</p>
+    </footer>
+
+    <script>
+        async function init() {
+            // 1. Fetch the index
+            const indexResponse = await fetch('data/index.json');
+            const fileList = await indexResponse.json();
+
+            // 2. Fetch all event files
+            const events = await Promise.all(fileList.map(async file => {
+                const response = await fetch(file);
+                return response.json();
+            }));
+
+            // 3. Prepare data for Chart.js
+            const chartData = events.map(event => ({
+                x: event.metrics.mortality.max, // Logarithmic X
+                y: event.metrics.scores.systematic_intensity, // Linear Y
+                label: event.name,
+                tier: event.analysis.tier,
+                raw: event
+            }));
+
+            // 4. Render Chart
+            const ctx = document.getElementById('hpiChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        label: 'Historical Events',
+                        data: chartData,
+                        backgroundColor: (ctx) => {
+                            const tier = ctx.raw?.tier;
+                            if (tier?.includes('ERASURE')) return '#ef4444';
+                            if (tier?.includes('INDUSTRIAL')) return '#f97316';
+                            if (tier?.includes('CONTINENTAL')) return '#eab308';
+                            return '#8b5cf6'; // Profit driven
+                        },
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.raw.label;
+                                },
+                                afterLabel: function(context) {
+                                    const e = context.raw.raw;
+                                    return [
+                                        `Deaths: ${e.metrics.mortality.max.toLocaleString()}`,
+                                        `Intensity: ${e.metrics.scores.systematic_intensity}%`,
+                                        `Type: ${e.analysis.tier}`
+                                    ];
+                                }
+                            }
+                        },
+                        legend: { display: false },
+                        annotation: {
+                            // Future: Add background quadrants here
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'logarithmic',
+                            title: { display: true, text: 'Mortality Volume (Logarithmic Scale)', color: '#94a3b8' },
+                            grid: { color: '#334155' },
+                            ticks: { color: '#94a3b8' }
+                        },
+                        y: {
+                            min: 0,
+                            max: 105,
+                            title: { display: true, text: 'Systematic Intensity Score (%)', color: '#94a3b8' },
+                            grid: { color: '#334155' },
+                            ticks: { color: '#94a3b8' }
+                        }
+                    }
+                }
+            });
+
+            // 5. Render Cards
+            const listContainer = document.getElementById('eventList');
+            events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
+                const card = document.createElement('div');
+                card.className = `event-card tier-${event.analysis.tier.replace(' ', '.')}`;
+                card.style.borderColor = getTierColor(event.analysis.tier);
+                
+                card.innerHTML = `
+                    <span class="tier-badge" style="color:${getTierColor(event.analysis.tier)}; border: 1px solid ${getTierColor(event.analysis.tier)}">${event.analysis.tier}</span>
+                    <h3>${event.name}</h3>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
+                            Max Deaths
+                        </div>
+                        <div class="stat-item">
+                            <strong>${event.metrics.scores.systematic_intensity}%</strong>
+                            Intensity
+                        </div>
+                        <div class="stat-item">
+                            <strong>${event.metrics.scores.profit}%</strong>
+                            Profit Score
+                        </div>
+                    </div>
+                    <p style="color: #cbd5e1; font-size: 0.95rem;">${event.analysis.pattern_note}</p>
+                `;
+                listContainer.appendChild(card);
+            });
+        }
+
+        function getTierColor(tier) {
+            if (tier?.includes('ERASURE')) return '#ef4444';
+            if (tier?.includes('INDUSTRIAL')) return '#f97316';
+            if (tier?.includes('CONTINENTAL')) return '#eab308';
+            return '#8b5cf6';
+        }
+
+        init();
+    </script>
+</body>
+</html>
