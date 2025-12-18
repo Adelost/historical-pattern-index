@@ -1,0 +1,75 @@
+{
+  "id": "second_congo_war_1998",
+  "name": "Second Congo War (Africa's World War)",
+  "status": "historic",
+  "period": { "start": 1998, "end": 2003 },
+  "geography": {
+    "region": "Central Africa (Democratic Republic of Congo)",
+    "coordinates": [-2.5, 23.5]
+  },
+  "participants": {
+    "perpetrators": ["Rwanda", "Uganda", "Various militias", "DRC government forces", "Zimbabwe", "Angola"],
+    "victims": ["Congolese civilians"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 3000000,
+      "max": 5400000,
+      "population_initial": 50000000,
+      "population_loss_percent": 8.0,
+      "confidence": "low",
+      "note": "Deadliest conflict since WWII. Most deaths from disease and starvation caused by displacement. 9 African nations involved. Conflict over minerals (coltan, diamonds, gold) fueled by global electronics demand."
+    },
+    "scores": {
+      "systematic_intensity": 70,
+      "profit": 100,
+      "ideology": 80,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["resource_war", "proxy_war", "african_conflict", "minerals", "post_cold_war"],
+  "denial_status": "partial",
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Deadliest conflict since WWII but barely known in West. 'Coltan war' - your phone may contain minerals mined by forced labor during this conflict. Multiple perpetrators make attribution complex. Shows how resource extraction creates mass death even without explicit genocide policy. Ongoing instability in eastern DRC traces directly to this war."
+  },
+  "sources": [
+    { "title": "Dancing in the Glory of Monsters: The Collapse of the Congo and the Great War of Africa", "author": "Jason Stearns", "year": 2011 },
+    { "title": "Africa's World War: Congo, the Rwandan Genocide, and the Making of a Continental Catastrophe", "author": "Gerard Prunier", "year": 2009 }
+  ]
+}

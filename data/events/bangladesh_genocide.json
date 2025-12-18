@@ -1,0 +1,75 @@
+{
+  "id": "bangladesh_genocide_1971",
+  "name": "Bangladesh Genocide (Operation Searchlight)",
+  "status": "historic",
+  "period": { "start": 1971, "end": 1971 },
+  "geography": {
+    "region": "South Asia (East Pakistan / Bangladesh)",
+    "coordinates": [23.8, 90.4]
+  },
+  "participants": {
+    "perpetrators": ["Pakistani Army", "Razakars (collaborators)", "Al-Badr", "Al-Shams"],
+    "victims": ["Bengali civilians", "Bengali Hindus", "Intellectuals", "Students"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 300000,
+      "max": 3000000,
+      "population_initial": 75000000,
+      "population_loss_percent": 2.0,
+      "confidence": "low",
+      "note": "Estimates vary enormously. Bangladesh claims 3 million; independent estimates usually 300k-500k. 10 million refugees fled to India. Systematic targeting of Hindu minority and Bengali intellectuals."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 20,
+      "ideology": 100,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ideology_driven", "ethnic_cleansing", "religious_persecution", "south_asian", "cold_war"],
+  "denial_status": "denied",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "South Asian genocide often overlooked in Western narratives. Operation Searchlight targeted Bengali nationalists, Hindus, and intellectuals. US and China supported Pakistan; India intervened. 'Intellectual kill list' - professors, writers systematically murdered on December 14, 1971. Pakistan still largely denies. International Crimes Tribunal held 2010-present."
+  },
+  "sources": [
+    { "title": "The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide", "author": "Gary Bass", "year": 2013 },
+    { "title": "Dead Reckoning: Memories of the 1971 Bangladesh War", "author": "Srinath Raghavan", "year": 2013 }
+  ]
+}

@@ -20,7 +20,10 @@
   "data/events/nanking_massacre.json",
   "data/events/the_holocaust.json",
   "data/events/great_leap_forward.json",
+  "data/events/bangladesh_genocide.json",
   "data/events/cambodia_khmer_rouge.json",
   "data/events/bosnian_genocide.json",
-  "data/events/rwandan_genocide.json"
+  "data/events/rwandan_genocide.json",
+  "data/events/second_congo_war.json",
+  "data/events/darfur_genocide.json"
 ]
