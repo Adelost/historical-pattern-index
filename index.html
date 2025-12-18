@@ -513,6 +513,94 @@
             line-height: 1.4;
         }
 
+        /* Causes Section (Why Did This Happen?) */
+        .causes-details {
+            border-top: 1px solid var(--border-light);
+            padding-top: 0.75rem;
+        }
+
+        .causes-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: #fbbf24;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: all 0.2s;
+            list-style: none;
+            font-weight: 600;
+        }
+
+        .causes-toggle::-webkit-details-marker { display: none; }
+
+        .causes-toggle:hover {
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        .causes-toggle .chevron {
+            transition: transform 0.2s;
+        }
+
+        .causes-details[open] .causes-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .causes-content {
+            padding: 1rem 0 0.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .causes-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .warning-signs {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 8px;
+            padding: 0.75rem;
+        }
+
+        .warning-sign {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            margin-bottom: 0.4rem;
+        }
+
+        .warning-sign:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-icon {
+            color: #fbbf24;
+            flex-shrink: 0;
+        }
+
+        .root-causes {
+            background: rgba(148, 163, 184, 0.1);
+            border-radius: 8px;
+            padding: 0.75rem;
+        }
+
+        .root-causes p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
         footer { margin-top: auto; padding: 3rem 1rem; color: var(--text-muted); font-size: 0.85rem; text-align: center; }
         a { color: var(--accent); text-decoration: none; }
         a:hover { text-decoration: underline; }
