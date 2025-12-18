@@ -95,9 +95,17 @@ def format_deaths(min_d, max_d):
     return f"{format_millions(min_d)}-{format_millions(max_d)}"
 
 
+def format_year(year):
+    """Format year with BCE/CE suffix."""
+    if year < 0:
+        return f"{abs(year)} BCE"
+    return str(year)
+
+
 def generate_summary(events, stats):
     """Generate summary line."""
-    return f"{stats['count']} events. {stats['year_span']:,} years of history. {format_millions(stats['deaths_min'])}-{format_millions(stats['deaths_max'])} documented deaths."
+    year_start = format_year(stats['year_min'])
+    return f"{stats['count']} events. {stats['year_span']:,} years of history ({year_start}–present). {format_millions(stats['deaths_min'])}-{format_millions(stats['deaths_max'])} documented deaths."
 
 
 def generate_events_table(events):

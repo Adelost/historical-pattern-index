@@ -23,7 +23,9 @@
   "data/events/soviet_great_purge.json",
   "data/events/nanking_massacre.json",
   "data/events/the_holocaust.json",
+  "data/events/soviet_deportations.json",
   "data/events/bengal_famine_1943.json",
+  "data/events/partition_of_india.json",
   "data/events/great_leap_forward.json",
   "data/events/indonesian_killings.json",
   "data/events/biafra_famine.json",
@@ -31,11 +33,15 @@
   "data/events/bangladesh_genocide.json",
   "data/events/cambodia_khmer_rouge.json",
   "data/events/east_timor_genocide.json",
+  "data/events/dirty_war_argentina.json",
   "data/events/guatemalan_genocide.json",
+  "data/events/anfal_genocide.json",
   "data/events/bosnian_genocide.json",
   "data/events/rwandan_genocide.json",
   "data/events/second_congo_war.json",
   "data/events/darfur_genocide.json",
+  "data/events/yazidi_genocide.json",
   "data/events/rohingya_genocide.json",
-  "data/events/uyghur_persecution.json"
+  "data/events/uyghur_persecution.json",
+  "data/events/tigray_war.json"
 ]

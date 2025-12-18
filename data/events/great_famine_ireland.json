@@ -21,10 +21,10 @@
       "note": "Approx 1M died, another 1M emigrated. Mortality driven by blight but exacerbated by continued food exports and laissez-faire policy."
     },
     "scores": {
-      "systematic_intensity": 50,
-      "profit": 90,
-      "ideology": 60,
-      "complicity": 70
+      "systematic_intensity": 60,
+      "profit": 80,
+      "ideology": 40,
+      "complicity": 60
     },
     "breakdowns": {
       "systematic_intensity": {

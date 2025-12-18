@@ -1,0 +1,75 @@
+{
+  "id": "partition_of_india_1947",
+  "name": "Partition of India",
+  "status": "historic",
+  "period": { "start": 1947, "end": 1948 },
+  "geography": {
+    "region": "South Asia (India/Pakistan)",
+    "coordinates": [30.0, 74.0]
+  },
+  "participants": {
+    "perpetrators": ["Hindu mobs", "Muslim mobs", "Sikh mobs", "British colonial administration (indirect)"],
+    "victims": ["Muslims", "Hindus", "Sikhs"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 200000,
+      "max": 2000000,
+      "population_initial": 14000000,
+      "population_loss_percent": 10.0,
+      "confidence": "low",
+      "note": "Estimates range from 200k to 2M killed. 14-18 million displaced - largest mass migration in history. Violence was multi-directional across religious lines."
+    },
+    "scores": {
+      "systematic_intensity": 50,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["religious_violence", "ethnic_cleansing", "decolonization", "mass_migration"],
+  "denial_status": "partial",
+  "analysis": {
+    "tier": "CHAOTIC ATROCITY",
+    "pattern_note": "Rushed British withdrawal (Mountbatten moved date up by 10 months) left no time for orderly transition. Radcliffe Line drawn in 6 weeks by lawyer who'd never been to India. Violence was communal and chaotic rather than state-directed. Legacy: Kashmir conflict, 3 India-Pakistan wars, ongoing nuclear tensions."
+  },
+  "sources": [
+    { "title": "Midnight's Furies: The Deadly Legacy of India's Partition", "author": "Nisid Hajari", "year": 2015 },
+    { "title": "The Great Partition", "author": "Yasmin Khan", "year": 2007 }
+  ]
+}

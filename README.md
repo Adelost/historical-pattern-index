@@ -14,7 +14,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->39 events. 2,173 years of history. 163M-274M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->45 events. 2,173 years of history (149 BCE–present). 164M-277M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -44,6 +44,8 @@ This project attempts to fix that.
 | Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | Chaotic | Disputed |
 | The Holocaust | 1941-1945 | 6M-6M | Industrial | No |
 | Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | Disputed |
+| Soviet Ethnic Deportations | 1943-1944 | 200k-400k | Erasure | No |
+| Partition of India | 1947-1948 | 200k-2M | Chaotic | Partial |
 | Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Industrial | Suppressed |
 | Indonesian Mass Killings | 1965-1966 | 500k-1M | Industrial | Partial |
 | Cultural Revolution | 1966-1976 | 500k-2M | Industrial | Partial |
@@ -51,13 +53,17 @@ This project attempts to fix that.
 | Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | Industrial | **Denied** |
 | Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | Industrial | No |
 | East Timor Genocide | 1975-1999 | 100k-180k | Erasure | No |
+| Dirty War (Argentina) | 1976-1983 | 10k-30k | Industrial | No |
 | Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | Industrial | Partial |
+| Anfal Campaign (Kurdish Genocide) | 1986-1989 | 50k-182k | Industrial | No |
 | Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | Industrial | No |
 | Rwandan Genocide | 1994-1994 | 500k-1M | Industrial | No |
 | Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Collapse | Partial |
 | Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
+| Yazidi Genocide | 2014-2017 | 5k-10k | Erasure | No |
 | Rohingya Genocide | 2016-2017 | 10k-25k | Erasure | **Denied** |
 | Uyghur Persecution (Xinjiang) | 2017-2024 | N/A* | Industrial | **Denied** |
+| Tigray War | 2020-2022 | 300k-500k | Industrial | **Denied** |
 <!-- /STATS:EVENTS_TABLE -->
 
 Full dataset: [`/data/events/`](data/events/)
@@ -70,7 +76,7 @@ Full dataset: [`/data/events/`](data/events/)
 
 The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
 
-**2. <!-- STATS:DENIED_COUNT -->10<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
+**2. <!-- STATS:DENIED_COUNT -->11<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
 
 <!-- STATS:DENIED_TABLE -->
 | Event | Denier | Deaths |
@@ -82,6 +88,7 @@ The highest death tolls come from profit-driven systems (slave trade, colonial e
 | Assyrian Genocide (Seyfo) | Turkey | 250k-750k |
 | Circassian Genocide | Russian Empire | 400k-600k |
 | Dzungar Genocide | Qing Dynasty | 480k-600k |
+| Tigray War | Ethiopian National Defense Force | 300k-500k |
 | Darfur Genocide | Sudanese government | 200k-400k |
 | Rohingya Genocide | Myanmar military (Tatmadaw) | 10k-25k |
 | Uyghur Persecution (Xinjiang) | Chinese Communist Party | N/A* |
@@ -118,7 +125,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->39<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->45<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges

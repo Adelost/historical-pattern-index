@@ -22,9 +22,9 @@
     },
     "scores": {
       "systematic_intensity": 90,
-      "profit": 30,
+      "profit": 60,
       "ideology": 100,
-      "complicity": 90
+      "complicity": 60
     },
     "breakdowns": {
       "systematic_intensity": {

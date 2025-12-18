@@ -1,0 +1,75 @@
+{
+  "id": "dirty_war_argentina_1976",
+  "name": "Dirty War (Argentina)",
+  "status": "historic",
+  "period": { "start": 1976, "end": 1983 },
+  "geography": {
+    "region": "South America (Argentina)",
+    "coordinates": [-34.6, -58.4]
+  },
+  "participants": {
+    "perpetrators": ["Argentine military junta", "National Reorganization Process"],
+    "victims": ["Political dissidents", "Leftists", "Students", "Union members", "Journalists"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 10000,
+      "max": 30000,
+      "population_initial": 26000000,
+      "population_loss_percent": 0.1,
+      "confidence": "medium",
+      "note": "Official estimate: 9,000. Human rights groups: 30,000 'desaparecidos' (disappeared). Many thrown alive from planes into ocean ('death flights'). Babies stolen from detained mothers."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 20,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": false,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["state_terrorism", "disappearances", "cold_war", "operation_condor", "death_flights"],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Part of US-backed Operation Condor across South America. 'Disappearance' as method - bodies never found, plausible deniability. Mothers of Plaza de Mayo still march weekly. Transitional justice model: trials resumed 2006 after amnesty laws overturned. ~500 stolen babies still being identified via DNA."
+  },
+  "sources": [
+    { "title": "Nunca Más (Never Again)", "author": "CONADEP", "year": 1984 },
+    { "title": "A Lexicon of Terror", "author": "Marguerite Feitlowitz", "year": 1998 }
+  ]
+}

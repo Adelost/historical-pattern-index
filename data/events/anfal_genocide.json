@@ -1,0 +1,75 @@
+{
+  "id": "anfal_genocide_1986",
+  "name": "Anfal Campaign (Kurdish Genocide)",
+  "status": "historic",
+  "period": { "start": 1986, "end": 1989 },
+  "geography": {
+    "region": "Middle East (Iraq/Kurdistan)",
+    "coordinates": [36.2, 44.0]
+  },
+  "participants": {
+    "perpetrators": ["Iraqi Ba'ath Party", "Saddam Hussein regime", "Iraqi Army"],
+    "victims": ["Kurdish people", "Assyrians", "Other minorities"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 50000,
+      "max": 182000,
+      "population_initial": 4000000,
+      "population_loss_percent": 4.0,
+      "confidence": "medium",
+      "note": "Included Halabja chemical attack (5,000 killed in single day). 4,000+ villages destroyed. Up to 182,000 'disappeared' per Kurdish estimates."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 40,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["chemical_weapons", "ethnic_cleansing", "arab_nationalism", "village_destruction"],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Named after Quranic chapter meaning 'spoils of war'. First use of chemical weapons against civilian population since WWI. Iraqi High Tribunal ruled it genocide in 2006. 'Chemical Ali' (Ali Hassan al-Majid) executed 2010. Western powers largely silent during campaign due to Iran-Iraq War alignment."
+  },
+  "sources": [
+    { "title": "Genocide in Iraq: The Anfal Campaign Against the Kurds", "author": "Human Rights Watch", "year": 1993 },
+    { "title": "Anfal: The Kurdish Genocide in Iraq", "author": "Choman Hardi", "year": 2011 }
+  ]
+}
