@@ -14,29 +14,51 @@ This project attempts to fix that.
 
 ## The Data
 
-37 events. 2,154 years of history. 150+ million documented deaths.
+<!-- STATS:SUMMARY -->39 events. 2,173 years of history. 163M-274M documented deaths.<!-- /STATS:SUMMARY -->
 
-| Event | Period | Deaths | Denied? |
-|-------|--------|--------|---------|
-| Mongol Conquests | 1206-1368 | 30-40M | No |
-| Spanish Americas | 1492-1600 | 50-56M | Partial |
-| Transatlantic Slave Trade | 1501-1867 | 1.8-2.5M* | No |
-| Circassian Genocide | 1864-1867 | 400-600k | **Denied** |
-| Taiping Rebellion | 1850-1864 | 20-30M | Suppressed |
-| British India Famines | 1876-1902 | 12-29M | Disputed |
-| Congo Free State | 1885-1908 | 8-13M | No |
-| Armenian Genocide | 1915-1923 | 1-1.5M | **Denied** |
-| Holodomor | 1932-1933 | 3.5-7.5M | **Denied** |
-| The Holocaust | 1941-1945 | 5.7-6M | No |
-| Great Leap Forward | 1958-1962 | 15-55M | Suppressed |
-| Bangladesh Genocide | 1971 | 300k-3M | **Denied** |
-| Guatemalan Genocide | 1981-1983 | 100-200k | Partial |
-| Cambodian Genocide | 1975-1979 | 1.5-2M | No |
-| Rwandan Genocide | 1994 | 500k-1M | No |
-| Second Congo War | 1998-2003 | 3-5.4M | Partial |
-| Darfur | 2003-2008 | 200-400k | **Denied** |
-
-*Middle Passage only. Total system deaths 10-15M+.
+<!-- STATS:EVENTS_TABLE -->
+| Event | Period | Deaths | Tier | Denied? |
+|-------|--------|--------|------|---------|
+| Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Erasure | No |
+| Mongol Conquests | 1206-1368 | 30M-40M | Collapse | No |
+| Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Collapse | Partial |
+| Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | No |
+| Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Collapse | Partial |
+| Dzungar Genocide | 1755-1758 | 480k-600k | Erasure | **Denied** |
+| The Black War (Tasmania) | 1824-1831 | 6k-9k | Erasure | No |
+| French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Collapse | Partial |
+| Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Erasure | Partial |
+| British Opium Trade in China | 1839-1906 | 20k-50k | Profit | No |
+| Great Famine (Ireland) | 1845-1852 | 1M-2M | Profit | Disputed |
+| Taiping Rebellion | 1850-1864 | 20M-30M | Collapse | Suppressed |
+| Circassian Genocide | 1864-1867 | 400k-600k | Erasure | **Denied** |
+| British India Famines (Late Victorian Holocausts) | 1876-1902 | 12M-29M | Industrial | Disputed |
+| Congo Free State | 1885-1908 | 8M-13M | Profit | No |
+| Herero and Nama Genocide | 1904-1908 | 65k-100k | Erasure | No |
+| Assyrian Genocide (Seyfo) | 1914-1920 | 250k-750k | Industrial | **Denied** |
+| Greek Genocide (Pontic Greeks) | 1914-1923 | 300k-900k | Industrial | **Denied** |
+| Armenian Genocide | 1915-1923 | 1M-2M | Industrial | **Denied** |
+| Holodomor (Ukrainian Famine) | 1932-1933 | 4M-8M | Industrial | **Denied** |
+| Italian Invasion of Ethiopia | 1935-1941 | 350k-760k | Industrial | Partial |
+| Soviet Great Purge (Great Terror) | 1936-1938 | 680k-1M | Industrial | No |
+| Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | Chaotic | Disputed |
+| The Holocaust | 1941-1945 | 6M-6M | Industrial | No |
+| Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | Disputed |
+| Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Industrial | Suppressed |
+| Indonesian Mass Killings | 1965-1966 | 500k-1M | Industrial | Partial |
+| Cultural Revolution | 1966-1976 | 500k-2M | Industrial | Partial |
+| Biafra War & Famine (Nigerian Civil War) | 1967-1970 | 1M-3M | Profit | Partial |
+| Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | Industrial | **Denied** |
+| Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | Industrial | No |
+| East Timor Genocide | 1975-1999 | 100k-180k | Erasure | No |
+| Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | Industrial | Partial |
+| Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | Industrial | No |
+| Rwandan Genocide | 1994-1994 | 500k-1M | Industrial | No |
+| Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Collapse | Partial |
+| Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
+| Rohingya Genocide | 2016-2017 | 10k-25k | Erasure | **Denied** |
+| Uyghur Persecution (Xinjiang) | 2017-2024 | N/A* | Industrial | **Denied** |
+<!-- /STATS:EVENTS_TABLE -->
 
 Full dataset: [`/data/events/`](data/events/)
 
@@ -48,16 +70,22 @@ Full dataset: [`/data/events/`](data/events/)
 
 The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
 
-**2. Six events are still officially denied.**
+**2. <!-- STATS:DENIED_COUNT -->10<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
 
+<!-- STATS:DENIED_TABLE -->
 | Event | Denier | Deaths |
 |-------|--------|--------|
-| Armenian Genocide | Turkey | 1-1.5M |
-| Holodomor | Russia | 3.5-7.5M |
-| Circassian Genocide | Russia | 400-600k |
-| Dzungar Genocide | China | 480-600k |
-| Bangladesh 1971 | Pakistan | 300k-3M |
-| Darfur | Sudan | 200-400k |
+| Holodomor (Ukrainian Famine) | Russia | 4M-8M |
+| Bangladesh Genocide (Operation Searchlight) | Pakistani Army | 300k-3M |
+| Armenian Genocide | Turkey | 1M-2M |
+| Greek Genocide (Pontic Greeks) | Turkey | 300k-900k |
+| Assyrian Genocide (Seyfo) | Turkey | 250k-750k |
+| Circassian Genocide | Russian Empire | 400k-600k |
+| Dzungar Genocide | Qing Dynasty | 480k-600k |
+| Darfur Genocide | Sudanese government | 200k-400k |
+| Rohingya Genocide | Myanmar military (Tatmadaw) | 10k-25k |
+| Uyghur Persecution (Xinjiang) | Chinese Communist Party | N/A* |
+<!-- /STATS:DENIED_TABLE -->
 
 **3. Speed doesn't require bureaucracy.**
 
@@ -82,7 +110,7 @@ Each event gets four scores (0-100%) based on binary checklists:
 
 Each score is calculated from a checklist of 5-10 binary questions. No subjective weighting. If 8 of 10 boxes are checked, the score is 80%.
 
-Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
+Full methodology: [docs/methodology.md](docs/methodology.md)
 
 ---
 
@@ -90,7 +118,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: 37 events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->39<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges

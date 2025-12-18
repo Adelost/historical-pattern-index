@@ -1,0 +1,75 @@
+{
+  "id": "bengal_famine_1943",
+  "name": "Bengal Famine of 1943",
+  "status": "historic",
+  "period": { "start": 1943, "end": 1944 },
+  "geography": {
+    "region": "South Asia (British India, Bengal)",
+    "coordinates": [22.5, 88.3]
+  },
+  "participants": {
+    "perpetrators": ["British Raj", "Churchill War Cabinet"],
+    "victims": ["Bengali civilians", "Rural poor"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 2000000,
+      "max": 3000000,
+      "population_initial": 60000000,
+      "population_loss_percent": 4.0,
+      "confidence": "medium",
+      "note": "Deaths from starvation and disease during WWII. Rice exports continued. Churchill rejected relief ships. His quote: 'Indians breeding like rabbits.' Separate from British India Famines (1876-1902)."
+    },
+    "scores": {
+      "systematic_intensity": 60,
+      "profit": 60,
+      "ideology": 40,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["famine_as_weapon", "colonialism", "british_empire", "wwii", "churchill"],
+  "denial_status": "disputed",
+  "analysis": {
+    "tier": "PROFIT-DRIVEN ATTRITION",
+    "pattern_note": "Churchill's famine. Rice diverted for war effort and exports while millions starved. Relief ships denied. 'Denial policy' destroyed boats and rice stocks to prevent Japanese use. Churchill blamed Indians for 'breeding like rabbits.' Distinct from 1876-1902 famines - this was WWII-era with Churchill directly responsible. Still politically sensitive in UK."
+  },
+  "sources": [
+    { "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II", "author": "Madhusree Mukerjee", "year": 2010 },
+    { "title": "Hungry Bengal: War, Famine and the End of Empire", "author": "Janam Mukherjee", "year": 2015 }
+  ]
+}
