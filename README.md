@@ -169,4 +169,8 @@ This is a data project, not a forum for political debate.
 * **No Opinions:** All data points must be backed by at least one reputable academic or primary source.
 * **Show the Range:** Do not use single numbers for death tolls if there is academic disagreement. Use the min and max fields.
 * **Pull Requests:** Submit new events via PR using the JSON template.
-* **License:** MIT
+
+## ⚖️ License
+
+*   **Code:** [MIT License](LICENSE) (Free to use for software/tools).
+*   **Data:** [Creative Commons Attribution 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/) (Free to use, but must cite HPI).
