@@ -20,7 +20,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->48 events. 2,166 years of history (149 BCE–present). 193M-336M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->50 events. 2,166 years of history (149 BCE–present). 196M-341M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -34,8 +34,10 @@ This project attempts to fix that.
 | Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Collapse | Partial |
 | Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | No |
 | Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Collapse | Partial |
+| Swedish Deluge (Potop) | 1655-1660 | 3M-4M | Collapse | No |
 | Fall of Nojpetén (Last Maya Kingdom) | 1697-1697 | 2k-10k | Erasure | No |
 | Dzungar Genocide | 1755-1758 | 480k-600k | Erasure | **Denied** |
+| Napoleonic Haiti Campaign (Saint-Domingue) | 1801-1803 | 100k-150k | Profit | Partial |
 | The Black War (Tasmania) | 1824-1831 | 6k-9k | Erasure | No |
 | French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Collapse | Partial |
 | Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Erasure | Partial |
@@ -115,18 +117,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 77% (37/48) |
-| Economic crisis exploited | 46% (22/48) |
-| Dehumanizing rhetoric | 40% (19/48) |
-| Property seizures | 38% (18/48) |
-| Deliberate starvation | 31% (15/48) |
-| Minorities scapegoated | 27% (13/48) |
-| Forced displacement/deportation | 25% (12/48) |
-| Militias and death squads | 19% (9/48) |
-| Media incitement | 19% (9/48) |
-| International inaction | 17% (8/48) |
-| Colonial 'civilizing' justification | 17% (8/48) |
-| Emergency laws/state of exception | 10% (5/48) |
+| Nationalist/ethnic purity ideology | 78% (39/50) |
+| Economic crisis exploited | 50% (25/50) |
+| Property seizures | 44% (22/50) |
+| Dehumanizing rhetoric | 34% (17/50) |
+| Deliberate starvation | 34% (17/50) |
+| Forced displacement/deportation | 28% (14/50) |
+| Militias and death squads | 20% (10/50) |
+| Media incitement | 20% (10/50) |
+| International inaction | 20% (10/50) |
+| Colonial 'civilizing' justification | 20% (10/50) |
+| Minorities scapegoated | 18% (9/50) |
+| Emergency laws/state of exception | 10% (5/50) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 **6. Different mechanisms, different warning signs.**
@@ -161,7 +163,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->48<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->50<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges

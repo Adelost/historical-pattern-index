@@ -8,7 +8,10 @@
   },
   "geography": {
     "region": "Middle East (Judea/Palestine)",
-    "coordinates": [31.78, 35.23]
+    "coordinates": [
+      31.78,
+      35.23
+    ]
   },
   "participants": {
     "perpetrators": [
@@ -95,7 +98,12 @@
       "Rebellion met with overwhelming force",
       "Cultural symbols targeted for destruction"
     ],
-    "root_causes": "Roman imperial control, Jewish religious resistance, taxation grievances, messianic movements, Hellenistic cultural conflict"
+    "root_causes": "Roman imperial control, Jewish religious resistance, taxation grievances, messianic movements, Hellenistic cultural conflict",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "INTERNATIONAL_INACTION",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

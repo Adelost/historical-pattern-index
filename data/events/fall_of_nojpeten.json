@@ -8,7 +8,10 @@
   },
   "geography": {
     "region": "Central America (Petén, Guatemala)",
-    "coordinates": [16.93, -89.89]
+    "coordinates": [
+      16.93,
+      -89.89
+    ]
   },
   "participants": {
     "perpetrators": [
@@ -92,7 +95,12 @@
       "Religious justification for conquest",
       "Previous diplomatic failures escalating to military action"
     ],
-    "root_causes": "Spanish imperial expansion, Catholic evangelization, strategic control of Guatemala-Yucatán corridor, 150 years of failed conversion attempts"
+    "root_causes": "Spanish imperial expansion, Catholic evangelization, strategic control of Guatemala-Yucatán corridor, 150 years of failed conversion attempts",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "DEHUMANIZATION",
+      "FORCED_DISPLACEMENT"
+    ]
   },
   "sources": [
     {

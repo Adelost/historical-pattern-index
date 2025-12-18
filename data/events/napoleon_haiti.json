@@ -1,0 +1,117 @@
+{
+  "id": "napoleon_haiti_1801",
+  "name": "Napoleonic Haiti Campaign (Saint-Domingue)",
+  "status": "historic",
+  "period": {
+    "start": 1801,
+    "end": 1803
+  },
+  "geography": {
+    "region": "Caribbean (Haiti/Saint-Domingue)",
+    "coordinates": [
+      19.0,
+      -72.0
+    ]
+  },
+  "participants": {
+    "perpetrators": [
+      "Napoleonic France",
+      "French Expeditionary Army"
+    ],
+    "victims": [
+      "Haitian revolutionaries",
+      "Formerly enslaved population",
+      "Free Black population"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 100000,
+      "max": 150000,
+      "population_initial": 500000,
+      "population_loss_percent": 25.0,
+      "confidence": "medium",
+      "note": "Deaths from combat, massacres, disease. Napoleon sent 40,000 troops to restore slavery. Most died of yellow fever. Haitian resistance ultimately succeeded."
+    },
+    "scores": {
+      "systematic_intensity": 78,
+      "profit": 100,
+      "ideology": 40,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "40,000 troops deployed. Mass executions, drownings (noyades). Dogs used against prisoners. Systematic campaign.",
+      "profit": "Entire purpose was to restore slavery and sugar plantation profits. Saint-Domingue was France's richest colony.",
+      "ideology": "Racial hierarchy assumed, but primarily economic motivation. Napoleon reinstated slavery in French colonies.",
+      "complicity": "French state, military, plantation class. Europe's other powers watched. Haitian independence ignored diplomatically for decades."
+    }
+  },
+  "tags": [
+    "profit_driven",
+    "slavery",
+    "colonial",
+    "caribbean"
+  ],
+  "denial_status": "partial",
+  "analysis": {
+    "tier": "PROFIT-DRIVEN ATTRITION",
+    "pattern_note": "Napoleon's attempt to restore slavery after Haitian Revolution. General Leclerc and later Rochambeau used extreme brutality - mass drownings, dog attacks, executions. France demanded 'independence debt' from Haiti until 1947. First successful slave revolution, but France never acknowledged the atrocities. Shows profit motive can drive attempted re-enslavement.",
+    "warning_signs": [
+      "Former enslaved people seen as 'property' to reclaim",
+      "Economic interests override abolition",
+      "Massive military force deployed against civilians"
+    ],
+    "root_causes": "Sugar profits, Napoleon's imperial ambitions, racial ideology, fear of successful Black revolution spreading",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "INTERNATIONAL_INACTION"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Avengers of the New World: The Story of the Haitian Revolution",
+      "author": "Laurent Dubois",
+      "year": 2004
+    },
+    {
+      "title": "The Black Jacobins",
+      "author": "C.L.R. James",
+      "year": 1938
+    }
+  ]
+}

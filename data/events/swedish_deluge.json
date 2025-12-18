@@ -1,0 +1,119 @@
+{
+  "id": "swedish_deluge_1655",
+  "name": "Swedish Deluge (Potop)",
+  "status": "historic",
+  "period": {
+    "start": 1655,
+    "end": 1660
+  },
+  "geography": {
+    "region": "Eastern Europe (Poland-Lithuania)",
+    "coordinates": [
+      52.0,
+      20.0
+    ]
+  },
+  "participants": {
+    "perpetrators": [
+      "Swedish Empire",
+      "Brandenburg",
+      "Transylvania"
+    ],
+    "victims": [
+      "Polish-Lithuanian population",
+      "Jews",
+      "Catholics"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 3000000,
+      "max": 4000000,
+      "population_initial": 11000000,
+      "population_loss_percent": 30.0,
+      "confidence": "medium",
+      "note": "Poland lost ~30% of its population. Some estimates higher when including famine and plague. Cities like Warsaw reduced to rubble."
+    },
+    "scores": {
+      "systematic_intensity": 67,
+      "profit": 80,
+      "ideology": 40,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Organized military campaign, systematic looting of cities, churches, libraries. Cultural treasures shipped to Sweden.",
+      "profit": "Primary motive was plunder. Swedish Empire financed through conquest. Stripped Poland of wealth, art, archives.",
+      "ideology": "Some Protestant vs Catholic dimension, but primarily territorial and economic.",
+      "complicity": "Swedish soldiers, allied forces, some Polish nobles collaborated. Europe largely watched."
+    }
+  },
+  "tags": [
+    "profit_driven",
+    "plunder",
+    "early_modern",
+    "northern_europe"
+  ],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Often forgotten outside Poland. One of the most destructive events in Polish history. Swedish army systematically looted cultural heritage - archives, art, libraries shipped to Stockholm. Demonstrates that European powers inflicted colonial-style extraction on each other, not just overseas.",
+    "warning_signs": [
+      "Weakened state targeted by neighbors",
+      "Religious differences exploited",
+      "Systematic looting and cultural theft"
+    ],
+    "root_causes": "Swedish imperial expansion, Polish-Lithuanian weakness, religious tensions, opportunity for plunder",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "PROPERTY_SEIZURE"
+    ]
+  },
+  "sources": [
+    {
+      "title": "The Deluge: The Great Northern War",
+      "author": "Robert Frost",
+      "year": 2000
+    },
+    {
+      "title": "God's Playground: A History of Poland",
+      "author": "Norman Davies",
+      "year": 1981
+    }
+  ]
+}

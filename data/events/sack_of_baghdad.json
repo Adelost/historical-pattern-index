@@ -97,7 +97,10 @@
       "No allies willing to assist",
       "Previous cities destroyed as examples"
     ],
-    "root_causes": "Mongol expansion, Abbasid weakness and isolation, Hulagu's personal ambition to end Caliphate"
+    "root_causes": "Mongol expansion, Abbasid weakness and isolation, Hulagu's personal ambition to end Caliphate",
+    "pattern_tags": [
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

@@ -101,7 +101,11 @@
       "Military rewarded through plunder",
       "Terror normalized as strategy"
     ],
-    "root_causes": "Power vacuum after Mongol decline, Timur's personal ambition, militarized steppe culture, weak fragmented states"
+    "root_causes": "Power vacuum after Mongol decline, Timur's personal ambition, militarized steppe culture, weak fragmented states",
+    "pattern_tags": [
+      "ECONOMIC_CRISIS",
+      "FORCED_DISPLACEMENT"
+    ]
   },
   "sources": [
     {

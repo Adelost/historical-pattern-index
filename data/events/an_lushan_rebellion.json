@@ -8,7 +8,10 @@
   },
   "geography": {
     "region": "East Asia (Tang Dynasty China)",
-    "coordinates": [34.26, 108.94]
+    "coordinates": [
+      34.26,
+      108.94
+    ]
   },
   "participants": {
     "perpetrators": [
@@ -95,7 +98,14 @@
       "Central government losing control of armies",
       "Ethnic tensions in frontier forces"
     ],
-    "root_causes": "Tang military decentralization, An Lushan's personal ambition, Emperor Xuanzong's complacency, frontier army system (jiedushi), court factionalism"
+    "root_causes": "Tang military decentralization, An Lushan's personal ambition, Emperor Xuanzong's complacency, frontier army system (jiedushi), court factionalism",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "MEDIA_INCITEMENT",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {
