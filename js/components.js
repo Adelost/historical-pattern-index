@@ -34,6 +34,13 @@ export const DenialBadge = (status) => {
     return '';
 };
 
+export const StatusBadge = (status) => {
+    if (status === 'ongoing') {
+        return '<span class="status-badge ongoing">ONGOING</span>';
+    }
+    return '';
+};
+
 export const Metric = (label, value) => `
     <div class="metric">
         <b>${value}</b>
@@ -135,7 +142,7 @@ export const Card = (event) => {
     <article class="card" id="card-${event.id}" style="--tier-color: ${color}" tabindex="0" aria-label="${event.name}, ${event.analysis.tier}">
         <div class="card-header">
             <div>
-                <h3>${event.name}${DenialBadge(denialStatus)}</h3>
+                <h3>${event.name}${DenialBadge(denialStatus)}${StatusBadge(event.status)}</h3>
                 <div class="meta">${event.geography.region} · ${event.period.start}–${event.period.end}</div>
             </div>
             ${Badge(event.analysis.tier)}

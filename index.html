@@ -393,6 +393,26 @@
             color: #fcd34d;
         }
 
+        .status-badge {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 0.5rem;
+        }
+
+        .status-badge.ongoing {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
         /* Breakdown Section */
         .breakdown-details {
             border-top: 1px solid var(--border-light);
@@ -533,6 +553,7 @@
             #btnDownload { width: 100%; }
             .card-grid { grid-template-columns: 1fr; }
             .scores { grid-template-columns: 1fr; }
+            .breakdown-content { grid-template-columns: 1fr; }
             #mapView { height: 350px; }
         }
     </style>

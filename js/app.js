@@ -247,8 +247,10 @@ const App = {
 
     updateChart(events) {
         const ctx = document.getElementById('hpiChart').getContext('2d');
-        const data = events.map(e => ({
-            x: Math.max(1, e.metrics.mortality.max),
+        // Filter out events with unknown/zero deaths - they can't be meaningfully plotted on mortality axis
+        const chartEvents = events.filter(e => e.metrics.mortality.max > 0);
+        const data = chartEvents.map(e => ({
+            x: e.metrics.mortality.max,
             y: e.metrics.scores.systematic_intensity,
             tier: e.analysis.tier,
             raw: e
