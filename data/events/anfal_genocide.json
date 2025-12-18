@@ -73,6 +73,12 @@
         "diffused_responsibility": true,
         "silence": false
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Chemical weapons (Halabja), forced relocations, mass executions. Saddam's campaigns.",
+      "profit": "Oil-rich Kurdish regions, but primarily political control.",
+      "ideology": "Arab nationalism vs Kurdish autonomy. Ethnic targeting explicit.",
+      "complicity": "Iraqi military and Ba'ath party. West ignored during Iran-Iraq War. Saddam tried 2006."
     }
   },
   "tags": [

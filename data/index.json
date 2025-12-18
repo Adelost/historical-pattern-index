@@ -40,8 +40,5 @@
   "data/events/rwandan_genocide.json",
   "data/events/second_congo_war.json",
   "data/events/darfur_genocide.json",
-  "data/events/yazidi_genocide.json",
-  "data/events/rohingya_genocide.json",
-  "data/events/uyghur_persecution.json",
-  "data/events/tigray_war.json"
+  "data/events/yazidi_genocide.json"
 ]

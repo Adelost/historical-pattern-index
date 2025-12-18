@@ -71,6 +71,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Qing Emperor Qianlong ordered complete elimination of Dzungar people. Military campaigns 1755-1758.",
+      "profit": "Land seizure for Qing expansion and resettlement. Control of Central Asian trade routes.",
+      "ideology": "Framed as eliminating a threat to Qing rule, but ethnic targeting was explicit.",
+      "complicity": "Qing military and settlers benefited from depopulated lands. Still denied by China today."
     }
   },
   "denial_status": "denied",

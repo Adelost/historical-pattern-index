@@ -74,6 +74,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "NKVD quotas, show trials, Gulag system. Paranoid targeting of perceived enemies.",
+      "profit": "Gulag labor economically significant but not primary driver.",
+      "ideology": "Stalinist paranoia and elimination of perceived counter-revolutionaries. Political, not ethnic.",
+      "complicity": "Party members denounced colleagues. Society paralyzed by fear. Archives opened post-USSR."
     }
   },
   "tags": [

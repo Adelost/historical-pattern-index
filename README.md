@@ -16,7 +16,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->45 events. 2,173 years of history (149 BCE–present). 164M-277M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->42 events. 2,166 years of history (149 BCE–present). 163M-276M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -63,9 +63,6 @@ This project attempts to fix that.
 | Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Collapse | Partial |
 | Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
 | Yazidi Genocide | 2014-2017 | 5k-10k | Erasure | No |
-| Rohingya Genocide | 2016-2017 | 10k-25k | Erasure | **Denied** |
-| Uyghur Persecution (Xinjiang) | 2017-2024 | N/A* | Industrial | **Denied** |
-| Tigray War | 2020-2022 | 300k-500k | Industrial | **Denied** |
 <!-- /STATS:EVENTS_TABLE -->
 
 **[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)** — includes map view, timeline, and detailed score breakdowns for each event.
@@ -80,7 +77,7 @@ Full dataset: [`/data/events/`](data/events/)
 
 The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
 
-**2. <!-- STATS:DENIED_COUNT -->11<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
+**2. <!-- STATS:DENIED_COUNT -->8<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
 
 <!-- STATS:DENIED_TABLE -->
 | Event | Denier | Deaths |
@@ -92,10 +89,7 @@ The highest death tolls come from profit-driven systems (slave trade, colonial e
 | Assyrian Genocide (Seyfo) | Turkey | 250k-750k |
 | Circassian Genocide | Russian Empire | 400k-600k |
 | Dzungar Genocide | Qing Dynasty | 480k-600k |
-| Tigray War | Ethiopian National Defense Force | 300k-500k |
 | Darfur Genocide | Sudanese government | 200k-400k |
-| Rohingya Genocide | Myanmar military (Tatmadaw) | 10k-25k |
-| Uyghur Persecution (Xinjiang) | Chinese Communist Party | N/A* |
 <!-- /STATS:DENIED_TABLE -->
 
 **3. Speed doesn't require bureaucracy.**
@@ -129,7 +123,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->45<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->42<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges

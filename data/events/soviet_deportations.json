@@ -77,6 +77,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "NKVD operations deported entire ethnic groups: Chechens, Crimean Tatars, Volga Germans, others.",
+      "profit": "Land seizure, but primarily punitive and security-driven.",
+      "ideology": "Collective punishment for alleged collaboration. Ethnic targeting for political reasons.",
+      "complicity": "Soviet officials and settlers benefited from vacated lands. Survivors rehabilitated post-Stalin."
     }
   },
   "tags": [

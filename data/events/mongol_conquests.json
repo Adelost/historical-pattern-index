@@ -76,6 +76,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Organized military campaigns with deliberate terror tactics. Cities given choice: surrender or annihilation.",
+      "profit": "Primary driver was tribute, trade route control, and wealth extraction from conquered peoples.",
+      "ideology": "Mandate of Heaven concept, but conquest was pragmatic rather than ideologically purifying.",
+      "complicity": "Mongol soldiers and administrators directly benefited; conquered peoples often collaborated to survive."
     }
   },
   "denial_status": "acknowledged",

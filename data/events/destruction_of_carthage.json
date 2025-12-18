@@ -69,6 +69,12 @@
         "diffused_responsibility": false,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Rome's explicit policy of annihilation (Carthago delenda est). City systematically razed, population killed or enslaved, land salted.",
+      "profit": "Seizure of Carthaginian wealth, slaves, and North African trade routes was a major Roman objective.",
+      "ideology": "Framed as eliminating an existential rival, but primarily strategic rather than ethnic/religious purification.",
+      "complicity": "Roman citizens celebrated the victory and benefited from plunder and expanded territory."
     }
   },
   "tags": [

@@ -74,6 +74,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Multiple state and militia actors. Systematic resource extraction through violence.",
+      "profit": "Coltan, diamonds, gold, timber. Corporations and neighboring states extracted resources.",
+      "ideology": "Ethnic tensions exploited, but profit drove the war. 'Africa's World War.'",
+      "complicity": "Rwanda, Uganda, multinational corporations, consumers of electronics. Ongoing instability."
     }
   },
   "tags": [

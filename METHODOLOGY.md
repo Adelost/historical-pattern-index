@@ -15,6 +15,13 @@ This index covers events from 146 BCE to present.
 
 **Upper bound (present - 10 years)**: Events need at least a decade of scholarly analysis before inclusion. Death tolls stabilize, archives open, and political dust settles.
 
+This rule is strictly enforced. Ongoing events (e.g., Uyghur persecution, Rohingya crisis, Tigray war) are **not included** regardless of severity, because:
+1. Death tolls are unstable and politically contested
+2. Including some ongoing events but not others invites accusations of bias
+3. The project documents history, not current affairs
+
+These events may be added once the 10-year threshold is reached and scholarly consensus emerges.
+
 Events outside this scope are not excluded for being "less important"—they're excluded because our methodology cannot score them reliably.
 
 ---

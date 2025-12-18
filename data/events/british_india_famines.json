@@ -71,6 +71,12 @@
         "diffused_responsibility": true,
         "silence": false
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Colonial policies prioritized export over food security. Railways moved grain out during famines.",
+      "profit": "Cash crop exports continued during famines. Colonial economy extracted wealth systematically.",
+      "ideology": "Malthusian and racial theories blamed Indian 'overpopulation' rather than policy.",
+      "complicity": "British government, merchants, and consumers benefited. Famine relief deliberately limited."
     }
   },
   "tags": [

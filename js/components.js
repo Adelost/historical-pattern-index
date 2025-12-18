@@ -92,11 +92,13 @@ const categoryMeta = {
 };
 
 // Breakdown checklist component
-export const BreakdownSection = (breakdowns) => {
+export const BreakdownSection = (breakdowns, rationales = {}) => {
     if (!breakdowns) return '';
 
     const categories = Object.entries(breakdowns).map(([category, items]) => {
         const meta = categoryMeta[category] || { label: category, color: '#94a3b8' };
+        const rationale = rationales[category] || '';
+
         const itemsList = Object.entries(items).map(([key, value]) => `
             <div class="breakdown-item ${value ? 'checked' : ''}">
                 <span class="breakdown-check">${value ? '✓' : '✗'}</span>
@@ -112,6 +114,7 @@ export const BreakdownSection = (breakdowns) => {
                 <div class="breakdown-items">
                     ${itemsList}
                 </div>
+                ${rationale ? `<div class="breakdown-rationale">${rationale}</div>` : ''}
             </div>
         `;
     }).join('');
@@ -136,6 +139,7 @@ export const Card = (event) => {
     const deaths = event.metrics.mortality;
     const scores = event.metrics.scores;
     const breakdowns = event.metrics.breakdowns;
+    const rationales = event.metrics.rationales || {};
     const denialStatus = event.denial_status || 'acknowledged';
 
     return `
@@ -155,7 +159,7 @@ export const Card = (event) => {
             ${ScoreBar('Complicity', scores.complicity, 'complicity')}
         </div>
 
-        ${BreakdownSection(breakdowns)}
+        ${BreakdownSection(breakdowns, rationales)}
 
         <div class="metrics-row">
             ${Metric('Deaths', Utils.formatDeaths(deaths.min, deaths.max))}

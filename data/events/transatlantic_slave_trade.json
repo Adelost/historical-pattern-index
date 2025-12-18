@@ -71,6 +71,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Centuries-long infrastructure: forts, ships, auctions, plantations, legal codes. State-chartered companies.",
+      "profit": "Pure economic extraction. Entire colonial economies built on enslaved labor. Sugar, cotton, tobacco.",
+      "ideology": "Racism developed to justify the system, but profit preceded and drove the ideology.",
+      "complicity": "European consumers, investors, insurers all benefited. 'Triangle trade' enriched multiple continents."
     }
   },
   "tags": [

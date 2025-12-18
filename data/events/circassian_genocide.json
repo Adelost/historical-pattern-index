@@ -70,6 +70,12 @@
         "diffused_responsibility": true,
         "silence": true
       }
+    },
+    "rationales": {
+      "systematic_intensity": "Russian military campaigns, forced deportations, destruction of villages. 90% of population killed or expelled.",
+      "profit": "Land seizure for Russian settlers and military bases in North Caucasus.",
+      "ideology": "Christian Russia vs Muslim Circassians, but primarily strategic territorial control.",
+      "complicity": "Russian settlers occupied depopulated lands. Ottoman Empire accepted refugees but didn't intervene."
     }
   },
   "tags": [
