@@ -1,0 +1,74 @@
+{
+  "id": "cambodia_khmer_rouge_1975",
+  "name": "Cambodian Genocide (Khmer Rouge)",
+  "status": "historic",
+  "period": { "start": 1975, "end": 1979 },
+  "geography": {
+    "region": "Southeast Asia",
+    "coordinates": [12.5, 104.9]
+  },
+  "participants": {
+    "perpetrators": ["Khmer Rouge (CPK)", "Pol Pot Regime"],
+    "victims": ["Urban Population ('New People')", "Intellectuals", "Ethnic Minorities (Cham, Vietnamese, Chinese)", "Religious Groups"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1500000,
+      "max": 2000000,
+      "population_initial": 7500000,
+      "population_loss_percent": 25.0,
+      "confidence": "medium",
+      "note": "Deaths from execution, starvation, and forced labor."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 30,
+      "ideology": 100,
+      "complicity": 90
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": false,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["autogenocide", "agrarian_utopia", "ideology_driven"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "A non-European example of Tier 2. Matches the Holocaust profile (Ideology=100, Intensity=90) but driven by agrarian communism rather than race. Proves that systematic patterns are universal."
+  },
+  "sources": [
+    { "title": "The Pol Pot Regime", "author": "Ben Kiernan", "year": 1996 },
+    { "title": "Voices from S-21", "author": "David Chandler", "year": 1999 }
+  ]
+}
