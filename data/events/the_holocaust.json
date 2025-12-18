@@ -63,6 +63,7 @@
     }
   },
   "tags": ["industrial_genocide", "ideology_driven", "state_sponsored"],
+  "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute."

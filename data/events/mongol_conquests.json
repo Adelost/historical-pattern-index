@@ -1,0 +1,75 @@
+{
+  "id": "mongol_conquests_1206",
+  "name": "Mongol Conquests",
+  "status": "historic",
+  "period": { "start": 1206, "end": 1368 },
+  "geography": {
+    "region": "Eurasia (China, Persia, Central Asia, Russia, Middle East)",
+    "coordinates": [47.0, 103.0]
+  },
+  "participants": {
+    "perpetrators": ["Mongol Empire", "Genghis Khan", "Mongol successor states"],
+    "victims": ["Chinese", "Persians", "Khwarezmians", "Russians", "Central Asians", "Arabs"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 30000000,
+      "max": 40000000,
+      "population_initial": 400000000,
+      "population_loss_percent": 10.0,
+      "confidence": "low",
+      "note": "Possibly 10% of world population. Some estimates go higher. Cities like Baghdad, Samarkand, Nishapur completely destroyed. Terror used as deliberate strategy - cities that resisted were annihilated as warning to others."
+    },
+    "scores": {
+      "systematic_intensity": 60,
+      "profit": 100,
+      "ideology": 60,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": ["military_conquest", "medieval", "empire_building", "siege_warfare", "terror_strategy"],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Terror as military doctrine. Cities that surrendered were spared; those that resisted were annihilated to the last person. Baghdad 1258: 200k-2M killed, libraries burned, irrigation destroyed. Yet Mongols were religiously tolerant and created Pax Mongolica trade network. Shows how extreme violence can coexist with 'civilizational' achievements."
+  },
+  "sources": [
+    { "title": "Genghis Khan and the Making of the Modern World", "author": "Jack Weatherford", "year": 2004 },
+    { "title": "The Mongol Conquests: The Military Operations of Genghis Khan and Sube'etei", "author": "Carl Sverdrup", "year": 2017 }
+  ]
+}

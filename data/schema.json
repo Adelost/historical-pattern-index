@@ -75,6 +75,11 @@
       "required": ["mortality", "scores", "breakdowns"]
     },
     "tags": { "type": "array", "items": { "type": "string" } },
+    "denial_status": {
+      "type": "string",
+      "enum": ["acknowledged", "partial", "disputed", "denied", "suppressed"],
+      "description": "How the event is recognized by perpetrator state/successors: acknowledged (fully), partial (some recognition), disputed (contested facts), denied (rejected), suppressed (censored/hidden)"
+    },
     "analysis": {
       "type": "object",
       "properties": {

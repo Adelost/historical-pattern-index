@@ -62,6 +62,7 @@
     }
   },
   "tags": ["continental_collapse", "disease_multiplier", "resource_extraction"],
+  "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
     "pattern_note": "Biological warfare is distinct from intentional germ warfare. Systemic intensity comes from Encomienda (labor) and Requerimiento."

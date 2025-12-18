@@ -1,0 +1,75 @@
+{
+  "id": "dzungar_genocide_1755",
+  "name": "Dzungar Genocide",
+  "status": "historic",
+  "period": { "start": 1755, "end": 1758 },
+  "geography": {
+    "region": "Central Asia (Dzungaria, modern Xinjiang)",
+    "coordinates": [44.0, 85.0]
+  },
+  "participants": {
+    "perpetrators": ["Qing Dynasty", "Qianlong Emperor", "Qing military"],
+    "victims": ["Dzungar people (Oirat Mongols)"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 480000,
+      "max": 600000,
+      "population_initial": 600000,
+      "population_loss_percent": 80.0,
+      "confidence": "medium",
+      "note": "Near-total destruction of Dzungar people. Qianlong explicitly ordered extermination. Survivors fled to Russia or were enslaved. Smallpox epidemic killed many survivors. Region repopulated with Han, Uyghur, and other groups. One of history's most complete genocides."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 20,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "denial_status": "denied",
+  "tags": ["genocide", "ethnic_cleansing", "qing_dynasty", "central_asia", "total_destruction"],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "One of the most complete genocides in history - 80% of an entire people killed in 3 years. Qianlong Emperor's own words: 'Show no mercy at all to these rebels. Only the old and weak should be saved.' Dzungars were last nomadic empire to challenge Qing. Their elimination opened Xinjiang for settlement. Critical context for understanding current Uyghur situation in same region."
+  },
+  "sources": [
+    { "title": "The Qing Empire and the Opium War", "author": "Mao Haijian", "year": 2016 },
+    { "title": "China's Last Empire: The Great Qing", "author": "William Rowe", "year": 2009 }
+  ]
+}

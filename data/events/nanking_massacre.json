@@ -63,6 +63,7 @@
     }
   },
   "tags": ["war_crime", "military_atrocity", "rape", "denial", "asian_perpetrator"],
+  "denial_status": "disputed",
   "analysis": {
     "tier": "CHAOTIC ATROCITY",
     "pattern_note": "Lower systematic intensity despite massive death toll - this was chaotic military violence rather than bureaucratic genocide. Shows that industrial organization isn't required for mass death. Still denied/minimized in Japan, creating ongoing diplomatic tensions with China."

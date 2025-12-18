@@ -63,6 +63,7 @@
     }
   },
   "tags": ["chattel_slavery", "profit_driven", "global_trade", "middle_passage"],
+  "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "The definitive example of Profit-Driven Attrition. Ideology score is low (20%) because racism was often a consequence of the system, not the initial driver, though religious justification ('saving souls') was used."
