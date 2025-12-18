@@ -68,6 +68,14 @@ CAUSES = {
         ],
         "root_causes": "Labor demand in colonies, profit motive, development of racial capitalism"
     },
+    "fall_of_nojpeten": {
+        "warning_signs": [
+            "Isolated indigenous polity surrounded by colonial power",
+            "Religious justification for conquest",
+            "Previous diplomatic failures escalating to military action"
+        ],
+        "root_causes": "Spanish imperial expansion, Catholic evangelization, strategic control of Guatemala-Yucatán corridor, 150 years of failed conversion attempts"
+    },
     "dzungar_genocide": {
         "warning_signs": [
             "Ethnic group labeled security threat",

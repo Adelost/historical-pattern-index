@@ -1,0 +1,114 @@
+{
+  "id": "fall_of_nojpeten_1697",
+  "name": "Fall of Nojpetén (Last Maya Kingdom)",
+  "status": "historic",
+  "period": {
+    "start": 1697,
+    "end": 1697
+  },
+  "geography": {
+    "region": "Central America (Petén, Guatemala)",
+    "coordinates": [16.93, -89.89]
+  },
+  "participants": {
+    "perpetrators": [
+      "Spanish Empire",
+      "Martín de Ursúa y Arismendi"
+    ],
+    "victims": [
+      "Itza Maya",
+      "Petén Itzá Kingdom"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 2000,
+      "max": 10000,
+      "population_initial": 60000,
+      "population_loss_percent": 15.0,
+      "confidence": "low",
+      "note": "Exact casualties unknown. Spanish assault on March 13, 1697 caused heavy loss of life among Itza defenders. Many fled into jungle. Subsequent disease and displacement increased mortality. Primary significance is cultural: the last Maya codices were destroyed, ending independent preservation of Maya written tradition."
+    },
+    "scores": {
+      "systematic_intensity": 67,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Final conquest of last independent Maya polity. Temples destroyed, codices burned. Religious conversion enforced. Maya elite executed or enslaved.",
+      "profit": "Strategic control of Petén region. Tribute extraction. Land for Spanish settlement.",
+      "ideology": "Catholic mission to eliminate 'idolatry'. 150 years of failed diplomacy ended with military assault. Itza resistance framed as devil worship.",
+      "complicity": "Spanish colonial administration supported conquest. Other Maya groups (already conquered) assisted Spanish forces."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "cultural_destruction",
+    "colonialism",
+    "last_codices",
+    "end_of_civilization",
+    "epistemicide"
+  ],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "The end of independent Maya civilization. Nojpetén on Lake Petén Itzá was the last unconquered Maya city, holding out 150 years after initial Spanish contact. When it fell on March 13, 1697, the last Maya codices in native hands were destroyed. Only four codices survive today - all already in European collections by this date. This event completed the epistemicide begun at Maní in 1562. The Itza had preserved their written tradition longer than any other Maya group, making its destruction especially significant.",
+    "warning_signs": [
+      "Isolated indigenous polity surrounded by colonial power",
+      "Religious justification for conquest",
+      "Previous diplomatic failures escalating to military action"
+    ],
+    "root_causes": "Spanish imperial expansion, Catholic evangelization, strategic control of Guatemala-Yucatán corridor, 150 years of failed conversion attempts"
+  },
+  "sources": [
+    {
+      "title": "The Conquest of the Last Maya Kingdom",
+      "author": "Grant D. Jones",
+      "year": 1998
+    },
+    {
+      "title": "Maya Conquistador",
+      "author": "Matthew Restall",
+      "year": 1998
+    },
+    {
+      "title": "Rebirth of the Postclassic Maya",
+      "author": "Prudence M. Rice",
+      "year": 2004
+    }
+  ]
+}
