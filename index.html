@@ -7,21 +7,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
+            --bg-color: #0b1120; /* Darker, richer blue */
+            --card-bg: rgba(30, 41, 59, 0.7); /* Semi-transparent */
+            --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
             --accent: #38bdf8;
-            --tier-1: #ef4444;
-            --tier-2: #f97316;
-            --tier-3: #eab308;
-            --tier-4: #8b5cf6;
+            --tier-1: #f87171;
+            --tier-2: #fb923c;
+            --tier-3: #facc15;
+            --tier-4: #a78bfa;
         }
 
         body {
             background-color: var(--bg-color);
+            background-image: 
+                linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)),
+                linear-gradient(#1e293b 1px, transparent 1px),
+                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
             color: var(--text-primary);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -30,134 +35,50 @@
             min-height: 100vh;
         }
 
-        header {
-            text-align: center;
-            padding: 2rem 1rem;
-            max-width: 800px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-        }
-
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-            font-weight: 300;
-        }
-
-        main {
-            width: 100%;
-            max-width: 1000px;
-            padding: 1rem;
-        }
-
-        .chart-container {
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-        }
-
-        .error-message {
-            background-color: rgba(239, 68, 68, 0.1);
-            color: var(--tier-1);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--tier-1);
-            margin-bottom: 1rem;
-            display: none;
-        }
-
-        .controls-container {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            background: var(--card-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            align-items: center;
-        }
-
-        .filters {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        select {
-            background: var(--bg-color);
-            color: var(--text-primary);
-            border: 1px solid #334155;
-            padding: 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-        }
-
-        .btn-download {
-            background: var(--accent);
-            color: #000;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-
-        .btn-download:hover {
-            opacity: 0.9;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
+        /* ... header styles ... */
 
         .event-card {
             background-color: var(--card-bg);
-            border-radius: 8px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
             padding: 1.5rem;
             border-left: 4px solid var(--accent);
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
         }
 
-        .event-card h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.25rem;
+        .event-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
-        .stats {
+        .tier-header {
             display: flex;
-            gap: 1rem;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
         }
 
-        .stat-item strong {
-            color: var(--text-primary);
-            display: block;
+        .tier-icon {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+            opacity: 0.8;
         }
 
         .tier-badge {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px; /* Pill shape */
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
             text-transform: uppercase;
-            margin-bottom: 1rem;
         }
 
         footer {
@@ -349,57 +270,80 @@
                 return;
             }
 
-            events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
-                const card = document.createElement('div');
-                const tierClass = getSafeClassName(event.analysis.tier);
-                card.className = `event-card ${tierClass}`;
-                card.style.borderColor = getTierColor(event.analysis.tier);
+        function getTierIcon(tier) {
+            const t = tier.toLowerCase();
+            // Erasure = Ghost/Dust
+            if (t.includes('erasure')) return `<svg class="tier-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z"/></svg>`; 
+            // Industrial = Factory/Gear
+            if (t.includes('industrial')) return `<svg class="tier-icon" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2V9h8v10z"/></svg>`;
+            // Continental = Globe
+            if (t.includes('continental')) return `<svg class="tier-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>`;
+            // Profit = Coin/Chart
+            return `<svg class="tier-icon" viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>`;
+        }
 
-                const badge = document.createElement('span');
-                badge.className = 'tier-badge';
-                badge.textContent = event.analysis.tier;
-                badge.style.color = getTierColor(event.analysis.tier);
-                badge.style.border = `1px solid ${getTierColor(event.analysis.tier)}`;
+        // ... existing code ...
 
-                const title = document.createElement('h3');
-                title.textContent = event.name;
+                // Render Cards Safely
+                events.sort((a,b) => b.metrics.mortality.max - a.metrics.mortality.max).forEach(event => {
+                    const card = document.createElement('div');
+                    const tierClass = getSafeClassName(event.analysis.tier);
+                    card.className = `event-card ${tierClass}`;
+                    card.style.borderColor = getTierColor(event.analysis.tier);
 
-                const meta = document.createElement('div');
-                meta.style.fontSize = '0.85rem';
-                meta.style.color = '#94a3b8';
-                meta.style.marginBottom = '0.5rem';
-                meta.textContent = `${event.geography?.region || 'Unknown'} • ${event.period.start}-${event.period.end}`;
+                    const header = document.createElement('div');
+                    header.className = 'tier-header';
 
-                const stats = document.createElement('div');
-                stats.className = 'stats';
-                stats.innerHTML = `
-                    <div class="stat-item">
-                        <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
-                        Max Deaths
-                        <div style="font-size: 0.7em; color: #64748b;">(Init: ${((event.metrics.mortality.population_initial || 0)/1000000).toFixed(1)}M)</div>
-                    </div>
-                    <div class="stat-item">
-                        <strong>${event.metrics.scores.systematic_intensity}%</strong>
-                        Intensity
-                    </div>
-                    <div class="stat-item">
-                        <strong>${event.metrics.scores.profit}%</strong>
-                        Profit
-                    </div>
-                `;
+                    const badge = document.createElement('div');
+                    badge.className = 'tier-badge';
+                    badge.style.color = getTierColor(event.analysis.tier);
+                    badge.style.backgroundColor = getTierColor(event.analysis.tier) + '20'; // 20% opacity
+                    badge.style.border = `1px solid ${getTierColor(event.analysis.tier)}`;
+                    badge.innerHTML = `${getTierIcon(event.analysis.tier)} ${event.analysis.tier}`;
 
-                const note = document.createElement('p');
-                note.style.color = '#cbd5e1';
-                note.style.fontSize = '0.95rem';
-                note.textContent = event.analysis.pattern_note;
+                    header.appendChild(badge);
 
-                card.appendChild(badge);
-                card.appendChild(title);
-                card.appendChild(meta);
-                card.appendChild(stats);
-                card.appendChild(note);
-                listContainer.appendChild(card);
-            });
+                    const title = document.createElement('h3');
+                    title.textContent = event.name;
+
+                    // ... rest of rendering ...
+                    const meta = document.createElement('div');
+                    meta.style.fontSize = '0.85rem';
+                    meta.style.color = '#94a3b8';
+                    meta.style.marginBottom = '0.5rem';
+                    meta.textContent = `${event.geography?.region || 'Unknown'} • ${event.period.start}-${event.period.end}`;
+
+                    const stats = document.createElement('div');
+                    stats.className = 'stats';
+                    stats.innerHTML = `
+                        <div class="stat-item">
+                            <strong>${event.metrics.mortality.max.toLocaleString()}</strong>
+                            Max Deaths
+                            <div style="font-size: 0.7em; color: #64748b;">(Init: ${((event.metrics.mortality.population_initial || 0)/1000000).toFixed(1)}M)</div>
+                        </div>
+                        <div class="stat-item">
+                            <strong>${event.metrics.scores.systematic_intensity}%</strong>
+                            Intensity
+                        </div>
+                        <div class="stat-item">
+                            <strong>${event.metrics.scores.profit}%</strong>
+                            Profit
+                        </div>
+                    `;
+
+                    const note = document.createElement('p');
+                    note.style.color = '#cbd5e1';
+                    note.style.fontSize = '0.95rem';
+                    note.style.marginTop = '1rem';
+                    note.textContent = event.analysis.pattern_note;
+
+                    card.appendChild(header);
+                    card.appendChild(title);
+                    card.appendChild(meta);
+                    card.appendChild(stats);
+                    card.appendChild(note);
+                    listContainer.appendChild(card);
+                });
         }
 
         async function init() {
