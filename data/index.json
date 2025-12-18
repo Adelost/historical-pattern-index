@@ -4,6 +4,7 @@
   "data/events/spanish_conquest_yucatan.json",
   "data/events/transatlantic_slave_trade.json",
   "data/events/tasmania_black_war.json",
+  "data/events/british_opium_trade.json",
   "data/events/great_famine_ireland.json",
   "data/events/congo_free_state.json",
   "data/events/herero_nama_genocide.json",
@@ -11,8 +12,8 @@
   "data/events/holodomor.json",
   "data/events/nanking_massacre.json",
   "data/events/the_holocaust.json",
-  "data/events/cambodia_khmer_rouge.json",
   "data/events/great_leap_forward.json",
+  "data/events/cambodia_khmer_rouge.json",
   "data/events/bosnian_genocide.json",
   "data/events/rwandan_genocide.json"
 ]

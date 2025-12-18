@@ -1,0 +1,74 @@
+{
+  "id": "british_opium_trade_1839",
+  "name": "British Opium Trade in China",
+  "status": "historic",
+  "period": { "start": 1839, "end": 1906 },
+  "geography": {
+    "region": "East Asia (China)",
+    "coordinates": [30.0, 115.0]
+  },
+  "participants": {
+    "perpetrators": ["British Empire", "British East India Company"],
+    "victims": ["Chinese population"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 20000,
+      "max": 50000,
+      "population_initial": 400000000,
+      "population_loss_percent": 0.01,
+      "confidence": "low",
+      "note": "Direct war deaths low (~20-50k across both Opium Wars). True harm was addiction: 10-15 million addicts by 1900, economic devastation, societal breakdown. Contributed to instability leading to Taiping Rebellion (20-30M dead). Mortality figures vastly understate actual harm."
+    },
+    "scores": {
+      "systematic_intensity": 70,
+      "profit": 80,
+      "ideology": 40,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": false,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["imperialism", "drug_trade", "profit_driven", "forced_markets", "unequal_treaties"],
+  "analysis": {
+    "tier": "PROFIT-DRIVEN ATTRITION",
+    "pattern_note": "State-sponsored drug trafficking enforced by military. Britain grew opium in India, forced China to accept imports via gunboat diplomacy. When China resisted, Royal Navy attacked. Resulted in 'unequal treaties', Hong Kong cession, and millions of addicts. Highest profit score in dataset - pure extraction with ideological cover ('free trade'). Shows how economic violence can devastate without high direct mortality."
+  },
+  "sources": [
+    { "title": "The Opium War: Drugs, Dreams and the Making of Modern China", "author": "Julia Lovell", "year": 2011 },
+    { "title": "Imperial Twilight: The Opium War and the End of China's Last Golden Age", "author": "Stephen Platt", "year": 2018 }
+  ]
+}
