@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the event (e.g., congo_free_state_1885)"
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the event"
+    },
+    "period": {
+      "type": "object",
+      "properties": {
+        "start": { "type": "integer" },
+        "end": { "type": "integer" }
+      },
+      "required": ["start", "end"]
+    },
+    "metrics": {
+      "type": "object",
+      "properties": {
+        "mortality": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "integer" },
+            "max": { "type": "integer" },
+            "population_loss_percent": { "type": "number" },
+            "confidence": { "type": "string", "enum": ["low", "medium", "high"] }
+          },
+          "required": ["min", "max", "population_loss_percent"]
+        },
+        "scores": {
+          "type": "object",
+          "properties": {
+            "systematic_intensity": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "profit": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "ideology": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "complicity": { "type": "integer", "minimum": 0, "maximum": 100 }
+          },
+          "required": ["systematic_intensity", "profit", "ideology", "complicity"]
+        }
+      },
+      "required": ["mortality", "scores"]
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "analysis": {
+      "type": "object",
+      "properties": {
+        "tier": { "type": "string" },
+        "pattern_note": { "type": "string" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "author": { "type": "string" },
+          "year": { "type": "integer" }
+        },
+        "required": ["title", "author"]
+      }
+    }
+  },
+  "required": ["id", "name", "period", "metrics", "sources"]
+}
