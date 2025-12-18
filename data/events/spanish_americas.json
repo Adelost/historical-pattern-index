@@ -85,7 +85,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Biological warfare is distinct from intentional germ warfare. Systemic intensity comes from Encomienda (labor) and Requerimiento."
+    "pattern_note": "Biological warfare is distinct from intentional germ warfare. Systemic intensity comes from Encomienda (labor) and Requerimiento.",
+    "warning_signs": [
+      "Indigenous peoples deemed 'uncivilized'",
+      "Religious justification for conquest",
+      "Wealth extraction as primary goal"
+    ],
+    "root_causes": "Colonial expansion, gold/silver fever, religious mission ideology, technological superiority"
   },
   "sources": [
     {

@@ -89,7 +89,13 @@
   ],
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "One of the most complete genocides in history - 80% of an entire people killed in 3 years. Qianlong Emperor's own words: 'Show no mercy at all to these rebels. Only the old and weak should be saved.' Dzungars were last nomadic empire to challenge Qing. Their elimination opened Xinjiang for settlement. Critical context for understanding current Uyghur situation in same region."
+    "pattern_note": "One of the most complete genocides in history - 80% of an entire people killed in 3 years. Qianlong Emperor's own words: 'Show no mercy at all to these rebels. Only the old and weak should be saved.' Dzungars were last nomadic empire to challenge Qing. Their elimination opened Xinjiang for settlement. Critical context for understanding current Uyghur situation in same region.",
+    "warning_signs": [
+      "Ethnic group labeled security threat",
+      "Calls for complete elimination",
+      "Land targeted for resettlement"
+    ],
+    "root_causes": "Imperial expansion, fear of nomadic military power, desire for territory"
   },
   "sources": [
     {

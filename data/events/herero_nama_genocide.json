@@ -87,7 +87,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "First genocide of the 20th century. General von Trotha's Vernichtungsbefehl (extermination order) explicitly commanded annihilation. Survivors driven into Omaheke Desert to die. Concentration camps with 45% mortality rate."
+    "pattern_note": "First genocide of the 20th century. General von Trotha's Vernichtungsbefehl (extermination order) explicitly commanded annihilation. Survivors driven into Omaheke Desert to die. Concentration camps with 45% mortality rate.",
+    "warning_signs": [
+      "Settler land seizures",
+      "Racial ideology of superiority",
+      "Military given extermination orders"
+    ],
+    "root_causes": "Settler colonialism, land hunger, racial ideology, colonial military culture"
   },
   "sources": [
     {

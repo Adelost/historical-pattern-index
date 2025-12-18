@@ -90,7 +90,13 @@
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "First genocide of 21st century. Arab supremacist ideology - Janjaweed ('devils on horseback') armed by Khartoum. Villages burned, wells poisoned, women systematically raped. China and Russia blocked UN intervention (oil interests). ICC issued arrest warrant for al-Bashir - first for sitting president. Shows genocide can happen under international scrutiny with impunity."
+    "pattern_note": "First genocide of 21st century. Arab supremacist ideology - Janjaweed ('devils on horseback') armed by Khartoum. Villages burned, wells poisoned, women systematically raped. China and Russia blocked UN intervention (oil interests). ICC issued arrest warrant for al-Bashir - first for sitting president. Shows genocide can happen under international scrutiny with impunity.",
+    "warning_signs": [
+      "Government arming ethnic militias",
+      "Aerial bombing of villages",
+      "Forced displacement campaigns"
+    ],
+    "root_causes": "Arab supremacism, competition for land/water, counter-insurgency, government complicity"
   },
   "sources": [
     {

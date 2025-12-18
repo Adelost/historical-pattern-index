@@ -89,7 +89,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "US-backed genocide during Cold War. Reagan praised Rios Montt as 'a man of great personal integrity.' Scorched earth policy destroyed 626 villages. Maya targeted as 'internal enemy' regardless of guerrilla involvement. Rios Montt convicted of genocide in 2013 (overturned on technicality). Shows how anti-communism justified ethnic extermination."
+    "pattern_note": "US-backed genocide during Cold War. Reagan praised Rios Montt as 'a man of great personal integrity.' Scorched earth policy destroyed 626 villages. Maya targeted as 'internal enemy' regardless of guerrilla involvement. Rios Montt convicted of genocide in 2013 (overturned on technicality). Shows how anti-communism justified ethnic extermination.",
+    "warning_signs": [
+      "Indigenous linked to insurgency",
+      "Scorched earth military doctrine",
+      "US-backed military government"
+    ],
+    "root_causes": "Cold War counter-insurgency, racism against Maya, land inequality, US intervention"
   },
   "sources": [
     {

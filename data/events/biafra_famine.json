@@ -89,7 +89,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "First televised famine - starving children broadcast globally. Biafra (Igbo-majority) seceded; Nigeria blockaded. Oil was the prize - Biafra had major reserves. UK backed Nigeria despite famine images. Coined term 'humanitarian intervention' as international response. Nigeria won; reintegration followed. Some call it genocide; Nigeria calls it civil war."
+    "pattern_note": "First televised famine - starving children broadcast globally. Biafra (Igbo-majority) seceded; Nigeria blockaded. Oil was the prize - Biafra had major reserves. UK backed Nigeria despite famine images. Coined term 'humanitarian intervention' as international response. Nigeria won; reintegration followed. Some call it genocide; Nigeria calls it civil war.",
+    "warning_signs": [
+      "Blockade of civilian population",
+      "Starvation as military strategy",
+      "International community passive"
+    ],
+    "root_causes": "Ethnic tensions, oil resources, Nigerian unity prioritized over lives"
   },
   "sources": [
     {

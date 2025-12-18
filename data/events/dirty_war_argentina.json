@@ -92,7 +92,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Part of US-backed Operation Condor across South America. 'Disappearance' as method - bodies never found, plausible deniability. Mothers of Plaza de Mayo still march weekly. Transitional justice model: trials resumed 2006 after amnesty laws overturned. ~500 stolen babies still being identified via DNA."
+    "pattern_note": "Part of US-backed Operation Condor across South America. 'Disappearance' as method - bodies never found, plausible deniability. Mothers of Plaza de Mayo still march weekly. Transitional justice model: trials resumed 2006 after amnesty laws overturned. ~500 stolen babies still being identified via DNA.",
+    "warning_signs": [
+      "Military coup against elected government",
+      "Leftists labeled 'subversives'",
+      "Disappearances and secret detention"
+    ],
+    "root_causes": "Cold War ideology, military authoritarianism, US support for anti-communist regimes"
   },
   "sources": [
     {

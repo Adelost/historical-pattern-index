@@ -90,7 +90,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Fascist colonialism - conquest for imperial glory, not profit (Italy lost money). Mustard gas dropped on civilians, Red Cross camps bombed. Graziani massacre: revenge for assassination attempt killed tens of thousands. 'Vendetta' against only African nation to defeat European power (Battle of Adwa 1896). Still downplayed in Italy - 'Italiani brava gente' myth persists."
+    "pattern_note": "Fascist colonialism - conquest for imperial glory, not profit (Italy lost money). Mustard gas dropped on civilians, Red Cross camps bombed. Graziani massacre: revenge for assassination attempt killed tens of thousands. 'Vendetta' against only African nation to defeat European power (Battle of Adwa 1896). Still downplayed in Italy - 'Italiani brava gente' myth persists.",
+    "warning_signs": [
+      "Fascist imperial ambitions",
+      "Revenge narrative for past defeat",
+      "Racist 'civilizing' rhetoric"
+    ],
+    "root_causes": "Fascist ideology, desire for empire, revenge for Adwa, international weakness"
   },
   "sources": [
     {

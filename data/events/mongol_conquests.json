@@ -94,7 +94,13 @@
   ],
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Terror as military doctrine. Cities that surrendered were spared; those that resisted were annihilated to the last person. Baghdad 1258: 200k-2M killed, libraries burned, irrigation destroyed. Yet Mongols were religiously tolerant and created Pax Mongolica trade network. Shows how extreme violence can coexist with 'civilizational' achievements."
+    "pattern_note": "Terror as military doctrine. Cities that surrendered were spared; those that resisted were annihilated to the last person. Baghdad 1258: 200k-2M killed, libraries burned, irrigation destroyed. Yet Mongols were religiously tolerant and created Pax Mongolica trade network. Shows how extreme violence can coexist with 'civilizational' achievements.",
+    "warning_signs": [
+      "Expanding military power unchecked",
+      "Resistance met with disproportionate violence",
+      "Terror as deliberate strategy"
+    ],
+    "root_causes": "Centralized military power, weak/fragmented opposition, conquest culture"
   },
   "sources": [
     {

@@ -88,7 +88,13 @@
   "denial_status": "disputed",
   "analysis": {
     "tier": "CHAOTIC ATROCITY",
-    "pattern_note": "Lower systematic intensity despite massive death toll - this was chaotic military violence rather than bureaucratic genocide. Shows that industrial organization isn't required for mass death. Still denied/minimized in Japan, creating ongoing diplomatic tensions with China."
+    "pattern_note": "Lower systematic intensity despite massive death toll - this was chaotic military violence rather than bureaucratic genocide. Shows that industrial organization isn't required for mass death. Still denied/minimized in Japan, creating ongoing diplomatic tensions with China.",
+    "warning_signs": [
+      "Military culture of brutality",
+      "Dehumanization of enemy civilians",
+      "Command structure breakdown"
+    ],
+    "root_causes": "Japanese militarism, racism toward Chinese, lack of command accountability"
   },
   "sources": [
     {

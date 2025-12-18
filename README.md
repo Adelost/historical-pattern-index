@@ -16,7 +16,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->42 events. 2,166 years of history (149 BCE–present). 163M-276M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->43 events. 2,166 years of history (149 BCE–present). 163M-276M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -47,6 +47,7 @@ This project attempts to fix that.
 | The Holocaust | 1941-1945 | 6M-6M | Industrial | No |
 | Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | Disputed |
 | Soviet Ethnic Deportations | 1943-1944 | 200k-400k | Erasure | No |
+| Nakba (Palestinian Exodus) | 1947-1949 | 10k-15k | Collapse | Disputed |
 | Partition of India | 1947-1948 | 200k-2M | Chaotic | Partial |
 | Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Industrial | Suppressed |
 | Indonesian Mass Killings | 1965-1966 | 500k-1M | Industrial | Partial |
@@ -123,7 +124,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->42<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->43<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges

@@ -88,7 +88,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "The definitive example of Profit-Driven Attrition. Ideology score is low (20%) because racism was often a consequence of the system, not the initial driver, though religious justification ('saving souls') was used."
+    "pattern_note": "The definitive example of Profit-Driven Attrition. Ideology score is low (20%) because racism was often a consequence of the system, not the initial driver, though religious justification ('saving souls') was used.",
+    "warning_signs": [
+      "Economic system dependent on dehumanization",
+      "Legal frameworks normalizing bondage",
+      "Racial theories justifying exploitation"
+    ],
+    "root_causes": "Labor demand in colonies, profit motive, development of racial capitalism"
   },
   "sources": [
     {

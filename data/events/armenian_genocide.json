@@ -89,7 +89,13 @@
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "The 'prototype' for 20th century genocide. Tehcir Law legalized deportations. Death marches into Syrian desert. Hitler reportedly said 'Who remembers the Armenians?' Still denied by Turkey - demonstrates how denial enables repetition."
+    "pattern_note": "The 'prototype' for 20th century genocide. Tehcir Law legalized deportations. Death marches into Syrian desert. Hitler reportedly said 'Who remembers the Armenians?' Still denied by Turkey - demonstrates how denial enables repetition.",
+    "warning_signs": [
+      "Minority blamed for military defeats",
+      "Nationalism excluding minorities",
+      "Wartime 'security' justifications"
+    ],
+    "root_causes": "Ottoman collapse, Turkish nationalism, WWI chaos, history of pogroms"
   },
   "sources": [
     {

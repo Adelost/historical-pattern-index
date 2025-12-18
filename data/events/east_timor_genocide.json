@@ -87,7 +87,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "Invasion occurred day after US President Ford visited Jakarta. Western powers armed Indonesia and blocked UN action. Up to 25% of population killed. Independence finally achieved in 2002 after UN intervention."
+    "pattern_note": "Invasion occurred day after US President Ford visited Jakarta. Western powers armed Indonesia and blocked UN action. Up to 25% of population killed. Independence finally achieved in 2002 after UN intervention.",
+    "warning_signs": [
+      "Military occupation after decolonization",
+      "Independence movement crushed",
+      "International powers looking away"
+    ],
+    "root_causes": "Indonesian expansionism, Cold War anti-communism, oil interests, international complicity"
   },
   "sources": [
     {

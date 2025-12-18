@@ -87,7 +87,13 @@
   "denial_status": "disputed",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "Classic example of 'Structural Violence'. Not a genocide by gas chamber, but by market dogma (Laissez-faire). Food was exported while people starved. High Profit Score meets moderate Ideology (Providentialism)."
+    "pattern_note": "Classic example of 'Structural Violence'. Not a genocide by gas chamber, but by market dogma (Laissez-faire). Food was exported while people starved. High Profit Score meets moderate Ideology (Providentialism).",
+    "warning_signs": [
+      "Food exports during starvation",
+      "Ideology (laissez-faire) over lives",
+      "Blaming victims for their poverty"
+    ],
+    "root_causes": "Colonial extraction, absentee landlordism, ideological rigidity, anti-Irish prejudice"
   },
   "sources": [
     {

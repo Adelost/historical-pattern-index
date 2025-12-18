@@ -89,7 +89,14 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Challenges the '>5 years' criterion - extreme intensity achieved in only 100 days. RTLM radio coordinated killings. ID cards marked ethnicity enabling systematic targeting. Demonstrates ideology can mobilize faster than bureaucracy."
+    "pattern_note": "Challenges the '>5 years' criterion - extreme intensity achieved in only 100 days. RTLM radio coordinated killings. ID cards marked ethnicity enabling systematic targeting. Demonstrates ideology can mobilize faster than bureaucracy.",
+    "warning_signs": [
+      "Radio inciting violence against minority",
+      "Tutsi called 'cockroaches' (inyenzi)",
+      "Militia training and weapon distribution",
+      "Previous massacres unpunished"
+    ],
+    "root_causes": "Colonial ethnic categories, Hutu Power ideology, political assassination trigger, international abandonment"
   },
   "sources": [
     {

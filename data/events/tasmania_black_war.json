@@ -85,7 +85,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "Extremely low absolute numbers but near-total extinction. Driven by land seizure (Profit) rather than purity ideology."
+    "pattern_note": "Extremely low absolute numbers but near-total extinction. Driven by land seizure (Profit) rather than purity ideology.",
+    "warning_signs": [
+      "Settlers viewing indigenous as obstacles",
+      "Frontier violence normalized",
+      "'Dying race' narratives"
+    ],
+    "root_causes": "Settler colonialism, land hunger for sheep farming, dehumanization"
   },
   "sources": [
     {

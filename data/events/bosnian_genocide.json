@@ -89,7 +89,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "First genocide in Europe since WWII. Coined term 'ethnic cleansing'. UN peacekeepers present at Srebrenica but failed to prevent massacre. ICTY prosecutions established legal precedents. Demonstrates genocide can happen in modern Europe with international observers watching."
+    "pattern_note": "First genocide in Europe since WWII. Coined term 'ethnic cleansing'. UN peacekeepers present at Srebrenica but failed to prevent massacre. ICTY prosecutions established legal precedents. Demonstrates genocide can happen in modern Europe with international observers watching.",
+    "warning_signs": [
+      "Nationalist rhetoric of ethnic purity",
+      "Historical grievances weaponized",
+      "Ethnic cleansing for 'Greater Serbia'"
+    ],
+    "root_causes": "Yugoslav collapse, Serbian nationalism, historical tensions, weak international response"
   },
   "sources": [
     {

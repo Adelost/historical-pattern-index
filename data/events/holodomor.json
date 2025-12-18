@@ -89,7 +89,13 @@
   "denial_status": "denied",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Grain quotas enforced while millions starved. Blacklisted villages sealed off. Demonstrates how ideology ('destroy the kulaks as a class') combined with economic extraction (grain exports) creates famine. Still denied by Russia."
+    "pattern_note": "Grain quotas enforced while millions starved. Blacklisted villages sealed off. Demonstrates how ideology ('destroy the kulaks as a class') combined with economic extraction (grain exports) creates famine. Still denied by Russia.",
+    "warning_signs": [
+      "Grain quotas despite crop failure",
+      "Borders closed to prevent escape",
+      "Denial of famine existence"
+    ],
+    "root_causes": "Stalinist collectivization, suppression of Ukrainian nationalism, ideological rigidity"
   },
   "sources": [
     {

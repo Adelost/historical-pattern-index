@@ -89,7 +89,13 @@
   "denial_status": "disputed",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Railways built to export grain, not feed Indians. Taxes collected during starvation. Viceroy Lytton held Delhi Durbar feast while millions died. Free market ideology ('don't interfere with markets') used to justify inaction. Parallels with Irish Famine - same empire, same ideology, same result."
+    "pattern_note": "Railways built to export grain, not feed Indians. Taxes collected during starvation. Viceroy Lytton held Delhi Durbar feast while millions died. Free market ideology ('don't interfere with markets') used to justify inaction. Parallels with Irish Famine - same empire, same ideology, same result.",
+    "warning_signs": [
+      "Cash crops prioritized over food",
+      "Colonial policies ignore local needs",
+      "Famine relief seen as 'moral hazard'"
+    ],
+    "root_causes": "Colonial extraction, export-oriented agriculture, racist indifference, economic ideology"
   },
   "sources": [
     {

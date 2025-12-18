@@ -88,7 +88,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "State-sponsored drug trafficking enforced by military. Britain grew opium in India, forced China to accept imports via gunboat diplomacy. When China resisted, Royal Navy attacked. Resulted in 'unequal treaties', Hong Kong cession, and millions of addicts. Highest profit score in dataset - pure extraction with ideological cover ('free trade'). Shows how economic violence can devastate without high direct mortality."
+    "pattern_note": "State-sponsored drug trafficking enforced by military. Britain grew opium in India, forced China to accept imports via gunboat diplomacy. When China resisted, Royal Navy attacked. Resulted in 'unequal treaties', Hong Kong cession, and millions of addicts. Highest profit score in dataset - pure extraction with ideological cover ('free trade'). Shows how economic violence can devastate without high direct mortality.",
+    "warning_signs": [
+      "Corporate profits over human welfare",
+      "Military force to open markets",
+      "'Free trade' masking exploitation"
+    ],
+    "root_causes": "Trade deficit, corporate greed (East India Company), imperial arrogance"
   },
   "sources": [
     {

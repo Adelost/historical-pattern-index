@@ -94,7 +94,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "Operation Lentil deported entire Chechen nation in 3 days using 12,000 trucks. Collective punishment for alleged collaboration with Nazis. Erased from maps - Chechnya ceased to exist as administrative unit until 1957. European Parliament recognized Crimean Tatar deportation as genocide (2019)."
+    "pattern_note": "Operation Lentil deported entire Chechen nation in 3 days using 12,000 trucks. Collective punishment for alleged collaboration with Nazis. Erased from maps - Chechnya ceased to exist as administrative unit until 1957. European Parliament recognized Crimean Tatar deportation as genocide (2019).",
+    "warning_signs": [
+      "Entire ethnic groups labeled 'traitors'",
+      "Collective punishment",
+      "Wartime 'security' justification"
+    ],
+    "root_causes": "Stalinist paranoia, WWII pressures, ethnic scapegoating"
   },
   "sources": [
     {

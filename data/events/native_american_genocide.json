@@ -91,7 +91,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "Manifest Destiny as genocidal ideology. Indian Removal Act (1830) legalized ethnic cleansing. Reservation system as concentration. Boarding schools ('Kill the Indian, save the man') as cultural genocide. 80% population loss in 60 years. Still ongoing effects: poverty, health disparities, broken treaties."
+    "pattern_note": "Manifest Destiny as genocidal ideology. Indian Removal Act (1830) legalized ethnic cleansing. Reservation system as concentration. Boarding schools ('Kill the Indian, save the man') as cultural genocide. 80% population loss in 60 years. Still ongoing effects: poverty, health disparities, broken treaties.",
+    "warning_signs": [
+      "'Manifest Destiny' expansionism",
+      "Treaties made to be broken",
+      "Indigenous portrayed as 'savages'"
+    ],
+    "root_causes": "Land hunger, gold discoveries, railroad expansion, settler colonialism"
   },
   "sources": [
     {

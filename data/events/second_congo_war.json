@@ -92,7 +92,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Deadliest conflict since WWII but barely known in West. 'Coltan war' - your phone may contain minerals mined by forced labor during this conflict. Multiple perpetrators make attribution complex. Shows how resource extraction creates mass death even without explicit genocide policy. Ongoing instability in eastern DRC traces directly to this war."
+    "pattern_note": "Deadliest conflict since WWII but barely known in West. 'Coltan war' - your phone may contain minerals mined by forced labor during this conflict. Multiple perpetrators make attribution complex. Shows how resource extraction creates mass death even without explicit genocide policy. Ongoing instability in eastern DRC traces directly to this war.",
+    "warning_signs": [
+      "Multiple armed groups competing for resources",
+      "Minerals funding warfare",
+      "Civilian population as target"
+    ],
+    "root_causes": "Post-Mobutu vacuum, Rwandan genocide spillover, mineral wealth, weak state"
   },
   "sources": [
     {

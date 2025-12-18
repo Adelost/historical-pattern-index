@@ -92,7 +92,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "Mao mobilized youth against 'Four Olds' (customs, culture, habits, ideas). Destroyed temples, artifacts, books. Sent millions to countryside for 're-education'. Officially condemned by CCP (1981) as 'grave error' but detailed discussion still censored."
+    "pattern_note": "Mao mobilized youth against 'Four Olds' (customs, culture, habits, ideas). Destroyed temples, artifacts, books. Sent millions to countryside for 're-education'. Officially condemned by CCP (1981) as 'grave error' but detailed discussion still censored.",
+    "warning_signs": [
+      "Youth mobilized against 'enemies'",
+      "Intellectuals and elders targeted",
+      "Denunciations rewarded"
+    ],
+    "root_causes": "Mao's power consolidation, ideological fanaticism, generational mobilization"
   },
   "sources": [
     {

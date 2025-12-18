@@ -90,7 +90,14 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute."
+    "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute.",
+    "warning_signs": [
+      "Scapegoating minorities for national problems",
+      "Dehumanizing propaganda ('vermin', 'parasites')",
+      "Legal exclusion escalating to violence",
+      "Economic crisis blamed on outgroup"
+    ],
+    "root_causes": "Antisemitism, Nazi racial ideology, WWI humiliation, Great Depression, weak Weimar institutions"
   },
   "sources": [
     {

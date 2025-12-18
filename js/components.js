@@ -134,6 +134,46 @@ export const BreakdownSection = (breakdowns, rationales = {}) => {
     `;
 };
 
+// Warning signs and root causes section
+export const CausesSection = (analysis) => {
+    const signs = analysis.warning_signs || [];
+    const causes = analysis.root_causes || '';
+
+    if (!signs.length && !causes) return '';
+
+    const signsList = signs.map(sign => `
+        <div class="warning-sign">
+            <span class="warning-icon">⚠</span>
+            <span>${sign}</span>
+        </div>
+    `).join('');
+
+    return `
+        <details class="causes-details">
+            <summary class="causes-toggle">
+                <span>Why Did This Happen?</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </summary>
+            <div class="causes-content">
+                ${signs.length ? `
+                    <div class="warning-signs">
+                        <div class="causes-label">Warning Signs</div>
+                        ${signsList}
+                    </div>
+                ` : ''}
+                ${causes ? `
+                    <div class="root-causes">
+                        <div class="causes-label">Root Causes</div>
+                        <p>${causes}</p>
+                    </div>
+                ` : ''}
+            </div>
+        </details>
+    `;
+};
+
 export const Card = (event) => {
     const { color } = Utils.getTheme(event.analysis.tier);
     const deaths = event.metrics.mortality;
@@ -160,6 +200,8 @@ export const Card = (event) => {
         </div>
 
         ${BreakdownSection(breakdowns, rationales)}
+
+        ${CausesSection(event.analysis)}
 
         <div class="metrics-row">
             ${Metric('Deaths', Utils.formatDeaths(deaths.min, deaths.max))}

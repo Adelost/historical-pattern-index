@@ -90,7 +90,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "132 years of occupation. 'Algérie française' - settler colony where 1M Europeans ruled 9M Algerians. Torture institutionalized during independence war (gégène electric torture). France still struggles to acknowledge crimes - called 'events' not 'war' until 1999. Population halved during conquest, then halved again fighting for independence."
+    "pattern_note": "132 years of occupation. 'Algérie française' - settler colony where 1M Europeans ruled 9M Algerians. Torture institutionalized during independence war (gégène electric torture). France still struggles to acknowledge crimes - called 'events' not 'war' until 1999. Population halved during conquest, then halved again fighting for independence.",
+    "warning_signs": [
+      "Colonial 'civilizing mission' rhetoric",
+      "Settler land seizures",
+      "Brutal suppression of resistance"
+    ],
+    "root_causes": "Imperial expansion, settler colonialism, strategic Mediterranean control"
   },
   "sources": [
     {

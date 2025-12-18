@@ -89,7 +89,13 @@
   "denial_status": "disputed",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "Churchill's famine. Rice diverted for war effort and exports while millions starved. Relief ships denied. 'Denial policy' destroyed boats and rice stocks to prevent Japanese use. Churchill blamed Indians for 'breeding like rabbits.' Distinct from 1876-1902 famines - this was WWII-era with Churchill directly responsible. Still politically sensitive in UK."
+    "pattern_note": "Churchill's famine. Rice diverted for war effort and exports while millions starved. Relief ships denied. 'Denial policy' destroyed boats and rice stocks to prevent Japanese use. Churchill blamed Indians for 'breeding like rabbits.' Distinct from 1876-1902 famines - this was WWII-era with Churchill directly responsible. Still politically sensitive in UK.",
+    "warning_signs": [
+      "War priorities over civilian welfare",
+      "Colonial indifference to 'natives'",
+      "Denial of crisis severity"
+    ],
+    "root_causes": "WWII resource diversion, colonial racism, policy failures, Japanese threat"
   },
   "sources": [
     {

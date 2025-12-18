@@ -85,7 +85,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "PROFIT-DRIVEN ATTRITION",
-    "pattern_note": "Driven purely by extraction. Propaganda marked False because they didn't try to convince the victims, they just enslaved them."
+    "pattern_note": "Driven purely by extraction. Propaganda marked False because they didn't try to convince the victims, they just enslaved them.",
+    "warning_signs": [
+      "Corporate/personal rule without oversight",
+      "Quotas enforced through violence",
+      "'Humanitarian' cover for extraction"
+    ],
+    "root_causes": "Personal greed (Leopold II), rubber demand, lack of international accountability"
   },
   "sources": [
     {

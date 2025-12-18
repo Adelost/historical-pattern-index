@@ -90,7 +90,13 @@
   ],
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Christian-inspired millenarian movement vs Qing dynasty. Hong Xiuquan believed he was Jesus's brother. Taiping banned private property, opium, foot-binding - radical utopianism. Both sides massacred cities. Nanjing changed hands with mass killings each time. Shows how ideological civil wars produce extreme casualties. Rarely taught in West; sensitive in China."
+    "pattern_note": "Christian-inspired millenarian movement vs Qing dynasty. Hong Xiuquan believed he was Jesus's brother. Taiping banned private property, opium, foot-binding - radical utopianism. Both sides massacred cities. Nanjing changed hands with mass killings each time. Shows how ideological civil wars produce extreme casualties. Rarely taught in West; sensitive in China.",
+    "warning_signs": [
+      "Messianic leader with absolute following",
+      "Apocalyptic religious ideology",
+      "Weak central government"
+    ],
+    "root_causes": "Qing dynasty decline, economic hardship, foreign incursions, millenarian movement"
   },
   "sources": [
     {

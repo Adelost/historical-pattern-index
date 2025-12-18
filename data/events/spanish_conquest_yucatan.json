@@ -88,7 +88,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "A prime example of 'Epistemicide'. Shows that Ideology (Religion) combined with Profit (Encomienda) can lead to the total destruction of recorded history, distinct from biological extinction."
+    "pattern_note": "A prime example of 'Epistemicide'. Shows that Ideology (Religion) combined with Profit (Encomienda) can lead to the total destruction of recorded history, distinct from biological extinction.",
+    "warning_signs": [
+      "Foreign religion declared only truth",
+      "Indigenous knowledge labeled 'devil worship'",
+      "Book burning and cultural destruction"
+    ],
+    "root_causes": "Religious fanaticism, colonial extraction, erasure of competing worldviews"
   },
   "sources": [
     {

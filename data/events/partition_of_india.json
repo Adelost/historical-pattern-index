@@ -91,7 +91,13 @@
   "denial_status": "partial",
   "analysis": {
     "tier": "CHAOTIC ATROCITY",
-    "pattern_note": "Rushed British withdrawal (Mountbatten moved date up by 10 months) left no time for orderly transition. Radcliffe Line drawn in 6 weeks by lawyer who'd never been to India. Violence was communal and chaotic rather than state-directed. Legacy: Kashmir conflict, 3 India-Pakistan wars, ongoing nuclear tensions."
+    "pattern_note": "Rushed British withdrawal (Mountbatten moved date up by 10 months) left no time for orderly transition. Radcliffe Line drawn in 6 weeks by lawyer who'd never been to India. Violence was communal and chaotic rather than state-directed. Legacy: Kashmir conflict, 3 India-Pakistan wars, ongoing nuclear tensions.",
+    "warning_signs": [
+      "Communal violence escalating",
+      "Political leaders inflaming tensions",
+      "Hasty colonial withdrawal"
+    ],
+    "root_causes": "British divide-and-rule legacy, communalism, rushed partition, weak transitional authority"
   },
   "sources": [
     {

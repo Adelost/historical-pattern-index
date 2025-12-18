@@ -86,7 +86,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "TOTAL ERASURE",
-    "pattern_note": "ISIS explicitly targeted Yazidis as 'devil worshippers'. Sexual slavery systematized with religious justification. Nadia Murad (survivor) won Nobel Peace Prize 2018. Despite relatively low death toll, meets genocide criteria through intent to destroy group via enslavement and forced conversion."
+    "pattern_note": "ISIS explicitly targeted Yazidis as 'devil worshippers'. Sexual slavery systematized with religious justification. Nadia Murad (survivor) won Nobel Peace Prize 2018. Despite relatively low death toll, meets genocide criteria through intent to destroy group via enslavement and forced conversion.",
+    "warning_signs": [
+      "Religious minority labeled 'devil worshippers'",
+      "Extremist ideology spreading",
+      "Sexual slavery systematized"
+    ],
+    "root_causes": "ISIS jihadism, religious intolerance, state collapse in Iraq/Syria"
   },
   "sources": [
     {

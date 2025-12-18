@@ -91,7 +91,13 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "State terror turned inward. Execution quotas sent to regions. Show trials of 'enemies of the people'. Destroyed Soviet military leadership before WWII. NKVD Order 00447 set targets by category. Perpetrators later purged themselves."
+    "pattern_note": "State terror turned inward. Execution quotas sent to regions. Show trials of 'enemies of the people'. Destroyed Soviet military leadership before WWII. NKVD Order 00447 set targets by category. Perpetrators later purged themselves.",
+    "warning_signs": [
+      "Paranoid leader with absolute power",
+      "Quotas for arrests and executions",
+      "Enemies everywhere mentality"
+    ],
+    "root_causes": "Stalinist paranoia, consolidation of power, totalitarian system"
   },
   "sources": [
     {

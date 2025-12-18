@@ -89,7 +89,13 @@
   "denial_status": "suppressed",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "History's deadliest famine. Grain quotas enforced while millions starved - local officials lied about yields to meet targets. Challenges genocide definition: was it murder or criminal negligence? Either way, policy continued despite known deaths. Still censored in China."
+    "pattern_note": "History's deadliest famine. Grain quotas enforced while millions starved - local officials lied about yields to meet targets. Challenges genocide definition: was it murder or criminal negligence? Either way, policy continued despite known deaths. Still censored in China.",
+    "warning_signs": [
+      "Impossible targets from ideological leadership",
+      "Local officials afraid to report truth",
+      "Ideology overriding reality"
+    ],
+    "root_causes": "Maoist utopianism, centralized control, fear of dissent, statistical fraud"
   },
   "sources": [
     {
