@@ -1,0 +1,27 @@
+{
+  "id": "event_unique_id",
+  "name": "Event Name",
+  "period": { "start": 0, "end": 0 },
+  "metrics": {
+    "mortality": {
+      "min": 0,
+      "max": 0,
+      "population_loss_percent": 0.0,
+      "confidence": "low/medium/high"
+    },
+    "scores": {
+      "systematic_intensity": 0,
+      "profit": 0,
+      "ideology": 0,
+      "complicity": 0
+    }
+  },
+  "tags": [],
+  "analysis": {
+    "tier": "TIER_NAME",
+    "pattern_note": ""
+  },
+  "sources": [
+    { "author": "", "title": "", "year": 0 }
+  ]
+}

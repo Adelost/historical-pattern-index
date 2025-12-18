@@ -19,6 +19,25 @@ Traditional history often focuses on the "winners" or the most visible tragedies
 
 HPI classifies historical events based on their data profile, not a moral ranking.
 
+```text
+       HIGH (100%)
+      ^
+      |    [TIER 1: TOTAL ERASURE]           [TIER 2: MEGA-EVENT]
+I     |    (Tasmania, Herero)                (Holocaust, Cambodia)
+N     |          * *
+T     |
+E     |
+N     |
+S     |
+I     |    [TIER ?? : FAILED/CHAOTIC]        [TIER 3 & 4: PROFIT/COLLAPSE]
+T     |    (Pogroms, Riots)                  (Congo, Spanish Americas)
+Y     |          .                                 *
+      |
+      +-------------------------------------------------------->
+      LOW              VOLUME (Logarithmic Scale)           HIGH
+      (1k)             (100k)            (10M)             (100M)
+```
+
 | Tier | Profile Name | Characteristics | Historic Examples |
 | :--- | :--- | :--- | :--- |
 | **I** | **TOTAL ERASURE** | Low Absolute Volume • Max Intensity (100%) | Tasmania, Herero/Nama |
