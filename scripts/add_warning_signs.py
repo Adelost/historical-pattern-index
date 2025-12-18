@@ -20,6 +20,14 @@ CAUSES = {
         ],
         "root_causes": "Imperial rivalry, fear of resurgent competitor, desire for Mediterranean dominance"
     },
+    "jewish_roman_wars": {
+        "warning_signs": [
+            "Imperial power demanding religious conformity",
+            "Rebellion met with overwhelming force",
+            "Cultural symbols targeted for destruction"
+        ],
+        "root_causes": "Roman imperial control, Jewish religious resistance, taxation grievances, messianic movements, Hellenistic cultural conflict"
+    },
     "mongol_conquests": {
         "warning_signs": [
             "Expanding military power unchecked",

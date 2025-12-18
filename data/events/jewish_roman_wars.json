@@ -1,0 +1,117 @@
+{
+  "id": "jewish_roman_wars_66",
+  "name": "Jewish-Roman Wars",
+  "status": "historic",
+  "period": {
+    "start": 66,
+    "end": 136
+  },
+  "geography": {
+    "region": "Middle East (Judea/Palestine)",
+    "coordinates": [31.78, 35.23]
+  },
+  "participants": {
+    "perpetrators": [
+      "Roman Empire",
+      "Emperor Vespasian",
+      "Emperor Titus",
+      "Emperor Hadrian"
+    ],
+    "victims": [
+      "Jews of Judea",
+      "Jewish diaspora communities"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1000000,
+      "max": 2000000,
+      "population_initial": 2500000,
+      "population_loss_percent": 60.0,
+      "confidence": "low",
+      "note": "Three major conflicts: First Jewish-Roman War (66-73 CE), Kitos War (115-117 CE), Bar Kokhba Revolt (132-136 CE). Josephus claims 1.1 million died in Jerusalem siege alone. Cassius Dio claims 580,000 killed in Bar Kokhba revolt. Figures likely exaggerated but scale was catastrophic. Massive enslavement and diaspora."
+    },
+    "scores": {
+      "systematic_intensity": 78,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Roman military infrastructure deployed for total suppression. Second Temple destroyed (70 CE). Jerusalem razed and rebuilt as Aelia Capitolina. Jews banned from Jerusalem. Judea renamed Syria Palaestina to erase Jewish connection.",
+      "profit": "Massive enslavement - slaves flooded Roman markets. Temple treasury seized. Fiscus Judaicus tax imposed on all Jews. Triumphal arch built celebrating plunder.",
+      "ideology": "Roman imperial ideology demanded submission. Jewish monotheism seen as rejection of Roman order. Hadrian banned circumcision and Torah study.",
+      "complicity": "Roman citizens benefited from slaves and plunder. Other provinces remained passive. Some Jews collaborated with Rome."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "ancient",
+    "religious_persecution",
+    "cultural_destruction",
+    "temple_destruction",
+    "diaspora",
+    "roman_empire"
+  ],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Template for religious-cultural destruction. The Second Temple's destruction (70 CE) remains central to Jewish identity 2000 years later. Hadrian's renaming of Judea to 'Syria Palaestina' and Jerusalem to 'Aelia Capitolina' was deliberate erasure. Bar Kokhba revolt (132-136 CE) ended with Jews banned from Jerusalem for centuries. Created the Jewish diaspora that lasted until 1948. Arch of Titus in Rome still depicts Temple treasures being carried off.",
+    "warning_signs": [
+      "Imperial power demanding religious conformity",
+      "Rebellion met with overwhelming force",
+      "Cultural symbols targeted for destruction"
+    ],
+    "root_causes": "Roman imperial control, Jewish religious resistance, taxation grievances, messianic movements, Hellenistic cultural conflict"
+  },
+  "sources": [
+    {
+      "title": "The Jewish War",
+      "author": "Flavius Josephus",
+      "year": 75
+    },
+    {
+      "title": "Rome and Jerusalem: The Clash of Ancient Civilizations",
+      "author": "Martin Goodman",
+      "year": 2007
+    },
+    {
+      "title": "The Bar Kokhba War Reconsidered",
+      "author": "Peter Schäfer",
+      "year": 2003
+    }
+  ]
+}

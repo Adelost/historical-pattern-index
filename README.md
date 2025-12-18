@@ -20,12 +20,13 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->45 events. 2,166 years of history (149 BCE–present). 179M-298M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->46 events. 2,166 years of history (149 BCE–present). 180M-300M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
 |-------|--------|--------|------|---------|
 | Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Erasure | No |
+| Jewish-Roman Wars | 66-136 | 1M-2M | Erasure | No |
 | Mongol Conquests | 1206-1368 | 30M-40M | Collapse | No |
 | Mongol Sack of Baghdad | 1258-1258 | 200k-2M | Erasure | No |
 | Timur's Conquests | 1370-1405 | 15M-20M | Collapse | No |
@@ -112,18 +113,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 82% (37/45) |
-| Economic crisis exploited | 49% (22/45) |
-| Dehumanizing rhetoric | 42% (19/45) |
-| Property seizures | 40% (18/45) |
-| Deliberate starvation | 33% (15/45) |
-| Minorities scapegoated | 29% (13/45) |
-| Forced displacement/deportation | 27% (12/45) |
-| Militias and death squads | 20% (9/45) |
-| Media incitement | 20% (9/45) |
-| International inaction | 18% (8/45) |
-| Colonial 'civilizing' justification | 18% (8/45) |
-| Emergency laws/state of exception | 11% (5/45) |
+| Nationalist/ethnic purity ideology | 80% (37/46) |
+| Economic crisis exploited | 48% (22/46) |
+| Dehumanizing rhetoric | 41% (19/46) |
+| Property seizures | 39% (18/46) |
+| Deliberate starvation | 33% (15/46) |
+| Minorities scapegoated | 28% (13/46) |
+| Forced displacement/deportation | 26% (12/46) |
+| Militias and death squads | 20% (9/46) |
+| Media incitement | 20% (9/46) |
+| International inaction | 17% (8/46) |
+| Colonial 'civilizing' justification | 17% (8/46) |
+| Emergency laws/state of exception | 11% (5/46) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 **6. Different mechanisms, different warning signs.**
@@ -158,7 +159,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->45<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->46<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges
