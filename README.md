@@ -15,6 +15,19 @@ Traditional history often focuses on the "winners" or the most visible tragedies
 
 ---
 
+## 💡 How HPI Compares
+HPI fills a specific niche between pure statistics and qualitative theory.
+
+| Framework Type | Examples | What they measure | What HPI adds |
+| :--- | :--- | :--- | :--- |
+| **Body Count Databases** | *UCDP, Our World in Data* | **Consequences** (Casualties, Dates) | HPI measures the **Mechanism** (How organized was it?) |
+| **Stage Theories** | *Genocide Watch* | **Progression** (Stages of development) | HPI provides **Quantifiable Scores** (Profit % vs Ideology %) |
+| **Legal Reports** | *Amnesty, HRW* | **Crimes** (Violations of law) | HPI analyzes **Incentives** (Why did it happen?) |
+
+**Key Differentiator:** Most frameworks focus heavily on ideology (hatred). HPI is unique in treating **Economic Profit** as a driver of equal weight to Ideology, allowing us to quantify the destructiveness of "business-as-usual" colonialism alongside totalitarian regimes.
+
+---
+
 ## 📊 The Tier System
 
 HPI classifies historical events based on their data profile, not a moral ranking.
