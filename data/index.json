@@ -1,10 +1,14 @@
 [
   "data/events/tasmania_black_war.json",
+  "data/events/herero_nama_genocide.json",
+  "data/events/armenian_genocide.json",
+  "data/events/holodomor.json",
   "data/events/the_holocaust.json",
-  "data/events/spanish_americas.json",
-  "data/events/congo_free_state.json",
   "data/events/cambodia_khmer_rouge.json",
+  "data/events/rwandan_genocide.json",
+  "data/events/spanish_americas.json",
   "data/events/spanish_conquest_yucatan.json",
+  "data/events/congo_free_state.json",
   "data/events/great_famine_ireland.json",
   "data/events/transatlantic_slave_trade.json",
   "data/events/destruction_of_carthage.json"

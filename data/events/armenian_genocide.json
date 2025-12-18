@@ -1,0 +1,74 @@
+{
+  "id": "armenian_genocide_1915",
+  "name": "Armenian Genocide",
+  "status": "historic",
+  "period": { "start": 1915, "end": 1923 },
+  "geography": {
+    "region": "Anatolia / Ottoman Empire",
+    "coordinates": [39.0, 35.0]
+  },
+  "participants": {
+    "perpetrators": ["Ottoman Empire", "Young Turks (Committee of Union and Progress)"],
+    "victims": ["Armenians", "Assyrians", "Greeks"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1000000,
+      "max": 1500000,
+      "population_initial": 2000000,
+      "population_loss_percent": 75.0,
+      "confidence": "medium",
+      "note": "Armenian population in Ottoman Empire. Includes death marches into Syrian desert."
+    },
+    "scores": {
+      "systematic_intensity": 100,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ideology_driven", "death_marches", "denial", "ethno_nationalism"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "The 'prototype' for 20th century genocide. Tehcir Law legalized deportations. Death marches into Syrian desert. Hitler reportedly said 'Who remembers the Armenians?' Still denied by Turkey - demonstrates how denial enables repetition."
+  },
+  "sources": [
+    { "title": "The Burning Tigris", "author": "Peter Balakian", "year": 2003 },
+    { "title": "A Shameful Act", "author": "Taner Akcam", "year": 2006 }
+  ]
+}

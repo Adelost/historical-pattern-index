@@ -1,0 +1,74 @@
+{
+  "id": "holodomor_1932",
+  "name": "Holodomor (Ukrainian Famine)",
+  "status": "historic",
+  "period": { "start": 1932, "end": 1933 },
+  "geography": {
+    "region": "Eastern Europe (Soviet Ukraine)",
+    "coordinates": [49.0, 32.0]
+  },
+  "participants": {
+    "perpetrators": ["Soviet Union", "Stalin regime", "NKVD"],
+    "victims": ["Ukrainian peasants", "Kulaks"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 3500000,
+      "max": 7500000,
+      "population_initial": 32000000,
+      "population_loss_percent": 15.0,
+      "confidence": "low",
+      "note": "Estimates vary widely. Soviet archives were sealed. Some historians count 3.5M, others up to 10M including birth deficit."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["famine_as_weapon", "communism", "collectivization", "denial"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Grain quotas enforced while millions starved. Blacklisted villages sealed off. Demonstrates how ideology ('destroy the kulaks as a class') combined with economic extraction (grain exports) creates famine. Still denied by Russia."
+  },
+  "sources": [
+    { "title": "Bloodlands: Europe Between Hitler and Stalin", "author": "Timothy Snyder", "year": 2010 },
+    { "title": "Red Famine: Stalin's War on Ukraine", "author": "Anne Applebaum", "year": 2017 }
+  ]
+}

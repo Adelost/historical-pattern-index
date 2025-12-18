@@ -1,0 +1,73 @@
+{
+  "id": "herero_nama_genocide_1904",
+  "name": "Herero and Nama Genocide",
+  "status": "historic",
+  "period": { "start": 1904, "end": 1908 },
+  "geography": {
+    "region": "Southern Africa (German South West Africa)",
+    "coordinates": [-22.0, 17.0]
+  },
+  "participants": {
+    "perpetrators": ["German Empire", "Schutztruppe"],
+    "victims": ["Herero people", "Nama people"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 65000,
+      "max": 100000,
+      "population_initial": 100000,
+      "population_loss_percent": 80.0,
+      "confidence": "medium"
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 80,
+      "ideology": 60,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["colonialism", "total_erasure", "concentration_camps", "extermination_order"],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "First genocide of the 20th century. General von Trotha's Vernichtungsbefehl (extermination order) explicitly commanded annihilation. Survivors driven into Omaheke Desert to die. Concentration camps with 45% mortality rate."
+  },
+  "sources": [
+    { "title": "Germany's Genocide of the Herero", "author": "Jeremy Sarkin", "year": 2011 },
+    { "title": "The Kaiser's Holocaust", "author": "David Olusoga & Casper Erichsen", "year": 2010 }
+  ]
+}
