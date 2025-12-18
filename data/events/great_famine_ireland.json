@@ -16,7 +16,7 @@
       "min": 1000000,
       "max": 1500000,
       "population_initial": 8200000,
-      "population_loss_percent": 25.0,
+      "population_loss_percent": 15.0,
       "confidence": "high",
       "note": "Approx 1M died, another 1M emigrated. Mortality driven by blight but exacerbated by continued food exports and laissez-faire policy."
     },

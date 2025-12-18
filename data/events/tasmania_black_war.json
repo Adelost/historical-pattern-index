@@ -16,7 +16,7 @@
       "min": 6000,
       "max": 9000,
       "population_initial": 10000,
-      "population_loss_percent": 99.0,
+      "population_loss_percent": 90.0,
       "confidence": "medium"
     },
     "scores": {

@@ -13,9 +13,9 @@
   },
   "metrics": {
     "mortality": {
-      "min": 500000,
-      "max": 1500000,
-      "population_initial": 600000,
+      "min": 1000000,
+      "max": 1600000,
+      "population_initial": 2000000,
       "population_loss_percent": 80.0,
       "confidence": "low",
       "note": "US-era deaths only (1830-1890). Broader demographic collapse from ~10M pre-contact to 250k by 1900 includes earlier colonial periods. Trail of Tears alone killed 15,000+. Wounded Knee, Sand Creek, and countless other massacres."
