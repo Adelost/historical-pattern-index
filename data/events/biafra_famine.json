@@ -95,7 +95,14 @@
       "Starvation as military strategy",
       "International community passive"
     ],
-    "root_causes": "Ethnic tensions, oil resources, Nigerian unity prioritized over lives"
+    "root_causes": "Ethnic tensions, oil resources, Nigerian unity prioritized over lives",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "INTERNATIONAL_INACTION",
+      "MEDIA_INCITEMENT"
+    ]
   },
   "sources": [
     {

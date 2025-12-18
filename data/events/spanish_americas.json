@@ -91,7 +91,13 @@
       "Religious justification for conquest",
       "Wealth extraction as primary goal"
     ],
-    "root_causes": "Colonial expansion, gold/silver fever, religious mission ideology, technological superiority"
+    "root_causes": "Colonial expansion, gold/silver fever, religious mission ideology, technological superiority",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM"
+    ]
   },
   "sources": [
     {

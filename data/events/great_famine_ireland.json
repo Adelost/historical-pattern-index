@@ -93,7 +93,11 @@
       "Ideology (laissez-faire) over lives",
       "Blaming victims for their poverty"
     ],
-    "root_causes": "Colonial extraction, absentee landlordism, ideological rigidity, anti-Irish prejudice"
+    "root_causes": "Colonial extraction, absentee landlordism, ideological rigidity, anti-Irish prejudice",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS"
+    ]
   },
   "sources": [
     {

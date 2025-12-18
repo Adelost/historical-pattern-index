@@ -96,7 +96,11 @@
       "Revenge narrative for past defeat",
       "Racist 'civilizing' rhetoric"
     ],
-    "root_causes": "Fascist ideology, desire for empire, revenge for Adwa, international weakness"
+    "root_causes": "Fascist ideology, desire for empire, revenge for Adwa, international weakness",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "ETHNIC_NATIONALISM"
+    ]
   },
   "sources": [
     {

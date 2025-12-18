@@ -178,83 +178,43 @@ def generate_tier_breakdown(stats):
 
 
 def generate_patterns_table(events):
-    """Generate recurring warning signs patterns table."""
-    # Pattern categories with keywords to match (based on actual warning signs in data)
-    PATTERN_CATEGORIES = {
-        "Dehumanizing rhetoric": [
-            "dehumaniz", "vermin", "cockroach", "savage", "parasite",
-            "uncivilized", "devil worship", "inferior", "subversive",
-            "dying race", "enemies"
-        ],
-        "Minorities scapegoated": [
-            "scapegoat", "blamed", "existential threat", "internal enemy",
-            "foreign element", "traitor", "labeled security threat",
-            "labeled 'traitors'"
-        ],
-        "Nationalist/ethnic purity ideology": [
-            "national", "ethnic", "purity", "racial", "religious",
-            "homogen", "supremac", "greater serbia", "turkey for turks"
-        ],
-        "Militias and death squads": [
-            "militia", "paramilitary", "death squad", "weapon distribut",
-            "death list", "military coordinat", "armed group", "janjaweed"
-        ],
-        "Legal exclusion escalating": [
-            "legal exclusion", "emergency", "martial law", "enabling act",
-            "laws suspend", "citizenship strip"
-        ],
-        "State media incitement": [
-            "propaganda", "radio incit", "media", "state-controlled",
-            "inciting violence"
-        ],
-        "Economic crisis exploited": [
-            "economic crisis", "hyperinflation", "crisis blamed",
-            "depression", "blamed on outgroup"
-        ],
-        "Land/property seizures": [
-            "land seizure", "property", "settler land", "confiscat",
-            "land targeted", "land cleared"
-        ],
-        "Forced displacement/deportation": [
-            "deportation", "displacement", "removal", "evacuation",
-            "forced relocation", "expulsion", "ethnic cleansing"
-        ],
-        "International passivity": [
-            "international", "passive", "looking away", "ignored",
-            "abandoned", "slow to respond"
-        ],
-        "Colonial/imperial 'civilizing' claims": [
-            "civilizing", "colonial", "imperial", "mission", "humanitarian cover"
-        ],
-        "Deliberate starvation policies": [
-            "famine", "starvation", "blockade", "food export", "grain quota"
-        ]
+    """Generate recurring warning signs patterns table from pattern_tags."""
+    # Map pattern tags to human-readable labels
+    PATTERN_LABELS = {
+        "DEHUMANIZATION": "Dehumanizing rhetoric",
+        "SCAPEGOATING": "Minorities scapegoated",
+        "ETHNIC_NATIONALISM": "Nationalist/ethnic purity ideology",
+        "MILITIA_VIOLENCE": "Militias and death squads",
+        "EMERGENCY_LAWS": "Emergency laws/state of exception",
+        "MEDIA_INCITEMENT": "Media incitement",
+        "ECONOMIC_CRISIS": "Economic crisis exploited",
+        "PROPERTY_SEIZURE": "Property seizures",
+        "FORCED_DISPLACEMENT": "Forced displacement/deportation",
+        "INTERNATIONAL_INACTION": "International inaction",
+        "COLONIAL_JUSTIFICATION": "Colonial 'civilizing' justification",
+        "DELIBERATE_STARVATION": "Deliberate starvation"
     }
 
     total_events = len(events)
-    category_events = {cat: set() for cat in PATTERN_CATEGORIES}
+    tag_counts = {tag: 0 for tag in PATTERN_LABELS}
 
     for event in events:
-        event_id = event.get("id", "unknown")
-        signs = event.get("analysis", {}).get("warning_signs", [])
-
-        for sign in signs:
-            sign_lower = sign.lower()
-            for category, keywords in PATTERN_CATEGORIES.items():
-                if any(kw in sign_lower for kw in keywords):
-                    category_events[category].add(event_id)
+        pattern_tags = event.get("analysis", {}).get("pattern_tags", [])
+        for tag in pattern_tags:
+            if tag in tag_counts:
+                tag_counts[tag] += 1
 
     # Sort by frequency
-    sorted_cats = sorted(category_events.items(), key=lambda x: -len(x[1]))
+    sorted_tags = sorted(tag_counts.items(), key=lambda x: -x[1])
 
     lines = ["| Warning Sign Pattern | Frequency |", "|---------------------|-----------|"]
 
-    for cat, event_ids in sorted_cats:
-        count = len(event_ids)
+    for tag, count in sorted_tags:
         if count == 0:
             continue
         pct = round(count / total_events * 100)
-        lines.append(f"| {cat} | {pct}% ({count}/{total_events}) |")
+        label = PATTERN_LABELS.get(tag, tag)
+        lines.append(f"| {label} | {pct}% ({count}/{total_events}) |")
 
     return "\n".join(lines)
 

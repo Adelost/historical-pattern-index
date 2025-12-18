@@ -100,7 +100,10 @@
       "Resistance met with disproportionate violence",
       "Terror as deliberate strategy"
     ],
-    "root_causes": "Centralized military power, weak/fragmented opposition, conquest culture"
+    "root_causes": "Centralized military power, weak/fragmented opposition, conquest culture",
+    "pattern_tags": [
+      "ECONOMIC_CRISIS"
+    ]
   },
   "sources": [
     {

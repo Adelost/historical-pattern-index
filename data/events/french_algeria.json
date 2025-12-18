@@ -96,7 +96,13 @@
       "Settler land seizures",
       "Brutal suppression of resistance"
     ],
-    "root_causes": "Imperial expansion, settler colonialism, strategic Mediterranean control"
+    "root_causes": "Imperial expansion, settler colonialism, strategic Mediterranean control",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

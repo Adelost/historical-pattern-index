@@ -96,7 +96,12 @@
       "Aerial bombing of villages",
       "Forced displacement campaigns"
     ],
-    "root_causes": "Arab supremacism, competition for land/water, counter-insurgency, government complicity"
+    "root_causes": "Arab supremacism, competition for land/water, counter-insurgency, government complicity",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "MILITIA_VIOLENCE"
+    ]
   },
   "sources": [
     {

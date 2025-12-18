@@ -98,7 +98,14 @@
       "Intellectuals and elders targeted",
       "Denunciations rewarded"
     ],
-    "root_causes": "Mao's power consolidation, ideological fanaticism, generational mobilization"
+    "root_causes": "Mao's power consolidation, ideological fanaticism, generational mobilization",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "FORCED_DISPLACEMENT",
+      "MEDIA_INCITEMENT",
+      "MILITIA_VIOLENCE"
+    ]
   },
   "sources": [
     {

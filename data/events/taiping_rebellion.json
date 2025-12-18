@@ -96,7 +96,11 @@
       "Apocalyptic religious ideology",
       "Weak central government"
     ],
-    "root_causes": "Qing dynasty decline, economic hardship, foreign incursions, millenarian movement"
+    "root_causes": "Qing dynasty decline, economic hardship, foreign incursions, millenarian movement",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS"
+    ]
   },
   "sources": [
     {

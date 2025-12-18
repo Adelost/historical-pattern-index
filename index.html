@@ -162,7 +162,7 @@
         .view.active { display: block; }
 
         /* --- Map --- */
-        #mapView {
+        #mapCanvas {
             height: 500px;
             border-radius: 16px;
             overflow: hidden;
@@ -652,7 +652,7 @@
             .card-grid { grid-template-columns: 1fr; }
             .scores { grid-template-columns: 1fr; }
             .breakdown-content { grid-template-columns: 1fr; }
-            #mapView { height: 350px; }
+            #mapCanvas { height: 350px; }
         }
     </style>
 </head>
@@ -742,8 +742,8 @@
             </div>
         </div>
 
-        <div id="mapViewContainer" class="view">
-            <div id="mapView"></div>
+        <div id="mapView" class="view">
+            <div id="mapCanvas"></div>
         </div>
 
         <div id="timelineView" class="view">

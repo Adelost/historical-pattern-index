@@ -95,7 +95,12 @@
       "Calls for complete elimination",
       "Land targeted for resettlement"
     ],
-    "root_causes": "Imperial expansion, fear of nomadic military power, desire for territory"
+    "root_causes": "Imperial expansion, fear of nomadic military power, desire for territory",
+    "pattern_tags": [
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

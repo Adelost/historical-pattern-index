@@ -95,7 +95,14 @@
       "Colonial policies ignore local needs",
       "Famine relief seen as 'moral hazard'"
     ],
-    "root_causes": "Colonial extraction, export-oriented agriculture, racist indifference, economic ideology"
+    "root_causes": "Colonial extraction, export-oriented agriculture, racist indifference, economic ideology",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "INTERNATIONAL_INACTION",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

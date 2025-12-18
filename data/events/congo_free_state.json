@@ -87,11 +87,19 @@
     "tier": "PROFIT-DRIVEN ATTRITION",
     "pattern_note": "Driven purely by extraction. Propaganda marked False because they didn't try to convince the victims, they just enslaved them.",
     "warning_signs": [
+      "Congolese described as 'savages' needing civilization",
       "Corporate/personal rule without oversight",
       "Quotas enforced through violence",
       "'Humanitarian' cover for extraction"
     ],
-    "root_causes": "Personal greed (Leopold II), rubber demand, lack of international accountability"
+    "root_causes": "Personal greed (Leopold II), rubber demand, lack of international accountability",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "INTERNATIONAL_INACTION",
+      "MILITIA_VIOLENCE"
+    ]
   },
   "sources": [
     {

@@ -97,7 +97,11 @@
       "Political leaders inflaming tensions",
       "Hasty colonial withdrawal"
     ],
-    "root_causes": "British divide-and-rule legacy, communalism, rushed partition, weak transitional authority"
+    "root_causes": "British divide-and-rule legacy, communalism, rushed partition, weak transitional authority",
+    "pattern_tags": [
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM"
+    ]
   },
   "sources": [
     {

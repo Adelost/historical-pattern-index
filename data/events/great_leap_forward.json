@@ -95,7 +95,11 @@
       "Local officials afraid to report truth",
       "Ideology overriding reality"
     ],
-    "root_causes": "Maoist utopianism, centralized control, fear of dissent, statistical fraud"
+    "root_causes": "Maoist utopianism, centralized control, fear of dissent, statistical fraud",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS"
+    ]
   },
   "sources": [
     {

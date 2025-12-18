@@ -89,11 +89,22 @@
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Often overlooked alongside Armenian Genocide. Part of Ottoman campaign to create homogeneous Turkish state. Destroyed ancient Assyrian presence in southeastern Anatolia. Less internationally recognized than Armenian Genocide.",
     "warning_signs": [
+      "Christians labeled 'infidels' and 'traitors'",
       "Christians targeted as 'foreign element'",
       "Coordinated with other ethnic cleansing",
       "Wartime cover for atrocities"
     ],
-    "root_causes": "Ottoman collapse, religious nationalism, WWI opportunity"
+    "root_causes": "Ottoman collapse, religious nationalism, WWI opportunity",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "EMERGENCY_LAWS",
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT",
+      "MEDIA_INCITEMENT",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

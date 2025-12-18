@@ -92,7 +92,14 @@
       "Extremist ideology spreading",
       "Sexual slavery systematized"
     ],
-    "root_causes": "ISIS jihadism, religious intolerance, state collapse in Iraq/Syria"
+    "root_causes": "ISIS jihadism, religious intolerance, state collapse in Iraq/Syria",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "EMERGENCY_LAWS",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

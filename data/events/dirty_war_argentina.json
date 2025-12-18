@@ -98,7 +98,11 @@
       "Leftists labeled 'subversives'",
       "Disappearances and secret detention"
     ],
-    "root_causes": "Cold War ideology, military authoritarianism, US support for anti-communist regimes"
+    "root_causes": "Cold War ideology, military authoritarianism, US support for anti-communist regimes",
+    "pattern_tags": [
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT"
+    ]
   },
   "sources": [
     {

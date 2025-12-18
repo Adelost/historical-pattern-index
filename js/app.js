@@ -89,7 +89,7 @@ const App = {
     },
 
     initMap() {
-        const map = L.map('mapView', {
+        const map = L.map('mapCanvas', {
             center: [20, 0],
             zoom: 2,
             minZoom: 2,

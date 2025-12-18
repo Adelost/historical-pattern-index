@@ -91,11 +91,18 @@
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "A non-European example of Tier 2. Matches the Holocaust profile (Ideology=100, Intensity=90) but driven by agrarian communism rather than race. Proves that systematic patterns are universal.",
     "warning_signs": [
+      "Urban people labeled 'new people' - lesser class",
       "Radical ideology rejecting all modernity",
       "Evacuation of cities",
       "Educated and urban people targeted"
     ],
-    "root_causes": "Extreme Maoist ideology, US bombing destabilization, radical utopianism"
+    "root_causes": "Extreme Maoist ideology, US bombing destabilization, radical utopianism",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "DELIBERATE_STARVATION",
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT"
+    ]
   },
   "sources": [
     {

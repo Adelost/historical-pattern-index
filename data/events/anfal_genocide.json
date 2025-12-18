@@ -92,11 +92,18 @@
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Named after Quranic chapter meaning 'spoils of war'. First use of chemical weapons against civilian population since WWI. Iraqi High Tribunal ruled it genocide in 2006. 'Chemical Ali' (Ali Hassan al-Majid) executed 2010. Western powers largely silent during campaign due to Iran-Iraq War alignment.",
     "warning_signs": [
+      "Kurds labeled 'saboteurs' and 'traitors'",
       "Ethnic autonomy movements crushed",
       "Chemical weapons used on civilians",
       "Villages systematically destroyed"
     ],
-    "root_causes": "Kurdish autonomy threat, Ba'athist Arab nationalism, Iran-Iraq War context"
+    "root_causes": "Kurdish autonomy threat, Ba'athist Arab nationalism, Iran-Iraq War context",
+    "pattern_tags": [
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT",
+      "INTERNATIONAL_INACTION",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

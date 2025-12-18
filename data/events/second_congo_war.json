@@ -98,7 +98,13 @@
       "Minerals funding warfare",
       "Civilian population as target"
     ],
-    "root_causes": "Post-Mobutu vacuum, Rwandan genocide spillover, mineral wealth, weak state"
+    "root_causes": "Post-Mobutu vacuum, Rwandan genocide spillover, mineral wealth, weak state",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "MILITIA_VIOLENCE"
+    ]
   },
   "sources": [
     {

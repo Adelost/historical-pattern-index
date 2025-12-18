@@ -95,7 +95,14 @@
       "Colonial indifference to 'natives'",
       "Denial of crisis severity"
     ],
-    "root_causes": "WWII resource diversion, colonial racism, policy failures, Japanese threat"
+    "root_causes": "WWII resource diversion, colonial racism, policy failures, Japanese threat",
+    "pattern_tags": [
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "EMERGENCY_LAWS",
+      "ETHNIC_NATIONALISM",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

@@ -91,7 +91,13 @@
       "Dehumanizing rhetoric ('Carthago delenda est')",
       "Total war ideology"
     ],
-    "root_causes": "Imperial rivalry, fear of resurgent competitor, desire for Mediterranean dominance"
+    "root_causes": "Imperial rivalry, fear of resurgent competitor, desire for Mediterranean dominance",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

@@ -97,7 +97,15 @@
       "Legal exclusion escalating to violence",
       "Economic crisis blamed on outgroup"
     ],
-    "root_causes": "Antisemitism, Nazi racial ideology, WWI humiliation, Great Depression, weak Weimar institutions"
+    "root_causes": "Antisemitism, Nazi racial ideology, WWI humiliation, Great Depression, weak Weimar institutions",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "MILITIA_VIOLENCE",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

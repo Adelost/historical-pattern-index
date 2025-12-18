@@ -95,7 +95,16 @@
       "Historical grievances weaponized",
       "Ethnic cleansing for 'Greater Serbia'"
     ],
-    "root_causes": "Yugoslav collapse, Serbian nationalism, historical tensions, weak international response"
+    "root_causes": "Yugoslav collapse, Serbian nationalism, historical tensions, weak international response",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT",
+      "INTERNATIONAL_INACTION",
+      "MEDIA_INCITEMENT",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

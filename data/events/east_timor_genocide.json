@@ -93,7 +93,14 @@
       "Independence movement crushed",
       "International powers looking away"
     ],
-    "root_causes": "Indonesian expansionism, Cold War anti-communism, oil interests, international complicity"
+    "root_causes": "Indonesian expansionism, Cold War anti-communism, oil interests, international complicity",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "INTERNATIONAL_INACTION"
+    ]
   },
   "sources": [
     {

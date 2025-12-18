@@ -95,7 +95,17 @@
       "Nationalism excluding minorities",
       "Wartime 'security' justifications"
     ],
-    "root_causes": "Ottoman collapse, Turkish nationalism, WWI chaos, history of pogroms"
+    "root_causes": "Ottoman collapse, Turkish nationalism, WWI chaos, history of pogroms",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "EMERGENCY_LAWS",
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT",
+      "MILITIA_VIOLENCE",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

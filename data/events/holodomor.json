@@ -95,7 +95,14 @@
       "Borders closed to prevent escape",
       "Denial of famine existence"
     ],
-    "root_causes": "Stalinist collectivization, suppression of Ukrainian nationalism, ideological rigidity"
+    "root_causes": "Stalinist collectivization, suppression of Ukrainian nationalism, ideological rigidity",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "DELIBERATE_STARVATION",
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "MEDIA_INCITEMENT"
+    ]
   },
   "sources": [
     {

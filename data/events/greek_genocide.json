@@ -90,11 +90,19 @@
     "tier": "INDUSTRIAL MEGA-EVENT",
     "pattern_note": "Concurrent with Armenian Genocide, same perpetrators and methods. Greeks had lived in Anatolia for 3000 years. Population exchanges after 1923 completed the ethnic cleansing. Recognized by Greece, Cyprus, and several US states.",
     "warning_signs": [
+      "Greeks called 'gavur' (infidels) and traitors",
       "Ethnic homogenization ideology",
       "'Turkey for Turks' rhetoric",
       "Deportations and labor battalions"
     ],
-    "root_causes": "Turkish nationalism, WWI context, goal of ethnically homogeneous state"
+    "root_causes": "Turkish nationalism, WWI context, goal of ethnically homogeneous state",
+    "pattern_tags": [
+      "ETHNIC_NATIONALISM",
+      "FORCED_DISPLACEMENT",
+      "MEDIA_INCITEMENT",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

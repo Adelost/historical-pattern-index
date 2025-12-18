@@ -94,7 +94,13 @@
       "Indigenous knowledge labeled 'devil worship'",
       "Book burning and cultural destruction"
     ],
-    "root_causes": "Religious fanaticism, colonial extraction, erasure of competing worldviews"
+    "root_causes": "Religious fanaticism, colonial extraction, erasure of competing worldviews",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "DEHUMANIZATION",
+      "ECONOMIC_CRISIS",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {

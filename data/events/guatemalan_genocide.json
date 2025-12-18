@@ -95,7 +95,12 @@
       "Scorched earth military doctrine",
       "US-backed military government"
     ],
-    "root_causes": "Cold War counter-insurgency, racism against Maya, land inequality, US intervention"
+    "root_causes": "Cold War counter-insurgency, racism against Maya, land inequality, US intervention",
+    "pattern_tags": [
+      "COLONIAL_JUSTIFICATION",
+      "ETHNIC_NATIONALISM",
+      "SCAPEGOATING"
+    ]
   },
   "sources": [
     {

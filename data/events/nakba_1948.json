@@ -2,14 +2,27 @@
   "id": "nakba_1948",
   "name": "Nakba (Palestinian Exodus)",
   "status": "historic",
-  "period": { "start": 1947, "end": 1949 },
+  "period": {
+    "start": 1947,
+    "end": 1949
+  },
   "geography": {
     "region": "Middle East (Palestine/Israel)",
-    "coordinates": [31.5, 34.8]
+    "coordinates": [
+      31.5,
+      34.8
+    ]
   },
   "participants": {
-    "perpetrators": ["Haganah", "Irgun", "Lehi", "Israel Defense Forces"],
-    "victims": ["Palestinian Arabs"]
+    "perpetrators": [
+      "Haganah",
+      "Irgun",
+      "Lehi",
+      "Israel Defense Forces"
+    ],
+    "victims": [
+      "Palestinian Arabs"
+    ]
   },
   "metrics": {
     "mortality": {
@@ -62,15 +75,37 @@
       }
     }
   },
-  "tags": ["displacement", "ethnic_cleansing", "settler_colonialism", "middle_east"],
+  "tags": [
+    "displacement",
+    "ethnic_cleansing",
+    "settler_colonialism",
+    "middle_east"
+  ],
   "denial_status": "disputed",
   "analysis": {
     "tier": "CONTINENTAL COLLAPSE",
-    "pattern_note": "Mass displacement during 1948 Arab-Israeli War. Plan Dalet documented military operations to clear Arab villages. 750,000 Palestinians became refugees. Over 400 villages destroyed or depopulated. Deir Yassin massacre became symbol of violence. Israel's 'Absentee Property Law' (1950) legalized seizure of refugee property. Term 'Nakba' (catastrophe) coined by Syrian historian Constantine Zurayk in 1948. Event remains central to Palestinian identity and Israeli-Palestinian conflict."
+    "pattern_note": "Mass displacement during 1948 Arab-Israeli War. Plan Dalet documented military operations to clear Arab villages. 750,000 Palestinians became refugees. Over 400 villages destroyed or depopulated. Deir Yassin massacre became symbol of violence. Israel's 'Absentee Property Law' (1950) legalized seizure of refugee property. Term 'Nakba' (catastrophe) coined by Syrian historian Constantine Zurayk in 1948. Event remains central to Palestinian identity and Israeli-Palestinian conflict.",
+    "pattern_tags": [
+      "ECONOMIC_CRISIS",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
-    { "title": "The Birth of the Palestinian Refugee Problem Revisited", "author": "Benny Morris", "year": 2004 },
-    { "title": "The Ethnic Cleansing of Palestine", "author": "Ilan Pappé", "year": 2006 },
-    { "title": "All That Remains: The Palestinian Villages Occupied and Depopulated by Israel in 1948", "author": "Walid Khalidi", "year": 1992 }
+    {
+      "title": "The Birth of the Palestinian Refugee Problem Revisited",
+      "author": "Benny Morris",
+      "year": 2004
+    },
+    {
+      "title": "The Ethnic Cleansing of Palestine",
+      "author": "Ilan Pappé",
+      "year": 2006
+    },
+    {
+      "title": "All That Remains: The Palestinian Villages Occupied and Depopulated by Israel in 1948",
+      "author": "Walid Khalidi",
+      "year": 1992
+    }
   ]
 }

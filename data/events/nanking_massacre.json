@@ -94,7 +94,12 @@
       "Dehumanization of enemy civilians",
       "Command structure breakdown"
     ],
-    "root_causes": "Japanese militarism, racism toward Chinese, lack of command accountability"
+    "root_causes": "Japanese militarism, racism toward Chinese, lack of command accountability",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE"
+    ]
   },
   "sources": [
     {
