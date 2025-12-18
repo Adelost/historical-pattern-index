@@ -1,189 +1,114 @@
-# Historical Pattern Index (HPI)
+# Historical Pattern Index
 
-> "History without opinions. Just data."
+The deadliest conflict since World War II killed 5.4 million people.
 
-**The Historical Pattern Index (HPI)** is an open-source framework designed to quantify and identify recurring patterns in historical atrocities. By moving away from emotional narratives and towards measurable data, HPI aims to make history scientifically comparable for the sole purpose of prevention.
+It's not Iraq. Not Syria. Not Afghanistan.
 
-## 🎯 The Mission
+It's the Second Congo War (1998-2003). Most people have never heard of it.
 
-Traditional history often focuses on the "winners" or the most visible tragedies. This creates a bias where small-scale total erasures are forgotten, and profit-driven destruction is minimized compared to ideological violence.
+Why? Because it was driven by profit (coltan, diamonds, gold), not ideology. And we don't have good frameworks for seeing profit-driven mass death. We notice genocides. We overlook "market forces."
 
-**HPI changes this by using:**
-1.  **Logarithmic Scales:** To ensure that the total extermination of a small population (e.g., Tasmania) is visualized with the same gravity as a continental collapse (e.g., The Americas).
-2.  **Systemic Intensity Metrics:** Measuring the *mechanics* of destruction (bureaucracy, infrastructure, policy) rather than just the body count.
-3.  **Driver Analysis:** Distinguishing between **Ideological Hatred** and **Profit-Driven Indifference** to identify modern risk profiles in supply chains and policy.
+This project attempts to fix that.
 
 ---
 
-## 💡 How HPI Compares
-HPI fills a specific niche between pure statistics and qualitative theory.
+## The Data
 
-| Framework Type | Examples | What they measure | What HPI adds |
-| :--- | :--- | :--- | :--- |
-| **Body Count Databases** | *UCDP, Our World in Data* | **Consequences** (Casualties, Dates) | HPI measures the **Mechanism** (How organized was it?) |
-| **Stage Theories** | *Genocide Watch* | **Progression** (Stages of development) | HPI provides **Quantifiable Scores** (Profit % vs Ideology %) |
-| **Legal Reports** | *Amnesty, HRW* | **Crimes** (Violations of law) | HPI analyzes **Incentives** (Why did it happen?) |
+27 events. 2,154 years of history. 150+ million documented deaths.
 
-**Key Differentiator:** Most frameworks focus heavily on ideology (hatred). HPI is unique in treating **Economic Profit** as a driver of equal weight to Ideology, allowing us to quantify the destructiveness of "business-as-usual" colonialism alongside totalitarian regimes.
+| Event | Period | Deaths | Denied? |
+|-------|--------|--------|---------|
+| Mongol Conquests | 1206-1368 | 30-40M | No |
+| Spanish Americas | 1492-1600 | 50-56M | Partial |
+| Transatlantic Slave Trade | 1501-1867 | 1.8-2.5M | No |
+| Taiping Rebellion | 1850-1864 | 20-30M | Suppressed |
+| British India Famines | 1876-1902 | 12-29M | Disputed |
+| Congo Free State | 1885-1908 | 8-13M | No |
+| Armenian Genocide | 1915-1923 | 1-1.5M | **Denied** |
+| Holodomor | 1932-1933 | 3.5-7.5M | **Denied** |
+| The Holocaust | 1941-1945 | 5.7-6M | No |
+| Great Leap Forward | 1958-1962 | 15-55M | Suppressed |
+| Bangladesh Genocide | 1971 | 300k-3M | **Denied** |
+| Cambodian Genocide | 1975-1979 | 1.5-2M | No |
+| Rwandan Genocide | 1994 | 500k-1M | No |
+| Second Congo War | 1998-2003 | 3-5.4M | Partial |
+| Darfur | 2003-2008 | 200-400k | **Denied** |
 
----
-
-## 📊 The Tier System
-
-HPI classifies historical events based on their data profile, not a moral ranking.
-
-```text
-       HIGH (100%)
-      ^
-      |    [TIER 1: TOTAL ERASURE]           [TIER 2: MEGA-EVENT]
-I     |    (Tasmania, Herero)                (Holocaust, Cambodia)
-N     |          * *
-T     |
-E     |
-N     |
-S     |
-I     |    [TIER ?? : FAILED/CHAOTIC]        [TIER 3 & 4: PROFIT/COLLAPSE]
-T     |    (Pogroms, Riots)                  (Congo, Spanish Americas)
-Y     |          .                                 *
-      |
-      +-------------------------------------------------------->
-      LOW              VOLUME (Logarithmic Scale)           HIGH
-      (1k)             (100k)            (10M)             (100M)
-```
-
-| Tier | Profile Name | Characteristics | Historic Examples |
-| :--- | :--- | :--- | :--- |
-| **I** | **TOTAL ERASURE** | Low Absolute Volume • Max Intensity (100%) | Tasmania, Herero/Nama |
-| **II** | **INDUSTRIAL MEGA-EVENT** | High Volume • Max Intensity (100%) | The Holocaust, Cambodia (Khmer Rouge) |
-| **III** | **CONTINENTAL COLLAPSE** | Max Volume • Mixed Intensity | Spanish Americas, Mongol Conquests |
-| **IV** | **PROFIT-DRIVEN ATTRITION** | High Volume • Max Profit Score | Congo Free State, Trans-Atlantic Slave Trade |
+Full dataset: [`/data/events/`](data/events/)
 
 ---
 
-## 📐 Methodology & Scoring
+## What We Found
 
-HPI calculates scores based on **Binary Checklists**. For an event to receive a score, indicators must be verified by academic sources (Yes=1, No=0). Scores are expressed as percentages (0-100%).
+**1. Profit kills as much as ideology.**
 
-### 1. Systematic Intensity Score (Y-Axis)
-*Measures the level of intent, organization, and state involvement.*
+The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
 
-* [ ] **Policy:** Were there explicit orders, laws, or decrees authorizing violence?
-* [ ] **State Involvement:** Were state institutions (military, police, courts) directly involved?
-* [ ] **Infrastructure:** Was specific infrastructure built (camps, prisons, transport)?
-* [ ] **Propaganda:** Was organized propaganda used to dehumanize victims?
-* [ ] **Broad Targeting:** Was violence directed at civilians (women, children, elderly)?
-* [ ] **Cultural Ban:** Was language, religion, or culture legally prohibited?
-* [ ] **Property Seizure:** Was property or land systematically confiscated?
-* [ ] **Identification:** Were registry/ID systems used to identify victims?
-* [ ] **Biological Warfare:** Was starvation, disease, or sterilization used as a weapon?
-* [ ] **Duration:** Did the system persist continuously for >5 years?
+**2. Five events are still officially denied.**
 
-### 2. Profit Score (Driver A)
-*Measures the economic incentive behind the atrocity.*
+| Event | Denier | Deaths |
+|-------|--------|--------|
+| Armenian Genocide | Turkey | 1-1.5M |
+| Holodomor | Russia | 3.5-7.5M |
+| Dzungar Genocide | China | 480-600k |
+| Bangladesh 1971 | Pakistan | 300k-3M |
+| Darfur | Sudan | 200-400k |
 
-* [ ] **Direct Revenue:** Did the event generate measurable revenue for the state/entity?
-* [ ] **Resource Extraction:** Was the primary goal raw materials (gold, rubber, land)?
-* [ ] **Forced Labor:** Was slave or coerced labor utilized?
-* [ ] **Economic Dependence:** Was the national/corporate economy dependent on this system?
-* [ ] **Market Integration:** Were goods/resources sold to consumer markets?
+**3. Speed doesn't require bureaucracy.**
 
-### 3. Ideology Score (Driver B)
-*Measures the conviction and "higher purpose".*
+Rwanda killed 70% of its Tutsi population in 100 days with machetes and radio coordination. The Holocaust took 4 years with industrial infrastructure. Ideology can mobilize faster than bureaucracy.
 
-* [ ] **Purity Ideal:** Was ethnic/religious cleansing a stated goal?
-* [ ] **Historical Claim:** Justified by "ancient rights" or "destiny"?
-* [ ] **Higher Purpose:** Framed as necessary for national survival/salvation?
-* [ ] **Victim Narrative:** Did perpetrators claim self-defense?
-* [ ] **Utopianism:** Was a "golden age" promised post-cleansing?
+**4. The forgotten middle.**
 
-### 4. Complicity Score (Enabler)
-*Measures how ordinary society enabled the event.*
-
-* [ ] **Distance:** Geographic separation between perpetrators/beneficiaries and victims?
-* [ ] **Benefit:** Did the general public benefit economically (prices, taxes, land)?
-* [ ] **Euphemisms:** Was sanitizing language used (e.g., "relocation" vs "death march")?
-* [ ] **Diffused Responsibility:** Was the chain of command fragmented?
-* [ ] **Silence:** Was dissent or criticism punished/socially ostracized?
+Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieval atrocities are underrepresented. So are inter-African and intra-Asian conflicts before European contact.
 
 ---
 
-## 💾 Data Structure (v3.1)
+## How It Works
 
-All events are stored as JSON files in `/data/events/`. We use strict schemas to ensure every score is mathematically derived from binary checklists.
+Each event gets four scores (0-100%) based on binary checklists:
 
-```json
-{
-  "id": "event_id",
-  "name": "Event Name",
-  "status": "historic",
-  "period": { "start": 1800, "end": 1805 },
-  "geography": {
-    "region": "Region Name",
-    "coordinates": [0.0, 0.0]
-  },
-  "participants": {
-    "perpetrators": ["Group A"],
-    "victims": ["Group B"]
-  },
-  "metrics": {
-    "mortality": {
-      "min": 5000,
-      "max": 8000,
-      "population_initial": 10000,
-      "population_loss_percent": 99.0,
-      "confidence": "high"
-    },
-    "scores": {
-      "systematic_intensity": 90, 
-      "profit": 100,
-      "ideology": 40,
-      "complicity": 80
-    },
-    "breakdowns": {
-      "systematic_intensity": {
-        "policy": true,
-        "state_involvement": true,
-        "infrastructure": true,
-        "propaganda": true,
-        "broad_targeting": true,
-        "cultural_ban": true,
-        "property_seizure": true,
-        "identification": true,
-        "biological_warfare": true,
-        "duration_over_5y": false
-      }
-      // Full breakdowns for profit, ideology, and complicity are also required.
-    }
-  },
-  "tags": ["colonialism", "total_erasure"],
-  "sources": [
-    { "author": "Author Name", "title": "Book Title", "year": 2020 }
-  ]
-}
-```
+| Score | What it measures | Example high-scorer |
+|-------|------------------|---------------------|
+| **Systematic Intensity** | Organization, infrastructure, state involvement | Holocaust (90%) |
+| **Profit** | Economic extraction as primary driver | Congo Free State (100%) |
+| **Ideology** | Ethnic/religious "purification" as goal | Rwanda (100%) |
+| **Complicity** | How society enabled it | Second Congo War (100%) |
 
-## ⚠️ Limitations & Known Biases
+Each score is calculated from a checklist of 5-10 binary questions. No subjective weighting. If 8 of 10 boxes are checked, the score is 80%.
 
-This framework is a work in progress. We acknowledge the following limitations:
-
-* **Small Sample Size:** The current dataset contains only 4 events, which is insufficient for robust pattern analysis.
-* **Geographic Skew:** Current events are skewed toward European colonial perpetrators. Contributions covering other regions (Asia, Africa, Middle East) are especially welcome.
-* **Equal Weighting:** All checklist items are weighted equally (1 item = 10% or 20% of score). This is a simplification—"infrastructure for killing" may be more significant than "propaganda," but we lack objective criteria to weight them differently.
-* **Arbitrary Thresholds:** The ">5 years" duration threshold is a pragmatic choice, not a scientifically derived cutoff.
-* **Definitional Ambiguity:** Some checklist items (e.g., "biological warfare") may be interpreted differently. We define it broadly to include deliberate starvation and disease, but this is debatable.
-
-**HPI does not claim to be a perfect measure of historical atrocities. It is a structured framework for comparison, open to refinement.**
+Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 ---
 
-## 🤝 Contributing
-This is a data project, not a forum for political debate.
+## Limitations
 
-* **No Opinions:** All data points must be backed by at least one reputable academic or primary source.
-* **Show the Range:** Do not use single numbers for death tolls if there is academic disagreement. Use the min and max fields.
-* **Pull Requests:** Submit new events via PR using the JSON template.
+This is a work in progress, not a finished truth.
 
-## ⚖️ License
+- **Sample size**: 27 events is better than 4, but still small
+- **Source bias**: English-language academic sources overrepresented
+- **Equal weighting**: All checklist items count equally (debatable)
+- **Death toll uncertainty**: Many estimates span 2-10x ranges
+- **"Genocide" definition**: Some events (famines, resource wars) don't fit legal definitions but killed millions
 
-*   **Code:** [MIT License](LICENSE) (Free to use for software/tools).
-*   **Data:** [Creative Commons Attribution 4.0 (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/) (Free to use, but must cite HPI).
+We're not claiming this is the final word. We're claiming it's better than ignoring the pattern.
+
+---
+
+## Contributing
+
+Add events via pull request. Requirements:
+
+1. Academic sources (not Wikipedia)
+2. Death toll ranges (min/max), not single numbers
+3. Complete checklist breakdowns
+4. No editorializing in `pattern_note`
+
+Template: [`/data/events/_template.json`](data/events/_template.json)
+
+---
+
+## License
+
+- **Code**: MIT
+- **Data**: CC-BY-4.0 (cite this project)
