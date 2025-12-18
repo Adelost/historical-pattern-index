@@ -14,13 +14,14 @@ This project attempts to fix that.
 
 ## The Data
 
-27 events. 2,154 years of history. 150+ million documented deaths.
+37 events. 2,154 years of history. 150+ million documented deaths.
 
 | Event | Period | Deaths | Denied? |
 |-------|--------|--------|---------|
 | Mongol Conquests | 1206-1368 | 30-40M | No |
 | Spanish Americas | 1492-1600 | 50-56M | Partial |
-| Transatlantic Slave Trade | 1501-1867 | 1.8-2.5M | No |
+| Transatlantic Slave Trade | 1501-1867 | 1.8-2.5M* | No |
+| Circassian Genocide | 1864-1867 | 400-600k | **Denied** |
 | Taiping Rebellion | 1850-1864 | 20-30M | Suppressed |
 | British India Famines | 1876-1902 | 12-29M | Disputed |
 | Congo Free State | 1885-1908 | 8-13M | No |
@@ -29,10 +30,13 @@ This project attempts to fix that.
 | The Holocaust | 1941-1945 | 5.7-6M | No |
 | Great Leap Forward | 1958-1962 | 15-55M | Suppressed |
 | Bangladesh Genocide | 1971 | 300k-3M | **Denied** |
+| Guatemalan Genocide | 1981-1983 | 100-200k | Partial |
 | Cambodian Genocide | 1975-1979 | 1.5-2M | No |
 | Rwandan Genocide | 1994 | 500k-1M | No |
 | Second Congo War | 1998-2003 | 3-5.4M | Partial |
 | Darfur | 2003-2008 | 200-400k | **Denied** |
+
+*Middle Passage only. Total system deaths 10-15M+.
 
 Full dataset: [`/data/events/`](data/events/)
 
@@ -44,12 +48,13 @@ Full dataset: [`/data/events/`](data/events/)
 
 The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
 
-**2. Five events are still officially denied.**
+**2. Six events are still officially denied.**
 
 | Event | Denier | Deaths |
 |-------|--------|--------|
 | Armenian Genocide | Turkey | 1-1.5M |
 | Holodomor | Russia | 3.5-7.5M |
+| Circassian Genocide | Russia | 400-600k |
 | Dzungar Genocide | China | 480-600k |
 | Bangladesh 1971 | Pakistan | 300k-3M |
 | Darfur | Sudan | 200-400k |
@@ -85,7 +90,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: 27 events is better than 4, but still small
+- **Sample size**: 37 events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges
