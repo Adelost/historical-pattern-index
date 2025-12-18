@@ -94,27 +94,52 @@ HPI calculates scores based on **Binary Checklists**. For an event to receive a 
 
 ---
 
-## 💾 Data Structure
+## 💾 Data Structure (v3.1)
 
-All events are stored as JSON files in `/data/events/`. We use range estimates (`min`/`max`) to account for historical uncertainty.
+All events are stored as JSON files in `/data/events/`. We use strict schemas to ensure every score is mathematically derived from binary checklists.
 
 ```json
 {
   "id": "event_id",
   "name": "Event Name",
+  "status": "historic",
   "period": { "start": 1800, "end": 1805 },
+  "geography": {
+    "region": "Region Name",
+    "coordinates": [0.0, 0.0]
+  },
+  "participants": {
+    "perpetrators": ["Group A"],
+    "victims": ["Group B"]
+  },
   "metrics": {
     "mortality": {
       "min": 5000,
       "max": 8000,
+      "population_initial": 10000,
       "population_loss_percent": 99.0,
       "confidence": "high"
     },
     "scores": {
-      "systematic_intensity": 90,
+      "systematic_intensity": 90, 
       "profit": 100,
       "ideology": 40,
       "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": true,
+        "duration_over_5y": false
+      }
+      // Full breakdowns for profit, ideology, and complicity are also required.
     }
   },
   "tags": ["colonialism", "total_erasure"],
