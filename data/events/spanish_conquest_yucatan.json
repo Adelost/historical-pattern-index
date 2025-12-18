@@ -1,0 +1,74 @@
+{
+  "id": "spanish_conquest_yucatan_1562",
+  "name": "Spanish Conquest of Yucatán (Cultural Erasure)",
+  "status": "historic",
+  "period": { "start": 1527, "end": 1570 },
+  "geography": {
+    "region": "Central America / Mexico",
+    "coordinates": [20.0, -89.0]
+  },
+  "participants": {
+    "perpetrators": ["Spanish Empire", "Franciscan Order", "Diego de Landa"],
+    "victims": ["Maya Civilization"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 200000,
+      "max": 500000,
+      "population_initial": 800000,
+      "population_loss_percent": 60.0,
+      "confidence": "medium",
+      "note": "Mortality driven by war and disease. The unique aspect is 'Epistemicide' (destruction of knowledge) via the Auto-da-fé of Maní (1562) where 27 codices and 5000 idols were burned."
+    },
+    "scores": {
+      "systematic_intensity": 70,
+      "profit": 100,
+      "ideology": 80,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["cultural_erasure", "epistemicide", "colonialism", "religious_persecution"],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "A prime example of 'Epistemicide'. Shows that Ideology (Religion) combined with Profit (Encomienda) can lead to the total destruction of recorded history, distinct from biological extinction."
+  },
+  "sources": [
+    { "title": "Relación de las cosas de Yucatán", "author": "Diego de Landa", "year": 1566 },
+    { "title": "Ambivalent Conquests", "author": "Inga Clendinnen", "year": 1987 }
+  ]
+}
