@@ -28,6 +28,14 @@ CAUSES = {
         ],
         "root_causes": "Roman imperial control, Jewish religious resistance, taxation grievances, messianic movements, Hellenistic cultural conflict"
     },
+    "an_lushan_rebellion": {
+        "warning_signs": [
+            "Regional military commanders gaining autonomy",
+            "Central government losing control of armies",
+            "Ethnic tensions in frontier forces"
+        ],
+        "root_causes": "Tang military decentralization, An Lushan's personal ambition, Emperor Xuanzong's complacency, frontier army system (jiedushi), court factionalism"
+    },
     "mongol_conquests": {
         "warning_signs": [
             "Expanding military power unchecked",
