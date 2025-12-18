@@ -169,54 +169,56 @@ const App = {
             markers.push(`<div class="timeline-marker" style="left: ${x}%">${year}</div>`);
         }
 
-        // Create events (stagger rows to avoid overlap)
-        const rows = [];
+        // Create events - just dots, no labels
         const eventHtml = sorted.map(event => {
             const x = ((event.period.start - minYear) / range) * 100;
             const { color } = Utils.getTheme(event.analysis.tier);
-
-            // Find available row
-            let row = 0;
-            while (rows[row] && rows[row] > x - 8) {
-                row++;
-            }
-            rows[row] = x + 8;
-
-            const y = 60 + (row * 45);
-            const deaths = event.metrics.mortality;
+            const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
 
             return `
                 <div class="timeline-event"
-                     style="left: ${x}%; top: ${y}px; background: ${color};"
-                     data-id="${event.id}"
-                     title="${event.name}">
-                </div>
-                <div class="timeline-label" style="left: ${x}%; top: ${y + 18}px;">
-                    ${event.name.length > 15 ? event.name.substring(0, 13) + '…' : event.name}
+                     style="left: ${x}%; background: ${color};"
+                     data-id="${event.id}">
+                    <div class="timeline-tooltip">
+                        <strong>${event.name}</strong><br>
+                        ${event.period.start}–${event.period.end} · ${deaths} deaths
+                    </div>
                 </div>`;
         }).join('');
-
-        const height = Math.max(400, 60 + (rows.length * 45) + 50);
 
         timeline.innerHTML = `
             <div class="timeline-axis"></div>
             ${markers.join('')}
             ${eventHtml}
         `;
-        timeline.style.minHeight = `${height}px`;
 
-        // Add click handlers
+        // Add click handlers - show info panel
         timeline.querySelectorAll('.timeline-event').forEach(el => {
             el.addEventListener('click', () => {
                 const id = el.dataset.id;
-                this.switchView('cards');
-                setTimeout(() => {
-                    const card = document.getElementById(`card-${id}`);
-                    if (card) {
-                        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        card.focus();
-                    }
-                }, 100);
+                const event = this.state.events.find(e => e.id === id);
+                if (!event) return;
+
+                // Update selection state
+                timeline.querySelectorAll('.timeline-event').forEach(e => e.classList.remove('selected'));
+                el.classList.add('selected');
+
+                // Show info panel
+                const infoPanel = document.getElementById('timelineInfo');
+                const scores = event.metrics.scores;
+                const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
+
+                document.getElementById('timelineInfoTitle').textContent = event.name;
+                document.getElementById('timelineInfoMeta').innerHTML =
+                    `${event.geography.region} · ${event.period.start}–${event.period.end} · <strong>${deaths} deaths</strong>`;
+                document.getElementById('timelineInfoScores').innerHTML = `
+                    <span class="score-pill" style="border-left: 3px solid #ef4444;">Systematic ${scores.systematic_intensity}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #a78bfa;">Profit ${scores.profit}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #38bdf8;">Ideology ${scores.ideology}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #4ade80;">Complicity ${scores.complicity}%</span>
+                `;
+                document.getElementById('timelineInfoNote').textContent = `"${event.analysis.pattern_note}"`;
+                infoPanel.classList.add('visible');
             });
         });
     },

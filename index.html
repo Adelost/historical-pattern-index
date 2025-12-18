@@ -261,8 +261,8 @@
 
         .timeline {
             position: relative;
-            min-height: 400px;
-            padding-top: 60px;
+            min-height: 300px;
+            min-width: 100%;
         }
 
         .timeline-axis {
@@ -276,55 +276,93 @@
 
         .timeline-marker {
             position: absolute;
-            top: 0;
-            font-size: 0.7rem;
+            top: 10px;
+            font-size: 0.75rem;
             color: var(--text-muted);
             transform: translateX(-50%);
         }
 
         .timeline-event {
             position: absolute;
-            width: 12px;
-            height: 12px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             cursor: pointer;
             transform: translate(-50%, -50%);
             transition: all 0.2s;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255,255,255,0.4);
+            top: 40px;
         }
 
         .timeline-event:hover {
-            transform: translate(-50%, -50%) scale(1.5);
+            transform: translate(-50%, -50%) scale(1.4);
             z-index: 100;
+            border-color: white;
         }
 
-        .timeline-label {
-            position: absolute;
-            font-size: 0.7rem;
-            color: var(--text-main);
-            white-space: nowrap;
-            transform: translateX(-50%);
-            max-width: 120px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            text-align: center;
+        .timeline-event.selected {
+            transform: translate(-50%, -50%) scale(1.4);
+            border-color: white;
+            box-shadow: 0 0 12px currentColor;
         }
 
         .timeline-tooltip {
             display: none;
             position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
             background: #0f172a;
             border: 1px solid #334155;
-            padding: 0.75rem;
+            padding: 0.75rem 1rem;
             border-radius: 8px;
             font-size: 0.8rem;
             z-index: 1000;
-            min-width: 200px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            min-width: 220px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            white-space: nowrap;
         }
 
         .timeline-event:hover .timeline-tooltip {
             display: block;
+        }
+
+        .timeline-info {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
+            display: none;
+        }
+
+        .timeline-info.visible {
+            display: block;
+        }
+
+        .timeline-info h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        .timeline-info .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .timeline-info .scores {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-info .score-pill {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.1);
         }
 
         /* --- Chart --- */
@@ -848,6 +886,12 @@
         <div id="timelineView" class="view">
             <div class="timeline-container">
                 <div id="timeline" class="timeline"></div>
+                <div id="timelineInfo" class="timeline-info">
+                    <h3 id="timelineInfoTitle">Select an event</h3>
+                    <div class="meta" id="timelineInfoMeta"></div>
+                    <div class="scores" id="timelineInfoScores"></div>
+                    <p id="timelineInfoNote" style="margin: 0.75rem 0 0; font-size: 0.85rem; color: var(--text-muted); font-style: italic;"></p>
+                </div>
             </div>
         </div>
 

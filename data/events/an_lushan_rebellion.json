@@ -1,0 +1,117 @@
+{
+  "id": "an_lushan_rebellion_755",
+  "name": "An Lushan Rebellion",
+  "status": "historic",
+  "period": {
+    "start": 755,
+    "end": 763
+  },
+  "geography": {
+    "region": "East Asia (Tang Dynasty China)",
+    "coordinates": [34.26, 108.94]
+  },
+  "participants": {
+    "perpetrators": [
+      "An Lushan",
+      "Shi Siming",
+      "Yan Dynasty rebels",
+      "Tang Dynasty forces"
+    ],
+    "victims": [
+      "Chinese civilian population",
+      "Tang Dynasty subjects"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 13000000,
+      "max": 36000000,
+      "population_initial": 53000000,
+      "population_loss_percent": 50.0,
+      "confidence": "low",
+      "note": "Tang census: 52.9 million (754 CE) to 16.9 million (764 CE). Actual deaths debated - some fled, some uncounted. Even conservative estimates make this one of history's deadliest conflicts. Deaths from warfare, famine, disease, and displacement. Both rebel and loyalist forces committed atrocities."
+    },
+    "scores": {
+      "systematic_intensity": 44,
+      "profit": 80,
+      "ideology": 40,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": false,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Civil war rather than targeted extermination. Both sides committed massacres. Cities changed hands multiple times with accompanying slaughter. But no ethnic or religious targeting - violence was political/military.",
+      "profit": "Rebels sought imperial treasury and tax revenues. Soldiers on both sides looted extensively. War economy developed. Land seizures widespread.",
+      "ideology": "An Lushan claimed imperial mandate, established Yan Dynasty. But ideology was thin - primarily power grab. No ethnic purification or utopian vision.",
+      "complicity": "Regional warlords chose sides opportunistically. Foreign mercenaries (Uyghurs, Arabs) joined for plunder. Population suffered regardless of which side controlled territory."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "civil_war",
+    "medieval",
+    "dynastic_collapse",
+    "mass_atrocity",
+    "tang_dynasty",
+    "famine"
+  ],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Possibly deadliest civil war in human history. Tang Dynasty census shows 36 million population drop - even accounting for refugees and census failures, mortality was catastrophic. An Lushan was a Sogdian-Turkic general who exploited Tang military structure. After his assassination, war continued under successors. Tang never recovered its golden age power. Shows how military-political fragmentation can kill more than ideological genocides. Largely unknown in West despite scale exceeding most European conflicts combined.",
+    "warning_signs": [
+      "Regional military commanders gaining autonomy",
+      "Central government losing control of armies",
+      "Ethnic tensions in frontier forces"
+    ],
+    "root_causes": "Tang military decentralization, An Lushan's personal ambition, Emperor Xuanzong's complacency, frontier army system (jiedushi), court factionalism"
+  },
+  "sources": [
+    {
+      "title": "The Cambridge History of China, Vol. 3: Sui and T'ang China",
+      "author": "Denis Twitchett",
+      "year": 1979
+    },
+    {
+      "title": "An Lushan Rebellion and the Origins of Chronic Militarism in Late Tang China",
+      "author": "Charles Peterson",
+      "year": 1979
+    },
+    {
+      "title": "The World of the Rebellious General: An Lushan and Tang China",
+      "author": "David Graff",
+      "year": 2002
+    }
+  ]
+}
