@@ -1,0 +1,74 @@
+{
+  "id": "native_american_genocide_1830",
+  "name": "Native American Genocide (US Indian Wars & Removal)",
+  "status": "historic",
+  "period": { "start": 1830, "end": 1890 },
+  "geography": {
+    "region": "North America (United States)",
+    "coordinates": [39.0, -98.0]
+  },
+  "participants": {
+    "perpetrators": ["United States Government", "US Army", "State militias", "Settlers"],
+    "victims": ["Native American tribes", "Indigenous peoples"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 500000,
+      "max": 1500000,
+      "population_initial": 600000,
+      "population_loss_percent": 80.0,
+      "confidence": "low",
+      "note": "US-era deaths only (1830-1890). Broader demographic collapse from ~10M pre-contact to 250k by 1900 includes earlier colonial periods. Trail of Tears alone killed 15,000+. Wounded Knee, Sand Creek, and countless other massacres."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["ethnic_cleansing", "settler_colonialism", "ideology_driven", "land_seizure", "cultural_genocide"],
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Manifest Destiny as genocidal ideology. Indian Removal Act (1830) legalized ethnic cleansing. Reservation system as concentration. Boarding schools ('Kill the Indian, save the man') as cultural genocide. 80% population loss in 60 years. Still ongoing effects: poverty, health disparities, broken treaties."
+  },
+  "sources": [
+    { "title": "An American Genocide: The United States and the California Indian Catastrophe", "author": "Benjamin Madley", "year": 2016 },
+    { "title": "Bury My Heart at Wounded Knee", "author": "Dee Brown", "year": 1970 }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "french_algeria_1830",
+  "name": "French Algeria (Conquest & Colonial Rule)",
+  "status": "historic",
+  "period": { "start": 1830, "end": 1962 },
+  "geography": {
+    "region": "North Africa (Algeria)",
+    "coordinates": [28.0, 2.0]
+  },
+  "participants": {
+    "perpetrators": ["French Empire", "French Army", "Pied-noir settlers"],
+    "victims": ["Algerian Arabs", "Berber population"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1000000,
+      "max": 2500000,
+      "population_initial": 3000000,
+      "population_loss_percent": 50.0,
+      "confidence": "low",
+      "note": "Conquest period (1830-1875): 500k-1M dead, population halved. Independence war (1954-1962): 300k-1.5M Algerians killed. Torture systematic during independence war. 2 million displaced into camps."
+    },
+    "scores": {
+      "systematic_intensity": 90,
+      "profit": 100,
+      "ideology": 80,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["settler_colonialism", "torture", "ethnic_cleansing", "french_empire", "independence_war"],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "132 years of occupation. 'Algérie française' - settler colony where 1M Europeans ruled 9M Algerians. Torture institutionalized during independence war (gégène electric torture). France still struggles to acknowledge crimes - called 'events' not 'war' until 1999. Population halved during conquest, then halved again fighting for independence."
+  },
+  "sources": [
+    { "title": "A Savage War of Peace: Algeria 1954-1962", "author": "Alistair Horne", "year": 1977 },
+    { "title": "The Question", "author": "Henri Alleg", "year": 1958 }
+  ]
+}

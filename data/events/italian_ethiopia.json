@@ -1,0 +1,74 @@
+{
+  "id": "italian_ethiopia_1935",
+  "name": "Italian Invasion of Ethiopia",
+  "status": "historic",
+  "period": { "start": 1935, "end": 1941 },
+  "geography": {
+    "region": "East Africa (Ethiopia)",
+    "coordinates": [9.0, 38.5]
+  },
+  "participants": {
+    "perpetrators": ["Fascist Italy", "Italian Army", "Mussolini regime"],
+    "victims": ["Ethiopian civilians", "Ethiopian resistance"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 350000,
+      "max": 760000,
+      "population_initial": 10000000,
+      "population_loss_percent": 5.0,
+      "confidence": "medium",
+      "note": "Includes Graziani massacre (Feb 1937): 19,000-30,000 killed in 3 days. Chemical weapons (mustard gas) used extensively. Clergy and intellectuals systematically targeted. Italy still has not fully acknowledged crimes."
+    },
+    "scores": {
+      "systematic_intensity": 80,
+      "profit": 40,
+      "ideology": 100,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false,
+        "duration_over_5y": false
+      },
+      "profit": {
+        "direct_revenue": false,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": false,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": false,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    }
+  },
+  "tags": ["fascism", "chemical_weapons", "colonialism", "italian_empire", "denied"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Fascist colonialism - conquest for imperial glory, not profit (Italy lost money). Mustard gas dropped on civilians, Red Cross camps bombed. Graziani massacre: revenge for assassination attempt killed tens of thousands. 'Vendetta' against only African nation to defeat European power (Battle of Adwa 1896). Still downplayed in Italy - 'Italiani brava gente' myth persists."
+  },
+  "sources": [
+    { "title": "The Addis Ababa Massacre: Italy's National Shame", "author": "Ian Campbell", "year": 2017 },
+    { "title": "Fascist Modernities: Italy 1922-1945", "author": "Ruth Ben-Ghiat", "year": 2001 }
+  ]
+}

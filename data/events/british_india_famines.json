@@ -1,0 +1,74 @@
+{
+  "id": "british_india_famines_1876",
+  "name": "British India Famines (Late Victorian Holocausts)",
+  "status": "historic",
+  "period": { "start": 1876, "end": 1902 },
+  "geography": {
+    "region": "South Asia (British India)",
+    "coordinates": [20.0, 78.0]
+  },
+  "participants": {
+    "perpetrators": ["British Raj", "British East India Company legacy policies"],
+    "victims": ["Indian peasants", "Rural population"]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 12000000,
+      "max": 29000000,
+      "population_initial": 250000000,
+      "population_loss_percent": 8.0,
+      "confidence": "medium",
+      "note": "Includes Great Famine 1876-78 (5-10M), 1896-97 famine (5M+), 1899-1900 famine (1M+). Grain exports continued during famines. Mike Davis documents this in 'Late Victorian Holocausts'."
+    },
+    "scores": {
+      "systematic_intensity": 70,
+      "profit": 80,
+      "ideology": 60,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false,
+        "duration_over_5y": true
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": false,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    }
+  },
+  "tags": ["famine_as_weapon", "colonialism", "profit_driven", "british_empire", "laissez_faire"],
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "Railways built to export grain, not feed Indians. Taxes collected during starvation. Viceroy Lytton held Delhi Durbar feast while millions died. Free market ideology ('don't interfere with markets') used to justify inaction. Parallels with Irish Famine - same empire, same ideology, same result."
+  },
+  "sources": [
+    { "title": "Late Victorian Holocausts: El Nino Famines and the Making of the Third World", "author": "Mike Davis", "year": 2001 },
+    { "title": "Churchill's Secret War: The British Empire and the Ravaging of India During World War II", "author": "Madhusree Mukerjee", "year": 2010 }
+  ]
+}
