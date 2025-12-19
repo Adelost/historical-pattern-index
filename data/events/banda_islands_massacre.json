@@ -1,0 +1,113 @@
+{
+  "id": "banda_islands_massacre_1621",
+  "name": "Banda Islands Massacre (Dutch VOC)",
+  "status": "historic",
+  "period": {
+    "start": 1621,
+    "end": 1621
+  },
+  "geography": {
+    "region": "Southeast Asia (Banda Islands, Indonesia)",
+    "coordinates": [
+      -4.5,
+      129.9
+    ]
+  },
+  "participants": {
+    "perpetrators": [
+      "Dutch East India Company (VOC)",
+      "Jan Pieterszoon Coen"
+    ],
+    "victims": [
+      "Bandanese population"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 13000,
+      "max": 15000,
+      "population_initial": 15000,
+      "population_loss_percent": 90.0,
+      "confidence": "medium",
+      "note": "Nearly entire population killed, enslaved, or fled. Only ~1,000 Bandanese survived. Island repopulated with slaves and Dutch planters."
+    },
+    "scores": {
+      "systematic_intensity": 78,
+      "profit": 100,
+      "ideology": 0,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": false,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": false,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Planned military operation. Coen requested and received reinforcements. Systematic execution of village leaders, enslavement of survivors.",
+      "profit": "100% profit motive. Nutmeg was worth more than gold. VOC wanted total monopoly. Replaced population with slave plantations.",
+      "ideology": "Zero ideological component. No religious or ethnic 'purification' goal. Pure commercial calculation.",
+      "complicity": "VOC shareholders profited. Dutch state backed company. Europe consumed the nutmeg. Forgotten for centuries."
+    }
+  },
+  "tags": [
+    "profit_driven",
+    "colonial",
+    "corporate_atrocity",
+    "spice_trade"
+  ],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "TOTAL ERASURE",
+    "pattern_note": "Possibly the purest example of profit-driven atrocity. No ideology, no ethnic hatred - just business. VOC's Jan Pieterszoon Coen exterminated 90% of the population to control nutmeg. Survivors enslaved. Island repopulated with slaves. Dutch schoolchildren weren't taught this until recently. Shows corporations can commit genocide for market share.",
+    "warning_signs": [
+      "Corporation given military power without oversight",
+      "Population seen as obstacle to resource extraction",
+      "Extreme profit margins justify any means"
+    ],
+    "root_causes": "Nutmeg monopoly worth killing for, VOC corporate structure with military power, no accountability to local population, European demand for spices",
+    "pattern_tags": [
+      "ETHNIC_NATIONALISM"
+    ]
+  },
+  "sources": [
+    {
+      "title": "The Nutmeg's Curse: Parables for a Planet in Crisis",
+      "author": "Amitav Ghosh",
+      "year": 2021
+    },
+    {
+      "title": "Nathaniel's Nutmeg",
+      "author": "Giles Milton",
+      "year": 1999
+    }
+  ]
+}
