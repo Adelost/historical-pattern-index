@@ -1,6 +1,6 @@
 # Historical Pattern Index
 
-**We notice genocides. We overlook "market forces." This project tracks both.**
+**Indexing patterns behind history's deadliest events.**
 
 [View interactive map](https://adelost.github.io/historical-pattern-index/) ・ [Methodology](METHODOLOGY.md)
 
