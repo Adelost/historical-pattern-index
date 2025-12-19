@@ -1,0 +1,118 @@
+{
+  "id": "mfecane_1815",
+  "name": "Mfecane (Southern African Wars)",
+  "status": "historic",
+  "period": {
+    "start": 1815,
+    "end": 1840
+  },
+  "geography": {
+    "region": "Southern Africa (South Africa, Zimbabwe, Mozambique)",
+    "coordinates": [-29.0, 29.0]
+  },
+  "participants": {
+    "perpetrators": [
+      "Zulu Kingdom",
+      "Shaka kaSenzangakhona",
+      "Ndwandwe",
+      "Mthethwa",
+      "Various displaced groups"
+    ],
+    "victims": [
+      "Nguni peoples",
+      "Sotho-Tswana peoples",
+      "Various southern African communities"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 1000000,
+      "max": 2000000,
+      "population_initial": 4000000,
+      "population_loss_percent": 40.0,
+      "confidence": "low",
+      "note": "Estimates highly contested. Deaths from warfare, famine, and displacement. Some historians argue figures exaggerated by colonial narratives to justify land seizure. Regardless, massive population displacement and societal collapse documented. Created power vacuum exploited by European colonizers."
+    },
+    "scores": {
+      "systematic_intensity": 44,
+      "profit": 60,
+      "ideology": 40,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": false,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": false,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": false,
+        "silence": true
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Shaka's military innovations created devastating warfare. Age-regiment system (amabutho) mobilized entire male population. Total war tactics against rivals. But no bureaucratic extermination infrastructure.",
+      "profit": "Cattle raiding as primary economic driver. Control of trade routes. Tribute extraction from conquered peoples. Slave trade pressure from Portuguese East Africa contributed.",
+      "ideology": "Military conquest and state-building rather than ethnic purification. Absorbed defeated peoples into Zulu nation. No explicit extermination ideology.",
+      "complicity": "European traders provided firearms. Colonial powers later used Mfecane narrative to claim land was 'empty'. Neighboring peoples sometimes allied with aggressors for survival."
+    }
+  },
+  "denial_status": "disputed",
+  "tags": [
+    "pre_colonial",
+    "african_history",
+    "state_formation",
+    "displacement",
+    "warfare"
+  ],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Massive upheaval in southern Africa during Zulu state formation. Shaka's military innovations (iklwa stabbing spear, bull-horn formation, age-regiments) revolutionized warfare. Chain reaction: defeated groups fled, attacking others, creating waves of displacement. Historiography contested - 'Mfecane myth' debate argues colonial historians exaggerated chaos to justify claiming 'empty' land. Regardless, documented mass displacement and new state formation (Zulu, Ndebele, Sotho, Swazi kingdoms). Only pre-colonial African event in dataset - critical for demonstrating atrocities occurred globally, not just in 'civilized' regions.",
+    "warning_signs": [
+      "Military innovation creating power imbalance",
+      "Environmental stress (drought) intensifying competition",
+      "External trade pressure destabilizing region"
+    ],
+    "root_causes": "Zulu military revolution, population pressure, drought, Portuguese slave trade disruption, competition for grazing land"
+  },
+  "sources": [
+    {
+      "title": "The Mfecane Aftermath: Reconstructive Debates in Southern African History",
+      "author": "Carolyn Hamilton",
+      "year": 1995
+    },
+    {
+      "title": "Shaka Zulu: The Rise of the Zulu Empire",
+      "author": "John Laband",
+      "year": 2017
+    },
+    {
+      "title": "The Zulu Kingdom and the Mfecane",
+      "author": "Elizabeth Eldredge",
+      "year": 2014
+    }
+  ]
+}

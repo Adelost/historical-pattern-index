@@ -84,6 +84,14 @@ CAUSES = {
         ],
         "root_causes": "Imperial expansion, fear of nomadic military power, desire for territory"
     },
+    "mfecane": {
+        "warning_signs": [
+            "Military innovation creating power imbalance",
+            "Environmental stress (drought) intensifying competition",
+            "External trade pressure destabilizing region"
+        ],
+        "root_causes": "Zulu military revolution, population pressure, drought, Portuguese slave trade disruption, competition for grazing land"
+    },
     "tasmania_black_war": {
         "warning_signs": [
             "Settlers viewing indigenous as obstacles",

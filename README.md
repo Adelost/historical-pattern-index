@@ -20,7 +20,7 @@ This project attempts to fix that.
 
 ## The Data
 
-<!-- STATS:SUMMARY -->52 events. 2,166 years of history (149 BCE–present). 196M-341M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->53 events. 2,166 years of history (149 BCE–present). 197M-343M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -40,6 +40,7 @@ This project attempts to fix that.
 | Fall of Nojpetén (Last Maya Kingdom) | 1697-1697 | 2k-10k | Erasure | No |
 | Dzungar Genocide | 1755-1758 | 480k-600k | Erasure | **Denied** |
 | Napoleonic Haiti Campaign (Saint-Domingue) | 1801-1803 | 100k-150k | Profit | Partial |
+| Mfecane (Southern African Wars) | 1815-1840 | 1M-2M | Collapse | Disputed |
 | The Black War (Tasmania) | 1824-1831 | 6k-9k | Erasure | No |
 | French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Collapse | Partial |
 | Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Erasure | Partial |
@@ -119,18 +120,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 79% (41/52) |
-| Economic crisis exploited | 48% (25/52) |
-| Property seizures | 44% (23/52) |
-| Dehumanizing rhetoric | 35% (18/52) |
-| Deliberate starvation | 33% (17/52) |
-| Forced displacement/deportation | 27% (14/52) |
-| Minorities scapegoated | 19% (10/52) |
-| Militias and death squads | 19% (10/52) |
-| Media incitement | 19% (10/52) |
-| International inaction | 19% (10/52) |
-| Colonial 'civilizing' justification | 19% (10/52) |
-| Emergency laws/state of exception | 10% (5/52) |
+| Nationalist/ethnic purity ideology | 77% (41/53) |
+| Economic crisis exploited | 47% (25/53) |
+| Property seizures | 43% (23/53) |
+| Dehumanizing rhetoric | 34% (18/53) |
+| Deliberate starvation | 32% (17/53) |
+| Forced displacement/deportation | 26% (14/53) |
+| Minorities scapegoated | 19% (10/53) |
+| Militias and death squads | 19% (10/53) |
+| Media incitement | 19% (10/53) |
+| International inaction | 19% (10/53) |
+| Colonial 'civilizing' justification | 19% (10/53) |
+| Emergency laws/state of exception | 9% (5/53) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 **6. Different mechanisms, different warning signs.**
@@ -165,7 +166,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->52<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->53<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges
