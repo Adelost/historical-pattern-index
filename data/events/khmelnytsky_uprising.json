@@ -1,0 +1,119 @@
+{
+  "id": "khmelnytsky_uprising_1648",
+  "name": "Khmelnytsky Uprising (Jewish Massacres)",
+  "status": "historic",
+  "period": {
+    "start": 1648,
+    "end": 1657
+  },
+  "geography": {
+    "region": "Eastern Europe (Ukraine/Poland-Lithuania)",
+    "coordinates": [
+      49.0,
+      32.0
+    ]
+  },
+  "participants": {
+    "perpetrators": [
+      "Zaporozhian Cossacks",
+      "Bohdan Khmelnytsky",
+      "Crimean Tatars"
+    ],
+    "victims": [
+      "Jews",
+      "Polish nobles",
+      "Catholic clergy"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 100000,
+      "max": 200000,
+      "population_initial": 450000,
+      "population_loss_percent": 35.0,
+      "confidence": "low",
+      "note": "Jewish deaths estimated 100,000-200,000. Some contemporary accounts claim higher. Hundreds of Jewish communities destroyed. Total deaths including Poles much higher."
+    },
+    "scores": {
+      "systematic_intensity": 67,
+      "profit": 60,
+      "ideology": 80,
+      "complicity": 60
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": true,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": false,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": true,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": false,
+        "benefit": true,
+        "euphemisms": false,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Coordinated attacks on Jewish communities across Ukraine. Synagogues destroyed, forced conversions, mass killings.",
+      "profit": "Jews targeted partly as economic intermediaries for Polish nobles. Property seized. Economic resentment exploited.",
+      "ideology": "Religious hatred, Jews blamed as agents of Polish oppression. Orthodox Christian vs Jewish dimension.",
+      "complicity": "Cossack forces, local peasants participated. Crimean Tatars allied. Poland unable to protect."
+    }
+  },
+  "tags": [
+    "antisemitism",
+    "religious_violence",
+    "cossacks",
+    "eastern_europe"
+  ],
+  "denial_status": "acknowledged",
+  "analysis": {
+    "tier": "INDUSTRIAL MEGA-EVENT",
+    "pattern_note": "One of the worst massacres of Jews before the Holocaust. Khmelnytsky is a national hero in Ukraine but this aspect is often minimized. Jews were targeted as visible agents of Polish landlords - economic scapegoating combined with religious hatred. Created lasting trauma in Jewish collective memory. Demonstrates how economic resentment + religious difference = mass violence.",
+    "warning_signs": [
+      "Jews scapegoated as agents of oppression",
+      "Religious hatred combined with economic resentment",
+      "Minority identified with unpopular ruling class"
+    ],
+    "root_causes": "Cossack grievances against Poland, economic role of Jews as intermediaries, Orthodox-Catholic-Jewish tensions, weak state protection",
+    "pattern_tags": [
+      "DEHUMANIZATION",
+      "ETHNIC_NATIONALISM",
+      "PROPERTY_SEIZURE",
+      "SCAPEGOATING"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Jewish Life in Ukraine: A Historical Overview",
+      "author": "Paul Robert Magocsi",
+      "year": 2007
+    },
+    {
+      "title": "The Cossacks and the Jews",
+      "author": "Shaul Stampfer",
+      "year": 2003
+    }
+  ]
+}
