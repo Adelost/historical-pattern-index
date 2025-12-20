@@ -172,6 +172,14 @@ CAUSES = {
         ],
         "root_causes": "Personal greed (Leopold II), rubber demand, lack of international accountability"
     },
+    "putumayo_genocide": {
+        "warning_signs": [
+            "Remote extraction zone beyond oversight",
+            "Indigenous labor with no legal protection",
+            "Commodity boom creating profit incentive"
+        ],
+        "root_causes": "Global rubber demand, British capital seeking returns, weak Peruvian/Colombian state presence, indigenous peoples seen as expendable labor"
+    },
     "herero_nama_genocide": {
         "warning_signs": [
             "Settler land seizures",

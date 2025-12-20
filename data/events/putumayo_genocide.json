@@ -1,0 +1,120 @@
+{
+  "id": "putumayo_genocide_1900",
+  "name": "Putumayo Genocide (Amazon Rubber Atrocities)",
+  "status": "historic",
+  "period": {
+    "start": 1879,
+    "end": 1912
+  },
+  "geography": {
+    "region": "South America (Peru/Colombia, Amazon)",
+    "coordinates": [-1.5, -73.5]
+  },
+  "participants": {
+    "perpetrators": [
+      "Casa Arana",
+      "Peruvian Amazon Company",
+      "Julio César Arana",
+      "British investors"
+    ],
+    "victims": [
+      "Huitoto people",
+      "Bora people",
+      "Andoke people",
+      "Ocaina people",
+      "Amazon indigenous peoples"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 30000,
+      "max": 100000,
+      "population_initial": 100000,
+      "population_loss_percent": 90.0,
+      "confidence": "low",
+      "note": "Casement's 1912 report: 4,000 tons of rubber cost 30,000 lives (1900-1911 alone). Other estimates reach 100,000. Ninety percent of affected Amazonian populations annihilated. Roger Casement, who exposed Congo atrocities, said Putumayo was even worse: 'people burned alive, decapitated, flogged to death, hunted like animals, used for target practice.'"
+    },
+    "scores": {
+      "systematic_intensity": 78,
+      "profit": 100,
+      "ideology": 20,
+      "complicity": 100
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": true,
+        "propaganda": false,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": true,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": true,
+        "economic_dependence": true,
+        "market_integration": true
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": false,
+        "higher_purpose": false,
+        "victim_narrative": false,
+        "utopianism": true
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": true
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "Rubber stations with quotas. 'Mark of Arana' - scarification from flogging. Stocks, deliberate starvation, executions for failure to meet quotas. Infrastructure of terror mirroring Congo.",
+      "profit": "Pure profit motive. Rubber boom prices drove extraction. British investors in London funded operations. Company registered on London Stock Exchange 1907.",
+      "ideology": "No ethnic purification goal. Indigenous peoples were labor to be exploited, not eliminated for racial reasons. Death was byproduct of extraction, not goal.",
+      "complicity": "British investors profited from London. Peruvian government complicit. International exposure (Casement report 1912) came too late. Company directors never prosecuted."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "rubber",
+    "profit_driven",
+    "corporate_atrocity",
+    "forced_labor",
+    "amazon",
+    "casement"
+  ],
+  "analysis": {
+    "tier": "PROFIT-DRIVEN ATTRITION",
+    "pattern_note": "The Amazon twin of Congo Free State. Same product (rubber), same methods (quotas, mutilation, murder), same era, same investigator (Roger Casement). Casement, who had exposed Leopold's Congo in 1904, was sent to Putumayo in 1910 and reported it was WORSE. Company was British-registered, traded on London Stock Exchange. When scandal broke, company simply dissolved - no executives prosecuted. Shows that Congo was not unique: where rubber money flowed, atrocities followed. A forgotten genocide: most people know Congo, almost no one knows Putumayo.",
+    "warning_signs": [
+      "Remote extraction zone beyond oversight",
+      "Indigenous labor with no legal protection",
+      "Commodity boom creating profit incentive"
+    ],
+    "root_causes": "Global rubber demand, British capital seeking returns, weak Peruvian/Colombian state presence, indigenous peoples seen as expendable labor"
+  },
+  "sources": [
+    {
+      "title": "The Devil and Mr. Casement: One Man's Battle for Human Rights in South America's Heart of Darkness",
+      "author": "Jordan Goodman",
+      "year": 2009
+    },
+    {
+      "title": "The Putumayo, the Devil's Paradise",
+      "author": "W. E. Hardenburg",
+      "year": 1912
+    },
+    {
+      "title": "Putumayo Report (Blue Book)",
+      "author": "Roger Casement",
+      "year": 1912
+    }
+  ]
+}
