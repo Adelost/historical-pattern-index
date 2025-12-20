@@ -192,26 +192,35 @@ export const Card = (event) => {
             ${Badge(event.analysis.tier)}
         </div>
 
-        <div class="scores">
-            ${ScoreBar('Systematic', scores.systematic_intensity, 'systematic')}
-            ${ScoreBar('Profit', scores.profit, 'profit')}
-            ${ScoreBar('Ideology', scores.ideology, 'ideology')}
-            ${ScoreBar('Complicity', scores.complicity, 'complicity')}
+        <div class="card-summary">
+            <span class="death-count">${Utils.formatDeaths(deaths.min, deaths.max)}</span>
+            <span class="death-label">deaths</span>
+            ${deaths.population_loss_percent ? `<span class="pop-loss">${deaths.population_loss_percent}% of population</span>` : ''}
         </div>
 
-        ${BreakdownSection(breakdowns, rationales)}
+        <details class="card-details">
+            <summary class="details-toggle">
+                <span>View analysis</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </summary>
 
-        ${CausesSection(event.analysis)}
+            <div class="scores">
+                ${ScoreBar('Systematic', scores.systematic_intensity, 'systematic')}
+                ${ScoreBar('Profit', scores.profit, 'profit')}
+                ${ScoreBar('Ideology', scores.ideology, 'ideology')}
+                ${ScoreBar('Complicity', scores.complicity, 'complicity')}
+            </div>
 
-        <div class="metrics-row">
-            ${Metric('Deaths', Utils.formatDeaths(deaths.min, deaths.max))}
-            ${Metric('Duration', Utils.formatDuration(event.period.start, event.period.end))}
-            ${Metric('Pop. Loss', deaths.population_loss_percent ? deaths.population_loss_percent + '%' : 'N/A')}
-        </div>
+            ${BreakdownSection(breakdowns, rationales)}
 
-        <div class="note">"${event.analysis.pattern_note}"</div>
+            ${CausesSection(event.analysis)}
 
-        ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="wiki-link">Read more on Wikipedia →</a>` : ''}
+            <div class="note">"${event.analysis.pattern_note}"</div>
+        </details>
+
+        ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="wiki-link">Wikipedia →</a>` : ''}
     </article>`;
 };
 

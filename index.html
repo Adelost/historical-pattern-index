@@ -22,6 +22,112 @@
             --tier-color: #38bdf8;
         }
 
+        /* --- Scrollytelling Intro --- */
+        .intro {
+            min-height: 100vh;
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .intro-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .intro-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .intro-text {
+            font-size: clamp(1.5rem, 5vw, 3rem);
+            font-weight: 300;
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0;
+        }
+
+        .intro-text .highlight {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .intro-small {
+            font-size: 0.6em;
+            color: #64748b;
+        }
+
+        .intro-subtext {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: #64748b;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+
+        .intro-tagline {
+            font-size: clamp(1.75rem, 6vw, 4rem);
+            font-weight: 700;
+            margin: 0.25em 0;
+            background: linear-gradient(135deg, #f1f5f9, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .intro-final {
+            gap: 2rem;
+        }
+
+        .intro-cta {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 100px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .intro-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(239, 68, 68, 0.4);
+        }
+
+        .intro-skip {
+            color: #64748b;
+            font-size: 0.85rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        .intro.hidden {
+            display: none;
+        }
+
+        .main-content {
+            display: none;
+        }
+
+        .main-content.visible {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
         /* --- Layout & Reset --- */
         * { box-sizing: border-box; }
 
@@ -561,13 +667,79 @@
         .card h3 { margin: 0; font-size: 1.1rem; line-height: 1.3; }
         .meta { font-size: 0.8rem; color: var(--text-muted); }
 
+        /* Card Summary */
+        .card-summary {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .death-count {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ef4444;
+        }
+
+        .death-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .pop-loss {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.05);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        /* Card Details Toggle */
+        .card-details {
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .details-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            padding: 0.75rem 0;
+            list-style: none;
+            transition: color 0.2s;
+        }
+
+        .details-toggle::-webkit-details-marker { display: none; }
+
+        .details-toggle:hover {
+            color: var(--accent);
+        }
+
+        .details-toggle .chevron {
+            transition: transform 0.2s;
+        }
+
+        .card-details[open] .details-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .card-details[open] .details-toggle {
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border-light);
+            margin-bottom: 0.75rem;
+        }
+
         /* Score Bars */
         .scores {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 0.5rem;
             padding: 0.75rem 0;
-            border-top: 1px solid var(--border-light);
         }
 
         .score-item {
@@ -615,12 +787,11 @@
         .note { font-size: 0.85rem; color: #cbd5e1; font-style: italic; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem; }
 
         .wiki-link {
-            display: block;
+            display: inline-block;
             font-size: 0.8rem;
             color: var(--text-muted);
             text-decoration: none;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border-light);
+            padding: 0.5rem 0;
             transition: color 0.2s;
         }
 
@@ -909,15 +1080,79 @@
             .scores { grid-template-columns: 1fr; }
             .breakdown-content { grid-template-columns: 1fr; }
             #mapCanvas { height: 350px; }
+
+            /* Filter bar mobile */
+            .filter-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .tier-filters, .era-filters {
+                width: 100%;
+            }
+
+            .tier-pill, .era-pill {
+                flex: 1;
+                text-align: center;
+                padding: 0.5rem 0.5rem;
+                font-size: 0.7rem;
+            }
+
+            .tier-pill:not([data-tier="all"]) {
+                padding-left: 0.5rem;
+            }
+
+            .tier-pill::before {
+                display: none;
+            }
+
+            /* Intro mobile */
+            .intro-text {
+                font-size: clamp(1.25rem, 4vw, 2rem);
+            }
+
+            .intro-tagline {
+                font-size: clamp(1.5rem, 5vw, 3rem);
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Historical Pattern Index</h1>
-        <div class="subtitle">Quantifying systemic mechanics of mass mortality and cultural erasure</div>
-    </header>
+    <!-- Scrollytelling Intro -->
+    <div id="intro" class="intro">
+        <div class="intro-section visible" data-step="1">
+            <p class="intro-text">The deadliest conflict since World War II killed <span class="highlight">5.4 million</span> people.</p>
+        </div>
+        <div class="intro-section" data-step="2">
+            <p class="intro-text">It's not Iraq.<br>Not Syria.<br>Not Afghanistan.</p>
+        </div>
+        <div class="intro-section" data-step="3">
+            <p class="intro-text">It's the <span class="highlight">Second Congo War</span><br><span class="intro-small">(1998–2003)</span></p>
+            <p class="intro-subtext">Most people have never heard of it.</p>
+        </div>
+        <div class="intro-section" data-step="4">
+            <p class="intro-tagline">History remembers the winners.</p>
+            <p class="intro-tagline">Data remembers the dead.</p>
+        </div>
+        <div class="intro-section intro-final" data-step="5">
+            <button id="enterSite" class="intro-cta">Explore the data</button>
+            <p class="intro-skip">↓ Scroll to continue</p>
+        </div>
+    </div>
+
+    <!-- Main Content (hidden until intro complete) -->
+    <div id="mainContent" class="main-content">
+        <header>
+            <h1>Historical Pattern Index</h1>
+            <div class="subtitle">Quantifying systemic mechanics of mass mortality and cultural erasure</div>
+        </header>
 
     <main>
         <!-- Key Insights -->
@@ -1075,10 +1310,75 @@
         </div>
     </main>
 
-    <footer>
-        <p>Open-source project. <a href="https://github.com/adelost/historical-pattern-index">GitHub</a> · <a href="https://github.com/adelost/historical-pattern-index/blob/master/METHODOLOGY.md">Methodology</a></p>
-        <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">Data remembers what narrative forgets.</p>
-    </footer>
+        <footer>
+            <p>Open-source project. <a href="https://github.com/adelost/historical-pattern-index">GitHub</a> · <a href="https://github.com/adelost/historical-pattern-index/blob/master/METHODOLOGY.md">Methodology</a></p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">Data remembers what narrative forgets.</p>
+        </footer>
+    </div><!-- /mainContent -->
+
+    <!-- Intro Script (runs before app) -->
+    <script>
+        (function() {
+            // Check if user has seen intro before
+            const hasSeenIntro = sessionStorage.getItem('hpi-intro-seen');
+            const intro = document.getElementById('intro');
+            const mainContent = document.getElementById('mainContent');
+
+            if (hasSeenIntro) {
+                // Skip intro
+                intro.classList.add('hidden');
+                mainContent.classList.add('visible');
+                return;
+            }
+
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.intro-section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Enter site button
+            document.getElementById('enterSite').addEventListener('click', enterSite);
+
+            // Also enter when scrolling past the last section
+            const lastSection = document.querySelector('.intro-final');
+            const finalObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting && entries[0].intersectionRatio > 0.8) {
+                    // User has scrolled to the end
+                }
+            }, { threshold: 0.8 });
+            finalObserver.observe(lastSection);
+
+            function enterSite() {
+                sessionStorage.setItem('hpi-intro-seen', 'true');
+                intro.style.opacity = '0';
+                intro.style.transition = 'opacity 0.5s ease';
+
+                setTimeout(() => {
+                    intro.classList.add('hidden');
+                    mainContent.classList.add('visible');
+                    window.scrollTo(0, 0);
+                }, 500);
+            }
+
+            // Allow skipping with scroll past final section
+            let scrolledPast = false;
+            window.addEventListener('scroll', () => {
+                const introRect = intro.getBoundingClientRect();
+                if (introRect.bottom < 0 && !scrolledPast) {
+                    scrolledPast = true;
+                    enterSite();
+                }
+            });
+        })();
+    </script>
 
     <script type="module" src="js/app.js"></script>
 </body>
