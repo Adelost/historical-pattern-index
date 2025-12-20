@@ -184,11 +184,11 @@ We don't use vague criteria. Each item has a specific, falsifiable question:
 
 | Category | Sample Question |
 |----------|-----------------|
-| **Ideology** | Did leaders claim *"we die if they don't"*? (Existential threat narrative) |
-| **Ideology** | Were victims called "rats," "cockroaches," or "vermin"? (Dehumanization) |
+| **Ideology** | Did leaders claim *"we die if they don't"*? (Existential threat) |
+| **Ideology** | Were civilians recruited to kill their neighbors? (Mass mobilization) |
 | **Profit** | Would the economy collapse without this extraction? (Economic dependence) |
 | **Systematic** | Did they target children to end the group's future? (Generational targeting) |
-| **Systematic** | Was starvation or disease used as a weapon? (Deliberate deprivation) |
+| **Complicity** | Was it called "relocation" instead of "death march"? (Euphemisms) |
 
 This is why Congo scores 100% Profit but 0% Ideology — and Rwanda scores 100% Ideology but 0% Profit. The questions force differentiation.
 
