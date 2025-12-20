@@ -10,8 +10,8 @@ export const Icon = (path) =>
     `<svg style="width:16px; height:16px; fill:currentColor" viewBox="0 0 24 24">${path}</svg>`;
 
 export const Badge = (tierName) => {
-    const { icon } = Utils.getTheme(tierName);
-    return `<div class="badge">${Icon(icon)} ${tierName}</div>`;
+    const { icon, shortLabel } = Utils.getTheme(tierName);
+    return `<div class="badge">${Icon(icon)} ${shortLabel || tierName}</div>`;
 };
 
 export const ScoreBar = (label, value, type) => `
@@ -69,9 +69,9 @@ const formatKey = (key) => {
         market_integration: 'Market Integration',
         // Ideology
         purity_ideal: 'Purity Ideal',
-        historical_claim: 'Historical Claim',
-        higher_purpose: 'Higher Purpose',
-        victim_narrative: 'Perpetrator as Victim',
+        dehumanization: 'Dehumanization',
+        mass_mobilization: 'Mass Mobilization',
+        victim_narrative: 'Existential Threat Narrative',
         utopianism: 'Utopian Vision',
         // Complicity
         distance: 'Geographic Distance',
