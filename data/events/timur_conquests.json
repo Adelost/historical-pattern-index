@@ -39,7 +39,7 @@
       "note": "Approximately 5% of world population. Delhi sack (1398): 100,000 killed in one day. Isfahan (1387): 70,000 skulls stacked into towers. Damascus, Aleppo, Baghdad devastated. Systematic massacres documented by contemporary chroniclers including Ibn Khaldun and Ruy González de Clavijo."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 44,
       "profit": 100,
       "ideology": 0,
       "complicity": 80
@@ -50,7 +50,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

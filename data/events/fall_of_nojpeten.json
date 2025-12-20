@@ -33,7 +33,7 @@
       "note": "Exact casualties unknown. Spanish assault on March 13, 1697 caused heavy loss of life among Itza defenders. Many fled into jungle. Subsequent disease and displacement increased mortality. Primary significance is cultural: the last Maya codices were destroyed, ending independent preservation of Maya written tradition."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 60,
       "ideology": 20,
       "complicity": 60
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

@@ -34,7 +34,7 @@
       "note": "Deaths from combat, massacres, disease. Napoleon sent 40,000 troops to restore slavery. Most died of yellow fever. Haitian resistance ultimately succeeded."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 66,
       "profit": 100,
       "ideology": 0,
       "complicity": 80
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

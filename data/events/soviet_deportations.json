@@ -39,7 +39,7 @@
       "note": "Entire ethnic groups deported in days. Chechens/Ingush: 500k deported, 25% died. Crimean Tatars: 200k deported, 46% died within 2 years. Accused collectively of Nazi collaboration."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 60,
       "complicity": 100
@@ -50,7 +50,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

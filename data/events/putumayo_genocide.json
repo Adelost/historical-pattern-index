@@ -39,7 +39,7 @@
       "note": "Casement's 1912 report: 4,000 tons of rubber cost 30,000 lives (1900-1911 alone). Other estimates reach 100,000. Ninety percent of affected Amazonian populations annihilated. Roger Casement, who exposed Congo atrocities, said Putumayo was even worse: 'people burned alive, decapitated, flogged to death, hunted like animals, used for target practice.'"
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 55,
       "profit": 100,
       "ideology": 20,
       "complicity": 100
@@ -50,7 +50,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": false,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

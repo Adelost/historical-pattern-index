@@ -35,7 +35,7 @@
       "note": "Poland lost ~30% of its population. Some estimates higher when including famine and plague. Cities like Warsaw reduced to rubble."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 80,
       "ideology": 0,
       "complicity": 60
@@ -46,7 +46,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

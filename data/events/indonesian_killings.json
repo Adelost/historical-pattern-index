@@ -35,7 +35,7 @@
       "note": "CIA described it as 'one of the worst mass murders of the 20th century'. Estimates range from 500,000 to 3 million. US and UK provided support."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 77,
       "profit": 40,
       "ideology": 100,
       "complicity": 100
@@ -46,7 +46,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

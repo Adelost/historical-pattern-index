@@ -34,7 +34,7 @@
       "note": "Approximately 70% of Rwanda's Tutsi population killed in ~100 days."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 66,
       "profit": 0,
       "ideology": 100,
       "complicity": 80
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

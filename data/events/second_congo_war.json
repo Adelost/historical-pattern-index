@@ -36,7 +36,7 @@
       "note": "Deadliest conflict since WWII. Most deaths from disease and starvation caused by displacement. 9 African nations involved. Conflict over minerals (coltan, diamonds, gold) fueled by global electronics demand."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 66,
       "profit": 100,
       "ideology": 60,
       "complicity": 100
@@ -47,7 +47,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

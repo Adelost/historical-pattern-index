@@ -35,7 +35,7 @@
       "note": "Estimates range from 90,000 to 2 million. Mongol sources claim 200,000; Arab historians claim over 1 million. Siege lasted 2 weeks, massacre lasted 7 days. Caliph Al-Musta'sim executed. Death toll includes scholars, scientists, and religious leaders systematically killed."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 66,
       "profit": 80,
       "ideology": 0,
       "complicity": 80
@@ -46,7 +46,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

@@ -32,7 +32,7 @@
       "note": "Direct war deaths low (~20-50k across both Opium Wars). True harm was addiction: 10-15 million addicts by 1900, economic devastation, societal breakdown. Contributed to instability leading to Taiping Rebellion (20-30M dead). Mortality figures vastly understate actual harm."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 80,
       "ideology": 20,
       "complicity": 80
@@ -43,7 +43,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

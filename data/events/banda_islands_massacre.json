@@ -32,7 +32,7 @@
       "note": "Nearly entire population killed, enslaved, or fled. Only ~1,000 Bandanese survived. Island repopulated with slaves and Dutch planters."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 55,
       "profit": 100,
       "ideology": 0,
       "complicity": 80
@@ -43,7 +43,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": false,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

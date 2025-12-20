@@ -31,7 +31,7 @@
         "state_involvement": false,
         "infrastructure": false,
         "propaganda": false,
-        "broad_targeting": false,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": false,
         "identification": false,

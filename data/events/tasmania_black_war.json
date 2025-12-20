@@ -31,7 +31,7 @@
       "confidence": "medium"
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 66,
       "profit": 80,
       "ideology": 40,
       "complicity": 80
@@ -42,7 +42,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

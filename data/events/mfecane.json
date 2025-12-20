@@ -37,7 +37,7 @@
       "note": "Estimates highly contested. Deaths from warfare, famine, and displacement. Some historians argue figures exaggerated by colonial narratives to justify land seizure. Regardless, massive population displacement and societal collapse documented. Created power vacuum exploited by European colonizers."
     },
     "scores": {
-      "systematic_intensity": 44,
+      "systematic_intensity": 33,
       "profit": 60,
       "ideology": 0,
       "complicity": 60
@@ -48,7 +48,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": false,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

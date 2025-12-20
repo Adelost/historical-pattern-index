@@ -33,7 +33,7 @@
       "note": "Most deaths from starvation during Nigerian blockade. Images of starving Biafran children shocked the world. Federal policy: 'Starvation is a legitimate weapon of war.' UK and Soviet Union backed Nigeria; France backed Biafra."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 66,
       "profit": 60,
       "ideology": 40,
       "complicity": 100
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

@@ -34,7 +34,7 @@
       "note": "Conquest period (1830-1875): 500k-1M dead, population halved. Independence war (1954-1962): 300k-1.5M Algerians killed. Torture systematic during independence war. 2 million displaced into camps."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 77,
       "profit": 100,
       "ideology": 40,
       "complicity": 100
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

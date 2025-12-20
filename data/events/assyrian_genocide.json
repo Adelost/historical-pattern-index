@@ -33,7 +33,7 @@
       "note": "Called 'Seyfo' (sword) by Assyrians. Occurred alongside Armenian and Greek genocides. Estimates range from 150,000 to 750,000."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 77,
       "profit": 40,
       "ideology": 80,
       "complicity": 80
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

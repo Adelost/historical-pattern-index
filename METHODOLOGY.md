@@ -122,7 +122,7 @@ Measures organization, state involvement, and infrastructure of violence.
 | `state_involvement` | Were state institutions (military, police, courts) directly involved? |
 | `infrastructure` | Was specific infrastructure built (camps, prisons, transport networks)? |
 | `propaganda` | Was organized propaganda used to dehumanize victims? |
-| `broad_targeting` | Was violence directed at civilians (women, children, elderly)? |
+| `generational_targeting` | Were children or reproduction specifically targeted to eliminate the group's future? |
 | `cultural_ban` | Was language, religion, or culture legally prohibited? |
 | `property_seizure` | Was property or land systematically confiscated? |
 | `identification` | Were registry/ID systems used to identify victims? |
@@ -250,7 +250,7 @@ Minimal example:
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

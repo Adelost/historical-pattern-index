@@ -34,7 +34,7 @@
       "note": "Paraguay lost 60-90% of its population - possibly highest proportion in any modern war. Pre-war population estimates vary (400,000-1,300,000), making percentages uncertain. Up to 90% of adult males killed. Deaths from combat, disease, and starvation. War continued even after outcome was certain, devastating civilian population."
     },
     "scores": {
-      "systematic_intensity": 56,
+      "systematic_intensity": 44,
       "profit": 80,
       "ideology": 20,
       "complicity": 80
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

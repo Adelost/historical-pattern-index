@@ -33,7 +33,7 @@
       "note": "Includes Great Famine 1876-78 (5-10M), 1896-97 famine (5M+), 1899-1900 famine (1M+). Grain exports continued during famines. Mike Davis documents this in 'Late Victorian Holocausts'."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 80,
       "ideology": 20,
       "complicity": 80
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

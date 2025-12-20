@@ -32,7 +32,7 @@
       "note": "Up to 1.5 million Circassians killed or expelled. 90% of population removed from homeland. Survivors deported to Ottoman Empire. Many died during forced marches and on overcrowded ships. Russia still does not recognize as genocide."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 80,
       "complicity": 100
@@ -43,7 +43,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

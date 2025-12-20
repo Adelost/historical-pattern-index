@@ -33,7 +33,7 @@
       "note": "Largest famine in human history. Estimates vary enormously due to CCP secrecy. Most historians estimate 30-45 million. Grain exports continued during the famine."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 80,
       "ideology": 100,
       "complicity": 60
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

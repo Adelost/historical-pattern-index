@@ -34,7 +34,7 @@
       "note": "Second deadliest conflict in human history after WWII. Some estimates reach 70-100 million when including famine and disease. Entire regions depopulated. Both sides committed mass atrocities."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 60,
       "ideology": 80,
       "complicity": 60
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

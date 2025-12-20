@@ -36,7 +36,7 @@
       "note": "Estimates range from 200k to 2M killed. 14-18 million displaced - largest mass migration in history. Violence was multi-directional across religious lines."
     },
     "scores": {
-      "systematic_intensity": 56,
+      "systematic_intensity": 55,
       "profit": 40,
       "ideology": 80,
       "complicity": 100
@@ -47,7 +47,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

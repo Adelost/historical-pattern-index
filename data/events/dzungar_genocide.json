@@ -33,7 +33,7 @@
       "note": "Near-total destruction of Dzungar people. Qianlong explicitly ordered extermination. Survivors fled to Russia or were enslaved. Smallpox epidemic killed many survivors. Region repopulated with Han, Uyghur, and other groups. One of history's most complete genocides."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 80,
       "complicity": 100
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

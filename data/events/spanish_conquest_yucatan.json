@@ -33,7 +33,7 @@
       "note": "Mortality driven by war and disease. The unique aspect is 'Epistemicide' (destruction of knowledge) via the Auto-da-fé of Maní (1562) where 27 codices and 5000 idols were burned."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 100,
       "ideology": 20,
       "complicity": 60
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

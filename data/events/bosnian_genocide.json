@@ -34,7 +34,7 @@
       "note": "Includes Srebrenica massacre (8,000+ men and boys in July 1995). 2.2 million displaced. Well-documented due to ICTY prosecutions."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 0,
       "ideology": 80,
       "complicity": 60
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

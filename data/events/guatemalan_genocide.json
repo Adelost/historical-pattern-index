@@ -33,7 +33,7 @@
       "note": "CEH Truth Commission documented 200,000 deaths/disappearances during civil war (1960-1996). 83% of identified victims were Maya. 93% of atrocities committed by state forces. Genocide phase concentrated in 1981-1983 under Rios Montt."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 40,
       "ideology": 80,
       "complicity": 100
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

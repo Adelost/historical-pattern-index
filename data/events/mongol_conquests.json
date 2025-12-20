@@ -38,7 +38,7 @@
       "note": "Possibly 10% of world population. Some estimates go higher. Cities like Baghdad, Samarkand, Nishapur completely destroyed. Terror used as deliberate strategy - cities that resisted were annihilated as warning to others."
     },
     "scores": {
-      "systematic_intensity": 56,
+      "systematic_intensity": 44,
       "profit": 100,
       "ideology": 20,
       "complicity": 100
@@ -49,7 +49,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

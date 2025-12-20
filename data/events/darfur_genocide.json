@@ -34,7 +34,7 @@
       "note": "UN estimates 300,000. 2.7 million displaced. First ICC arrest warrant for sitting head of state (Omar al-Bashir, 2009). Violence continues at lower levels. Main genocide phase 2003-2008."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 100,
       "complicity": 100
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

@@ -31,7 +31,7 @@
       "note": "UN documented ~5,000 killed, 10,000+ women/girls enslaved. 400,000+ displaced. Yazidis call it '74th Ferman' (decree) - referencing 74 historical persecutions."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 40,
       "ideology": 100,
       "complicity": 60
@@ -42,7 +42,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

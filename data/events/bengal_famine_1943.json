@@ -33,7 +33,7 @@
       "note": "Deaths from starvation and disease during WWII. Rice exports continued. Churchill rejected relief ships. His quote: 'Indians breeding like rabbits.' Separate from British India Famines (1876-1902)."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 55,
       "profit": 60,
       "ideology": 0,
       "complicity": 100
@@ -44,7 +44,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": false,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,

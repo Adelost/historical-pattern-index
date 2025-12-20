@@ -36,7 +36,7 @@
       "note": "Official records show 681,692 executions 1937-38. Additional deaths in Gulag camps. Broader Stalin-era repression killed millions more."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 40,
       "ideology": 80,
       "complicity": 100
@@ -47,7 +47,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

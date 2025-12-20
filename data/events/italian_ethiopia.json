@@ -34,7 +34,7 @@
       "note": "Includes Graziani massacre (Feb 1937): 19,000-30,000 killed in 3 days. Chemical weapons (mustard gas) used extensively. Clergy and intellectuals systematically targeted. Italy still has not fully acknowledged crimes."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 40,
       "ideology": 80,
       "complicity": 80
@@ -45,7 +45,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

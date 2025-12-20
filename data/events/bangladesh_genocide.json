@@ -37,7 +37,7 @@
       "note": "Estimates vary enormously. Bangladesh claims 3 million; independent estimates usually 300k-500k. 10 million refugees fled to India. Systematic targeting of Hindu minority and Bengali intellectuals."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 80,
       "complicity": 80
@@ -48,7 +48,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

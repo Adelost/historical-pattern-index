@@ -35,7 +35,7 @@
       "note": "Jewish deaths estimated 100,000-200,000. Some contemporary accounts claim higher. Hundreds of Jewish communities destroyed. Total deaths including Poles much higher."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 77,
       "profit": 60,
       "ideology": 80,
       "complicity": 60
@@ -46,7 +46,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,

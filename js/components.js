@@ -55,7 +55,7 @@ const formatKey = (key) => {
         state_involvement: 'State Involvement',
         infrastructure: 'Dedicated Infrastructure',
         propaganda: 'Propaganda Campaign',
-        broad_targeting: 'Broad Targeting',
+        generational_targeting: 'Generational Targeting',
         cultural_ban: 'Cultural/Religious Ban',
         property_seizure: 'Property Seizure',
         identification: 'Identification System',

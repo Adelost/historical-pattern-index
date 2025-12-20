@@ -35,7 +35,7 @@
       "note": "Death toll includes massacre victims (Deir Yassin, etc.) and war-related civilian deaths. Primary metric is displacement: 700,000-750,000 Palestinians fled or were expelled. Over 400 villages destroyed. Mortality figures debated; displacement figures well-documented."
     },
     "scores": {
-      "systematic_intensity": 67,
+      "systematic_intensity": 66,
       "profit": 40,
       "ideology": 60,
       "complicity": 100
@@ -46,7 +46,7 @@
         "state_involvement": true,
         "infrastructure": false,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,

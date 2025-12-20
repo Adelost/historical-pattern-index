@@ -37,7 +37,7 @@
       "note": "Estimates vary wildly from 500k to 8M. Separate from Great Leap Forward famine. Deaths from factional violence, persecution, suicide, and struggle sessions."
     },
     "scores": {
-      "systematic_intensity": 78,
+      "systematic_intensity": 77,
       "profit": 0,
       "ideology": 100,
       "complicity": 100
@@ -48,7 +48,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": false,

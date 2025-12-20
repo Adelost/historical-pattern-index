@@ -36,7 +36,7 @@
       "note": "Official estimate: 9,000. Human rights groups: 30,000 'desaparecidos' (disappeared). Many thrown alive from planes into ocean ('death flights'). Babies stolen from detained mothers."
     },
     "scores": {
-      "systematic_intensity": 89,
+      "systematic_intensity": 88,
       "profit": 20,
       "ideology": 80,
       "complicity": 80
@@ -47,7 +47,7 @@
         "state_involvement": true,
         "infrastructure": true,
         "propaganda": true,
-        "broad_targeting": true,
+        "generational_targeting": true,
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
