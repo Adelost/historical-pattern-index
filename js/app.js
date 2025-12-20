@@ -3,7 +3,7 @@
  */
 
 import { Utils } from './utils.js';
-import { Card, MapPopup } from './components.js';
+import { Card, MapPopup, TableRow, TableHeader } from './components.js';
 
 // --- APP LOGIC (State & Effects) ---
 const App = {
@@ -13,7 +13,8 @@ const App = {
         map: null,
         markers: [],
         currentView: 'cards',
-        filters: { period: 'all', tier: 'all', denial: 'all' }
+        filters: { period: 'all', tier: 'all', denial: 'all' },
+        sort: { field: 'period', direction: 'asc' }
     },
 
     async init() {
@@ -168,12 +169,17 @@ const App = {
             });
 
             marker.on('click', () => {
-                // Scroll to card when map marker clicked
-                const card = document.getElementById(`card-${event.id}`);
-                if (card && this.state.currentView === 'cards') {
-                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    card.focus();
+                // Switch to table view and expand the row
+                if (this.state.currentView !== 'cards') {
+                    this.switchView('cards');
                 }
+                setTimeout(() => {
+                    const row = document.querySelector(`.table-row[data-id="${event.id}"]`);
+                    if (row) {
+                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        row.click(); // Expand the row
+                    }
+                }, 100);
             });
 
             marker.addTo(this.state.map);
@@ -261,9 +267,72 @@ const App = {
         return this.state.events.filter(e => Utils.matches(e, this.state.filters));
     },
 
+    sortEvents(events) {
+        const { field, direction } = this.state.sort;
+        const modifier = direction === 'asc' ? 1 : -1;
+
+        return [...events].sort((a, b) => {
+            switch (field) {
+                case 'name':
+                    return modifier * a.name.localeCompare(b.name);
+                case 'period':
+                    return modifier * (a.period.start - b.period.start);
+                case 'deaths':
+                    return modifier * ((a.metrics.mortality.max || 0) - (b.metrics.mortality.max || 0));
+                case 'region':
+                    return modifier * a.geography.region.localeCompare(b.geography.region);
+                default:
+                    return 0;
+            }
+        });
+    },
+
+    bindTableEvents() {
+        const table = document.getElementById('eventTable');
+        if (!table) return;
+
+        // Row click to expand/collapse
+        table.querySelectorAll('.table-row').forEach(row => {
+            row.addEventListener('click', () => {
+                const id = row.dataset.id;
+                const details = table.querySelector(`.table-row-details[data-for="${id}"]`);
+                if (!details) return;
+
+                const isExpanded = row.classList.contains('expanded');
+
+                // Close all other rows
+                table.querySelectorAll('.table-row.expanded').forEach(r => {
+                    r.classList.remove('expanded');
+                    const d = table.querySelector(`.table-row-details[data-for="${r.dataset.id}"]`);
+                    if (d) d.classList.remove('expanded');
+                });
+
+                // Toggle this row
+                if (!isExpanded) {
+                    row.classList.add('expanded');
+                    details.classList.add('expanded');
+                }
+            });
+        });
+
+        // Header click to sort
+        table.querySelectorAll('.table-header .table-cell[data-sort]').forEach(cell => {
+            cell.addEventListener('click', () => {
+                const field = cell.dataset.sort;
+                if (this.state.sort.field === field) {
+                    this.state.sort.direction = this.state.sort.direction === 'asc' ? 'desc' : 'asc';
+                } else {
+                    this.state.sort.field = field;
+                    this.state.sort.direction = 'asc';
+                }
+                this.render();
+            });
+        });
+    },
+
     render() {
         const filtered = this.getFilteredEvents();
-        const sorted = [...filtered].sort((a, b) => a.period.start - b.period.start);
+        const sorted = this.sortEvents(filtered);
         const total = this.state.events.length;
 
         // Update result count
@@ -274,11 +343,29 @@ const App = {
             countEl.innerHTML = `Showing <span class="count">${filtered.length}</span> of ${total}`;
         }
 
-        // Update Grid (always, for when switching back)
-        const grid = document.getElementById('cardGrid');
-        grid.innerHTML = sorted.length
-            ? sorted.map(Card).join('')
-            : '<p style="grid-column:1/-1;text-align:center;color:#64748b">No matching events.</p>';
+        // Update Table
+        const table = document.getElementById('eventTable');
+        if (table) {
+            // Update sort indicators in header
+            const headerHtml = TableHeader();
+            const rowsHtml = sorted.length
+                ? sorted.map(TableRow).join('')
+                : '<div class="table-empty">No matching events.</div>';
+
+            table.innerHTML = headerHtml + rowsHtml;
+
+            // Update active sort indicator
+            const activeHeader = table.querySelector(`.table-cell[data-sort="${this.state.sort.field}"]`);
+            if (activeHeader) {
+                activeHeader.classList.add('sort-active');
+                if (this.state.sort.direction === 'desc') {
+                    activeHeader.classList.add('sort-desc');
+                }
+            }
+
+            // Bind table event handlers
+            this.bindTableEvents();
+        }
 
         // Update based on current view
         if (this.state.currentView === 'map') {
@@ -325,10 +412,10 @@ const App = {
                             const event = elements[0].element.$context.raw.raw;
                             this.switchView('cards');
                             setTimeout(() => {
-                                const card = document.getElementById(`card-${event.id}`);
-                                if (card) {
-                                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                    card.focus();
+                                const row = document.querySelector(`.table-row[data-id="${event.id}"]`);
+                                if (row) {
+                                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    row.click();
                                 }
                             }, 100);
                         }

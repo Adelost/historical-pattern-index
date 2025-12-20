@@ -253,3 +253,76 @@ export const TimelineEvent = (event, x, row) => {
         ${event.name.length > 20 ? event.name.substring(0, 18) + '…' : event.name}
     </div>`;
 };
+
+// Table Row Component
+export const TableRow = (event) => {
+    const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
+    const deaths = event.metrics.mortality;
+    const scores = event.metrics.scores;
+    const denialStatus = event.denial_status || 'acknowledged';
+    const period = `${event.period.start}–${event.period.end}`;
+
+    // Truncate region for display
+    const region = event.geography.region.split('(')[0].split(',')[0].trim();
+
+    return `
+    <div class="table-row" data-id="${event.id}" style="--tier-color: ${color}">
+        <div class="table-cell cell-tier">
+            <span class="tier-dot"></span>
+        </div>
+        <div class="table-cell cell-name">
+            <span class="event-name">${event.name}</span>
+            <span class="event-meta">
+                <span class="tier-label">${shortLabel}</span>
+                ${denialStatus === 'denied' ? '<span class="denied-tag">DENIED</span>' : ''}
+                <span class="mobile-deaths">${Utils.formatDeaths(deaths.min, deaths.max)}</span>
+            </span>
+        </div>
+        <div class="table-cell cell-period">${period}</div>
+        <div class="table-cell cell-deaths">${Utils.formatDeaths(deaths.min, deaths.max)}</div>
+        <div class="table-cell cell-region">${region}</div>
+        <div class="table-cell cell-expand">
+            <span class="expand-hint">Details</span>
+            <svg class="expand-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
+    </div>
+    <div class="table-row-details" data-for="${event.id}">
+        <div class="details-inner">
+            <div class="details-scores">
+                ${ScoreBar('Systematic', scores.systematic_intensity, 'systematic')}
+                ${ScoreBar('Profit', scores.profit, 'profit')}
+                ${ScoreBar('Ideology', scores.ideology, 'ideology')}
+                ${ScoreBar('Complicity', scores.complicity, 'complicity')}
+            </div>
+            <div class="details-note">
+                "${event.analysis.pattern_note}"
+            </div>
+            ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">Read more on Wikipedia →</a>` : ''}
+        </div>
+    </div>`;
+};
+
+// Table Header
+export const TableHeader = () => `
+    <div class="table-header">
+        <div class="table-cell cell-tier"></div>
+        <div class="table-cell cell-name" data-sort="name">
+            Event
+            <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+        <div class="table-cell cell-period" data-sort="period">
+            Period
+            <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+        <div class="table-cell cell-deaths" data-sort="deaths">
+            Deaths
+            <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+        <div class="table-cell cell-region" data-sort="region">
+            Region
+            <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
+        </div>
+        <div class="table-cell cell-expand"></div>
+    </div>`;

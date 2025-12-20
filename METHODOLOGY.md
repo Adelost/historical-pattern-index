@@ -22,7 +22,7 @@ This rule is strictly enforced. Ongoing events (e.g., Uyghur persecution, Rohing
 
 These events may be added once the 10-year threshold is reached and scholarly consensus emerges.
 
-Events outside this scope are not excluded for being "less important"—they're excluded because our methodology cannot score them reliably.
+Events outside this scope are not excluded for being "less important". They're excluded because our methodology cannot score them reliably.
 
 ---
 
@@ -59,11 +59,11 @@ We measure **atrocities against civilians**, not wars between armies.
 | **Slaughter** | System vs civilian | Holocaust, Rwanda | ✅ Yes |
 | **Extraction** | Corporation vs labor | Congo, Putumayo | ✅ Yes |
 
-This is why the **Holocaust is included** but **WW2 as a whole is not**:
+The **Holocaust is included** but **WW2 as a whole is not**:
 - WW2 = primarily armies fighting armies (military history)
 - Holocaust = state systematically killing civilians (atrocity)
 
-**Exception**: If a conventional war triggers a distinct genocide, that specific atrocity is indexed. Example: The Armenian Genocide occurred during WWI, but we index the genocide—not the war.
+**Exception**: If a conventional war triggers a distinct genocide, that specific atrocity is indexed. Example: The Armenian Genocide occurred during WWI, but we index the genocide, not the war.
 
 ### Why We Include Famous Events (Benchmarks)
 
@@ -82,10 +82,10 @@ Without the Holocaust as reference, users cannot understand what Putumayo's "100
 
 A core finding: profit-driven systems (colonial extraction, resource wars, forced labor) kill as many people as ideological genocides, but receive less attention. We intentionally include events that demonstrate this pattern:
 
-- **Congo Free State** (rubber) — 8-13M deaths
-- **Putumayo** (rubber) — 30-100k deaths
-- **British India Famines** (export policy) — 12-29M deaths
-- **Second Congo War** (minerals) — 3-5M deaths
+- **Congo Free State** (rubber): 8-13M deaths
+- **Putumayo** (rubber): 30-100k deaths
+- **British India Famines** (export policy): 12-29M deaths
+- **Second Congo War** (minerals): 3-5M deaths
 
 ---
 
@@ -128,9 +128,9 @@ Measures organization, state involvement, and infrastructure of violence.
 | `identification` | Were registry/ID systems used to identify victims? |
 | `deliberate_deprivation` | Was starvation, disease, or sterilization used as a weapon? |
 
-**Note**: `deliberate_deprivation` includes famine, disease spread, and forced sterilization—any intentional denial of life necessities.
+**Note**: `deliberate_deprivation` includes famine, disease spread, and forced sterilization, i.e. any intentional denial of life necessities.
 
-**Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less—and from a prevention standpoint, rapid genocides are more dangerous because there's less time to intervene.
+**Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less. From a prevention standpoint, rapid genocides are more dangerous because there's less time to intervene.
 
 ---
 
@@ -150,7 +150,7 @@ Measures economic incentive as a driver of violence.
 
 ## 3. Ideology Score (5 items)
 
-Measures ideological conviction as a driver. These items are intentionally **hard to satisfy**—only true genocides and ideological purges should score high. Colonial profit-extraction ("civilizing mission") should score low.
+Measures ideological conviction as a driver. These items are intentionally **hard to satisfy**. Only true genocides and ideological purges should score high. Colonial profit-extraction ("civilizing mission") should score low.
 
 | Item | Question |
 |------|----------|
@@ -202,7 +202,7 @@ Events are classified into tiers based on their score profile:
 | II | **Industrial Mega-Event** | High intensity, high volume (organized mass killing) |
 | III | **Continental Collapse** | Maximum volume, mixed intensity (colonial devastation) |
 | IV | **Profit-Driven Attrition** | High volume, maximum profit score (extraction systems) |
-| — | **Chaotic Atrocity** | High death toll but low systematic organization |
+| - | **Chaotic Atrocity** | High death toll but low systematic organization |
 
 ---
 

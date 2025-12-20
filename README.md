@@ -12,7 +12,7 @@ It's not Iraq. Not Syria. Not Afghanistan.
 
 It's the Second Congo War (1998-2003). Most people have never heard of it.
 
-Why? Because narrative often overrides numbers. This project indexes the silent catastrophes behind the official stories — and tracks the warning signs that repeat.
+Why? Because narrative often overrides numbers. This project indexes the silent catastrophes behind the official stories, and tracks the warning signs that repeat.
 
 ---
 
@@ -100,7 +100,7 @@ Why? Because narrative often overrides numbers. This project indexes the silent 
 
 </details>
 
-**[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)** — includes map view, timeline, and detailed score breakdowns for each event.
+**[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)**
 
 Full dataset: [`/data/events/`](data/events/)
 
@@ -190,7 +190,7 @@ We don't use vague criteria. Each item has a specific, falsifiable question:
 | **Systematic** | Did they target children to end the group's future? (Generational targeting) |
 | **Complicity** | Was it called "relocation" instead of "death march"? (Euphemisms) |
 
-This is why Congo scores 100% Profit but 0% Ideology — and Rwanda scores 100% Ideology but 0% Profit. The questions force differentiation.
+Congo scores 100% Profit but 0% Ideology. Rwanda scores 100% Ideology but 0% Profit. The questions force differentiation.
 
 Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
