@@ -253,11 +253,15 @@ Template: [`/data/events/_template.json`](data/events/_template.json)
 
 ---
 
-## Related: Lost Knowledge
+## Related: Knowledge Destruction
 
 Some losses are permanent. The Maya had 5,000+ codices. 4 survive. Silphium was an effective contraceptive. We destroyed it 2,000 years ago and still can't recreate it.
 
-[See what we lost](KNOWLEDGE_LOST.md)
+Other knowledge survived only because someone acted. Timbuktu librarians smuggled 350,000 manuscripts past al-Qaeda in rice sacks. A Muslim curator hid a Jewish manuscript from Serbian snipers. Some texts were hidden 2,000 years ago and found by accident — the Dead Sea Scrolls by a goat herder, the Nag Hammadi gospels by a farmer whose mother burned pages for kindling.
+
+Same forces. Same patterns. Different outcomes.
+
+[See what we lost](KNOWLEDGE_LOST.md) ・ [See what we saved](KNOWLEDGE_SAVED.md)
 
 ---
 

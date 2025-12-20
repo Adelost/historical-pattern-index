@@ -1,0 +1,195 @@
+# Knowledge Saved Index
+
+What we almost lost, and how it survived.
+
+This is the companion to [KNOWLEDGE_LOST.md](KNOWLEDGE_LOST.md). Same forces. Same patterns. Different outcome.
+
+**Data:** [`/data/knowledge_saved.json`](data/knowledge_saved.json)
+
+---
+
+## The Point
+
+The same drivers that destroy knowledge also threaten it:
+
+| Driver | Lost | Rescued | Recovered |
+|--------|------|---------|-----------|
+| religious_ideology | Maya Codices, Nalanda | Timbuktu | Nag Hammadi |
+| ethnic_ideology | Yiddish Libraries, Sarajevo Library | Sarajevo Haggadah, Polish (30%) | — |
+| political_ideology | Institut für Sexualwissenschaft | Tibetan Texts | — |
+| conquest | House of Wisdom, Carthage | Iraqi Jewish Archive | Dead Sea Scrolls |
+
+What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
+
+---
+
+## The Data
+
+### Rescued (active intervention)
+
+| Event | Year | Driver | Threat | How saved |
+|-------|------|--------|--------|-----------|
+| Timbuktu Manuscripts | 2012-13 | religious_ideology | al-Qaeda occupation | Locals smuggled 350,000 manuscripts out |
+| Tibetan Buddhist Texts | 1959-76 | political_ideology | Cultural Revolution | Monks fled to India with texts |
+| Iraqi Jewish Archive | 2003 | conquest | Flooded basement during invasion | US forces evacuated and restored |
+| Armenian Manuscripts | 1915-23 | ethnic_ideology | Armenian Genocide | Matenadaran collection preserved in Yerevan |
+| Sarajevo Haggadah | 1992-95 | ethnic_ideology | Siege of Sarajevo | Curator hid it in bank vault |
+| Polish Libraries | 1939-45 | ethnic_ideology | Nazi destruction (70% lost) | Underground networks saved 30% |
+
+### Recovered (hidden and found)
+
+| Event | Hidden | Found | Driver | How found |
+|-------|--------|-------|--------|-----------|
+| Dead Sea Scrolls | ~68 CE | 1947 | conquest | Bedouin shepherd in cave |
+| Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer digging |
+
+---
+
+## Cases
+
+### Dead Sea Scrolls (hidden ~68 CE, found 1947)
+
+**Threat**: Roman legions were destroying Jewish communities during the Jewish-Roman Wars (66-73 CE). The Qumran community hid their library in caves near the Dead Sea before being killed or scattered.
+
+**What was at risk**: ~900 manuscripts. Hebrew Bible texts 1000 years older than any known copies. Sectarian texts, commentaries, apocalyptic writings.
+
+**How survived**: Sealed in clay jars in dry desert caves. Remained hidden for 1900 years. A Bedouin shepherd searching for a lost goat threw a rock into a cave and heard pottery shatter (1947).
+
+**The fragility**: Some scrolls were sold to antiquities dealers. Some fragments used as kindling before their value was understood. The shepherd's cousin initially stored them in a bag hanging from a tent pole.
+
+**What we learned**: Oldest biblical manuscripts. Evidence of Jewish diversity before rabbinic Judaism. Changed biblical scholarship permanently.
+
+> "Had they been found in a wetter climate, they would have rotted centuries ago."
+
+### Nag Hammadi Library (hidden ~367 CE, found 1945)
+
+**Threat**: In 367 CE, Bishop Athanasius of Alexandria sent an Easter letter ordering the destruction of all "heretical" books. Gnostic Christians buried their library in a sealed jar near Nag Hammadi, Egypt.
+
+**What was at risk**: 13 leather-bound codices containing 52 texts. Gnostic gospels, including the Gospel of Thomas. Texts that showed early Christianity was far more diverse than the orthodox version that survived.
+
+**How survived**: Buried in a jar at the base of a cliff. Found by an Egyptian farmer digging for fertilizer (1945). He took them home; his mother used some pages to start fires.
+
+**The fragility**: One codex was sold separately and partially burned. Texts passed through black market before reaching scholars. Full publication took until the 1970s.
+
+**What we learned**: The Gospel of Thomas (sayings of Jesus, no narrative). Evidence that "heresy" was just the version that lost. Transformed understanding of early Christianity.
+
+> "His mother... burned some of the pages to heat the oven."
+
+---
+
+### Timbuktu Manuscripts (2012-2013)
+
+**Threat**: When Ansar Dine (al-Qaeda affiliate) occupied Timbuktu in 2012, they burned 4,000+ manuscripts and destroyed Sufi mausoleums as "idolatrous."
+
+**What was at risk**: 400,000+ manuscripts. Centuries of Islamic scholarship, astronomy, medicine, law. Timbuktu was a center of learning from the 14th century.
+
+**How saved**: Librarians and locals had been smuggling manuscripts to Bamako for months before the occupation intensified. They hid them in rice sacks, transported them by donkey cart and river boat. 350,000+ manuscripts reached safety.
+
+**What remains at risk**: Many manuscripts still in private family collections. Digitization incomplete. Climate, insects, and instability threaten what survived.
+
+> "We used every means possible—cars, motorcycles, donkeys, boats on the river. We worked at night."
+> — Abdel Kader Haidara, librarian
+
+### Tibetan Buddhist Texts (1959-1976)
+
+**Threat**: Chinese invasion of Tibet (1959) and Cultural Revolution (1966-76) destroyed 6,000+ monasteries. Monks were killed, imprisoned, or forced to renounce. Libraries burned.
+
+**What was at risk**: Centuries of Buddhist philosophy, medicine, astronomy. Oral teaching lineages. Unique texts preserved nowhere else.
+
+**How saved**: Monks fleeing to India carried what they could. The Dalai Lama established the Library of Tibetan Works and Archives in Dharamsala (1970). Some texts were reconstructed from memory by senior monks.
+
+**What remains at risk**: Tibetan Buddhism still suppressed in China. Oral lineages depend on aging teachers in exile. When they die, some knowledge dies with them.
+
+### Iraqi Jewish Archive (2003)
+
+**Threat**: US forces discovered the archive in a flooded basement of the Mukhabarat (secret police) headquarters during the 2003 invasion. Sewage water was destroying the documents.
+
+**What was at risk**: 2,700 books and tens of thousands of documents from the Iraqi Jewish community (150,000 people in 1948, now ~4 people remaining in Iraq).
+
+**How saved**: US forces evacuated the archive. The National Archives freeze-dried and restored the documents over 5 years. Digitized and made available online.
+
+**What remains at risk**: Diplomatic dispute over whether to return to Iraq (where no Jewish community exists) or give to the diaspora. The archive is in legal limbo.
+
+### Armenian Manuscripts - Matenadaran (1915-1923)
+
+**Threat**: The Armenian Genocide destroyed not just people but culture. Churches, libraries, and cultural sites across Anatolia were destroyed alongside the population.
+
+**What was at risk**: Thousands of Armenian manuscripts in communities across the Ottoman Empire. 2,000+ year literary tradition.
+
+**How saved**: The Matenadaran collection in Yerevan (now 23,000+ manuscripts) preserved the pre-genocide core collection. Some manuscripts were smuggled out by survivors.
+
+**What remains at risk**: Armenian heritage sites in modern Turkey are deteriorating. No access for preservation or archaeology. The cultural landscape of historic Armenia is being erased through neglect.
+
+### Sarajevo Haggadah (1992-1995)
+
+**Threat**: During the siege of Sarajevo, the same forces that burned the National Library (1.5 million volumes) threatened the National Museum and its treasures, including the 14th-century Sarajevo Haggadah.
+
+**What was at risk**: One of the oldest and most beautiful illuminated Jewish manuscripts in the world. Symbol of Sarajevo's multicultural heritage.
+
+**How saved**: Museum curator Enver Imamović (a Muslim) and a police officer smuggled it to a bank vault under cover of darkness. Its location was kept secret until the war ended.
+
+**Significance**: The Haggadah had already survived the Spanish Inquisition, Napoleon, and the Nazis. A Muslim curator saved a Jewish manuscript from Serbian nationalists. It represents the Bosnian multiculturalism that ethnic cleansing tried to destroy.
+
+### Polish Libraries (1939-1945)
+
+**Threat**: Nazi Generalplan Ost aimed to erase Polish culture entirely. Libraries were systematically destroyed. Warsaw libraries were burned in 1944 as reprisal for the uprising. The Krasiński Library alone: 400,000 volumes burned.
+
+**What was at risk**: 22+ million books across Polish libraries.
+
+**What was lost**: 16 million books (70%).
+
+**How saved**: Underground library networks. Books hidden in walls, buried in gardens, moved to rural areas. Illegal lending continued throughout occupation. Some collections evacuated east before the Nazi advance.
+
+**What remains at risk**: Some looted books still in Russian collections. Reconstruction is ongoing, but 70% is gone forever.
+
+---
+
+## The Pattern
+
+| What made the difference | Examples |
+|-------------------------|----------|
+| **Local resistance** | Timbuktu (librarians), Sarajevo (curator), Poland (underground) |
+| **Exile** | Tibet (monks to India), Armenia (to Yerevan) |
+| **Intervention** | Iraq (US forces) |
+| **Hidden and recovered** | Dead Sea Scrolls (1900 years), Nag Hammadi (1600 years) |
+| **Luck** | All of the above. Every survival was fragile. |
+
+The pattern is the same. The outcome depends on response — or chance.
+
+---
+
+## Connection to Main Index
+
+| Knowledge saved | Connected event | What changed? |
+|-----------------|-----------------|---------------|
+| Dead Sea Scrolls | Jewish-Roman Wars | Hidden in caves, found 1900 years later |
+| Tibetan Texts | Cultural Revolution | Exile to India |
+| Armenian Matenadaran | Armenian Genocide | Core collection in Yerevan |
+| Sarajevo Haggadah | Bosnian Genocide | Individual courage |
+| Polish Libraries (30%) | The Holocaust | Underground resistance |
+
+---
+
+## What This Shows
+
+1. **The threat is real and ongoing** — Timbuktu was 2012, not ancient history
+2. **Intervention works** — People can save knowledge if they act
+3. **The same drivers recur** — Religious ideology, ethnic ideology, conquest
+4. **People have always tried to hide knowledge** — Dead Sea Scrolls (68 CE), Nag Hammadi (367 CE)
+5. **Luck is not a strategy** — Every survival was fragile. Scrolls became kindling. Pages lit ovens.
+
+The difference between KNOWLEDGE_LOST and KNOWLEDGE_SAVED is often one person, one decision, one goat.
+
+---
+
+## Sources
+
+- Vermes, Geza. *The Dead Sea Scrolls* (multiple editions)
+- Pagels, Elaine. *The Gnostic Gospels* (1979)
+- Meyer, Marvin. *The Nag Hammadi Scriptures* (2007)
+- Hammer, Joshua. *The Bad-Ass Librarians of Timbuktu* (2016)
+- Shakya, Tsering. *The Dragon in the Land of Snows* (1999)
+- Brooks, Geraldine. *People of the Book* (2008)
+- Polastron, Lucien X. *Books on Fire: The Destruction of Libraries throughout History* (2007)
+
+[Return to main index](README.md) ・ [See what we lost](KNOWLEDGE_LOST.md)

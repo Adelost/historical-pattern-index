@@ -4,6 +4,8 @@ What humanity destroyed and can never recover.
 
 This is not about nostalgia. It's about recognizing that some losses are permanent. Species can sometimes be reintroduced. Knowledge, once lost, is gone.
 
+See also: [Knowledge Saved](KNOWLEDGE_SAVED.md) — what we almost lost, and how it survived.
+
 **Data:** [`/data/knowledge_lost.json`](data/knowledge_lost.json)
 
 ---
@@ -247,4 +249,4 @@ Genocide kills people. Epistemicide kills their knowledge. Often the same perpet
 - Dalby, Andrew. *Language in Danger* (2003)
 - Polastron, Lucien X. *Books on Fire: The Destruction of Libraries throughout History* (2007)
 
-[Return to main index](README.md)
+[Return to main index](README.md) ・ [See what we saved](KNOWLEDGE_SAVED.md)
