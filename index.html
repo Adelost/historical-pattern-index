@@ -1526,6 +1526,32 @@
             border-radius: 50%;
         }
 
+        /* Knowledge Sections */
+        .knowledge-section {
+            margin-bottom: 3rem;
+        }
+
+        .knowledge-section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .knowledge-section-header h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .knowledge-count.saved {
+            background: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
         /* Timeline */
         .knowledge-timeline {
             position: relative;
@@ -1922,10 +1948,6 @@
         <div id="knowledgeView" class="view">
             <div class="knowledge-container">
                 <div class="knowledge-header">
-                    <div class="knowledge-title">
-                        <h2>Knowledge Lost</h2>
-                        <span class="knowledge-count">9 irreversible losses</span>
-                    </div>
                     <p class="knowledge-tagline">Same forces that kill people also kill knowledge</p>
                     <div class="knowledge-legend">
                         <span class="legend-item"><span class="legend-dot" style="background: #ef4444;"></span>Religious</span>
@@ -1935,8 +1957,26 @@
                         <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span>Economic</span>
                     </div>
                 </div>
-                <div class="knowledge-timeline" id="knowledgeTimeline"></div>
-                <div class="knowledge-cards" id="knowledgeCards"></div>
+
+                <!-- Lost Section -->
+                <div class="knowledge-section">
+                    <div class="knowledge-section-header">
+                        <h3>Lost</h3>
+                        <span class="knowledge-count" id="lostCount"></span>
+                    </div>
+                    <div class="knowledge-timeline" id="knowledgeLostTimeline"></div>
+                    <div class="knowledge-cards" id="knowledgeLostCards"></div>
+                </div>
+
+                <!-- Saved Section -->
+                <div class="knowledge-section">
+                    <div class="knowledge-section-header">
+                        <h3>Saved</h3>
+                        <span class="knowledge-count saved" id="savedCount"></span>
+                    </div>
+                    <div class="knowledge-timeline" id="knowledgeSavedTimeline"></div>
+                    <div class="knowledge-cards" id="knowledgeSavedCards"></div>
+                </div>
             </div>
         </div>
     </main>

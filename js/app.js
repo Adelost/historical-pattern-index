@@ -10,6 +10,7 @@ const App = {
     state: {
         events: [],
         knowledgeLost: [],
+        knowledgeSaved: [],
         chart: null,
         map: null,
         markers: [],
@@ -25,8 +26,9 @@ const App = {
             const promises = idx.map(url => fetch(url).then(r => r.json()));
             this.state.events = await Promise.all(promises);
 
-            // Load knowledge lost data
+            // Load knowledge data
             this.state.knowledgeLost = await fetch('data/knowledge_lost.json').then(r => r.json());
+            this.state.knowledgeSaved = await fetch('data/knowledge_saved.json').then(r => r.json());
 
             this.updateStats();
             this.bindEvents();
@@ -479,12 +481,6 @@ const App = {
     },
 
     renderKnowledge() {
-        const data = this.state.knowledgeLost;
-        if (!data.length) return;
-
-        // Sort by year
-        const sorted = [...data].sort((a, b) => a.year - b.year);
-
         // Driver color mapping
         const driverColors = {
             'religious_ideology': { class: 'driver-religious', label: 'Religious', color: '#ef4444' },
@@ -494,98 +490,113 @@ const App = {
             'economic_exploitation': { class: 'driver-economic', label: 'Economic', color: '#22c55e' }
         };
 
-        // Render timeline with equal spacing (ignores actual year gaps for readability)
-        const timelineEl = document.getElementById('knowledgeTimeline');
-        const padding = 5; // % padding at edges
-        const usableWidth = 100 - (padding * 2);
+        // Render a section (timeline + cards)
+        const renderSection = (data, timelineId, cardsId, isSaved = false) => {
+            if (!data.length) return;
 
-        const dotsHtml = sorted.map((entry, index) => {
-            // Equal spacing: distribute evenly across timeline
-            const x = sorted.length > 1
-                ? padding + (index / (sorted.length - 1)) * usableWidth
-                : 50; // Center if only one entry
+            const sorted = [...data].sort((a, b) => a.year - b.year);
+            const padding = 5;
+            const usableWidth = 100 - (padding * 2);
 
-            const driver = driverColors[entry.driver] || driverColors['conquest'];
-            const yearLabel = entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year;
+            // Timeline
+            const timelineEl = document.getElementById(timelineId);
+            const dotsHtml = sorted.map((entry, index) => {
+                const x = sorted.length > 1
+                    ? padding + (index / (sorted.length - 1)) * usableWidth
+                    : 50;
 
-            // Smart short name extraction
-            let shortName = entry.name.replace(/\s*\([^)]+\)/, '').trim(); // Remove parentheses
-            if (shortName.includes(' of ')) {
-                // "Library of Alexandria" → "Alexandria"
-                shortName = shortName.split(' of ').pop().split(' ')[0];
-            } else if (shortName.includes(' für ')) {
-                // "Institut für Sexualwissenschaft" → "Institut"
-                shortName = shortName.split(' ')[0];
-            } else {
-                // "Silphium Extinction" → "Silphium"
-                shortName = shortName.split(' ')[0];
-            }
-            // Truncate if still too long
-            if (shortName.length > 10) {
-                shortName = shortName.substring(0, 9) + '…';
-            }
+                const driver = driverColors[entry.driver] || driverColors['conquest'];
+                const yearLabel = entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year;
 
-            return `
-                <div class="timeline-dot ${driver.class}"
-                     style="left: calc(${x}% - 8px); background: ${driver.color};"
-                     data-id="${entry.id}"
-                     title="${entry.name}">
-                </div>
-                <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
-                <span class="timeline-label" style="left: ${x}%;">${shortName}</span>
-            `;
-        }).join('');
-
-        timelineEl.innerHTML = `
-            <div class="timeline-track">
-                <div class="timeline-line"></div>
-                ${dotsHtml}
-            </div>
-        `;
-
-        // Render cards
-        const cardsEl = document.getElementById('knowledgeCards');
-        const cardsHtml = sorted.map(entry => {
-            const driver = driverColors[entry.driver] || driverColors['conquest'];
-            const yearLabel = entry.year_end
-                ? `${entry.year < 0 ? Math.abs(entry.year) + ' BCE' : entry.year} - ${entry.year_end}`
-                : (entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year);
-
-            // Find connected event name if exists
-            let connectedHtml = '';
-            if (entry.connected_event) {
-                const connected = this.state.events.find(e => e.id === entry.connected_event);
-                if (connected) {
-                    connectedHtml = `
-                        <a href="#" class="knowledge-card-link" data-event-id="${connected.id}">
-                            ↳ Connected: ${connected.name}
-                        </a>
-                    `;
+                // Smart short name extraction
+                let shortName = entry.name.replace(/\s*\([^)]+\)/, '').trim();
+                if (shortName.includes(' of ')) {
+                    shortName = shortName.split(' of ').pop().split(' ')[0];
+                } else if (shortName.includes(' für ')) {
+                    shortName = shortName.split(' ')[0];
+                } else {
+                    shortName = shortName.split(' ')[0];
                 }
-            }
+                if (shortName.length > 10) {
+                    shortName = shortName.substring(0, 9) + '…';
+                }
 
-            return `
-                <div class="knowledge-card" data-id="${entry.id}">
-                    <div class="knowledge-card-header">
-                        <h3 class="knowledge-card-title">${entry.name}</h3>
-                        <span class="knowledge-card-year">${yearLabel}</span>
+                return `
+                    <div class="timeline-dot ${driver.class}"
+                         style="left: calc(${x}% - 8px); background: ${driver.color};"
+                         data-id="${entry.id}"
+                         title="${entry.name}">
                     </div>
-                    <div class="knowledge-card-meta">
-                        <span class="knowledge-badge driver" style="color: ${driver.color}; border: 1px solid ${driver.color}40;">
-                            ${driver.label}
-                        </span>
-                        <span class="knowledge-badge type">${entry.type}</span>
-                        <span class="knowledge-badge quantity">${entry.quantity}</span>
-                    </div>
-                    <div class="knowledge-card-what">${entry.what_lost}</div>
-                    <div class="knowledge-card-driver-note">"${entry.driver_note}"</div>
-                    <div class="knowledge-card-description">${entry.description}</div>
-                    ${connectedHtml}
+                    <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
+                    <span class="timeline-label" style="left: ${x}%;">${shortName}</span>
+                `;
+            }).join('');
+
+            timelineEl.innerHTML = `
+                <div class="timeline-track">
+                    <div class="timeline-line"></div>
+                    ${dotsHtml}
                 </div>
             `;
-        }).join('');
 
-        cardsEl.innerHTML = cardsHtml;
+            // Cards
+            const cardsEl = document.getElementById(cardsId);
+            const cardsHtml = sorted.map(entry => {
+                const driver = driverColors[entry.driver] || driverColors['conquest'];
+                const yearLabel = entry.year_end
+                    ? `${entry.year < 0 ? Math.abs(entry.year) + ' BCE' : entry.year} - ${entry.year_end}`
+                    : (entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year);
+
+                // Connected event link
+                let connectedHtml = '';
+                if (entry.connected_event) {
+                    const connected = this.state.events.find(e => e.id === entry.connected_event);
+                    if (connected) {
+                        connectedHtml = `
+                            <a href="#" class="knowledge-card-link" data-event-id="${connected.id}">
+                                ↳ Connected: ${connected.name}
+                            </a>
+                        `;
+                    }
+                }
+
+                // Different content for saved vs lost
+                const contentField = isSaved ? entry.saved_how : entry.what_lost;
+                const quantityField = isSaved ? entry.quantity_threatened : entry.quantity;
+
+                return `
+                    <div class="knowledge-card" data-id="${entry.id}">
+                        <div class="knowledge-card-header">
+                            <h3 class="knowledge-card-title">${entry.name}</h3>
+                            <span class="knowledge-card-year">${yearLabel}</span>
+                        </div>
+                        <div class="knowledge-card-meta">
+                            <span class="knowledge-badge driver" style="color: ${driver.color}; border: 1px solid ${driver.color}40;">
+                                ${driver.label}
+                            </span>
+                            <span class="knowledge-badge type">${entry.type}</span>
+                            <span class="knowledge-badge quantity">${quantityField || ''}</span>
+                        </div>
+                        <div class="knowledge-card-what">${contentField || ''}</div>
+                        <div class="knowledge-card-driver-note">"${entry.driver_note}"</div>
+                        <div class="knowledge-card-description">${entry.description || entry.threat || ''}</div>
+                        ${connectedHtml}
+                    </div>
+                `;
+            }).join('');
+
+            cardsEl.innerHTML = cardsHtml;
+        };
+
+        // Render both sections
+        const lostData = this.state.knowledgeLost;
+        const savedData = this.state.knowledgeSaved;
+
+        document.getElementById('lostCount').textContent = `${lostData.length} irreversible`;
+        document.getElementById('savedCount').textContent = `${savedData.length} rescued`;
+
+        renderSection(lostData, 'knowledgeLostTimeline', 'knowledgeLostCards', false);
+        renderSection(savedData, 'knowledgeSavedTimeline', 'knowledgeSavedCards', true);
 
         // Bind events
         this.bindKnowledgeEvents();
