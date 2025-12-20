@@ -49,6 +49,40 @@ const App = {
             });
         });
 
+        // Era Pill Filters
+        document.querySelectorAll('.era-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const period = pill.dataset.period;
+                this.state.filters.period = period;
+
+                // Update pill active state
+                document.querySelectorAll('.era-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                // Sync hidden dropdown
+                document.getElementById('filterPeriod').value = period;
+
+                this.render();
+            });
+        });
+
+        // Tier Pill Filters
+        document.querySelectorAll('.tier-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const tier = pill.dataset.tier;
+                this.state.filters.tier = tier;
+
+                // Update pill active state
+                document.querySelectorAll('.tier-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                // Sync hidden dropdown
+                document.getElementById('filterTier').value = tier;
+
+                this.render();
+            });
+        });
+
         // View Tabs
         document.querySelectorAll('.view-tab').forEach(tab => {
             tab.addEventListener('click', () => {

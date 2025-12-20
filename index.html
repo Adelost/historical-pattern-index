@@ -189,6 +189,123 @@
         .view-tab.active { background: var(--accent); color: var(--bg-dark); }
         .view-tab svg { width: 18px; height: 18px; }
 
+        /* --- Filter Bar --- */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+        }
+
+        .filter-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .filter-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+        }
+
+        /* --- Era Filter Pills --- */
+        .era-filters {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .era-pill {
+            padding: 0.4rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .era-pill:hover {
+            color: var(--text-main);
+            border-color: var(--text-muted);
+        }
+
+        .era-pill.active {
+            background: var(--accent);
+            color: var(--bg-dark);
+            border-color: var(--accent);
+        }
+
+        /* --- Tier Filter Pills --- */
+        .tier-filters {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .tier-pill {
+            --pill-color: var(--text-muted);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            border: 1px solid var(--pill-color);
+            background: transparent;
+            color: var(--pill-color);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .tier-pill::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--pill-color);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .tier-pill:not([data-tier="all"])::before {
+            opacity: 1;
+        }
+
+        .tier-pill:not([data-tier="all"]) {
+            padding-left: 1.75rem;
+        }
+
+        .tier-pill:hover {
+            background: color-mix(in srgb, var(--pill-color), transparent 90%);
+        }
+
+        .tier-pill.active {
+            background: var(--pill-color);
+            color: var(--bg-dark);
+            border-color: var(--pill-color);
+        }
+
+        .tier-pill.active::before {
+            background: var(--bg-dark);
+        }
+
+        .tier-pill[data-tier="all"] {
+            --pill-color: var(--accent);
+        }
+
         /* --- Controls --- */
         .toolbar {
             display: flex;
@@ -217,6 +334,12 @@
             transition: border-color 0.2s;
         }
         .control-input:hover, .control-input:focus { border-color: var(--accent); }
+
+        .toolbar-compact {
+            padding: 0.75rem 1rem;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
 
         .btn-action {
             background: var(--accent);
@@ -841,31 +964,54 @@
             </button>
         </div>
 
-        <!-- Toolbar -->
-        <div class="toolbar">
-            <div class="filter-group">
-                <select id="filterPeriod" class="control-input" aria-label="Filter by Period">
-                    <option value="all">All Periods</option>
-                    <option value="ancient">Ancient (< 500 AD)</option>
-                    <option value="medieval">Medieval (500-1500)</option>
-                    <option value="colonial">Colonial (1500-1900)</option>
-                    <option value="modern">Modern (1900-Present)</option>
-                </select>
-                <select id="filterTier" class="control-input" aria-label="Filter by Tier">
-                    <option value="all">All Tiers</option>
-                    <option value="TOTAL ERASURE">Total Erasure</option>
-                    <option value="INDUSTRIAL MEGA-EVENT">Industrial Mega-Event</option>
-                    <option value="CONTINENTAL COLLAPSE">Continental Collapse</option>
-                    <option value="PROFIT-DRIVEN ATTRITION">Profit-Driven Attrition</option>
-                    <option value="CHAOTIC ATROCITY">Chaotic Atrocity</option>
-                </select>
-                <select id="filterDenial" class="control-input" aria-label="Filter by Denial Status">
-                    <option value="all">All Denial Status</option>
-                    <option value="denied">Actively Denied</option>
-                    <option value="partial">Partially Denied</option>
-                    <option value="acknowledged">Acknowledged</option>
-                </select>
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <!-- Era Filters -->
+            <div class="filter-section">
+                <span class="filter-label">Era</span>
+                <div class="era-filters">
+                    <button class="era-pill active" data-period="all">All Time</button>
+                    <button class="era-pill" data-period="ancient">Ancient</button>
+                    <button class="era-pill" data-period="medieval">Medieval</button>
+                    <button class="era-pill" data-period="colonial">Colonial</button>
+                    <button class="era-pill" data-period="modern">Modern</button>
+                </div>
             </div>
+
+            <!-- Tier Filters -->
+            <div class="filter-section">
+                <span class="filter-label">Type</span>
+                <div class="tier-filters">
+                    <button class="tier-pill active" data-tier="all">All</button>
+                    <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: #dc2626;">Erasure</button>
+                    <button class="tier-pill" data-tier="INDUSTRIAL MEGA-EVENT" style="--pill-color: #ef4444;">Industrial</button>
+                    <button class="tier-pill" data-tier="PROFIT-DRIVEN ATTRITION" style="--pill-color: #d97706;">Profit</button>
+                    <button class="tier-pill" data-tier="CONTINENTAL COLLAPSE" style="--pill-color: #64748b;">Collapse</button>
+                    <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: #78716c;">Chaotic</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden dropdowns for state sync -->
+        <select id="filterPeriod" class="hidden" aria-hidden="true">
+            <option value="all">All</option>
+            <option value="ancient">Ancient</option>
+            <option value="medieval">Medieval</option>
+            <option value="colonial">Colonial</option>
+            <option value="modern">Modern</option>
+        </select>
+        <select id="filterTier" class="hidden" aria-hidden="true">
+            <option value="all">All</option>
+        </select>
+
+        <!-- Secondary Toolbar -->
+        <div class="toolbar toolbar-compact">
+            <select id="filterDenial" class="control-input" aria-label="Filter by Denial Status">
+                <option value="all">All Denial Status</option>
+                <option value="denied">🚫 Actively Denied</option>
+                <option value="partial">⚠️ Partially Denied</option>
+                <option value="acknowledged">✓ Acknowledged</option>
+            </select>
             <button id="btnDownload" class="control-input btn-action">⬇ Download JSON</button>
         </div>
 
@@ -903,8 +1049,8 @@
     </main>
 
     <footer>
-        <p>HPI is an open-source project. <a href="https://github.com/adelost/historical-pattern-index">View on GitHub</a> · <a href="https://github.com/adelost/historical-pattern-index/blob/master/METHODOLOGY.md">Methodology</a></p>
-        <p style="margin-top: 0.5rem; font-size: 0.8rem;">"History without opinions. Just data."</p>
+        <p>Open-source project. <a href="https://github.com/adelost/historical-pattern-index">GitHub</a> · <a href="https://github.com/adelost/historical-pattern-index/blob/master/METHODOLOGY.md">Methodology</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">Data remembers what narrative forgets.</p>
     </footer>
 
     <script type="module" src="js/app.js"></script>

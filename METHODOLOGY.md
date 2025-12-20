@@ -150,15 +150,17 @@ Measures economic incentive as a driver of violence.
 
 ## 3. Ideology Score (5 items)
 
-Measures conviction and "higher purpose" as a driver.
+Measures ideological conviction as a driver. These items are intentionally **hard to satisfy**—only true genocides and ideological purges should score high. Colonial profit-extraction ("civilizing mission") should score low.
 
 | Item | Question |
 |------|----------|
-| `purity_ideal` | Was ethnic/religious "cleansing" a stated goal? |
-| `historical_claim` | Justified by "ancient rights," "destiny," or historical grievance? |
-| `higher_purpose` | Framed as necessary for national survival or salvation? |
-| `victim_narrative` | Did perpetrators claim self-defense against victim group? |
-| `utopianism` | Was a "golden age" or perfect society promised after cleansing? |
+| `purity_ideal` | Was ethnic/religious/political "cleansing" a stated goal? |
+| `dehumanization` | Were victims labeled as subhuman ("rats," "cockroaches," "vermin," "cancer")? |
+| `mass_mobilization` | Were civilians actively recruited to participate in killing? |
+| `victim_narrative` | Did perpetrators claim existential self-defense ("we die if they don't")? |
+| `utopianism` | Was a "golden age" or purified society promised after elimination? |
+
+**Calibration**: Holocaust and Rwanda should score 100%. Congo Free State and Putumayo should score ≤40%.
 
 ---
 
