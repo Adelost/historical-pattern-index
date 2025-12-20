@@ -27,8 +27,8 @@ Only events where:
 | religious_ideology | 4 | Religious purification genocides |
 | conquest | 3 | Territorial conquest atrocities |
 | ethnic_ideology | 3 | Ethnic cleansing |
-| political_ideology | 1 | Ideological purges |
 | economic_exploitation | 1 | Profit-driven atrocities |
+| political_ideology | 1 | Ideological purges |
 <!-- /STATS:LOST_DRIVER_TABLE -->
 
 ---
@@ -38,18 +38,18 @@ Only events where:
 <!-- STATS:LOST_DATA_TABLE -->
 | Event | Year | Driver | What was lost | Quantity |
 |-------|------|--------|---------------|----------|
-| Carthage | 146 BCE | conquest | Punic literature, navigation | 500,000 volumes |
-| Alexandria | 48 BCE-642 CE | religious | Ancient science, literature | 400,000 scrolls |
-| Silphium | ~100 CE | economic | Contraceptive/medicine | 1 species |
-| Nalanda | 1193 | religious | Buddhist philosophy, science | Millions |
-| House of Wisdom | 1258 | conquest | Islamic Golden Age science | 500 years |
-| Constantinople | 1453 | conquest | Greco-Roman manuscripts | 120,000 volumes |
-| Aztec Codices | 1521 | religious | History, astronomy, poetry | 500 → 2-16 |
-| Maya Codices | 1562 | religious | Astronomy, mathematics | 5,000+ → 4 |
-| Tasmanian Languages | 1803-1905 | ethnic | 8+ complete languages | All dead |
-| Institut für Sexualwissenschaft | 1933 | political | Gender/sexuality research | 20,000+ books |
-| Yiddish Libraries | 1939-1945 | ethnic | Literature, manuscripts, theater | Millions of books |
-| Sarajevo Library | 1992 | ethnic | Bosnian cultural heritage | 1.5M volumes |
+| Library of Carthage | 146 BCE | conquest | Punic literature, history, navigation, agriculture, Mago's treatises | 500,000 volumes (reported) |
+| Library of Alexandria | 48 BCE-642 | religious_ideology | Ancient science, literature, philosophy | 40,000-400,000 scrolls |
+| Silphium Extinction | 100 | economic_exploitation | Contraceptive, abortifacient, digestive medicine | 1 species |
+| Nalanda University | 1193 | religious_ideology | Buddhist philosophy, logic, mathematics, astronomy, medicine | Millions of manuscripts (9 million according to some sources) |
+| House of Wisdom (Baghdad) | 1258 | conquest | Islamic Golden Age science, mathematics, astronomy, medicine, philosophy | Unknown (500 years of scholarship) |
+| Imperial Library of Constantinople | 1453 | conquest | Greco-Roman manuscripts, Byzantine scholarship | 120,000 volumes (at peak, before earlier fires) |
+| Aztec Codices | 1521-1600 | religious_ideology | History, astronomy, tribute records, religious texts, poetry | ~500 → 2-16 pre-conquest survive |
+| Maya Codices (Maní) | 1562 | religious_ideology | Astronomy, mathematics, history, religion | 5,000+ codices → 4 survive |
+| Tasmanian Languages | 1803-1905 | ethnic_ideology | 8+ complete languages, 35,000 years of ecological knowledge | All speakers dead |
+| Institut für Sexualwissenschaft | 1933 | political_ideology | Gender and sexuality research, medical records, patient files | 20,000+ books, 35,000 photographs, patient records |
+| Yiddish Libraries and Publishing | 1939-1945 | ethnic_ideology | Yiddish literature, manuscripts, newspapers, theater archives, religious texts | Millions of books, countless manuscripts. 11M speakers → language endangered. |
+| National Library of Sarajevo | 1992 | ethnic_ideology | Bosnian cultural heritage, records of coexistence | 1.5 million volumes, 155,000 rare books |
 <!-- /STATS:LOST_DATA_TABLE -->
 
 ---
@@ -224,13 +224,13 @@ Many knowledge destruction events connect to genocides in the main index:
 | Knowledge lost | Connected genocide |
 |----------------|-------------------|
 | Library of Carthage | Destruction of Carthage |
-| House of Wisdom | Mongol Sack of Baghdad |
+| House of Wisdom (Baghdad) | Mongol Sack of Baghdad |
 | Aztec Codices | Colonization of the Americas |
-| Maya Codices | Spanish Conquest of Yucatán |
-| Tasmanian Languages | Black War (Tasmania) |
+| Maya Codices (Maní) | Spanish Conquest of Yucatán |
+| Tasmanian Languages | The Black War |
 | Institut für Sexualwissenschaft | The Holocaust |
-| Yiddish Libraries | The Holocaust |
-| Sarajevo Library | Bosnian Genocide |
+| Yiddish Libraries and Publishing | The Holocaust |
+| National Library of Sarajevo | Bosnian Genocide |
 <!-- /STATS:LOST_CONNECTION_TABLE -->
 
 Genocide kills people. Epistemicide kills their knowledge. Often the same perpetrators do both.

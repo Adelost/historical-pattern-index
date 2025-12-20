@@ -15,10 +15,11 @@ The same drivers that destroy knowledge also threaten it:
 <!-- STATS:SAVED_DRIVER_SUMMARY -->
 | Driver | Lost | Rescued | Recovered |
 |--------|------|---------|-----------|
-| religious_ideology | Maya Codices, Nalanda | Timbuktu | Nag Hammadi |
-| ethnic_ideology | Yiddish Libraries, Sarajevo Library | Sarajevo Haggadah, Polish (30%) | — |
-| political_ideology | Institut für Sexualwissenschaft | Tibetan Texts | — |
-| conquest | House of Wisdom, Carthage | Iraqi Jewish Archive | Dead Sea Scrolls |
+| religious_ideology | Library of Alexandria, Nalanda University | Timbuktu Manuscripts | Nag Hammadi Library |
+| ethnic_ideology | Tasmanian Languages, Yiddish Libraries and Publishing | Armenian Manuscripts (Matenadaran), Sarajevo Haggadah | — |
+| political_ideology | Institut für Sexualwissenschaft | Tibetan Buddhist Texts | — |
+| conquest | Library of Carthage, House of Wisdom (Baghdad) | Iraqi Jewish Archive | Dead Sea Scrolls |
+| economic_exploitation | Silphium Extinction | — | — |
 <!-- /STATS:SAVED_DRIVER_SUMMARY -->
 
 What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
@@ -32,12 +33,12 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 <!-- STATS:SAVED_RESCUED_TABLE -->
 | Event | Year | Driver | Threat | How saved |
 |-------|------|--------|--------|-----------|
-| Timbuktu Manuscripts | 2012-13 | religious_ideology | al-Qaeda occupation | Locals smuggled 350,000 manuscripts out |
-| Tibetan Buddhist Texts | 1959-76 | political_ideology | Cultural Revolution | Monks fled to India with texts |
-| Iraqi Jewish Archive | 2003 | conquest | Flooded basement during invasion | US forces evacuated and restored |
-| Armenian Manuscripts | 1915-23 | ethnic_ideology | Armenian Genocide | Matenadaran collection preserved in Yerevan |
-| Sarajevo Haggadah | 1992-95 | ethnic_ideology | Siege of Sarajevo | Curator hid it in bank vault |
-| Polish Libraries | 1939-45 | ethnic_ideology | Nazi destruction (70% lost) | Underground networks saved 30% |
+| Timbuktu Manuscripts | 2012-2013 | religious_ideology | Islamist occupation of Timbuktu. 4,000+ manuscript... | Librarians and locals smuggled 350,000+ ... |
+| Iraqi Jewish Archive | 2003 | conquest | Flooding, neglect, looting during 2003 invasion. A... | US forces discovered and evacuated archi... |
+| Sarajevo Haggadah | 1992-1995 | ethnic_ideology | Siege of Sarajevo. National Museum targeted. 14th-... | Museum curator Enver Imamović and police... |
+| Tibetan Buddhist Texts | 1959-1976 | political_ideology | Chinese invasion (1959) and Cultural Revolution (1... | Monks fleeing to India carried texts. Da... |
+| Polish Libraries (WWII) | 1939-1945 | ethnic_ideology | 16 million books destroyed. Warsaw libraries burne... | Underground libraries. Books hidden in w... |
+| Armenian Manuscripts (Matenadaran) | 1915-1923 | ethnic_ideology | Genocide destroyed Armenian churches, libraries, a... | Matenadaran collection in Yerevan (now 2... |
 <!-- /STATS:SAVED_RESCUED_TABLE -->
 
 ### Recovered (hidden and found)
@@ -45,8 +46,8 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 <!-- STATS:SAVED_RECOVERED_TABLE -->
 | Event | Hidden | Found | Driver | How found |
 |-------|--------|-------|--------|-----------|
-| Dead Sea Scrolls | ~68 CE | 1947 | conquest | Bedouin shepherd in cave |
-| Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer digging |
+| Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer found sealed jar while d... |
+| Dead Sea Scrolls | ~73 CE | 1947 | conquest | Bedouin shepherd found first scrolls in ... |
 <!-- /STATS:SAVED_RECOVERED_TABLE -->
 
 ---
@@ -169,11 +170,11 @@ The pattern is the same. The outcome depends on response — or chance.
 <!-- STATS:SAVED_CONNECTION_TABLE -->
 | Knowledge saved | Connected event | What changed? |
 |-----------------|-----------------|---------------|
-| Dead Sea Scrolls | Jewish-Roman Wars | Hidden in caves, found 1900 years later |
-| Tibetan Texts | Cultural Revolution | Exile to India |
-| Armenian Matenadaran | Armenian Genocide | Core collection in Yerevan |
-| Sarajevo Haggadah | Bosnian Genocide | Individual courage |
-| Polish Libraries (30%) | The Holocaust | Underground resistance |
+| Dead Sea Scrolls | Jewish-Roman Wars | Hidden, found later |
+| Tibetan Buddhist Texts | Cultural Revolution | Exile |
+| Armenian Manuscripts (Matenadaran) | Armenian Genocide | Exile |
+| Sarajevo Haggadah | Bosnian Genocide | Local resistance |
+| Polish Libraries (WWII) | The Holocaust | Local resistance |
 <!-- /STATS:SAVED_CONNECTION_TABLE -->
 
 ---
