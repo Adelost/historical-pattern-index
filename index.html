@@ -1062,6 +1062,7 @@
         .metric b { display: block; font-size: 1rem; color: var(--text-main); font-weight: 700; margin-bottom: 2px; }
 
         .note { font-size: 0.85rem; color: #cbd5e1; font-style: italic; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem; }
+        .erasure-note { font-size: 0.85rem; color: #f59e0b; line-height: 1.5; margin-top: 0.75rem; padding: 0.5rem; background: rgba(245, 158, 11, 0.1); border-radius: 4px; }
 
         .wiki-link {
             display: inline-block;
@@ -1660,7 +1661,7 @@
     <script>
         (function() {
             // Check if user has seen intro before
-            const hasSeenIntro = sessionStorage.getItem('hpi-intro-seen');
+            const hasSeenIntro = localStorage.getItem('hpi-intro-seen');
             const intro = document.getElementById('intro');
             const mainContent = document.getElementById('mainContent');
 
@@ -1700,7 +1701,7 @@
             finalObserver.observe(lastSection);
 
             function enterSite() {
-                sessionStorage.setItem('hpi-intro-seen', 'true');
+                localStorage.setItem('hpi-intro-seen', 'true');
                 intro.style.opacity = '0';
                 intro.style.transition = 'opacity 0.5s ease';
 

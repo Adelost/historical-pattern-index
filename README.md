@@ -12,7 +12,7 @@ It's not Iraq. Not Syria. Not Afghanistan.
 
 It's the Second Congo War (1998-2003). Most people have never heard of it.
 
-Why? Because narrative often overrides numbers. This project indexes the silent catastrophes behind the official stories, and tracks the warning signs that repeat.
+Why? Because narrative often overrides numbers. This project indexes the silent catastrophes behind the official stories and tracks the warning signs that repeat.
 
 ---
 
@@ -110,7 +110,7 @@ Full dataset: [`/data/events/`](data/events/)
 
 **1. Profit kills as much as ideology.**
 
-The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade's death toll doesn't even count plantation deaths.
+The highest death tolls come from profit-driven systems (slave trade, colonial extraction, resource wars), not just ideological genocides. Congo Free State killed 8-13 million for rubber. The Atlantic slave trade numbers only count deaths in transit. Plantation deaths are uncounted.
 
 **2. <!-- STATS:DENIED_COUNT -->8<!-- /STATS:DENIED_COUNT --> events are still officially denied.**
 
@@ -165,6 +165,36 @@ Ideological atrocities need propaganda to mobilize killers. Profit-driven atroci
 
 ---
 
+## Beyond the Death Toll
+
+Some events in this index destroyed more than people. These aren't separate incidents. They're dimensions of the same atrocity.
+
+| Event | Deaths | Also destroyed |
+|-------|--------|----------------|
+| Native American Genocide | 1M-2M | Bison: 30M → 500 |
+| Maya Conquest | 200k-500k | 5,000 codices burned. 4 survive. |
+| Black War (Tasmania) | 6k-9k | 8+ languages. All extinct. |
+| Mongol Sack of Baghdad | 200k-2M | House of Wisdom. 500 years of science. |
+| Armenian Genocide | 1M-2M | 2,000+ churches. Language endangered. |
+| Bosnian Genocide | 100k-110k | Sarajevo Library. 1.5M volumes. |
+
+### Ecocide as Weapon
+
+The Bison wasn't hunted to extinction. It was military strategy:
+
+> "Let them kill, skin and sell until the buffalo is exterminated, as it is the only way to bring lasting peace."
+>
+> *General Philip Sheridan, US Army*
+
+| Year | Bison population | Result |
+|------|------------------|--------|
+| 1800 | 30-60 million | |
+| 1889 | ~500 | Plains nations forced to reservations |
+
+When you destroy a people's food source, you don't need to kill them directly.
+
+---
+
 ## How It Works
 
 Each event gets four scores (0-100%) based on binary checklists:
@@ -190,7 +220,7 @@ We don't use vague criteria. Each item has a specific, falsifiable question:
 | **Systematic** | Did they target children to end the group's future? (Generational targeting) |
 | **Complicity** | Was it called "relocation" instead of "death march"? (Euphemisms) |
 
-Congo scores 100% Profit but 0% Ideology. Rwanda scores 100% Ideology but 0% Profit. The questions force differentiation.
+Congo scores 100% Profit but 0% Ideology. Rwanda scores 100% Ideology but 0% Profit. The questions separate extraction from extermination.
 
 Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
@@ -220,6 +250,14 @@ Add events via pull request. Requirements:
 4. No editorializing in `pattern_note`
 
 Template: [`/data/events/_template.json`](data/events/_template.json)
+
+---
+
+## Related: Lost Knowledge
+
+Some losses are permanent. The Maya had 5,000+ codices. 4 survive. Silphium was an effective contraceptive. We destroyed it 2,000 years ago and still can't recreate it.
+
+[See what we lost](KNOWLEDGE_LOST.md)
 
 ---
 

@@ -218,6 +218,7 @@ export const Card = (event) => {
             ${CausesSection(event.analysis)}
 
             <div class="note">"${event.analysis.pattern_note}"</div>
+            ${event.erasure_note ? `<div class="erasure-note"><strong>Beyond death toll:</strong> ${event.erasure_note}</div>` : ''}
         </details>
 
         ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="wiki-link">Wikipedia →</a>` : ''}

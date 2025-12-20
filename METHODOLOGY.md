@@ -1,6 +1,6 @@
 # Methodology
 
-This document explains how HPI scores are calculated.
+How we score atrocities without opinion.
 
 ---
 
@@ -130,7 +130,7 @@ Measures organization, state involvement, and infrastructure of violence.
 
 **Note**: `deliberate_deprivation` includes famine, disease spread, and forced sterilization, i.e. any intentional denial of life necessities.
 
-**Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less. From a prevention standpoint, rapid genocides are more dangerous because there's less time to intervene.
+**Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less. Rapid genocides are also more dangerous because there's less time to intervene.
 
 ---
 
@@ -142,7 +142,7 @@ Measures economic incentive as a driver of violence.
 |------|----------|
 | `direct_revenue` | Did the event generate measurable revenue for the state/entity? |
 | `resource_extraction` | Was the primary goal raw materials (gold, rubber, land, oil)? |
-| `forced_labor` | Was slave or coerced labor utilized? |
+| `forced_labor` | Was slave or coerced labor used? |
 | `economic_dependence` | Was the national/corporate economy dependent on this system? |
 | `market_integration` | Were goods/resources sold to international consumer markets? |
 

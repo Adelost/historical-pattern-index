@@ -21,7 +21,7 @@ HPI calculates scores based on **Binary Checklists** (Yes=1, No=0). Scores are e
 
 1.  **Direct Revenue:** Did the event generate measurable revenue for the state/entity?
 2.  **Resource Extraction:** Was the primary goal raw materials (gold, rubber, land)?
-3.  **Forced Labor:** Was slave or coerced labor utilized?
+3.  **Forced Labor:** Was slave or coerced labor used?
 4.  **Economic Dependence:** Was the economy dependent on this system?
 5.  **Market Integration:** Were goods sold to consumer markets?
 

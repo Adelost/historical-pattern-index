@@ -12,9 +12,9 @@ const App = {
         chart: null,
         map: null,
         markers: [],
-        currentView: 'cards',
+        currentView: localStorage.getItem('hpi-view') || 'cards',
         filters: { period: 'all', tier: 'all', denial: 'all' },
-        sort: { field: 'period', direction: 'asc' }
+        sort: JSON.parse(localStorage.getItem('hpi-sort')) || { field: 'period', direction: 'asc' }
     },
 
     async init() {
@@ -25,7 +25,13 @@ const App = {
 
             this.updateStats();
             this.bindEvents();
-            this.render();
+
+            // Apply saved view from localStorage
+            if (this.state.currentView !== 'cards') {
+                this.switchView(this.state.currentView);
+            } else {
+                this.render();
+            }
         } catch (e) {
             console.error("Init failed:", e);
             document.querySelector('main').innerHTML = `<div class="error-message">Failed to load data. ${e.message}</div>`;
@@ -103,6 +109,7 @@ const App = {
 
     switchView(view) {
         this.state.currentView = view;
+        localStorage.setItem('hpi-view', view);
 
         // Update tabs
         document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
@@ -325,6 +332,7 @@ const App = {
                     this.state.sort.field = field;
                     this.state.sort.direction = 'asc';
                 }
+                localStorage.setItem('hpi-sort', JSON.stringify(this.state.sort));
                 this.render();
             });
         });

@@ -88,6 +88,10 @@
       },
       "required": ["tier", "pattern_note"]
     },
+    "erasure_note": {
+      "type": "string",
+      "description": "Optional. Documents destruction beyond mortality: languages lost, cultural sites destroyed, ecosystems eliminated as part of the same atrocity."
+    },
     "sources": {
       "type": "array",
       "items": {

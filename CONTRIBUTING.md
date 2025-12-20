@@ -1,6 +1,6 @@
 # Contributing to Historical Pattern Index (HPI)
 
-Thank you for your interest in contributing to HPI. This is a data-driven project aimed at identifying historical patterns of atrocity for prevention.
+HPI is a data-driven project identifying historical patterns of atrocity for prevention.
 
 ## Core Principles
 
@@ -25,7 +25,7 @@ To maintain scientific integrity, HPI prioritizes **data stability** over speed.
 3.  **Fill in the Data:**
     *   **Scores must match Breakdowns:** If you check 7 boxes in `breakdowns.systematic_intensity`, your score MUST be 70.
     *   **Use Range Estimates:** Always provide `min` and `max` for mortality if uncertain.
-4.  **Validate:** Ensure your JSON matches `data/schema.json`.
+4.  **Validate:** Check that your JSON matches `data/schema.json`.
 5.  **Submit a Pull Request.**
 
 ## Review Process
