@@ -21,9 +21,9 @@ Only events where:
 
 | Driver | Count | Genocide parallel |
 |--------|-------|-------------------|
-| religious_ideology | 3 | Religious purification genocides |
-| conquest | 2 | Territorial conquest atrocities |
-| ethnic_ideology | 2 | Ethnic cleansing |
+| religious_ideology | 4 | Religious purification genocides |
+| conquest | 3 | Territorial conquest atrocities |
+| ethnic_ideology | 3 | Ethnic cleansing |
 | political_ideology | 1 | Ideological purges |
 | economic_exploitation | 1 | Profit-driven atrocities |
 
@@ -33,14 +33,17 @@ Only events where:
 
 | Event | Year | Driver | What was lost | Quantity |
 |-------|------|--------|---------------|----------|
-| Silphium | ~100 CE | economic | Contraceptive/medicine | 1 species |
+| Carthage | 146 BCE | conquest | Punic literature, navigation | 500,000 volumes |
 | Alexandria | 48 BCE-642 CE | religious | Ancient science, literature | 400,000 scrolls |
+| Silphium | ~100 CE | economic | Contraceptive/medicine | 1 species |
 | Nalanda | 1193 | religious | Buddhist philosophy, science | Millions |
 | House of Wisdom | 1258 | conquest | Islamic Golden Age science | 500 years |
 | Constantinople | 1453 | conquest | Greco-Roman manuscripts | 120,000 volumes |
+| Aztec Codices | 1521 | religious | History, astronomy, poetry | 500 → 2-16 |
 | Maya Codices | 1562 | religious | Astronomy, mathematics | 5,000+ → 4 |
 | Tasmanian Languages | 1803-1905 | ethnic | 8+ complete languages | All dead |
 | Institut für Sexualwissenschaft | 1933 | political | Gender/sexuality research | 20,000+ books |
+| Yiddish Libraries | 1939-1945 | ethnic | Literature, manuscripts, theater | Millions of books |
 | Sarajevo Library | 1992 | ethnic | Bosnian cultural heritage | 1.5M volumes |
 
 ---
@@ -213,10 +216,13 @@ Many knowledge destruction events connect to genocides in the main index:
 
 | Knowledge lost | Connected genocide |
 |----------------|-------------------|
+| Library of Carthage | Destruction of Carthage |
 | House of Wisdom | Mongol Sack of Baghdad |
+| Aztec Codices | Colonization of the Americas |
 | Maya Codices | Spanish Conquest of Yucatán |
 | Tasmanian Languages | Black War (Tasmania) |
 | Institut für Sexualwissenschaft | The Holocaust |
+| Yiddish Libraries | The Holocaust |
 | Sarajevo Library | Bosnian Genocide |
 
 Genocide kills people. Epistemicide kills their knowledge. Often the same perpetrators do both.

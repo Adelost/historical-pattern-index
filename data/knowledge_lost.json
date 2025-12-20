@@ -1,17 +1,17 @@
 [
   {
-    "id": "silphium",
-    "name": "Silphium Extinction",
-    "year": 100,
+    "id": "carthage",
+    "name": "Library of Carthage",
+    "year": -146,
     "year_end": null,
-    "type": "medical",
-    "driver": "economic_exploitation",
-    "driver_note": "Overexploitation for profit. Same extraction logic as profit-driven atrocities like Congo Free State.",
-    "what_lost": "Contraceptive, abortifacient, digestive medicine",
-    "quantity": "1 species",
+    "type": "scientific",
+    "driver": "conquest",
+    "driver_note": "Roman total war. City razed, population killed or enslaved. Same annihilation logic as conquest genocides.",
+    "what_lost": "Punic literature, history, navigation, agriculture, Mago's treatises",
+    "quantity": "500,000 volumes (reported)",
     "recoverable": false,
-    "connected_event": null,
-    "description": "The most valuable plant in the ancient Mediterranean. Worth its weight in silver. Overharvested to extinction by ~100 CE. For nearly 2,000 years after (until the 1960s), no reliable contraceptive existed. We don't know what species it was. We can't recreate it."
+    "connected_event": "destruction_of_carthage_146bc",
+    "description": "When Rome destroyed Carthage in 146 BCE, they burned one of antiquity's great libraries. Carthage was a major Mediterranean power with advanced navigation and agriculture. Mago's 28-volume treatise on agriculture was so valued that the Roman Senate ordered it translated before the burning. Almost nothing else survived. The city was razed, the ground salted."
   },
   {
     "id": "alexandria",
@@ -26,6 +26,20 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The accumulated knowledge of the ancient world. Multiple destruction events: Caesar's fire (48 BCE), Christian destruction (391 CE), Arab conquest (642 CE). Lost works include most of Aristotle, most Greek dramatists, scientific treatises we only know by name."
+  },
+  {
+    "id": "silphium",
+    "name": "Silphium Extinction",
+    "year": 100,
+    "year_end": null,
+    "type": "medical",
+    "driver": "economic_exploitation",
+    "driver_note": "Overexploitation for profit. Same extraction logic as profit-driven atrocities like Congo Free State.",
+    "what_lost": "Contraceptive, abortifacient, digestive medicine",
+    "quantity": "1 species",
+    "recoverable": false,
+    "connected_event": null,
+    "description": "The most valuable plant in the ancient Mediterranean. Worth its weight in silver. Overharvested to extinction by ~100 CE. For nearly 2,000 years after (until the 1960s), no reliable contraceptive existed. We don't know what species it was. We can't recreate it."
   },
   {
     "id": "nalanda",
@@ -70,6 +84,20 @@
     "description": "Last major repository of Greco-Roman knowledge. Survived 1,000 years after Alexandria. Damaged by fire in 473 CE (120,000 documents lost), looted in Fourth Crusade (1204), final destruction when Ottomans conquered Constantinople in 1453. Some scholars fled to Italy, sparking the Renaissance. Most was lost."
   },
   {
+    "id": "aztec_codices",
+    "name": "Aztec Codices",
+    "year": 1521,
+    "year_end": 1600,
+    "type": "cultural",
+    "driver": "religious_ideology",
+    "driver_note": "Spanish Catholic purge of 'pagan' texts. Same religious purification as Maya destruction.",
+    "what_lost": "History, astronomy, tribute records, religious texts, poetry",
+    "quantity": "~500 → 2-16 pre-conquest survive",
+    "recoverable": false,
+    "connected_event": "spanish_americas_1492",
+    "description": "Moctezuma's palace held extensive libraries of painted books. After the conquest of Tenochtitlan (1521), Spanish friars systematically destroyed codices as works of the devil. Of perhaps 500 pre-conquest codices, only 2-16 are considered genuine pre-Hispanic. The Florentine Codex (1540-1585) was compiled from elder memories of what was burned."
+  },
+  {
     "id": "maya_codices",
     "name": "Maya Codices (Maní)",
     "year": 1562,
@@ -110,6 +138,20 @@
     "recoverable": false,
     "connected_event": "the_holocaust_1941",
     "description": "Founded 1919 by Magnus Hirschfeld. Pioneering research on gender and sexuality. On May 6, 1933, Nazi students stormed the institute. On May 10, the contents were publicly burned. The famous photographs of Nazi book burnings are mostly of this library. Research set back decades. Patient records destroyed, endangering those documented."
+  },
+  {
+    "id": "yiddish_libraries",
+    "name": "Yiddish Libraries and Publishing",
+    "year": 1939,
+    "year_end": 1945,
+    "type": "cultural",
+    "driver": "ethnic_ideology",
+    "driver_note": "Nazi genocide targeted Jewish culture alongside Jewish people. Language survived; libraries did not.",
+    "what_lost": "Yiddish literature, manuscripts, newspapers, theater archives, religious texts",
+    "quantity": "Millions of books, countless manuscripts. 11M speakers → language endangered.",
+    "recoverable": false,
+    "connected_event": "the_holocaust_1941",
+    "description": "Before the Holocaust, Yiddish was spoken by 11 million Jews across Europe. The genocide destroyed not just speakers but the entire cultural infrastructure: libraries, publishing houses, newspapers, theaters, schools. The language survived in Hasidic communities, but millions of books and unique manuscripts were burned. Less than 5% of published Yiddish books have been translated."
   },
   {
     "id": "sarajevo_library",
