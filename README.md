@@ -1,6 +1,6 @@
 # Historical Pattern Index
 
-**Indexing patterns behind history's deadliest events.**
+**History remembers the winners. Data remembers the dead.**
 
 [View interactive map](https://adelost.github.io/historical-pattern-index/) ・ [Methodology](METHODOLOGY.md)
 
