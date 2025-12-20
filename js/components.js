@@ -210,6 +210,8 @@ export const Card = (event) => {
         </div>
 
         <div class="note">"${event.analysis.pattern_note}"</div>
+
+        ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="wiki-link">Read more on Wikipedia →</a>` : ''}
     </article>`;
 };
 
