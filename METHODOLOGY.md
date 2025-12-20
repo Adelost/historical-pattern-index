@@ -26,6 +26,49 @@ Events outside this scope are not excluded for being "less important"—they're 
 
 ---
 
+## Event Selection Criteria
+
+This project prioritizes **overlooked atrocities** over well-known conflicts. Our goal is to shine light on patterns history often ignores.
+
+### We INCLUDE:
+
+| Type | Example | Why |
+|------|---------|-----|
+| **Forgotten atrocities** | Putumayo, Mfecane | Most people have never heard of them |
+| **Profit-driven mass death** | Congo Free State, British India Famines | "Profit kills as much as ideology" |
+| **Colonial extraction systems** | Rubber atrocities, slave trade | Systematic but often uncounted |
+| **Asymmetric violence** | Genocides, ethnic cleansing | State vs civilian population |
+| **Cultural erasure (epistemicide)** | Maya codex burning, Sack of Baghdad | Loss of knowledge/heritage |
+
+### We EXCLUDE:
+
+| Type | Example | Why |
+|------|---------|-----|
+| **Conventional wars** | WW1, WW2, Vietnam | Well-documented, symmetric conflicts between states |
+| **Natural disasters** | Black Death, earthquakes | No perpetrator |
+| **Ongoing events** | Uyghur, Yemen, Gaza | 10-year rule (see Historical Scope) |
+| **Low-documentation events** | Pre-Roman conflicts | Cannot score reliably |
+
+### Why exclude WW1/WW2?
+
+These are the most documented conflicts in history. Everyone knows them. Including them would:
+1. Drown out the overlooked atrocities we aim to highlight
+2. Shift focus from "profit kills" to conventional military history
+3. Make the dataset too large to be useful
+
+This is not a claim that WW1/WW2 were "less bad"—it's a curatorial choice to focus on what history forgets.
+
+### The "Profit Kills" Thesis
+
+A core finding: profit-driven systems (colonial extraction, resource wars, forced labor) kill as many people as ideological genocides, but receive less attention. We intentionally include events that demonstrate this pattern:
+
+- **Congo Free State** (rubber) — 8-13M deaths
+- **Putumayo** (rubber) — 30-100k deaths
+- **British India Famines** (export policy) — 12-29M deaths
+- **Second Congo War** (minerals) — 3-5M deaths
+
+---
+
 ## Core Principle
 
 All scores are derived from **binary checklists**. Each item is either true (1) or false (0), verified against academic sources. No subjective weighting.
@@ -178,8 +221,7 @@ Minimal example:
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false,
-        "duration_over_5y": false
+        "biological_warfare": false
       },
       "profit": { ... },
       "ideology": { ... },
