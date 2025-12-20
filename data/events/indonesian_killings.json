@@ -37,7 +37,7 @@
     "scores": {
       "systematic_intensity": 78,
       "profit": 40,
-      "ideology": 80,
+      "ideology": 100,
       "complicity": 100
     },
     "breakdowns": {
@@ -61,8 +61,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": false,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": true,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -116,5 +116,6 @@
       "author": "Jess Melvin",
       "year": 2018
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Indonesian_mass_killings_of_1965%E2%80%9366"
 }

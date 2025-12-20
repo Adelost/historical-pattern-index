@@ -34,7 +34,7 @@
     "scores": {
       "systematic_intensity": 89,
       "profit": 20,
-      "ideology": 100,
+      "ideology": 80,
       "complicity": 100
     },
     "breakdowns": {
@@ -58,8 +58,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -112,5 +112,6 @@
       "author": "John F. Baddeley",
       "year": 1908
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Circassian_genocide"
 }

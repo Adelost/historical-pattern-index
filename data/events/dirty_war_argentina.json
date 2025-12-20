@@ -62,8 +62,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": false,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -115,5 +115,6 @@
       "author": "Marguerite Feitlowitz",
       "year": 1998
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Dirty_War_(Argentina)"
 }

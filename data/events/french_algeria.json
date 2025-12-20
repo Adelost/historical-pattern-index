@@ -36,7 +36,7 @@
     "scores": {
       "systematic_intensity": 89,
       "profit": 100,
-      "ideology": 80,
+      "ideology": 40,
       "complicity": 100
     },
     "breakdowns": {
@@ -60,8 +60,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": true
       },

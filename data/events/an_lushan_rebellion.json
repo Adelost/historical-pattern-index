@@ -37,7 +37,7 @@
     "scores": {
       "systematic_intensity": 44,
       "profit": 80,
-      "ideology": 40,
+      "ideology": 0,
       "complicity": 80
     },
     "breakdowns": {
@@ -61,8 +61,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": false,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": false,
         "utopianism": false
       },
@@ -123,5 +123,6 @@
       "author": "David Graff",
       "year": 2002
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/An_Lushan_rebellion"
 }

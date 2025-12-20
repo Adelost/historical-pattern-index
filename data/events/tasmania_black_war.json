@@ -57,8 +57,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": false,
+        "dehumanization": true,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": false
       },

@@ -36,7 +36,7 @@
     "scores": {
       "systematic_intensity": 100,
       "profit": 40,
-      "ideology": 100,
+      "ideology": 80,
       "complicity": 80
     },
     "breakdowns": {
@@ -60,8 +60,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -118,5 +118,6 @@
       "author": "Taner Akcam",
       "year": 2006
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Armenian_genocide"
 }

@@ -63,8 +63,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": true,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -118,5 +118,6 @@
       "author": "Roderick MacFarquhar & Michael Schoenhals",
       "year": 2006
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Cultural_Revolution"
 }

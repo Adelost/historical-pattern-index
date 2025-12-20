@@ -34,7 +34,7 @@
     "scores": {
       "systematic_intensity": 78,
       "profit": 60,
-      "ideology": 60,
+      "ideology": 20,
       "complicity": 100
     },
     "breakdowns": {
@@ -58,8 +58,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": false
       },
@@ -113,5 +113,6 @@
       "author": "John Martinkus",
       "year": 2001
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/East_Timor_genocide"
 }

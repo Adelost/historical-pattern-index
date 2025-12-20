@@ -60,8 +60,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": true,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -116,5 +116,6 @@
       "author": "Human Rights Watch",
       "year": 1999
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Rwandan_genocide"
 }

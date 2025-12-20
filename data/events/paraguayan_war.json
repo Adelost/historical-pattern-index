@@ -8,7 +8,10 @@
   },
   "geography": {
     "region": "South America (Paraguay, Brazil, Argentina, Uruguay)",
-    "coordinates": [-23.44, -58.44]
+    "coordinates": [
+      -23.44,
+      -58.44
+    ]
   },
   "participants": {
     "perpetrators": [
@@ -33,7 +36,7 @@
     "scores": {
       "systematic_intensity": 56,
       "profit": 80,
-      "ideology": 60,
+      "ideology": 20,
       "complicity": 80
     },
     "breakdowns": {
@@ -57,8 +60,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": true,
         "utopianism": false
       },

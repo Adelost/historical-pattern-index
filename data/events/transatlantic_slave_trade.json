@@ -35,7 +35,7 @@
     "scores": {
       "systematic_intensity": 89,
       "profit": 100,
-      "ideology": 20,
+      "ideology": 0,
       "complicity": 100
     },
     "breakdowns": {
@@ -59,8 +59,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": false,
-        "higher_purpose": true,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": false,
         "utopianism": false
       },
@@ -112,5 +112,6 @@
       "author": "Eltis et al.",
       "year": 2020
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Trans-Atlantic_Slave_Trade"
 }

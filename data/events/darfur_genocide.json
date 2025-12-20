@@ -60,8 +60,8 @@
       },
       "ideology": {
         "purity_ideal": true,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": true,
+        "mass_mobilization": true,
         "victim_narrative": true,
         "utopianism": true
       },
@@ -114,5 +114,6 @@
       "author": "Brian Steidle",
       "year": 2007
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Darfur_genocide"
 }

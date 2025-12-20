@@ -34,7 +34,7 @@
     "scores": {
       "systematic_intensity": 56,
       "profit": 80,
-      "ideology": 40,
+      "ideology": 0,
       "complicity": 60
     },
     "breakdowns": {
@@ -58,8 +58,8 @@
       },
       "ideology": {
         "purity_ideal": false,
-        "historical_claim": true,
-        "higher_purpose": true,
+        "dehumanization": false,
+        "mass_mobilization": false,
         "victim_narrative": false,
         "utopianism": false
       },
@@ -110,5 +110,6 @@
       "author": "Cormac Ó Gráda",
       "year": 1999
     }
-  ]
+  ],
+  "wikipedia_url": "https://en.wikipedia.org/wiki/Great_Famine_(Ireland)"
 }
