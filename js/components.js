@@ -71,7 +71,7 @@ const formatKey = (key) => {
         purity_ideal: 'Purity Ideal',
         dehumanization: 'Dehumanization',
         mass_mobilization: 'Mass Mobilization',
-        victim_narrative: 'Existential Threat Narrative',
+        existential_threat: 'Existential Threat',
         utopianism: 'Utopian Vision',
         // Complicity
         distance: 'Geographic Distance',

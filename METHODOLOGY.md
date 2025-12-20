@@ -157,7 +157,7 @@ Measures ideological conviction as a driver. These items are intentionally **har
 | `purity_ideal` | Was ethnic/religious/political "cleansing" a stated goal? |
 | `dehumanization` | Were victims labeled as subhuman ("rats," "cockroaches," "vermin," "cancer")? |
 | `mass_mobilization` | Were civilians actively recruited to participate in killing? |
-| `victim_narrative` | Did perpetrators claim existential self-defense ("we die if they don't")? |
+| `existential_threat` | Did perpetrators claim existential self-defense ("we die if they don't")? |
 | `utopianism` | Was a "golden age" or purified society promised after elimination? |
 
 **Calibration**: Holocaust and Rwanda should score 100%. Congo Free State and Putumayo should score ≤40%.
