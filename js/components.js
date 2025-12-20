@@ -260,6 +260,8 @@ export const TableRow = (event) => {
     const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
     const deaths = event.metrics.mortality;
     const scores = event.metrics.scores;
+    const breakdowns = event.metrics.breakdowns;
+    const rationales = event.metrics.rationales || {};
     const denialStatus = event.denial_status || 'acknowledged';
     const period = `${event.period.start}–${event.period.end}`;
 
@@ -297,9 +299,15 @@ export const TableRow = (event) => {
                 ${ScoreBar('Ideology', scores.ideology, 'ideology')}
                 ${ScoreBar('Complicity', scores.complicity, 'complicity')}
             </div>
+
+            ${CausesSection(event.analysis)}
+
+            ${BreakdownSection(breakdowns, rationales)}
+
             <div class="details-note">
                 "${event.analysis.pattern_note}"
             </div>
+            ${event.erasure_note ? `<div class="details-erasure"><strong>Beyond death toll:</strong> ${event.erasure_note}</div>` : ''}
             ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">Read more on Wikipedia →</a>` : ''}
         </div>
     </div>`;
