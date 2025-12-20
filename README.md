@@ -20,6 +20,24 @@ Why? Because narrative often overrides numbers. This project indexes the silent 
 
 <!-- STATS:SUMMARY -->55 events. 2,166 years of history (149 BCE–present). 197M-344M documented deaths.<!-- /STATS:SUMMARY -->
 
+### Highlights
+
+| Event | Deaths | Type | Why it matters |
+|-------|--------|------|----------------|
+| **Great Leap Forward** | 15M-55M | Ideology | Largest death toll. Still suppressed in China. |
+| **Colonization of the Americas** | 50M-56M | Profit | 90% population collapse. Disease + extraction. |
+| **Congo Free State** | 8M-13M | Profit | Corporate genocide for rubber. Leopold's private colony. |
+| **The Holocaust** | 6M | Ideology | Industrial killing. The benchmark for systematic genocide. |
+| **Holodomor** | 4M-8M | Ideology | Man-made famine. **Still denied by Russia.** |
+| **Armenian Genocide** | 1M-2M | Ideology | First modern genocide. **Still denied by Turkey.** |
+| **Rwandan Genocide** | 500k-1M | Ideology | 70% killed in 100 days. Machetes, not gas chambers. |
+| **Second Congo War** | 3M-5M | Profit | Deadliest war since WW2. Almost unknown in the West. |
+| **Trans-Atlantic Slave Trade** | 2M+ | Profit | Deaths in transit only. Plantation deaths uncounted. |
+| **British India Famines** | 12M-29M | Profit | Exposed grain during starvation. Policy, not drought. |
+
+<details>
+<summary>📊 <strong>View all 55 events</strong></summary>
+
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
 |-------|--------|--------|------|---------|
@@ -79,6 +97,8 @@ Why? Because narrative often overrides numbers. This project indexes the silent 
 | Darfur Genocide | 2003-2008 | 200k-400k | Industrial | **Denied** |
 | Yazidi Genocide | 2014-2017 | 5k-10k | Erasure | No |
 <!-- /STATS:EVENTS_TABLE -->
+
+</details>
 
 **[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)** — includes map view, timeline, and detailed score breakdowns for each event.
 
@@ -151,12 +171,26 @@ Each event gets four scores (0-100%) based on binary checklists:
 
 | Score | What it measures | Example high-scorer |
 |-------|------------------|---------------------|
-| **Systematic Intensity** | Organization, infrastructure, state involvement | Holocaust (90%) |
+| **Systematic Intensity** | Organization, infrastructure, state involvement | Holocaust (100%) |
 | **Profit** | Economic extraction as primary driver | Congo Free State (100%) |
 | **Ideology** | Ethnic/religious "purification" as goal | Rwanda (100%) |
 | **Complicity** | How society enabled it | Second Congo War (100%) |
 
-Each score is calculated from a checklist of 5-10 binary questions. No subjective weighting. If 8 of 10 boxes are checked, the score is 80%.
+Each score is calculated from a checklist of 5-9 binary questions. No subjective weighting. If 8 of 9 boxes are checked, the score is 89%.
+
+### The Hard Questions
+
+We don't use vague criteria. Each item has a specific, falsifiable question:
+
+| Category | Sample Question |
+|----------|-----------------|
+| **Ideology** | Did leaders claim *"we die if they don't"*? (Existential threat narrative) |
+| **Ideology** | Were victims called "rats," "cockroaches," or "vermin"? (Dehumanization) |
+| **Profit** | Would the economy collapse without this extraction? (Economic dependence) |
+| **Systematic** | Did they target children to end the group's future? (Generational targeting) |
+| **Systematic** | Was starvation or disease used as a weapon? (Deliberate deprivation) |
+
+This is why Congo scores 100% Profit but 0% Ideology — and Rwanda scores 100% Ideology but 0% Profit. The questions force differentiation.
 
 Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
