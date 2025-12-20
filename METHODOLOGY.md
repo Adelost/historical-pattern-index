@@ -99,6 +99,17 @@ Score = (items checked / total items) × 100
 
 Example: If 8 of 9 systematic intensity items are true, the score is 89%.
 
+### What "100%" Actually Means
+
+Since scores are derived from checklists, a 100% score indicates the presence of all tracked structural elements.
+
+| Score Category | 100% Benchmark | What it indicates |
+|----------------|----------------|-------------------|
+| **Systematic** | The Holocaust | Maximum state infrastructure: camps, trains, bureaucracy, ID systems |
+| **Profit** | Congo Free State | Pure extraction: quotas, forced labor, mutilation for missed targets |
+| **Ideology** | Rwanda (1994) | Total purification goal: dehumanization, propaganda, intent to erase |
+| **Complicity** | Second Congo War | Total societal enabling: states, militias, and global trade all complicit |
+
 ---
 
 ## 1. Systematic Intensity (9 items)
