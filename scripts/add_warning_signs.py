@@ -124,6 +124,14 @@ CAUSES = {
         ],
         "root_causes": "Russian imperial expansion, strategic Black Sea control, religious difference"
     },
+    "paraguayan_war": {
+        "warning_signs": [
+            "Small nation surrounded by larger powers",
+            "Economic independence threatening regional interests",
+            "Foreign financial interests backing aggression"
+        ],
+        "root_causes": "Territorial disputes, Paraguayan economic independence threatening British trade interests, regional power struggles, López's miscalculated aggression"
+    },
     "british_opium_trade": {
         "warning_signs": [
             "Corporate profits over human welfare",

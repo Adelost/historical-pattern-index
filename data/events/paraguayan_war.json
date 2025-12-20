@@ -1,0 +1,115 @@
+{
+  "id": "paraguayan_war_1864",
+  "name": "Paraguayan War (War of the Triple Alliance)",
+  "status": "historic",
+  "period": {
+    "start": 1864,
+    "end": 1870
+  },
+  "geography": {
+    "region": "South America (Paraguay, Brazil, Argentina, Uruguay)",
+    "coordinates": [-23.44, -58.44]
+  },
+  "participants": {
+    "perpetrators": [
+      "Triple Alliance (Brazil, Argentina, Uruguay)",
+      "Emperor Pedro II",
+      "Bartolomé Mitre"
+    ],
+    "victims": [
+      "Paraguayan population",
+      "Paraguayan soldiers"
+    ]
+  },
+  "metrics": {
+    "mortality": {
+      "min": 300000,
+      "max": 1200000,
+      "population_initial": 525000,
+      "population_loss_percent": 70.0,
+      "confidence": "low",
+      "note": "Paraguay lost 60-90% of its population - possibly highest proportion in any modern war. Pre-war population estimates vary (400,000-1,300,000), making percentages uncertain. Up to 90% of adult males killed. Deaths from combat, disease, and starvation. War continued even after outcome was certain, devastating civilian population."
+    },
+    "scores": {
+      "systematic_intensity": 56,
+      "profit": 80,
+      "ideology": 60,
+      "complicity": 80
+    },
+    "breakdowns": {
+      "systematic_intensity": {
+        "policy": true,
+        "state_involvement": true,
+        "infrastructure": false,
+        "propaganda": true,
+        "broad_targeting": true,
+        "cultural_ban": false,
+        "property_seizure": true,
+        "identification": false,
+        "biological_warfare": false
+      },
+      "profit": {
+        "direct_revenue": true,
+        "resource_extraction": true,
+        "forced_labor": false,
+        "economic_dependence": true,
+        "market_integration": false
+      },
+      "ideology": {
+        "purity_ideal": false,
+        "historical_claim": true,
+        "higher_purpose": true,
+        "victim_narrative": true,
+        "utopianism": false
+      },
+      "complicity": {
+        "distance": true,
+        "benefit": true,
+        "euphemisms": true,
+        "diffused_responsibility": true,
+        "silence": false
+      }
+    },
+    "rationales": {
+      "systematic_intensity": "War of annihilation. Brazil and Argentina continued fighting after Paraguay was effectively defeated. Civilian massacres documented. But no industrial extermination infrastructure.",
+      "profit": "British loans financed Triple Alliance. Paraguay's independent economy (state-owned industries, no foreign debt) threatened regional trade patterns. Post-war Paraguay opened to foreign capital.",
+      "ideology": "Framed as 'civilizing' war against López's 'barbarism'. National honor narratives on all sides. Paraguay's resistance became suicidal national mission.",
+      "complicity": "British banking interests benefited. Argentine and Brazilian elites gained territory. International community ignored devastation."
+    }
+  },
+  "denial_status": "acknowledged",
+  "tags": [
+    "forgotten_war",
+    "demographic_collapse",
+    "south_america",
+    "british_finance",
+    "total_war"
+  ],
+  "analysis": {
+    "tier": "CONTINENTAL COLLAPSE",
+    "pattern_note": "Possibly the deadliest war in modern history by population percentage. Paraguay - a small nation with state-controlled economy and no foreign debt - was destroyed by its larger neighbors, financed by British banks. Francisco Solano López refused surrender even as his nation was annihilated. Post-war Paraguay lost 60% of territory and became dependent on foreign capital. A forgotten war: most people outside South America have never heard of it, despite death toll rivaling major 20th century conflicts. Shows how 'small' wars can be proportionally more devastating than world wars.",
+    "warning_signs": [
+      "Small nation surrounded by larger powers",
+      "Economic independence threatening regional interests",
+      "Foreign financial interests backing aggression"
+    ],
+    "root_causes": "Territorial disputes, Paraguayan economic independence threatening British trade interests, regional power struggles, López's miscalculated aggression"
+  },
+  "sources": [
+    {
+      "title": "The Paraguayan War: Causes and Early Conduct",
+      "author": "Thomas Whigham",
+      "year": 2002
+    },
+    {
+      "title": "The War of the Triple Alliance",
+      "author": "Chris Leuchars",
+      "year": 2002
+    },
+    {
+      "title": "I Die with My Country: Perspectives on the Paraguayan War",
+      "author": "Hendrik Kraay & Thomas Whigham",
+      "year": 2004
+    }
+  ]
+}

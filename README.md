@@ -12,13 +12,13 @@ It's not Iraq. Not Syria. Not Afghanistan.
 
 It's the Second Congo War (1998-2003). Most people have never heard of it.
 
-History remembers selectively. This project documents what's often left out - and tracks the warning signs that repeat.
+Why? Because narrative often overrides numbers. This project indexes the silent catastrophes behind the official stories — and tracks the warning signs that repeat.
 
 ---
 
 ## The Data
 
-<!-- STATS:SUMMARY -->53 events. 2,166 years of history (149 BCE–present). 197M-343M documented deaths.<!-- /STATS:SUMMARY -->
+<!-- STATS:SUMMARY -->54 events. 2,166 years of history (149 BCE–present). 197M-344M documented deaths.<!-- /STATS:SUMMARY -->
 
 <!-- STATS:EVENTS_TABLE -->
 | Event | Period | Deaths | Tier | Denied? |
@@ -46,6 +46,7 @@ History remembers selectively. This project documents what's often left out - an
 | Great Famine (Ireland) | 1845-1852 | 1M-2M | Profit | Disputed |
 | Taiping Rebellion | 1850-1864 | 20M-30M | Collapse | Suppressed |
 | Circassian Genocide | 1864-1867 | 400k-600k | Erasure | **Denied** |
+| Paraguayan War (War of the Triple Alliance) | 1864-1870 | 300k-1M | Collapse | No |
 | British India Famines (Late Victorian Holocausts) | 1876-1902 | 12M-29M | Industrial | Disputed |
 | Congo Free State | 1885-1908 | 8M-13M | Profit | No |
 | Herero and Nama Genocide | 1904-1908 | 65k-100k | Erasure | No |
@@ -118,18 +119,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 77% (41/53) |
-| Economic crisis exploited | 47% (25/53) |
-| Property seizures | 43% (23/53) |
-| Dehumanizing rhetoric | 34% (18/53) |
-| Deliberate starvation | 32% (17/53) |
-| Forced displacement/deportation | 26% (14/53) |
-| Minorities scapegoated | 19% (10/53) |
-| Militias and death squads | 19% (10/53) |
-| Media incitement | 19% (10/53) |
-| International inaction | 19% (10/53) |
-| Colonial 'civilizing' justification | 19% (10/53) |
-| Emergency laws/state of exception | 9% (5/53) |
+| Nationalist/ethnic purity ideology | 76% (41/54) |
+| Economic crisis exploited | 46% (25/54) |
+| Property seizures | 43% (23/54) |
+| Dehumanizing rhetoric | 33% (18/54) |
+| Deliberate starvation | 31% (17/54) |
+| Forced displacement/deportation | 26% (14/54) |
+| Minorities scapegoated | 19% (10/54) |
+| Militias and death squads | 19% (10/54) |
+| Media incitement | 19% (10/54) |
+| International inaction | 19% (10/54) |
+| Colonial 'civilizing' justification | 19% (10/54) |
+| Emergency laws/state of exception | 9% (5/54) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 **6. Different mechanisms, different warning signs.**
@@ -164,7 +165,7 @@ Full methodology: [METHODOLOGY.md](METHODOLOGY.md)
 
 This is a work in progress, not a finished truth.
 
-- **Sample size**: <!-- STATS:EVENT_COUNT -->53<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
+- **Sample size**: <!-- STATS:EVENT_COUNT -->54<!-- /STATS:EVENT_COUNT --> events is good coverage, but gaps remain
 - **Source bias**: English-language academic sources overrepresented
 - **Equal weighting**: All checklist items count equally (debatable)
 - **Death toll uncertainty**: Many estimates span 2-10x ranges
