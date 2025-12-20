@@ -44,19 +44,39 @@ This project prioritizes **overlooked atrocities** over well-known conflicts. Ou
 
 | Type | Example | Why |
 |------|---------|-----|
-| **Conventional wars** | WW1, WW2, Vietnam | Well-documented, symmetric conflicts between states |
+| **Battlefield combat** | D-Day, Stalingrad, Midway | Army vs army (military history) |
 | **Natural disasters** | Black Death, earthquakes | No perpetrator |
 | **Ongoing events** | Uyghur, Yemen, Gaza | 10-year rule (see Historical Scope) |
 | **Low-documentation events** | Pre-Roman conflicts | Cannot score reliably |
 
-### Why exclude WW1/WW2?
+### Battlefield vs Slaughter: The Key Distinction
 
-These are the most documented conflicts in history. Everyone knows them. Including them would:
-1. Drown out the overlooked atrocities we aim to highlight
-2. Shift focus from "profit kills" to conventional military history
-3. Make the dataset too large to be useful
+We measure **atrocities against civilians**, not wars between armies.
 
-This is not a claim that WW1/WW2 were "less bad"—it's a curatorial choice to focus on what history forgets.
+| Type | Definition | Example | Included? |
+|------|------------|---------|-----------|
+| **Battlefield** | Soldier vs soldier | Battle of Somme, Normandy | ❌ No |
+| **Slaughter** | System vs civilian | Holocaust, Rwanda | ✅ Yes |
+| **Extraction** | Corporation vs labor | Congo, Putumayo | ✅ Yes |
+
+This is why the **Holocaust is included** but **WW2 as a whole is not**:
+- WW2 = primarily armies fighting armies (military history)
+- Holocaust = state systematically killing civilians (atrocity)
+
+**Exception**: If a conventional war triggers a distinct genocide, that specific atrocity is indexed. Example: The Armenian Genocide occurred during WWI, but we index the genocide—not the war.
+
+### Why We Include Famous Events (Benchmarks)
+
+We intentionally include highly documented events like **The Holocaust**, **The Rwandan Genocide**, and **The Atlantic Slave Trade**.
+
+These serve as **calibration points**:
+1. They provide a baseline for our scoring system (what does "100% Ideology" look like?)
+2. They allow users to compare mechanisms of famous tragedies against unknown ones
+3. They reveal patterns: how the "forgotten" Herero Genocide (1904) served as a prototype for the Holocaust
+
+**We do not censor history. We use the known to illuminate the unknown.**
+
+Without the Holocaust as reference, users cannot understand what Putumayo's "100% Profit Score" means. Without Rwanda, the patterns in Darfur become invisible.
 
 ### The "Profit Kills" Thesis
 
