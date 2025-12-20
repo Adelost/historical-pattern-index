@@ -264,6 +264,15 @@ const App = {
     render() {
         const filtered = this.getFilteredEvents();
         const sorted = [...filtered].sort((a, b) => a.period.start - b.period.start);
+        const total = this.state.events.length;
+
+        // Update result count
+        const countEl = document.getElementById('resultCount');
+        if (filtered.length === total) {
+            countEl.innerHTML = `<span class="count">${total}</span> events`;
+        } else {
+            countEl.innerHTML = `Showing <span class="count">${filtered.length}</span> of ${total}`;
+        }
 
         // Update Grid (always, for when switching back)
         const grid = document.getElementById('cardGrid');
