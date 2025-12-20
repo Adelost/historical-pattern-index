@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Updates README.md with statistics from data/events/*.json
+Updates README.md, KNOWLEDGE_LOST.md, and KNOWLEDGE_SAVED.md with statistics.
 
 Usage: python scripts/update_readme.py
 
-Markers in README.md:
+Markers in markdown files:
   <!-- STATS:key -->...<!-- /STATS:key -->
 
 Replaces content between markers with generated statistics.
@@ -18,6 +18,10 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / "data" / "events"
 README_PATH = ROOT / "README.md"
+KNOWLEDGE_LOST_PATH = ROOT / "KNOWLEDGE_LOST.md"
+KNOWLEDGE_SAVED_PATH = ROOT / "KNOWLEDGE_SAVED.md"
+KNOWLEDGE_LOST_JSON = ROOT / "data" / "knowledge_lost.json"
+KNOWLEDGE_SAVED_JSON = ROOT / "data" / "knowledge_saved.json"
 
 
 def load_events():
@@ -219,9 +223,26 @@ def generate_patterns_table(events):
     return "\n".join(lines)
 
 
+def update_markdown(content, generators):
+    """Update markdown content with generated statistics."""
+    for key, generator in generators.items():
+        pattern = rf"(<!-- STATS:{key} -->).*?(<!-- /STATS:{key} -->)"
+        generated = generator()
+
+        def make_replacement(match, gen=generated):
+            # Inline stats (single values) don't need newlines
+            if "\n" not in gen:
+                return f"{match.group(1)}{gen}{match.group(2)}"
+            else:
+                return f"{match.group(1)}\n{gen}\n{match.group(2)}"
+
+        content = re.sub(pattern, make_replacement, content, flags=re.DOTALL)
+
+    return content
+
+
 def update_readme(content, events, stats):
     """Update README content with generated statistics."""
-
     generators = {
         "SUMMARY": lambda: generate_summary(events, stats),
         "EVENTS_TABLE": lambda: generate_events_table(events),
@@ -231,43 +252,304 @@ def update_readme(content, events, stats):
         "TIER_BREAKDOWN": lambda: generate_tier_breakdown(stats),
         "PATTERNS_TABLE": lambda: generate_patterns_table(events),
     }
+    return update_markdown(content, generators)
 
-    for key, generator in generators.items():
-        pattern = rf"(<!-- STATS:{key} -->).*?(<!-- /STATS:{key} -->)"
-        generated = generator()
 
-        def make_replacement(match):
-            # Inline stats (single values) don't need newlines
-            if "\n" not in generated:
-                return f"{match.group(1)}{generated}{match.group(2)}"
+# =============================================================================
+# Knowledge files support
+# =============================================================================
+
+def load_knowledge_lost():
+    """Load knowledge_lost.json."""
+    if not KNOWLEDGE_LOST_JSON.exists():
+        return []
+    with open(KNOWLEDGE_LOST_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_knowledge_saved():
+    """Load knowledge_saved.json."""
+    if not KNOWLEDGE_SAVED_JSON.exists():
+        return []
+    with open(KNOWLEDGE_SAVED_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def get_event_name(event_id, events):
+    """Look up event name from event ID."""
+    for e in events:
+        if e.get("id") == event_id:
+            return e.get("name", event_id)
+    return event_id
+
+
+def format_knowledge_year(entry):
+    """Format year or year range for knowledge entry."""
+    year = entry.get("year", 0)
+    year_end = entry.get("year_end")
+
+    if year < 0:
+        year_str = f"{abs(year)} BCE"
+    else:
+        year_str = str(year)
+
+    if year_end and year_end != year:
+        return f"{year_str}-{year_end}"
+    return year_str
+
+
+# Driver labels for genocide parallels
+DRIVER_PARALLELS = {
+    "religious_ideology": "Religious purification genocides",
+    "ethnic_ideology": "Ethnic cleansing",
+    "political_ideology": "Ideological purges",
+    "conquest": "Territorial conquest atrocities",
+    "economic_exploitation": "Profit-driven atrocities",
+}
+
+
+def generate_lost_driver_table(lost_entries):
+    """Generate driver count table for KNOWLEDGE_LOST.md."""
+    driver_counts = {}
+    for entry in lost_entries:
+        driver = entry.get("driver", "unknown")
+        driver_counts[driver] = driver_counts.get(driver, 0) + 1
+
+    # Sort by count descending
+    sorted_drivers = sorted(driver_counts.items(), key=lambda x: -x[1])
+
+    lines = ["| Driver | Count | Genocide parallel |", "|--------|-------|-------------------|"]
+    for driver, count in sorted_drivers:
+        parallel = DRIVER_PARALLELS.get(driver, driver)
+        lines.append(f"| {driver} | {count} | {parallel} |")
+
+    return "\n".join(lines)
+
+
+def generate_lost_data_table(lost_entries):
+    """Generate main data table for KNOWLEDGE_LOST.md."""
+    # Sort by year
+    sorted_entries = sorted(lost_entries, key=lambda x: x.get("year", 0))
+
+    lines = ["| Event | Year | Driver | What was lost | Quantity |",
+             "|-------|------|--------|---------------|----------|"]
+
+    for entry in sorted_entries:
+        name = entry.get("name", "Unknown")
+        year = format_knowledge_year(entry)
+        driver = entry.get("driver", "unknown")
+        what_lost = entry.get("what_lost", "")
+        quantity = entry.get("quantity", "")
+        lines.append(f"| {name} | {year} | {driver} | {what_lost} | {quantity} |")
+
+    return "\n".join(lines)
+
+
+def generate_lost_connection_table(lost_entries, events):
+    """Generate connection to main index table for KNOWLEDGE_LOST.md."""
+    lines = ["| Knowledge lost | Connected genocide |",
+             "|----------------|-------------------|"]
+
+    for entry in lost_entries:
+        connected = entry.get("connected_event")
+        if connected:
+            name = entry.get("name", "Unknown")
+            event_name = get_event_name(connected, events)
+            # Clean up event name (remove dates, parentheses)
+            event_name = re.sub(r'\s*\([^)]*\)', '', event_name)
+            event_name = re.sub(r'\s*\d{4}.*', '', event_name)
+            lines.append(f"| {name} | {event_name} |")
+
+    return "\n".join(lines)
+
+
+def generate_saved_driver_summary(lost_entries, saved_entries):
+    """Generate driver summary table for KNOWLEDGE_SAVED.md (cross-reference)."""
+    # Group entries by driver
+    drivers = {}
+
+    for entry in lost_entries:
+        driver = entry.get("driver", "unknown")
+        if driver not in drivers:
+            drivers[driver] = {"lost": [], "rescued": [], "recovered": []}
+        drivers[driver]["lost"].append(entry.get("name", "Unknown"))
+
+    for entry in saved_entries:
+        driver = entry.get("driver", "unknown")
+        if driver not in drivers:
+            drivers[driver] = {"lost": [], "rescued": [], "recovered": []}
+
+        saved_by = entry.get("saved_by", "")
+        if saved_by == "hidden_and_recovered":
+            drivers[driver]["recovered"].append(entry.get("name", "Unknown"))
+        else:
+            drivers[driver]["rescued"].append(entry.get("name", "Unknown"))
+
+    lines = ["| Driver | Lost | Rescued | Recovered |",
+             "|--------|------|---------|-----------|"]
+
+    # Sort by total entries
+    for driver in ["religious_ideology", "ethnic_ideology", "political_ideology", "conquest", "economic_exploitation"]:
+        if driver not in drivers:
+            continue
+        d = drivers[driver]
+        # Take first 2 examples max for readability
+        lost = ", ".join(d["lost"][:2]) or "—"
+        rescued = ", ".join(d["rescued"][:2]) or "—"
+        recovered = ", ".join(d["recovered"][:2]) or "—"
+        lines.append(f"| {driver} | {lost} | {rescued} | {recovered} |")
+
+    return "\n".join(lines)
+
+
+def generate_saved_rescued_table(saved_entries):
+    """Generate rescued entries table for KNOWLEDGE_SAVED.md."""
+    rescued = [e for e in saved_entries if e.get("saved_by") != "hidden_and_recovered"]
+    sorted_entries = sorted(rescued, key=lambda x: x.get("year", 0), reverse=True)
+
+    lines = ["| Event | Year | Driver | Threat | How saved |",
+             "|-------|------|--------|--------|-----------|"]
+
+    for entry in sorted_entries:
+        name = entry.get("name", "Unknown")
+        year = format_knowledge_year(entry)
+        driver = entry.get("driver", "unknown")
+        threat = entry.get("threat", "")[:50] + "..." if len(entry.get("threat", "")) > 50 else entry.get("threat", "")
+        saved_how = entry.get("saved_how", "")[:40] + "..." if len(entry.get("saved_how", "")) > 40 else entry.get("saved_how", "")
+        lines.append(f"| {name} | {year} | {driver} | {threat} | {saved_how} |")
+
+    return "\n".join(lines)
+
+
+def generate_saved_recovered_table(saved_entries):
+    """Generate recovered entries table for KNOWLEDGE_SAVED.md."""
+    recovered = [e for e in saved_entries if e.get("saved_by") == "hidden_and_recovered"]
+    sorted_entries = sorted(recovered, key=lambda x: x.get("year", 0))
+
+    lines = ["| Event | Hidden | Found | Driver | How found |",
+             "|-------|--------|-------|--------|-----------|"]
+
+    for entry in sorted_entries:
+        name = entry.get("name", "Unknown")
+        # Extract "hidden" year from description or driver_note
+        driver_note = entry.get("driver_note", "")
+        hidden_match = re.search(r'(\d+)\s*CE', driver_note)
+        hidden = f"~{hidden_match.group(1)} CE" if hidden_match else "Ancient"
+
+        found = str(entry.get("year", "?"))
+        driver = entry.get("driver", "unknown")
+        saved_how = entry.get("saved_how", "")[:40] + "..." if len(entry.get("saved_how", "")) > 40 else entry.get("saved_how", "")
+        lines.append(f"| {name} | {hidden} | {found} | {driver} | {saved_how} |")
+
+    return "\n".join(lines)
+
+
+def generate_saved_connection_table(saved_entries, events):
+    """Generate connection to main index table for KNOWLEDGE_SAVED.md."""
+    lines = ["| Knowledge saved | Connected event | What changed? |",
+             "|-----------------|-----------------|---------------|"]
+
+    for entry in saved_entries:
+        connected = entry.get("connected_event")
+        if connected:
+            name = entry.get("name", "Unknown")
+            event_name = get_event_name(connected, events)
+            # Clean up event name
+            event_name = re.sub(r'\s*\([^)]*\)', '', event_name)
+
+            # Determine what changed based on saved_by
+            saved_by = entry.get("saved_by", "")
+            if saved_by == "hidden_and_recovered":
+                what_changed = "Hidden, found later"
+            elif saved_by == "exile":
+                what_changed = "Exile"
+            elif saved_by == "local_resistance":
+                what_changed = "Local resistance"
+            elif saved_by == "intervention":
+                what_changed = "Intervention"
             else:
-                return f"{match.group(1)}\n{generated}\n{match.group(2)}"
+                what_changed = saved_by.replace("_", " ").title()
 
-        content = re.sub(pattern, make_replacement, content, flags=re.DOTALL)
+            lines.append(f"| {name} | {event_name} | {what_changed} |")
 
-    return content
+    return "\n".join(lines)
+
+
+def update_knowledge_lost(content, lost_entries, events):
+    """Update KNOWLEDGE_LOST.md with generated statistics."""
+    generators = {
+        "LOST_DRIVER_TABLE": lambda: generate_lost_driver_table(lost_entries),
+        "LOST_DATA_TABLE": lambda: generate_lost_data_table(lost_entries),
+        "LOST_CONNECTION_TABLE": lambda: generate_lost_connection_table(lost_entries, events),
+        "LOST_COUNT": lambda: str(len(lost_entries)),
+    }
+    return update_markdown(content, generators)
+
+
+def update_knowledge_saved(content, lost_entries, saved_entries, events):
+    """Update KNOWLEDGE_SAVED.md with generated statistics."""
+    generators = {
+        "SAVED_DRIVER_SUMMARY": lambda: generate_saved_driver_summary(lost_entries, saved_entries),
+        "SAVED_RESCUED_TABLE": lambda: generate_saved_rescued_table(saved_entries),
+        "SAVED_RECOVERED_TABLE": lambda: generate_saved_recovered_table(saved_entries),
+        "SAVED_CONNECTION_TABLE": lambda: generate_saved_connection_table(saved_entries, events),
+        "SAVED_COUNT": lambda: str(len(saved_entries)),
+        "SAVED_RESCUED_COUNT": lambda: str(len([e for e in saved_entries if e.get("saved_by") != "hidden_and_recovered"])),
+        "SAVED_RECOVERED_COUNT": lambda: str(len([e for e in saved_entries if e.get("saved_by") == "hidden_and_recovered"])),
+    }
+    return update_markdown(content, generators)
+
+
+def update_file(path, content, new_content, name):
+    """Write file if content changed."""
+    if new_content != content:
+        print(f"  Writing {name}...")
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(new_content)
+        return True
+    return False
 
 
 def main():
-    print("Loading events...")
+    print("Loading data...")
     events = load_events()
-    print(f"Found {len(events)} events")
+    lost = load_knowledge_lost()
+    saved = load_knowledge_saved()
+    print(f"  {len(events)} events, {len(lost)} lost, {len(saved)} saved")
 
     print("Calculating statistics...")
     stats = calc_stats(events)
 
-    print("Reading README.md...")
+    updated = []
+
+    # Update README.md
+    print("Processing README.md...")
     with open(README_PATH, encoding="utf-8") as f:
         content = f.read()
-
-    print("Updating content...")
     new_content = update_readme(content, events, stats)
+    if update_file(README_PATH, content, new_content, "README.md"):
+        updated.append("README.md")
 
-    if new_content != content:
-        print("Writing updated README.md...")
-        with open(README_PATH, "w", encoding="utf-8") as f:
-            f.write(new_content)
-        print("Done! README.md updated.")
+    # Update KNOWLEDGE_LOST.md
+    if KNOWLEDGE_LOST_PATH.exists():
+        print("Processing KNOWLEDGE_LOST.md...")
+        with open(KNOWLEDGE_LOST_PATH, encoding="utf-8") as f:
+            content = f.read()
+        new_content = update_knowledge_lost(content, lost, events)
+        if update_file(KNOWLEDGE_LOST_PATH, content, new_content, "KNOWLEDGE_LOST.md"):
+            updated.append("KNOWLEDGE_LOST.md")
+
+    # Update KNOWLEDGE_SAVED.md
+    if KNOWLEDGE_SAVED_PATH.exists():
+        print("Processing KNOWLEDGE_SAVED.md...")
+        with open(KNOWLEDGE_SAVED_PATH, encoding="utf-8") as f:
+            content = f.read()
+        new_content = update_knowledge_saved(content, lost, saved, events)
+        if update_file(KNOWLEDGE_SAVED_PATH, content, new_content, "KNOWLEDGE_SAVED.md"):
+            updated.append("KNOWLEDGE_SAVED.md")
+
+    if updated:
+        print(f"Done! Updated: {', '.join(updated)}")
     else:
         print("No changes needed.")
 

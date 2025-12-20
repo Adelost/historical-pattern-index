@@ -12,12 +12,14 @@ This is the companion to [KNOWLEDGE_LOST.md](KNOWLEDGE_LOST.md). Same forces. Sa
 
 The same drivers that destroy knowledge also threaten it:
 
+<!-- STATS:SAVED_DRIVER_SUMMARY -->
 | Driver | Lost | Rescued | Recovered |
 |--------|------|---------|-----------|
 | religious_ideology | Maya Codices, Nalanda | Timbuktu | Nag Hammadi |
 | ethnic_ideology | Yiddish Libraries, Sarajevo Library | Sarajevo Haggadah, Polish (30%) | — |
 | political_ideology | Institut für Sexualwissenschaft | Tibetan Texts | — |
 | conquest | House of Wisdom, Carthage | Iraqi Jewish Archive | Dead Sea Scrolls |
+<!-- /STATS:SAVED_DRIVER_SUMMARY -->
 
 What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 
@@ -27,6 +29,7 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 
 ### Rescued (active intervention)
 
+<!-- STATS:SAVED_RESCUED_TABLE -->
 | Event | Year | Driver | Threat | How saved |
 |-------|------|--------|--------|-----------|
 | Timbuktu Manuscripts | 2012-13 | religious_ideology | al-Qaeda occupation | Locals smuggled 350,000 manuscripts out |
@@ -35,13 +38,16 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 | Armenian Manuscripts | 1915-23 | ethnic_ideology | Armenian Genocide | Matenadaran collection preserved in Yerevan |
 | Sarajevo Haggadah | 1992-95 | ethnic_ideology | Siege of Sarajevo | Curator hid it in bank vault |
 | Polish Libraries | 1939-45 | ethnic_ideology | Nazi destruction (70% lost) | Underground networks saved 30% |
+<!-- /STATS:SAVED_RESCUED_TABLE -->
 
 ### Recovered (hidden and found)
 
+<!-- STATS:SAVED_RECOVERED_TABLE -->
 | Event | Hidden | Found | Driver | How found |
 |-------|--------|-------|--------|-----------|
 | Dead Sea Scrolls | ~68 CE | 1947 | conquest | Bedouin shepherd in cave |
 | Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer digging |
+<!-- /STATS:SAVED_RECOVERED_TABLE -->
 
 ---
 
@@ -160,6 +166,7 @@ The pattern is the same. The outcome depends on response — or chance.
 
 ## Connection to Main Index
 
+<!-- STATS:SAVED_CONNECTION_TABLE -->
 | Knowledge saved | Connected event | What changed? |
 |-----------------|-----------------|---------------|
 | Dead Sea Scrolls | Jewish-Roman Wars | Hidden in caves, found 1900 years later |
@@ -167,6 +174,7 @@ The pattern is the same. The outcome depends on response — or chance.
 | Armenian Matenadaran | Armenian Genocide | Core collection in Yerevan |
 | Sarajevo Haggadah | Bosnian Genocide | Individual courage |
 | Polish Libraries (30%) | The Holocaust | Underground resistance |
+<!-- /STATS:SAVED_CONNECTION_TABLE -->
 
 ---
 

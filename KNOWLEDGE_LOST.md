@@ -21,6 +21,7 @@ Only events where:
 
 ### Drivers (same as genocide patterns)
 
+<!-- STATS:LOST_DRIVER_TABLE -->
 | Driver | Count | Genocide parallel |
 |--------|-------|-------------------|
 | religious_ideology | 4 | Religious purification genocides |
@@ -28,11 +29,13 @@ Only events where:
 | ethnic_ideology | 3 | Ethnic cleansing |
 | political_ideology | 1 | Ideological purges |
 | economic_exploitation | 1 | Profit-driven atrocities |
+<!-- /STATS:LOST_DRIVER_TABLE -->
 
 ---
 
 ## The Data
 
+<!-- STATS:LOST_DATA_TABLE -->
 | Event | Year | Driver | What was lost | Quantity |
 |-------|------|--------|---------------|----------|
 | Carthage | 146 BCE | conquest | Punic literature, navigation | 500,000 volumes |
@@ -47,6 +50,7 @@ Only events where:
 | Institut für Sexualwissenschaft | 1933 | political | Gender/sexuality research | 20,000+ books |
 | Yiddish Libraries | 1939-1945 | ethnic | Literature, manuscripts, theater | Millions of books |
 | Sarajevo Library | 1992 | ethnic | Bosnian cultural heritage | 1.5M volumes |
+<!-- /STATS:LOST_DATA_TABLE -->
 
 ---
 
@@ -216,6 +220,7 @@ The famous images of Nazi book burnings are mostly of this library. Hirschfeld w
 
 Many knowledge destruction events connect to genocides in the main index:
 
+<!-- STATS:LOST_CONNECTION_TABLE -->
 | Knowledge lost | Connected genocide |
 |----------------|-------------------|
 | Library of Carthage | Destruction of Carthage |
@@ -226,6 +231,7 @@ Many knowledge destruction events connect to genocides in the main index:
 | Institut für Sexualwissenschaft | The Holocaust |
 | Yiddish Libraries | The Holocaust |
 | Sarajevo Library | Bosnian Genocide |
+<!-- /STATS:LOST_CONNECTION_TABLE -->
 
 Genocide kills people. Epistemicide kills their knowledge. Often the same perpetrators do both.
 

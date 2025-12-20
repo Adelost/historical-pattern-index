@@ -325,6 +325,15 @@
             background: var(--bg-card);
             border: 1px solid var(--border-light);
             border-radius: 12px;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .filter-bar.hidden,
+        .toolbar-compact.hidden {
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            visibility: hidden;
         }
 
         .filter-section {
