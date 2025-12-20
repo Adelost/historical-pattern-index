@@ -12,9 +12,7 @@ It's not Iraq. Not Syria. Not Afghanistan.
 
 It's the Second Congo War (1998-2003). Most people have never heard of it.
 
-Why? Because it was driven by profit (coltan, diamonds, gold), not ideology. And we don't have good frameworks for seeing profit-driven mass death. We notice genocides. We overlook "market forces."
-
-This project attempts to fix that.
+History remembers selectively. This project documents what's often left out - and tracks the warning signs that repeat.
 
 ---
 
