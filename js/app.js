@@ -387,6 +387,14 @@ const App = {
 
             // Bind table event handlers
             this.bindTableEvents();
+
+            // Auto-expand first row to show users what's available
+            const firstRow = table.querySelector('.table-row');
+            const firstDetails = table.querySelector('.table-row-details');
+            if (firstRow && firstDetails) {
+                firstRow.classList.add('expanded');
+                firstDetails.classList.add('expanded');
+            }
         }
 
         // Update based on current view
