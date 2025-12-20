@@ -51,7 +51,7 @@
         "cultural_ban": true,
         "property_seizure": true,
         "identification": true,
-        "biological_warfare": true
+        "deliberate_deprivation": true
       },
       "profit": {
         "direct_revenue": true,

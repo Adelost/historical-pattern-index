@@ -126,9 +126,9 @@ Measures organization, state involvement, and infrastructure of violence.
 | `cultural_ban` | Was language, religion, or culture legally prohibited? |
 | `property_seizure` | Was property or land systematically confiscated? |
 | `identification` | Were registry/ID systems used to identify victims? |
-| `biological_warfare` | Was starvation, disease, or sterilization used as a weapon? |
+| `deliberate_deprivation` | Was starvation, disease, or sterilization used as a weapon? |
 
-**Note**: `biological_warfare` is interpreted broadly to include deliberate famine and disease spread, not just laboratory pathogens.
+**Note**: `deliberate_deprivation` includes famine, disease spread, and forced sterilization—any intentional denial of life necessities.
 
 **Removed criterion**: `duration_over_5y` was removed because it conflates persistence with intensity. The Holocaust (4 years) was more systematically intense per unit time than many decades-long colonial campaigns. Speed of killing often indicates MORE organization, not less—and from a prevention standpoint, rapid genocides are more dangerous because there's less time to intervene.
 
@@ -252,7 +252,7 @@ Minimal example:
         "cultural_ban": false,
         "property_seizure": true,
         "identification": false,
-        "biological_warfare": false
+        "deliberate_deprivation": false
       },
       "profit": { ... },
       "ideology": { ... },

@@ -35,7 +35,7 @@
         "cultural_ban": false,
         "property_seizure": false,
         "identification": false,
-        "biological_warfare": false,
+        "deliberate_deprivation": false,
         "duration_over_5y": false
       }
     }

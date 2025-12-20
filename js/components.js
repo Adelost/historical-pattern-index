@@ -59,7 +59,7 @@ const formatKey = (key) => {
         cultural_ban: 'Cultural/Religious Ban',
         property_seizure: 'Property Seizure',
         identification: 'Identification System',
-        biological_warfare: 'Biological Warfare',
+        deliberate_deprivation: 'Deliberate Deprivation',
         duration_over_5y: 'Duration > 5 Years',
         // Profit
         direct_revenue: 'Direct Revenue',
