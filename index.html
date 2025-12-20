@@ -115,6 +115,26 @@
             50% { transform: translateY(8px); }
         }
 
+        .skip-intro {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: rgba(255,255,255,0.5);
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            border-radius: 100px;
+            cursor: pointer;
+            z-index: 100;
+            transition: all 0.2s;
+        }
+
+        .skip-intro:hover {
+            border-color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.8);
+        }
+
         .intro.hidden {
             display: none;
         }
@@ -1127,6 +1147,7 @@
 
     <!-- Scrollytelling Intro -->
     <div id="intro" class="intro">
+        <button id="skipIntro" class="skip-intro">Skip intro</button>
         <div class="intro-section visible" data-step="1">
             <p class="intro-text">The deadliest conflict since World War II killed <span class="highlight">5.4 million</span> people.</p>
         </div>
@@ -1346,6 +1367,9 @@
 
             // Enter site button
             document.getElementById('enterSite').addEventListener('click', enterSite);
+
+            // Skip intro button
+            document.getElementById('skipIntro').addEventListener('click', enterSite);
 
             // Also enter when scrolling past the last section
             const lastSection = document.querySelector('.intro-final');
