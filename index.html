@@ -637,6 +637,31 @@
             user-select: none;
         }
 
+        /* Custom scrollbar for timeline */
+        .timeline-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .timeline-container::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        .timeline-container::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
+        }
+
+        .timeline-container::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Firefox */
+        .timeline-container {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.15) rgba(255, 255, 255, 0.05);
+        }
+
         .timeline {
             position: relative;
             min-height: 120px;
