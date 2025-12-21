@@ -17,7 +17,10 @@ const App = {
         currentView: localStorage.getItem('hpi-view') || 'cards',
         filters: { period: 'all', tier: 'all', denial: 'all' },
         search: '',
-        sort: JSON.parse(localStorage.getItem('hpi-sort')) || { field: 'period', direction: 'asc' }
+        sort: JSON.parse(localStorage.getItem('hpi-sort')) || { field: 'period', direction: 'asc' },
+        // Knowledge filters
+        knowledgeSearch: '',
+        knowledgeDriver: 'all'
     },
 
     async init() {
@@ -117,6 +120,28 @@ const App = {
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url; a.download = 'hpi_dataset.json'; a.click();
+        });
+
+        // Knowledge Search
+        const knowledgeSearch = document.getElementById('knowledgeSearch');
+        if (knowledgeSearch) {
+            knowledgeSearch.addEventListener('input', (e) => {
+                this.state.knowledgeSearch = e.target.value.toLowerCase().trim();
+                this.renderKnowledge();
+            });
+        }
+
+        // Knowledge Driver Filter
+        document.querySelectorAll('.driver-pill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                const driver = pill.dataset.driver;
+                this.state.knowledgeDriver = driver;
+
+                document.querySelectorAll('.driver-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+
+                this.renderKnowledge();
+            });
         });
     },
 
@@ -220,6 +245,7 @@ const App = {
 
     renderTimeline(events) {
         const timeline = document.getElementById('timeline');
+        const rowsContainer = document.getElementById('timelineRows');
 
         // Sort by start year
         const sorted = [...events].sort((a, b) => a.period.start - b.period.start);
@@ -229,12 +255,10 @@ const App = {
         const padding = 40;
         const totalWidth = Math.max(sorted.length * pxPerEvent + padding * 2, timeline.parentElement.clientWidth);
 
-        // Create events with fixed pixel spacing
-        const eventHtml = sorted.map((event, index) => {
+        // Create timeline dots with fixed pixel spacing
+        const dotsHtml = sorted.map((event, index) => {
             const x = padding + index * pxPerEvent;
-
             const { color } = Utils.getTheme(event.analysis.tier);
-            const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
 
             // Short name for label
             let shortName = event.name.replace(/\s*\([^)]+\)/, '').trim();
@@ -248,7 +272,7 @@ const App = {
                      data-id="${event.id}">
                     <div class="timeline-tooltip">
                         <strong>${event.name}</strong><br>
-                        ${event.period.start}–${event.period.end} · ${deaths} deaths
+                        ${event.period.start}–${event.period.end}
                     </div>
                 </div>
                 <span class="timeline-year-label" style="left: ${x}px;">${event.period.start}</span>
@@ -258,38 +282,15 @@ const App = {
         timeline.style.width = `${totalWidth}px`;
         timeline.innerHTML = `
             <div class="timeline-axis"></div>
-            ${eventHtml}
+            ${dotsHtml}
         `;
 
-        // Add click handlers - show info panel
-        timeline.querySelectorAll('.timeline-event').forEach(el => {
-            el.addEventListener('click', () => {
-                const id = el.dataset.id;
-                const event = this.state.events.find(e => e.id === id);
-                if (!event) return;
+        // Render TableRows below timeline
+        const rowsHtml = sorted.map(event => TableRow(event)).join('');
+        rowsContainer.innerHTML = rowsHtml;
 
-                // Update selection state
-                timeline.querySelectorAll('.timeline-event').forEach(e => e.classList.remove('selected'));
-                el.classList.add('selected');
-
-                // Show info panel
-                const infoPanel = document.getElementById('timelineInfo');
-                const scores = event.metrics.scores;
-                const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
-
-                document.getElementById('timelineInfoTitle').textContent = event.name;
-                document.getElementById('timelineInfoMeta').innerHTML =
-                    `${event.geography.region} · ${event.period.start}–${event.period.end} · <strong>${deaths} deaths</strong>`;
-                document.getElementById('timelineInfoScores').innerHTML = `
-                    <span class="score-pill" style="border-left: 3px solid #f38ba8;">Systematic ${scores.systematic_intensity}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #cba6f7;">Profit ${scores.profit}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #89b4fa;">Ideology ${scores.ideology}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #a6e3a1;">Complicity ${scores.complicity}%</span>
-                `;
-                document.getElementById('timelineInfoNote').textContent = `"${event.analysis.pattern_note}"`;
-                infoPanel.classList.add('visible');
-            });
-        });
+        // Bind row + dot events
+        this.bindTimelineRowEvents();
 
         // Scroll indicator handling
         const container = timeline.parentElement;
@@ -311,7 +312,7 @@ const App = {
         let startX, scrollLeft;
 
         container.addEventListener('mousedown', (e) => {
-            if (e.target.closest('.timeline-event')) return; // Don't drag when clicking events
+            if (e.target.closest('.timeline-event')) return;
             isDragging = true;
             container.classList.add('dragging');
             startX = e.pageX - container.offsetLeft;
@@ -334,6 +335,20 @@ const App = {
             const x = e.pageX - container.offsetLeft;
             const walk = (x - startX) * 1.5;
             container.scrollLeft = scrollLeft - walk;
+        });
+    },
+
+    bindTimelineRowEvents() {
+        const container = document.getElementById('timelineRows');
+        const timeline = document.getElementById('timeline');
+        const dots = timeline.querySelectorAll('.timeline-event');
+
+        this.bindExpandableRows({
+            container,
+            rowSelector: '.table-row',
+            detailsSelector: '.table-row-details',
+            dots,
+            autoExpand: true
         });
     },
 
@@ -379,32 +394,71 @@ const App = {
         });
     },
 
-    bindTableEvents() {
-        const table = document.getElementById('eventTable');
-        if (!table) return;
+    // Generic expandable rows with optional dot sync
+    bindExpandableRows({ container, rowSelector, detailsSelector, dots = null, autoExpand = false }) {
+        const rows = container.querySelectorAll(rowSelector);
 
-        // Row click to expand/collapse
-        table.querySelectorAll('.table-row').forEach(row => {
+        rows.forEach(row => {
             row.addEventListener('click', () => {
                 const id = row.dataset.id;
-                const details = table.querySelector(`.table-row-details[data-for="${id}"]`);
+                const details = container.querySelector(`${detailsSelector}[data-for="${id}"]`);
                 if (!details) return;
 
                 const isExpanded = row.classList.contains('expanded');
 
                 // Close all other rows
-                table.querySelectorAll('.table-row.expanded').forEach(r => {
+                rows.forEach(r => {
                     r.classList.remove('expanded');
-                    const d = table.querySelector(`.table-row-details[data-for="${r.dataset.id}"]`);
+                    const d = container.querySelector(`${detailsSelector}[data-for="${r.dataset.id}"]`);
                     if (d) d.classList.remove('expanded');
                 });
+                if (dots) dots.forEach(d => d.classList.remove('selected'));
 
                 // Toggle this row
                 if (!isExpanded) {
                     row.classList.add('expanded');
                     details.classList.add('expanded');
+                    if (dots) {
+                        const dot = [...dots].find(d => d.dataset.id === id);
+                        if (dot) dot.classList.add('selected');
+                    }
                 }
             });
+        });
+
+        // Dot click → scroll to row and expand
+        if (dots) {
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const row = container.querySelector(`${rowSelector}[data-id="${dot.dataset.id}"]`);
+                    if (row) {
+                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(() => row.click(), 300);
+                    }
+                });
+            });
+        }
+
+        // Auto-expand first row
+        if (autoExpand && rows.length > 0) {
+            const firstRow = rows[0];
+            const firstDetails = container.querySelector(`${detailsSelector}[data-for="${firstRow.dataset.id}"]`);
+            if (firstDetails) {
+                firstRow.classList.add('expanded');
+                firstDetails.classList.add('expanded');
+                if (dots && dots.length > 0) dots[0].classList.add('selected');
+            }
+        }
+    },
+
+    bindTableEvents() {
+        const table = document.getElementById('eventTable');
+        if (!table) return;
+
+        this.bindExpandableRows({
+            container: table,
+            rowSelector: '.table-row',
+            detailsSelector: '.table-row-details'
         });
 
         // Header click to sort
@@ -573,16 +627,43 @@ const App = {
             return shortName.length > 10 ? shortName.substring(0, 9) + '…' : shortName;
         };
 
+        // Filter knowledge entries
+        const filterEntries = (entries) => {
+            return entries.filter(entry => {
+                // Driver filter
+                if (this.state.knowledgeDriver !== 'all' && entry.driver !== this.state.knowledgeDriver) {
+                    return false;
+                }
+                // Search filter
+                if (this.state.knowledgeSearch) {
+                    const searchFields = [
+                        entry.name,
+                        entry.what_lost || entry.saved_how || '',
+                        entry.description || '',
+                        entry.driver_note || ''
+                    ].join(' ').toLowerCase();
+                    return searchFields.includes(this.state.knowledgeSearch);
+                }
+                return true;
+            });
+        };
+
         // Render a section (timeline + cards)
         const renderSection = (data, timelineId, cardsId, isSaved = false) => {
-            if (!data.length) return;
+            const timelineEl = document.getElementById(timelineId);
+            const cardsEl = document.getElementById(cardsId);
+
+            if (!data.length) {
+                timelineEl.innerHTML = '';
+                cardsEl.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 2rem;">No results</p>';
+                return;
+            }
 
             const sorted = [...data].sort((a, b) => a.year - b.year);
             const padding = 5;
             const usableWidth = 100 - (padding * 2);
 
             // Timeline
-            const timelineEl = document.getElementById(timelineId);
             const dotsHtml = sorted.map((entry, index) => {
                 const x = sorted.length > 1
                     ? padding + (index / (sorted.length - 1)) * usableWidth
@@ -611,7 +692,6 @@ const App = {
             `;
 
             // Cards - using KnowledgeCard component (same pattern as TableRow)
-            const cardsEl = document.getElementById(cardsId);
             const cardsHtml = sorted.map(entry => {
                 const connectedEvent = entry.connected_event
                     ? this.state.events.find(e => e.id === entry.connected_event)
@@ -622,72 +702,65 @@ const App = {
             cardsEl.innerHTML = cardsHtml;
         };
 
-        // Render both sections
-        const lostData = this.state.knowledgeLost;
-        const savedData = this.state.knowledgeSaved;
+        // Filter and render both sections
+        const lostFiltered = filterEntries(this.state.knowledgeLost);
+        const savedFiltered = filterEntries(this.state.knowledgeSaved);
+        const totalLost = this.state.knowledgeLost.length;
+        const totalSaved = this.state.knowledgeSaved.length;
 
-        document.getElementById('lostCount').textContent = `${lostData.length} irreversible`;
-        document.getElementById('savedCount').textContent = `${savedData.length} rescued`;
+        // Update counts
+        document.getElementById('lostCount').textContent = lostFiltered.length === totalLost
+            ? `${totalLost} irreversible`
+            : `${lostFiltered.length} of ${totalLost}`;
+        document.getElementById('savedCount').textContent = savedFiltered.length === totalSaved
+            ? `${totalSaved} rescued`
+            : `${savedFiltered.length} of ${totalSaved}`;
 
-        renderSection(lostData, 'knowledgeLostTimeline', 'knowledgeLostCards', false);
-        renderSection(savedData, 'knowledgeSavedTimeline', 'knowledgeSavedCards', true);
+        // Update result count
+        const total = totalLost + totalSaved;
+        const filtered = lostFiltered.length + savedFiltered.length;
+        const countEl = document.getElementById('knowledgeResultCount');
+        if (countEl) {
+            countEl.textContent = filtered === total ? '' : `Showing ${filtered} of ${total}`;
+        }
+
+        renderSection(lostFiltered, 'knowledgeLostTimeline', 'knowledgeLostCards', false);
+        renderSection(savedFiltered, 'knowledgeSavedTimeline', 'knowledgeSavedCards', true);
 
         // Bind events
         this.bindKnowledgeEvents();
     },
 
     bindKnowledgeEvents() {
-        const rows = document.querySelectorAll('.knowledge-row');
-        const dots = document.querySelectorAll('.knowledge-timeline .timeline-dot');
-
-        // Row click to expand/collapse (same pattern as TableRow)
-        rows.forEach(row => {
-            row.addEventListener('click', () => {
-                const id = row.dataset.id;
-                const details = document.querySelector(`.knowledge-row-details[data-for="${id}"]`);
-                if (!details) return;
-
-                const isExpanded = row.classList.contains('expanded');
-
-                // Close all other rows
-                rows.forEach(r => {
-                    r.classList.remove('expanded');
-                    const d = document.querySelector(`.knowledge-row-details[data-for="${r.dataset.id}"]`);
-                    if (d) d.classList.remove('expanded');
-                });
-                dots.forEach(d => d.classList.remove('active'));
-
-                // Toggle this row
-                if (!isExpanded) {
-                    row.classList.add('expanded');
-                    details.classList.add('expanded');
-                    const dot = document.querySelector(`.timeline-dot[data-id="${id}"]`);
-                    if (dot) dot.classList.add('active');
-                }
-            });
+        // Bind Lost section
+        const lostCards = document.getElementById('knowledgeLostCards');
+        const lostDots = document.querySelectorAll('#knowledgeLostTimeline .timeline-dot');
+        this.bindExpandableRows({
+            container: lostCards,
+            rowSelector: '.knowledge-row',
+            detailsSelector: '.knowledge-row-details',
+            dots: lostDots,
+            autoExpand: true
         });
 
-        // Dot click to scroll to row and expand
-        dots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                const id = dot.dataset.id;
-                const row = document.querySelector(`.knowledge-row[data-id="${id}"]`);
-
-                if (row) {
-                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    setTimeout(() => row.click(), 300);
-                }
-            });
+        // Bind Saved section
+        const savedCards = document.getElementById('knowledgeSavedCards');
+        const savedDots = document.querySelectorAll('#knowledgeSavedTimeline .timeline-dot');
+        this.bindExpandableRows({
+            container: savedCards,
+            rowSelector: '.knowledge-row',
+            detailsSelector: '.knowledge-row-details',
+            dots: savedDots,
+            autoExpand: true
         });
 
-        // Connected event links
+        // Connected event links (navigate to Table view)
         document.querySelectorAll('.knowledge-link[data-event-id]').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
                 const eventId = link.dataset.eventId;
 
-                // Switch to table view and show the event
                 this.switchView('cards');
                 setTimeout(() => {
                     const row = document.querySelector(`.table-row[data-id="${eventId}"]`);
@@ -698,11 +771,6 @@ const App = {
                 }, 100);
             });
         });
-
-        // Auto-expand first row
-        if (rows.length > 0) {
-            rows[0].click();
-        }
     }
 };
 

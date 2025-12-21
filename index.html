@@ -197,71 +197,66 @@
         h1 { font-size: 2.5rem; margin: 0; letter-spacing: -0.03em; background: linear-gradient(to right, var(--ctp-text), var(--ctp-subtext)); -webkit-background-clip: text; color: transparent; }
         .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 300; margin-top: 0.5rem; }
 
-        /* --- Insights Banner --- */
+        /* --- Insights Banner (Minimal) --- */
         .insights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem 2.5rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
         }
 
         .insight-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
-            padding: 1.25rem;
             text-align: center;
         }
 
         .insight-card .number {
-            font-size: 2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--ctp-blue), var(--ctp-mauve));
-            -webkit-background-clip: text;
-            color: transparent;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
         }
 
         .insight-card .label {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             color: var(--text-muted);
-            margin-top: 0.25rem;
-        }
-
-        .insight-card.highlight {
-            border-color: var(--ctp-red);
-            background: rgba(243, 139, 168, 0.1);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .insight-card.highlight .number {
-            background: linear-gradient(135deg, var(--ctp-red), var(--ctp-peach));
-            -webkit-background-clip: text;
+            color: var(--ctp-red);
         }
 
-        /* --- About Scores --- */
+        /* --- About Scores (Subtle) --- */
         .about-scores {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
         }
 
         .about-scores details {
-            background: var(--bg-card);
-            border: 1px solid var(--border-light);
-            border-radius: 12px;
+            display: inline-block;
         }
 
         .about-scores summary {
-            padding: 1rem 1.25rem;
+            padding: 0.5rem 1rem;
             cursor: pointer;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: space-between;
-            font-size: 0.9rem;
+            gap: 0.5rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             list-style: none;
+            border-radius: 100px;
+            transition: all 0.2s;
         }
 
         .about-scores summary::-webkit-details-marker { display: none; }
 
-        .about-scores summary:hover { color: var(--text-main); }
+        .about-scores summary:hover {
+            color: var(--text-main);
+            background: rgba(255,255,255,0.05);
+        }
 
         .about-scores .chevron {
             transition: transform 0.2s;
@@ -275,8 +270,10 @@
 
         .about-scores .scores-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem;
+            max-width: 900px;
+            margin: 0.75rem auto 0;
             padding: 0 1.25rem 1.25rem;
         }
 
@@ -338,13 +335,14 @@
         .view-tab.active { background: var(--accent); color: var(--bg-dark); }
         .view-tab svg { width: 18px; height: 18px; }
 
-        /* --- Filter Bar --- */
+        /* --- Filter Bar (Minimal) --- */
         .filter-bar {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding: 1rem 1.25rem;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.75rem 1rem;
             background: var(--bg-card);
             border: 1px solid var(--border-light);
             border-radius: 12px;
@@ -362,15 +360,11 @@
         .filter-section {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
 
         .filter-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
+            display: none; /* Hide labels for minimal look */
         }
 
         /* --- Search Input --- */
@@ -423,21 +417,21 @@
             cursor: pointer;
         }
 
-        /* --- Era Filter Pills --- */
+        /* --- Era Filter Pills (Minimal) --- */
         .era-filters {
             display: flex;
-            gap: 0.35rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
         }
 
         .era-pill {
-            padding: 0.4rem 0.75rem;
-            border-radius: 6px;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
             border: 1px solid var(--border-light);
             background: transparent;
             color: var(--text-muted);
             font-size: 0.75rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
         }
@@ -453,20 +447,20 @@
             border-color: var(--accent);
         }
 
-        /* --- Tier Filter Pills --- */
+        /* --- Tier Filter Pills (Minimal) --- */
         .tier-filters {
             display: flex;
-            gap: 0.35rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
         }
 
         .tier-pill {
             --pill-color: var(--text-muted);
-            padding: 0.5rem 1rem;
+            padding: 0.35rem 0.75rem;
             border-radius: 100px;
-            border: 1px solid var(--pill-color);
+            border: 1px solid var(--border-light);
             background: transparent;
-            color: var(--pill-color);
+            color: var(--text-muted);
             font-size: 0.8rem;
             font-weight: 600;
             cursor: pointer;
@@ -543,16 +537,16 @@
         }
         .control-input:hover, .control-input:focus { border-color: var(--accent); }
 
-        .toolbar-compact {
-            padding: 0.75rem 1rem;
-            justify-content: flex-end;
-            gap: 0.75rem;
+        .control-input.control-small {
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem;
+            border-radius: 100px;
         }
 
         .result-count {
             font-size: 0.8rem;
             color: var(--text-muted);
-            margin-right: auto;
+            margin-left: auto;
         }
 
         .result-count .count {
@@ -560,13 +554,20 @@
             font-weight: 600;
         }
 
-        .btn-action {
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: none;
-            font-weight: 600;
+        .btn-download {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-light);
+            border-radius: 6px;
+            padding: 0.35rem 0.6rem;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
         }
-        .btn-action:hover { filter: brightness(1.1); }
+        .btn-download:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
 
         /* --- View Containers --- */
         .view { display: none; }
@@ -770,44 +771,6 @@
             transform: translateX(-50%);
             white-space: nowrap;
             font-weight: 500;
-        }
-
-        .timeline-info {
-            margin-top: 1.5rem;
-            padding: 1.25rem;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-            display: none;
-        }
-
-        .timeline-info.visible {
-            display: block;
-        }
-
-        .timeline-info h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
-
-        .timeline-info .meta {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 0.75rem;
-        }
-
-        .timeline-info .scores {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .timeline-info .score-pill {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.6rem;
-            border-radius: 12px;
-            background: rgba(255,255,255,0.1);
         }
 
         /* --- Chart --- */
@@ -1771,32 +1734,69 @@
             font-weight: 600;
         }
 
+        .knowledge-header {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
         .knowledge-tagline {
             color: var(--text-muted);
             font-style: italic;
             margin: 0;
         }
 
-        .knowledge-legend {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .legend-item {
+        /* Knowledge Filters */
+        .knowledge-filters {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0 1.5rem;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-light);
         }
 
-        .legend-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
+        .knowledge-filters .search-wrapper {
+            flex: 1;
+            min-width: 150px;
+            max-width: 250px;
+        }
+
+        .knowledge-filter-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .driver-pill {
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .driver-pill:hover {
+            border-color: var(--pill-color, var(--text-muted));
+            color: var(--pill-color, var(--text-main));
+        }
+
+        .driver-pill.active {
+            background: var(--pill-color, var(--accent));
+            border-color: var(--pill-color, var(--accent));
+            color: var(--bg-dark);
+        }
+
+        .knowledge-filters .result-count {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-left: auto;
         }
 
         /* Knowledge Sections */
@@ -1865,7 +1865,7 @@
             box-shadow: 0 0 12px currentColor;
         }
 
-        .timeline-dot.active {
+        .timeline-dot.selected {
             transform: scale(1.4);
             box-shadow: 0 0 16px currentColor;
         }
@@ -2189,7 +2189,6 @@
 
             <!-- Tier Filters -->
             <div class="filter-section">
-                <span class="filter-label">Type</span>
                 <div class="tier-filters">
                     <button class="tier-pill active" data-tier="all">All</button>
                     <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: #eba0ac;">Erasure</button>
@@ -2199,6 +2198,20 @@
                     <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: #585b70;">Chaotic</button>
                 </div>
             </div>
+
+            <!-- Denial Filter -->
+            <div class="filter-section">
+                <select id="filterDenial" class="control-input control-small" aria-label="Filter by Denial Status">
+                    <option value="all">Denial: All</option>
+                    <option value="denied">🚫 Denied</option>
+                    <option value="partial">⚠️ Partial</option>
+                    <option value="acknowledged">✓ Acknowledged</option>
+                </select>
+            </div>
+
+            <!-- Result count + Download -->
+            <span id="resultCount" class="result-count"></span>
+            <button id="btnDownload" class="btn-download" title="Download JSON">⬇</button>
         </div>
 
         <!-- Hidden dropdowns for state sync -->
@@ -2212,18 +2225,6 @@
         <select id="filterTier" class="hidden" aria-hidden="true">
             <option value="all">All</option>
         </select>
-
-        <!-- Secondary Toolbar -->
-        <div class="toolbar toolbar-compact">
-            <span id="resultCount" class="result-count"></span>
-            <select id="filterDenial" class="control-input" aria-label="Filter by Denial Status">
-                <option value="all">All Denial Status</option>
-                <option value="denied">🚫 Actively Denied</option>
-                <option value="partial">⚠️ Partially Denied</option>
-                <option value="acknowledged">✓ Acknowledged</option>
-            </select>
-            <button id="btnDownload" class="control-input btn-action">⬇ Download JSON</button>
-        </div>
 
         <!-- Views -->
         <div id="cardsView" class="view active">
@@ -2242,13 +2243,8 @@
         <div id="timelineView" class="view">
             <div class="timeline-container">
                 <div id="timeline" class="timeline"></div>
-                <div id="timelineInfo" class="timeline-info">
-                    <h3 id="timelineInfoTitle">Select an event</h3>
-                    <div class="meta" id="timelineInfoMeta"></div>
-                    <div class="scores" id="timelineInfoScores"></div>
-                    <p id="timelineInfoNote" style="margin: 0.75rem 0 0; font-size: 0.85rem; color: var(--text-muted); font-style: italic;"></p>
-                </div>
             </div>
+            <div id="timelineRows" class="event-table" style="margin-top: 1.5rem;"></div>
         </div>
 
         <div id="chartView" class="view">
@@ -2261,13 +2257,23 @@
             <div class="knowledge-container">
                 <div class="knowledge-header">
                     <p class="knowledge-tagline">Same forces that kill people also kill knowledge</p>
-                    <div class="knowledge-legend">
-                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-red);"></span>Religious</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-overlay0);"></span>Conquest</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-mauve);"></span>Ethnic</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-peach);"></span>Political</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-green);"></span>Economic</span>
+                </div>
+
+                <!-- Knowledge Filter Bar -->
+                <div class="knowledge-filters">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        <input type="search" id="knowledgeSearch" class="search-input" placeholder="Search knowledge..." aria-label="Search knowledge">
                     </div>
+                    <div class="knowledge-filter-pills">
+                        <button class="driver-pill active" data-driver="all">All</button>
+                        <button class="driver-pill" data-driver="religious_ideology" style="--pill-color: var(--ctp-red);">Religious</button>
+                        <button class="driver-pill" data-driver="conquest" style="--pill-color: var(--ctp-overlay0);">Conquest</button>
+                        <button class="driver-pill" data-driver="ethnic_ideology" style="--pill-color: var(--ctp-mauve);">Ethnic</button>
+                        <button class="driver-pill" data-driver="political_ideology" style="--pill-color: var(--ctp-peach);">Political</button>
+                        <button class="driver-pill" data-driver="economic_exploitation" style="--pill-color: var(--ctp-green);">Economic</button>
+                    </div>
+                    <span id="knowledgeResultCount" class="result-count"></span>
                 </div>
 
                 <!-- Lost Section -->

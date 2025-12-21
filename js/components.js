@@ -96,7 +96,7 @@ export const BreakdownSection = (breakdowns, rationales = {}) => {
     if (!breakdowns) return '';
 
     const categories = Object.entries(breakdowns).map(([category, items]) => {
-        const meta = categoryMeta[category] || { label: category, color: '#94a3b8' };
+        const meta = categoryMeta[category] || { label: category, color: '#a6adc8' };
         const rationale = rationales[category] || '';
 
         const itemsList = Object.entries(items).map(([key, value]) => `
@@ -217,7 +217,7 @@ export const DetailedAnalysis = (analysis, breakdowns, rationales) => {
     };
 
     const breakdownHtml = hasBreakdowns ? Object.entries(breakdowns).map(([category, items]) => {
-        const meta = categoryMeta[category] || { label: category, color: '#94a3b8' };
+        const meta = categoryMeta[category] || { label: category, color: '#a6adc8' };
         const rationale = rationales[category] || '';
 
         const itemsList = Object.entries(items).map(([key, value]) => `
