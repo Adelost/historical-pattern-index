@@ -652,7 +652,7 @@ const App = {
 
                 const rect = dot.getBoundingClientRect();
                 tooltip.style.left = rect.left + rect.width / 2 + 'px';
-                tooltip.style.top = rect.top - 10 + 'px';
+                tooltip.style.top = rect.top + rect.height / 2 + 'px';
             });
 
             dot.addEventListener('mouseleave', () => {

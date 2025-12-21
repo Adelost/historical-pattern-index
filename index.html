@@ -432,6 +432,7 @@
         }
 
         .era-pill {
+            --pill-color: var(--text-muted);
             padding: 0.35rem 0.75rem;
             border-radius: 100px;
             border: 1px solid var(--border-light);
@@ -441,17 +442,47 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            position: relative;
+        }
+
+        .era-pill::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--pill-color);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .era-pill:not([data-period="all"])::before {
+            opacity: 1;
+        }
+
+        .era-pill:not([data-period="all"]) {
+            padding-left: 1.75rem;
         }
 
         .era-pill:hover {
-            color: var(--text-main);
-            border-color: var(--text-muted);
+            background: color-mix(in srgb, var(--pill-color), transparent 90%);
         }
 
         .era-pill.active {
-            background: var(--accent);
+            background: var(--pill-color);
             color: var(--bg-dark);
-            border-color: var(--accent);
+            border-color: var(--pill-color);
+        }
+
+        .era-pill.active::before {
+            background: var(--bg-dark);
+        }
+
+        .era-pill[data-period="all"] {
+            --pill-color: var(--accent);
         }
 
         /* --- Tier Filter Pills (Minimal) --- */
@@ -801,50 +832,37 @@
             transform: scale(var(--dot-hover-scale));
         }
 
-        /* Chart tooltip (matches timeline style) */
+        /* Chart tooltip (minimal, like timeline labels) */
         .chart-tooltip {
             position: absolute;
             pointer-events: none;
-            transform: translate(-50%, -100%);
-            background: var(--ctp-mantle);
-            border: 1px solid var(--ctp-surface0);
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
+            transform: translate(-50%, -50%);
             opacity: 0;
             transition: opacity 0.15s;
             z-index: 1000;
             text-align: center;
-            min-width: 120px;
+            white-space: nowrap;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px; /* space for the dot in the middle */
         }
 
         .chart-tooltip-year {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--text-muted);
-            margin-bottom: 0.25rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
 
         .chart-tooltip-name {
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.7rem;
+            font-weight: 500;
             color: var(--text-main);
-            margin-bottom: 0.5rem;
-            line-height: 1.3;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
 
         .chart-tooltip-meta {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            font-size: 0.75rem;
-        }
-
-        .chart-tooltip-deaths {
-            font-weight: 600;
-            /* color set inline by tier */
-        }
-
-        .chart-tooltip-tier {
-            font-weight: 500;
+            display: none;
         }
 
         /* --- Expandable Row (Shared Base) --- */
@@ -1873,11 +1891,13 @@
                 font-size: 0.7rem;
             }
 
-            .tier-pill:not([data-tier="all"]) {
+            .tier-pill:not([data-tier="all"]),
+            .era-pill:not([data-period="all"]) {
                 padding-left: 0.5rem;
             }
 
-            .tier-pill::before {
+            .tier-pill::before,
+            .era-pill::before {
                 display: none;
             }
 
@@ -2346,10 +2366,10 @@
                 <span class="filter-label">Era</span>
                 <div class="era-filters">
                     <button class="era-pill active" data-period="all">All Time</button>
-                    <button class="era-pill" data-period="ancient">Ancient</button>
-                    <button class="era-pill" data-period="medieval">Medieval</button>
-                    <button class="era-pill" data-period="colonial">Colonial</button>
-                    <button class="era-pill" data-period="modern">Modern</button>
+                    <button class="era-pill" data-period="ancient" style="--pill-color: var(--ctp-rosewater);">Ancient</button>
+                    <button class="era-pill" data-period="medieval" style="--pill-color: var(--ctp-mauve);">Medieval</button>
+                    <button class="era-pill" data-period="colonial" style="--pill-color: var(--ctp-teal);">Colonial</button>
+                    <button class="era-pill" data-period="modern" style="--pill-color: var(--ctp-blue);">Modern</button>
                 </div>
             </div>
 
