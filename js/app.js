@@ -157,13 +157,11 @@ const App = {
         document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
         document.getElementById(`${view}View`).classList.add('active');
 
-        // Hide/show filter bar based on view (not relevant for Knowledge Lost)
-        const filterBar = document.querySelector('.filter-bar');
-        if (view === 'knowledge') {
-            filterBar.classList.add('hidden');
-        } else {
-            filterBar.classList.remove('hidden');
-        }
+        // Show/hide filter sections based on active view
+        document.querySelectorAll('.filter-section[data-views]').forEach(section => {
+            const views = section.dataset.views.split(' ');
+            section.classList.toggle('visible', views.includes(view));
+        });
 
         // Handle map view special case
         if (view === 'map' && !this.state.map) {

@@ -344,12 +344,19 @@
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
-        .filter-bar.hidden,
-        .toolbar-compact.hidden {
+        .filter-bar.hidden {
             opacity: 0;
             pointer-events: none;
             position: absolute;
             visibility: hidden;
+        }
+
+        .filter-section[data-views] {
+            display: none;
+        }
+
+        .filter-section[data-views].visible {
+            display: flex;
         }
 
         .filter-section {
@@ -1694,26 +1701,6 @@
         /* --- Knowledge Lost View --- */
         /* knowledge-container: uses .view-content base */
 
-        .knowledge-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .knowledge-title {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .knowledge-title h2 {
-            margin: 0;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
-
         .knowledge-count {
             background: rgba(243, 139, 168, 0.2);
             color: var(--ctp-red);
@@ -1723,37 +1710,8 @@
             font-weight: 600;
         }
 
-        .knowledge-header {
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
-
-        .knowledge-tagline {
-            color: var(--text-muted);
-            font-style: italic;
-            margin: 0;
-        }
-
-        /* Knowledge Filters */
-        .knowledge-filters {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin: 1rem 0 1.5rem;
-            padding: 0.75rem 1rem;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-        }
-
-        .knowledge-filters .search-wrapper {
-            flex: 1;
-            min-width: 150px;
-            max-width: 250px;
-        }
-
-        .knowledge-filter-pills {
+        /* Driver Filters (uses same style as era/tier pills) */
+        .driver-filters {
             display: flex;
             gap: 0.5rem;
             flex-wrap: wrap;
@@ -1780,12 +1738,6 @@
             background: var(--pill-color, var(--accent));
             border-color: var(--pill-color, var(--accent));
             color: var(--bg-dark);
-        }
-
-        .knowledge-filters .result-count {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-left: auto;
         }
 
         /* Knowledge Sections */
@@ -2124,8 +2076,8 @@
 
         <!-- Filter Bar -->
         <div class="filter-bar">
-            <!-- Search -->
-            <div class="filter-section search-section">
+            <!-- Events Search -->
+            <div class="filter-section search-section" data-views="cards map timeline chart">
                 <div class="search-wrapper">
                     <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
@@ -2134,8 +2086,18 @@
                 </div>
             </div>
 
+            <!-- Knowledge Search -->
+            <div class="filter-section search-section" data-views="knowledge">
+                <div class="search-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                    <input type="search" id="knowledgeSearch" class="search-input" placeholder="Search knowledge..." aria-label="Search knowledge">
+                </div>
+            </div>
+
             <!-- Era Filters -->
-            <div class="filter-section">
+            <div class="filter-section" data-views="cards map timeline chart">
                 <span class="filter-label">Era</span>
                 <div class="era-filters">
                     <button class="era-pill active" data-period="all">All Time</button>
@@ -2147,7 +2109,7 @@
             </div>
 
             <!-- Tier Filters -->
-            <div class="filter-section">
+            <div class="filter-section" data-views="cards map timeline chart">
                 <div class="tier-filters">
                     <button class="tier-pill active" data-tier="all">All</button>
                     <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: var(--ctp-maroon);">Erasure</button>
@@ -2158,8 +2120,20 @@
                 </div>
             </div>
 
+            <!-- Driver Filters (Knowledge) -->
+            <div class="filter-section" data-views="knowledge">
+                <div class="driver-filters">
+                    <button class="driver-pill active" data-driver="all">All</button>
+                    <button class="driver-pill" data-driver="religious_ideology" style="--pill-color: var(--ctp-red);">Religious</button>
+                    <button class="driver-pill" data-driver="conquest" style="--pill-color: var(--ctp-overlay0);">Conquest</button>
+                    <button class="driver-pill" data-driver="ethnic_ideology" style="--pill-color: var(--ctp-mauve);">Ethnic</button>
+                    <button class="driver-pill" data-driver="political_ideology" style="--pill-color: var(--ctp-peach);">Political</button>
+                    <button class="driver-pill" data-driver="economic_exploitation" style="--pill-color: var(--ctp-green);">Economic</button>
+                </div>
+            </div>
+
             <!-- Denial Filter -->
-            <div class="filter-section">
+            <div class="filter-section" data-views="cards map timeline chart">
                 <select id="filterDenial" class="control-input control-small" aria-label="Filter by Denial Status">
                     <option value="all">Denial: All</option>
                     <option value="denied">🚫 Denied</option>
@@ -2214,27 +2188,6 @@
 
         <div id="knowledgeView" class="view">
             <div class="knowledge-container view-content">
-                <div class="knowledge-header">
-                    <p class="knowledge-tagline">Same forces that kill people also kill knowledge</p>
-                </div>
-
-                <!-- Knowledge Filter Bar -->
-                <div class="knowledge-filters">
-                    <div class="search-wrapper">
-                        <svg class="search-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                        <input type="search" id="knowledgeSearch" class="search-input" placeholder="Search knowledge..." aria-label="Search knowledge">
-                    </div>
-                    <div class="knowledge-filter-pills">
-                        <button class="driver-pill active" data-driver="all">All</button>
-                        <button class="driver-pill" data-driver="religious_ideology" style="--pill-color: var(--ctp-red);">Religious</button>
-                        <button class="driver-pill" data-driver="conquest" style="--pill-color: var(--ctp-overlay0);">Conquest</button>
-                        <button class="driver-pill" data-driver="ethnic_ideology" style="--pill-color: var(--ctp-mauve);">Ethnic</button>
-                        <button class="driver-pill" data-driver="political_ideology" style="--pill-color: var(--ctp-peach);">Political</button>
-                        <button class="driver-pill" data-driver="economic_exploitation" style="--pill-color: var(--ctp-green);">Economic</button>
-                    </div>
-                    <span id="knowledgeResultCount" class="result-count"></span>
-                </div>
-
                 <!-- Lost Section -->
                 <div class="knowledge-section">
                     <div class="knowledge-section-header">
