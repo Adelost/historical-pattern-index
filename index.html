@@ -11,22 +11,45 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        /* --- Design System --- */
+        /* --- Design System (Catppuccin Mocha) --- */
         :root {
-            --bg-dark: #0b1120;
-            --bg-card: rgba(30, 41, 59, 0.65);
-            --text-main: #f1f5f9;
-            --text-muted: #94a3b8;
-            --border-light: rgba(255, 255, 255, 0.08);
-            --accent: #38bdf8;
-            --tier-color: #38bdf8;
+            --bg-dark: #1e1e2e;
+            --bg-card: rgba(49, 50, 68, 0.65);
+            --text-main: #cdd6f4;
+            --text-muted: #a6adc8;
+            --border-light: rgba(205, 214, 244, 0.08);
+            --accent: #89b4fa;
+            --tier-color: #89b4fa;
+
+            /* Catppuccin Mocha palette */
+            --ctp-base: #1e1e2e;
+            --ctp-mantle: #181825;
+            --ctp-crust: #11111b;
+            --ctp-surface0: #313244;
+            --ctp-surface1: #45475a;
+            --ctp-overlay0: #6c7086;
+            --ctp-text: #cdd6f4;
+            --ctp-subtext: #a6adc8;
+            --ctp-lavender: #b4befe;
+            --ctp-blue: #89b4fa;
+            --ctp-sapphire: #74c7ec;
+            --ctp-teal: #94e2d5;
+            --ctp-green: #a6e3a1;
+            --ctp-yellow: #f9e2af;
+            --ctp-peach: #fab387;
+            --ctp-maroon: #eba0ac;
+            --ctp-red: #f38ba8;
+            --ctp-mauve: #cba6f7;
+            --ctp-pink: #f5c2e7;
+            --ctp-flamingo: #f2cdcd;
+            --ctp-rosewater: #f5e0dc;
         }
 
         /* --- Scrollytelling Intro --- */
         .intro {
             min-height: 100vh;
-            background: #000;
-            color: #fff;
+            background: var(--ctp-crust);
+            color: var(--ctp-text);
             position: relative;
         }
 
@@ -57,18 +80,18 @@
         }
 
         .intro-text .highlight {
-            color: #ef4444;
+            color: var(--ctp-red);
             font-weight: 600;
         }
 
         .intro-small {
             font-size: 0.6em;
-            color: #64748b;
+            color: var(--ctp-overlay0);
         }
 
         .intro-subtext {
             font-size: clamp(1rem, 2.5vw, 1.5rem);
-            color: #64748b;
+            color: var(--ctp-overlay0);
             margin-top: 1.5rem;
             font-style: italic;
         }
@@ -77,7 +100,7 @@
             font-size: clamp(1.75rem, 6vw, 4rem);
             font-weight: 700;
             margin: 0.25em 0;
-            background: linear-gradient(135deg, #f1f5f9, #94a3b8);
+            background: linear-gradient(135deg, var(--ctp-text), var(--ctp-subtext));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -88,7 +111,7 @@
         }
 
         .intro-cta {
-            background: #ef4444;
+            background: var(--ctp-red);
             color: white;
             border: none;
             padding: 1rem 2.5rem;
@@ -101,11 +124,11 @@
 
         .intro-cta:hover {
             transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(239, 68, 68, 0.4);
+            box-shadow: 0 8px 30px rgba(243, 139, 168, 0.4);
         }
 
         .intro-skip {
-            color: #64748b;
+            color: var(--ctp-overlay0);
             font-size: 0.85rem;
             animation: bounce 2s infinite;
         }
@@ -508,9 +531,9 @@
         .filter-group { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 
         .control-input {
-            background: #0f172a;
+            background: var(--ctp-mantle);
             color: var(--text-main);
-            border: 1px solid #334155;
+            border: 1px solid var(--ctp-surface1);
             padding: 0.5rem 1rem;
             border-radius: 6px;
             font-size: 0.85rem;
@@ -674,7 +697,7 @@
             left: 0;
             right: 0;
             height: 2px;
-            background: #334155;
+            background: var(--ctp-surface1);
         }
 
         .timeline-marker {
@@ -715,8 +738,8 @@
             top: 24px;
             left: 50%;
             transform: translateX(-50%);
-            background: #0f172a;
-            border: 1px solid #334155;
+            background: var(--ctp-mantle);
+            border: 1px solid var(--ctp-surface1);
             padding: 0.75rem 1rem;
             border-radius: 8px;
             font-size: 0.8rem;
@@ -2169,11 +2192,11 @@
                 <span class="filter-label">Type</span>
                 <div class="tier-filters">
                     <button class="tier-pill active" data-tier="all">All</button>
-                    <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: #dc2626;">Erasure</button>
-                    <button class="tier-pill" data-tier="INDUSTRIAL MEGA-EVENT" style="--pill-color: #ef4444;">Industrial</button>
-                    <button class="tier-pill" data-tier="PROFIT-DRIVEN ATTRITION" style="--pill-color: #d97706;">Profit</button>
-                    <button class="tier-pill" data-tier="CONTINENTAL COLLAPSE" style="--pill-color: #64748b;">Collapse</button>
-                    <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: #78716c;">Chaotic</button>
+                    <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: #eba0ac;">Erasure</button>
+                    <button class="tier-pill" data-tier="INDUSTRIAL MEGA-EVENT" style="--pill-color: #f38ba8;">Industrial</button>
+                    <button class="tier-pill" data-tier="PROFIT-DRIVEN ATTRITION" style="--pill-color: #f9e2af;">Profit</button>
+                    <button class="tier-pill" data-tier="CONTINENTAL COLLAPSE" style="--pill-color: #6c7086;">Collapse</button>
+                    <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: #585b70;">Chaotic</button>
                 </div>
             </div>
         </div>

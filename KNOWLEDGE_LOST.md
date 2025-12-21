@@ -24,8 +24,8 @@ Only events where:
 <!-- STATS:LOST_DRIVER_TABLE -->
 | Driver | Count | Genocide parallel |
 |--------|-------|-------------------|
+| conquest | 5 | Territorial conquest atrocities |
 | religious_ideology | 5 | Religious purification genocides |
-| conquest | 4 | Territorial conquest atrocities |
 | ethnic_ideology | 3 | Ethnic cleansing |
 | economic_exploitation | 1 | Profit-driven atrocities |
 | political_ideology | 1 | Ideological purges |
@@ -38,6 +38,7 @@ Only events where:
 <!-- STATS:LOST_DATA_TABLE -->
 | Event | Year | Driver | What was lost | Quantity |
 |-------|------|--------|---------------|----------|
+| Zoroastrian Texts (Avesta) | 330 BCE | conquest | Religious texts, scientific treatises, royal archives, astronomical records | Original Avesta reportedly 21 volumes (nasks). Only ~25% survives. |
 | Library of Carthage | 146 BCE | conquest | Punic literature, history, navigation, agriculture, Mago's treatises | 500,000 volumes (reported) |
 | Druidic Knowledge System | 50 BCE-400 | conquest | Astronomy, law, philosophy, medicine, religious practices, oral histories | Entire knowledge system of Celtic peoples |
 | Library of Alexandria | 48 BCE-642 | religious_ideology | Ancient science, literature, philosophy | 40,000-400,000 scrolls |
@@ -165,6 +166,20 @@ This is the epistemological problem: we know things were lost, but we don't know
 ---
 
 ## Cases in Detail
+
+### Zoroastrian Texts (330 BCE - 7th c. CE)
+
+- **Location**: Persepolis, Persia (modern Iran)
+- **First destruction**: Alexander burned Persepolis (330 BCE)
+- **Second destruction**: Arab conquest of Persia (7th century CE)
+- **Original scope**: 21 nasks (volumes) covering religion, law, cosmology, medicine, astronomy
+- **Surviving**: ~25% of original Avesta
+
+Zoroastrianism was the state religion of Persia for over a millennium. Its scriptures — the Avesta — were kept in royal libraries. Alexander's troops burned Persepolis, destroying the primary collection. The Arab conquest centuries later destroyed more.
+
+Zoroastrian priests preserved what they could through memorization. But the scientific treatises — astronomy, medicine, mathematics — were largely written, not memorized. Those are gone.
+
+The surviving texts are mostly liturgical. The cosmological and scientific knowledge of ancient Persia is lost.
 
 ### Silphium (~7th c. BCE - ~100 CE)
 

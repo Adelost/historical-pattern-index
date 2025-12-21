@@ -28,6 +28,20 @@
     "description": "The Inca had no writing system but used quipus — knotted strings encoding information through colors, knot types, and positions. Spanish colonizers destroyed thousands as 'works of the devil.' The few who could read them died without passing on the knowledge. About 600 quipus survive in museums. We can decode simple numerical data but the full system — possibly including histories, songs, and laws — remains undeciphered. The key died with the quipucamayocs (quipu keepers)."
   },
   {
+    "id": "zoroastrian_texts",
+    "name": "Zoroastrian Texts (Avesta)",
+    "year": -330,
+    "year_end": null,
+    "type": "cultural",
+    "driver": "conquest",
+    "driver_note": "Alexander burned Persepolis and its royal archives. Later Arab conquest destroyed more. Conquest pattern repeated.",
+    "what_lost": "Religious texts, scientific treatises, royal archives, astronomical records",
+    "quantity": "Original Avesta reportedly 21 volumes (nasks). Only ~25% survives.",
+    "recoverable": false,
+    "connected_event": null,
+    "description": "The Zoroastrian scriptures (Avesta) were kept in the royal library at Persepolis. When Alexander burned the city in 330 BCE, much was destroyed. The remaining texts were further damaged during the Arab conquest of Persia (7th century CE). The original Avesta reportedly contained 21 nasks (volumes) covering cosmology, law, medicine, and astronomy. Only about a quarter survives. Zoroastrian priests preserved what they could through memorization, but the scientific and astronomical treatises were largely lost."
+  },
+  {
     "id": "carthage",
     "name": "Library of Carthage",
     "year": -146,
