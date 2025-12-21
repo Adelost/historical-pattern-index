@@ -567,7 +567,11 @@ const App = {
                         pointRadius: DOT_STYLE.size / 2,
                         pointHoverRadius: DOT_STYLE.size / 2 * DOT_STYLE.hoverScale,
                         borderWidth: DOT_STYLE.border / 2,
-                        borderColor: DOT_STYLE.borderColor
+                        borderColor: DOT_STYLE.borderColor,
+                        // Hover glow effect (matches timeline)
+                        hoverBorderWidth: DOT_STYLE.border,
+                        hoverBorderColor: 'rgba(255,255,255,0.8)',
+                        pointHoverBackgroundColor: (ctx) => Utils.getTheme(ctx.raw?.tier).color
                     }]
                 },
                 options: {
@@ -589,22 +593,47 @@ const App = {
                     plugins: {
                         legend: { display: false },
                         tooltip: {
-                            backgroundColor: '#181825',
-                            titleColor: '#cdd6f4',
-                            bodyColor: '#a6adc8',
-                            borderColor: '#313244',
-                            borderWidth: 1,
-                            cornerRadius: 8,
-                            padding: 12,
-                            titleFont: { size: 13, weight: 600 },
-                            bodyFont: { size: 12 },
-                            callbacks: {
-                                label: (c) => c.raw.raw.name,
-                                afterLabel: (c) => [
-                                    `Deaths: ${Utils.formatNum(c.raw.raw.metrics.mortality.max)}`,
-                                    `Intensity: ${c.raw.y}%`,
-                                    `Tier: ${c.raw.tier}`
-                                ]
+                            enabled: false,
+                            external: (context) => {
+                                // Get or create tooltip element
+                                let tooltip = document.getElementById('chart-tooltip');
+                                if (!tooltip) {
+                                    tooltip = document.createElement('div');
+                                    tooltip.id = 'chart-tooltip';
+                                    tooltip.className = 'chart-tooltip';
+                                    document.body.appendChild(tooltip);
+                                }
+
+                                // Hide if no tooltip
+                                if (context.tooltip.opacity === 0) {
+                                    tooltip.style.opacity = 0;
+                                    return;
+                                }
+
+                                // Get data
+                                const dataPoint = context.tooltip.dataPoints?.[0];
+                                if (!dataPoint) return;
+
+                                const event = dataPoint.raw.raw;
+                                const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
+                                const year = `${event.period.start}–${event.period.end}`;
+                                const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
+
+                                // Build tooltip content (matches timeline style)
+                                tooltip.innerHTML = `
+                                    <div class="chart-tooltip-year">${year}</div>
+                                    <div class="chart-tooltip-name">${event.name}</div>
+                                    <div class="chart-tooltip-meta">
+                                        <span class="chart-tooltip-deaths">${deaths}</span>
+                                        <span class="chart-tooltip-tier" style="color: ${color}">${shortLabel}</span>
+                                    </div>
+                                `;
+
+                                // Position tooltip
+                                const { offsetLeft, offsetTop } = context.chart.canvas;
+                                tooltip.style.opacity = 1;
+                                tooltip.style.left = offsetLeft + context.tooltip.caretX + 'px';
+                                tooltip.style.top = offsetTop + context.tooltip.caretY - 10 + 'px';
                             }
                         }
                     },

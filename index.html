@@ -759,6 +759,52 @@
             margin-bottom: 1.5rem;
         }
 
+        /* Chart tooltip (matches timeline style) */
+        .chart-tooltip {
+            position: absolute;
+            pointer-events: none;
+            transform: translate(-50%, -100%);
+            background: var(--ctp-mantle);
+            border: 1px solid var(--ctp-surface0);
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            opacity: 0;
+            transition: opacity 0.15s;
+            z-index: 1000;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .chart-tooltip-year {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .chart-tooltip-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .chart-tooltip-meta {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        .chart-tooltip-deaths {
+            color: var(--ctp-red);
+            font-weight: 600;
+        }
+
+        .chart-tooltip-tier {
+            font-weight: 500;
+        }
+
         /* --- Expandable Row (Shared Base) --- */
         .expandable-row {
             border-bottom: 1px solid var(--border-light);
