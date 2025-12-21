@@ -580,8 +580,9 @@
 
         .timeline {
             position: relative;
-            min-height: 300px;
+            min-height: 120px;
             min-width: 100%;
+            padding-bottom: 60px;
         }
 
         .timeline-axis {
@@ -644,6 +645,25 @@
 
         .timeline-event:hover .timeline-tooltip {
             display: block;
+        }
+
+        .timeline-year-label {
+            position: absolute;
+            top: 55px;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .timeline-name-label {
+            position: absolute;
+            top: 70px;
+            font-size: 0.7rem;
+            color: var(--text-main);
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-weight: 500;
         }
 
         .timeline-info {

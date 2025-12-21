@@ -224,27 +224,24 @@ const App = {
         // Sort by start year
         const sorted = [...events].sort((a, b) => a.period.start - b.period.start);
 
-        // Calculate time range
-        const years = sorted.map(e => [e.period.start, e.period.end]).flat();
-        const minYear = Math.min(...years);
-        const maxYear = Math.max(...years);
-        const range = maxYear - minYear;
+        // Use equal spacing (like Knowledge timeline) to avoid stacking
+        const padding = 3;
+        const usableWidth = 100 - (padding * 2);
 
-        // Create axis markers
-        const markers = [];
-        const step = range > 500 ? 200 : range > 200 ? 100 : 50;
-        const startMarker = Math.ceil(minYear / step) * step;
+        // Create events with equal spacing and year labels
+        const eventHtml = sorted.map((event, index) => {
+            const x = sorted.length > 1
+                ? padding + (index / (sorted.length - 1)) * usableWidth
+                : 50;
 
-        for (let year = startMarker; year <= maxYear; year += step) {
-            const x = ((year - minYear) / range) * 100;
-            markers.push(`<div class="timeline-marker" style="left: ${x}%">${year}</div>`);
-        }
-
-        // Create events - just dots, no labels
-        const eventHtml = sorted.map(event => {
-            const x = ((event.period.start - minYear) / range) * 100;
             const { color } = Utils.getTheme(event.analysis.tier);
             const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
+
+            // Short name for label
+            let shortName = event.name.replace(/\s*\([^)]+\)/, '').trim();
+            if (shortName.length > 12) {
+                shortName = shortName.substring(0, 11) + '…';
+            }
 
             return `
                 <div class="timeline-event"
@@ -254,12 +251,13 @@ const App = {
                         <strong>${event.name}</strong><br>
                         ${event.period.start}–${event.period.end} · ${deaths} deaths
                     </div>
-                </div>`;
+                </div>
+                <span class="timeline-year-label" style="left: ${x}%;">${event.period.start}</span>
+                <span class="timeline-name-label" style="left: ${x}%;">${shortName}</span>`;
         }).join('');
 
         timeline.innerHTML = `
             <div class="timeline-axis"></div>
-            ${markers.join('')}
             ${eventHtml}
         `;
 
