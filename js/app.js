@@ -577,6 +577,9 @@ const App = {
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
+                    onHover: (evt, elements) => {
+                        evt.native.target.style.cursor = elements.length ? 'pointer' : 'default';
+                    },
                     onClick: (evt, elements) => {
                         if (elements.length > 0) {
                             const event = elements[0].element.$context.raw.raw;
