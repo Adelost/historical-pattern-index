@@ -174,6 +174,106 @@ export const CausesSection = (analysis) => {
     `;
 };
 
+// Detailed Analysis - combines causes and breakdown in one collapsible
+export const DetailedAnalysis = (analysis, breakdowns, rationales) => {
+    const signs = analysis.warning_signs || [];
+    const causes = analysis.root_causes || '';
+    const hasBreakdowns = breakdowns && Object.keys(breakdowns).length > 0;
+
+    if (!signs.length && !causes && !hasBreakdowns) return '';
+
+    const signsList = signs.map(sign => `
+        <div class="warning-sign">
+            <span class="warning-icon">⚠</span>
+            <span>${sign}</span>
+        </div>
+    `).join('');
+
+    // Build breakdown categories
+    const categoryMeta = {
+        systematic_intensity: { label: 'Systematic Intensity', color: '#ef4444' },
+        profit: { label: 'Profit Motive', color: '#a78bfa' },
+        ideology: { label: 'Ideology', color: '#38bdf8' },
+        complicity: { label: 'Complicity', color: '#4ade80' }
+    };
+
+    const formatKey = (key) => {
+        const labels = {
+            policy: 'Official Policy', state_involvement: 'State Involvement',
+            infrastructure: 'Dedicated Infrastructure', propaganda: 'Propaganda Campaign',
+            generational_targeting: 'Generational Targeting', cultural_ban: 'Cultural/Religious Ban',
+            property_seizure: 'Property Seizure', identification: 'Identification System',
+            deliberate_deprivation: 'Deliberate Deprivation', duration_over_5y: 'Duration > 5 Years',
+            direct_revenue: 'Direct Revenue', resource_extraction: 'Resource Extraction',
+            forced_labor: 'Forced Labor', economic_dependence: 'Economic Dependence',
+            market_integration: 'Market Integration', purity_ideal: 'Purity Ideal',
+            dehumanization: 'Dehumanization', mass_mobilization: 'Mass Mobilization',
+            existential_threat: 'Existential Threat', utopianism: 'Utopian Vision',
+            distance: 'Geographic Distance', benefit: 'Benefiting Population',
+            euphemisms: 'Euphemistic Language', diffused_responsibility: 'Diffused Responsibility',
+            silence: 'Institutional Silence'
+        };
+        return labels[key] || key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    };
+
+    const breakdownHtml = hasBreakdowns ? Object.entries(breakdowns).map(([category, items]) => {
+        const meta = categoryMeta[category] || { label: category, color: '#94a3b8' };
+        const rationale = rationales[category] || '';
+
+        const itemsList = Object.entries(items).map(([key, value]) => `
+            <div class="breakdown-item ${value ? 'checked' : ''}">
+                <span class="breakdown-check">${value ? '✓' : '✗'}</span>
+                <span>${formatKey(key)}</span>
+            </div>
+        `).join('');
+
+        return `
+            <div class="breakdown-category">
+                <div class="breakdown-category-header" style="--cat-color: ${meta.color}">
+                    ${meta.label}
+                </div>
+                <div class="breakdown-items">
+                    ${itemsList}
+                </div>
+                ${rationale ? `<div class="breakdown-rationale">${rationale}</div>` : ''}
+            </div>
+        `;
+    }).join('') : '';
+
+    return `
+        <details class="detailed-analysis">
+            <summary class="analysis-toggle">
+                <span>Detailed Analysis</span>
+                <svg class="chevron" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </summary>
+            <div class="analysis-content">
+                ${signs.length ? `
+                    <div class="analysis-section">
+                        <div class="analysis-label">Warning Signs</div>
+                        ${signsList}
+                    </div>
+                ` : ''}
+                ${causes ? `
+                    <div class="analysis-section">
+                        <div class="analysis-label">Root Causes</div>
+                        <p>${causes}</p>
+                    </div>
+                ` : ''}
+                ${breakdownHtml ? `
+                    <div class="analysis-section">
+                        <div class="analysis-label">Score Breakdown</div>
+                        <div class="breakdown-content">
+                            ${breakdownHtml}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+        </details>
+    `;
+};
+
 export const Card = (event) => {
     const { color } = Utils.getTheme(event.analysis.tier);
     const deaths = event.metrics.mortality;
@@ -293,6 +393,8 @@ export const TableRow = (event) => {
     </div>
     <div class="table-row-details" data-for="${event.id}">
         <div class="details-inner">
+            ${event.description ? `<p class="details-description">${event.description}</p>` : ''}
+
             <div class="details-scores">
                 ${ScoreBar('Systematic', scores.systematic_intensity, 'systematic')}
                 ${ScoreBar('Profit', scores.profit, 'profit')}
@@ -300,14 +402,14 @@ export const TableRow = (event) => {
                 ${ScoreBar('Complicity', scores.complicity, 'complicity')}
             </div>
 
-            ${CausesSection(event.analysis)}
-
-            ${BreakdownSection(breakdowns, rationales)}
-
             <div class="details-note">
                 "${event.analysis.pattern_note}"
             </div>
+
             ${event.erasure_note ? `<div class="details-erasure"><strong>Beyond death toll:</strong> ${event.erasure_note}</div>` : ''}
+
+            ${DetailedAnalysis(event.analysis, breakdowns, rationales)}
+
             ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">Read more on Wikipedia →</a>` : ''}
         </div>
     </div>`;

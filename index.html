@@ -994,10 +994,19 @@
             gap: 1rem;
         }
 
+        .details-description {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            margin: 0 0 1.25rem 0;
+            padding: 0 1rem;
+        }
+
         .details-scores {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
+            margin-bottom: 1rem;
         }
 
         .details-note {
@@ -1028,6 +1037,61 @@
 
         .details-wiki:hover {
             text-decoration: underline;
+        }
+
+        /* Detailed Analysis Collapse */
+        .detailed-analysis {
+            margin: 1rem 0;
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .analysis-toggle {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .analysis-toggle:hover {
+            color: var(--text-main);
+        }
+
+        .detailed-analysis[open] .analysis-toggle .chevron {
+            transform: rotate(180deg);
+        }
+
+        .analysis-content {
+            padding: 0 1rem 1rem;
+        }
+
+        .analysis-section {
+            margin-bottom: 1.25rem;
+        }
+
+        .analysis-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .analysis-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .analysis-section p {
+            font-size: 0.85rem;
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
         }
 
         .table-empty {
