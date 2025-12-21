@@ -18,7 +18,7 @@ The same drivers that destroy knowledge also threaten it:
 | religious_ideology | Inca Quipus, Library of Alexandria | Timbuktu Manuscripts | Nag Hammadi Library |
 | ethnic_ideology | Tasmanian Languages, Yiddish Libraries and Publishing | Armenian Manuscripts (Matenadaran), Sarajevo Haggadah | — |
 | political_ideology | Institut für Sexualwissenschaft | Tibetan Buddhist Texts | — |
-| conquest | Druidic Knowledge System, Zoroastrian Texts (Avesta) | Iraqi Jewish Archive | Dead Sea Scrolls |
+| conquest | Druidic Knowledge System, Zoroastrian Texts (Avesta) | Iraqi Jewish Archive | Mesopotamian Cuneiform Tablets, Dead Sea Scrolls |
 | economic_exploitation | Silphium Extinction | — | — |
 <!-- /STATS:SAVED_DRIVER_SUMMARY -->
 
@@ -46,6 +46,7 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 <!-- STATS:SAVED_RECOVERED_TABLE -->
 | Event | Hidden | Found | Driver | How found |
 |-------|--------|-------|--------|-----------|
+| Mesopotamian Cuneiform Tablets | Ancient | 1850 | conquest | Clay tablets preserved by fire and buria... |
 | Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer found sealed jar while d... |
 | Dead Sea Scrolls | ~73 CE | 1947 | conquest | Bedouin shepherd found first scrolls in ... |
 <!-- /STATS:SAVED_RECOVERED_TABLE -->
@@ -53,6 +54,21 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 ---
 
 ## Cases
+
+### Mesopotamian Cuneiform Tablets (buried 612 BCE, found 1850s)
+
+**Threat**: When Nineveh fell to the Babylonians and Medes in 612 BCE, the Library of Ashurbanipal — the greatest library of the ancient world — was destroyed. The palace collapsed, burying 30,000+ clay tablets under rubble.
+
+**What was at risk**: The Epic of Gilgamesh. Sumerian literature. Babylonian astronomy and mathematics. Legal codes. Medical texts. 3,000 years of Mesopotamian civilization.
+
+**How survived**: Clay tablets, unlike papyrus, are preserved by fire — they become harder. The rubble protected them from weathering. They lay buried for 2,500 years.
+
+**Recovery**: British archaeologists (Layard, Rassam) excavated Nineveh in the 1840s-50s. Scholars (Rawlinson, Hincks) deciphered cuneiform. In 1872, George Smith translated the Flood narrative from Gilgamesh — a sensation that predated the Biblical account.
+
+**What we learned**: Oldest known literature. Mathematical astronomy. Legal traditions that influenced later codes. Evidence of ancient flood narratives.
+
+> "I am Ashurbanipal... I collected tablets and had them written... for the sake of distant days."
+> — Ashurbanipal's colophon
 
 ### Dead Sea Scrolls (hidden ~68 CE, found 1947)
 

@@ -1,5 +1,22 @@
 [
   {
+    "id": "mesopotamian_tablets",
+    "name": "Mesopotamian Cuneiform Tablets",
+    "year": 1850,
+    "year_end": null,
+    "type": "cultural",
+    "driver": "conquest",
+    "driver_note": "Nineveh destroyed by Babylonians/Medes (612 BCE). Library buried in ruins. Clay tablets survived where papyrus would have burned.",
+    "threat": "Library of Ashurbanipal destroyed when Nineveh fell. 30,000+ tablets buried under rubble for 2,500 years.",
+    "quantity_threatened": "Tens of thousands of tablets",
+    "quantity_lost": "Some fragmentary, many still untranslated. But core texts survived.",
+    "saved_by": "hidden_and_recovered",
+    "saved_how": "Clay tablets preserved by fire and burial. Excavated by Layard, Rassam and others (1840s-1850s). Cuneiform deciphered by Rawlinson, Hincks, and others.",
+    "connected_event": null,
+    "what_remains_at_risk": "Massive backlog of untranslated tablets. Ongoing looting of Iraqi sites. ISIS destroyed some sites but tablets in museums are safe.",
+    "sources": ["The Epic of Gilgamesh (Andrew George translation)", "The Buried Book (David Damrosch)"]
+  },
+  {
     "id": "dead_sea_scrolls",
     "name": "Dead Sea Scrolls",
     "year": 1947,
