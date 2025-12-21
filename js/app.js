@@ -16,6 +16,7 @@ const App = {
         markers: [],
         currentView: localStorage.getItem('hpi-view') || 'cards',
         filters: { period: 'all', tier: 'all', denial: 'all' },
+        search: '',
         sort: JSON.parse(localStorage.getItem('hpi-sort')) || { field: 'period', direction: 'asc' }
     },
 
@@ -50,6 +51,15 @@ const App = {
     },
 
     bindEvents() {
+        // Search Input
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                this.state.search = e.target.value.toLowerCase().trim();
+                this.render();
+            });
+        }
+
         // Filter Changes
         ['filterPeriod', 'filterTier', 'filterDenial'].forEach(id => {
             document.getElementById(id).addEventListener('change', (e) => {
@@ -285,7 +295,25 @@ const App = {
     },
 
     getFilteredEvents() {
-        return this.state.events.filter(e => Utils.matches(e, this.state.filters));
+        return this.state.events.filter(e => {
+            // Apply filters
+            if (!Utils.matches(e, this.state.filters)) return false;
+
+            // Apply search
+            if (this.state.search) {
+                const searchFields = [
+                    e.name,
+                    e.geography.region,
+                    e.geography.country || '',
+                    e.analysis.tier,
+                    e.analysis.pattern_note || ''
+                ].join(' ').toLowerCase();
+
+                return searchFields.includes(this.state.search);
+            }
+
+            return true;
+        });
     },
 
     sortEvents(events) {
