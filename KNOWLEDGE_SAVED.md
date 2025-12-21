@@ -15,7 +15,7 @@ The same drivers that destroy knowledge also threaten it:
 <!-- STATS:SAVED_DRIVER_SUMMARY -->
 | Driver | Lost | Rescued | Recovered |
 |--------|------|---------|-----------|
-| religious_ideology | Inca Quipus, Library of Alexandria | Timbuktu Manuscripts | Nag Hammadi Library |
+| religious_ideology | Inca Quipus, Library of Alexandria | Timbuktu Manuscripts | Egyptian Hieroglyphics, Nag Hammadi Library |
 | ethnic_ideology | Tasmanian Languages, Yiddish Libraries and Publishing | Armenian Manuscripts (Matenadaran), Sarajevo Haggadah | — |
 | political_ideology | Institut für Sexualwissenschaft | Tibetan Buddhist Texts | — |
 | conquest | Druidic Knowledge System, Zoroastrian Texts (Avesta) | Iraqi Jewish Archive | Mesopotamian Cuneiform Tablets, Dead Sea Scrolls |
@@ -46,6 +46,7 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 <!-- STATS:SAVED_RECOVERED_TABLE -->
 | Event | Hidden | Found | Driver | How found |
 |-------|--------|-------|--------|-----------|
+| Egyptian Hieroglyphics | ~394 CE | 1822 | religious_ideology | Rosetta Stone found during Napoleon's Eg... |
 | Mesopotamian Cuneiform Tablets | Ancient | 1850 | conquest | Clay tablets preserved by fire and buria... |
 | Nag Hammadi Library | ~367 CE | 1945 | religious_ideology | Egyptian farmer found sealed jar while d... |
 | Dead Sea Scrolls | ~73 CE | 1947 | conquest | Bedouin shepherd found first scrolls in ... |
@@ -54,6 +55,21 @@ What made the difference? Resistance. Exile. Intervention. Sometimes a goat.
 ---
 
 ## Cases
+
+### Egyptian Hieroglyphics (died 394 CE, deciphered 1822)
+
+**Threat**: When Christianity became Rome's state religion, Egyptian temples were closed. Emperor Theodosius I banned pagan worship (391 CE). The last known hieroglyphic inscription dates to 394 CE. The priests who could read them died without training successors.
+
+**What was at risk**: 3,000 years of Egyptian civilization. The pyramids, temples, and obelisks stood covered in writing no one could read. Egypt's own history became mute.
+
+**The silence**: For 1,400 years, hieroglyphics were indecipherable. Scholars thought they were mystical symbols, not a language. Egypt's past was locked behind an unbreakable code.
+
+**Recovery**: Napoleon's soldiers found the Rosetta Stone in 1799 — the same text in hieroglyphics, Demotic, and Greek. Jean-François Champollion, working from the Greek, cracked the code in 1822. He reportedly fainted when he realized he could read the names of pharaohs.
+
+**What we learned**: Egyptian history from primary sources. Religious texts (Book of the Dead). Medical, mathematical, and astronomical knowledge. Love poetry. Administrative records. The full span of human life in ancient Egypt.
+
+> "Je tiens l'affaire!" ("I've got it!")
+> — Champollion, 1822
 
 ### Mesopotamian Cuneiform Tablets (buried 612 BCE, found 1850s)
 

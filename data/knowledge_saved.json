@@ -1,5 +1,22 @@
 [
   {
+    "id": "egyptian_hieroglyphics",
+    "name": "Egyptian Hieroglyphics",
+    "year": 1822,
+    "year_end": null,
+    "type": "cultural",
+    "driver": "religious_ideology",
+    "driver_note": "Christianity suppressed Egyptian religion. Last hieroglyphic inscription 394 CE. Language died with the priests.",
+    "threat": "Egyptian religion banned under Theodosius I (391 CE). Temples closed. Priests who could read hieroglyphics died without successors. 1,400 years of silence.",
+    "quantity_threatened": "3,000 years of Egyptian civilization",
+    "quantity_lost": "Oral traditions, religious practices, pronunciation. But texts on stone survived unread.",
+    "saved_by": "hidden_and_recovered",
+    "saved_how": "Rosetta Stone found during Napoleon's Egyptian campaign (1799). Jean-François Champollion deciphered hieroglyphics (1822) using Greek parallel text.",
+    "connected_event": null,
+    "what_remains_at_risk": "Fully recovered. Hieroglyphics now taught in universities. Thousands of texts translated.",
+    "sources": ["The Rosetta Stone (British Museum)", "Cracking Codes: The Rosetta Stone (Richard Parkinson)"]
+  },
+  {
     "id": "mesopotamian_tablets",
     "name": "Mesopotamian Cuneiform Tablets",
     "year": 1850,

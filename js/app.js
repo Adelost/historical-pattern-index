@@ -281,10 +281,10 @@ const App = {
                 document.getElementById('timelineInfoMeta').innerHTML =
                     `${event.geography.region} · ${event.period.start}–${event.period.end} · <strong>${deaths} deaths</strong>`;
                 document.getElementById('timelineInfoScores').innerHTML = `
-                    <span class="score-pill" style="border-left: 3px solid #ef4444;">Systematic ${scores.systematic_intensity}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #a78bfa;">Profit ${scores.profit}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #38bdf8;">Ideology ${scores.ideology}%</span>
-                    <span class="score-pill" style="border-left: 3px solid #4ade80;">Complicity ${scores.complicity}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #f38ba8;">Systematic ${scores.systematic_intensity}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #cba6f7;">Profit ${scores.profit}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #89b4fa;">Ideology ${scores.ideology}%</span>
+                    <span class="score-pill" style="border-left: 3px solid #a6e3a1;">Complicity ${scores.complicity}%</span>
                 `;
                 document.getElementById('timelineInfoNote').textContent = `"${event.analysis.pattern_note}"`;
                 infoPanel.classList.add('visible');
@@ -526,9 +526,9 @@ const App = {
                     plugins: {
                         legend: { display: false },
                         tooltip: {
-                            backgroundColor: '#0f172a',
-                            titleColor: '#f1f5f9',
-                            bodyColor: '#cbd5e1',
+                            backgroundColor: '#181825',  // ctp-mantle
+                            titleColor: '#cdd6f4',       // ctp-text
+                            bodyColor: '#a6adc8',        // ctp-subtext
                             callbacks: {
                                 label: (c) => c.raw.raw.name,
                                 afterLabel: (c) => [
@@ -542,16 +542,16 @@ const App = {
                     scales: {
                         x: {
                             type: 'logarithmic',
-                            grid: { color: '#334155' },
-                            ticks: { color: '#64748b' },
-                            title: { display: true, text: 'Mortality (Log Scale)', color: '#94a3b8' }
+                            grid: { color: '#45475a' },   // ctp-surface1
+                            ticks: { color: '#6c7086' },  // ctp-overlay0
+                            title: { display: true, text: 'Mortality (Log Scale)', color: '#a6adc8' }
                         },
                         y: {
                             min: 0,
                             max: 105,
-                            grid: { color: '#334155' },
-                            ticks: { color: '#64748b' },
-                            title: { display: true, text: 'Systematic Intensity (%)', color: '#94a3b8' }
+                            grid: { color: '#45475a' },   // ctp-surface1
+                            ticks: { color: '#6c7086' },  // ctp-overlay0
+                            title: { display: true, text: 'Systematic Intensity (%)', color: '#a6adc8' }
                         }
                     }
                 }

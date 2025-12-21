@@ -83,12 +83,12 @@ const formatKey = (key) => {
     return labels[key] || key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 };
 
-// Category labels and colors
+// Category labels and colors (Catppuccin Mocha)
 const categoryMeta = {
-    systematic_intensity: { label: 'Systematic Intensity', color: '#ef4444' },
-    profit: { label: 'Profit Motive', color: '#a78bfa' },
-    ideology: { label: 'Ideology', color: '#38bdf8' },
-    complicity: { label: 'Complicity', color: '#4ade80' }
+    systematic_intensity: { label: 'Systematic Intensity', color: '#f38ba8' },  // red
+    profit: { label: 'Profit Motive', color: '#cba6f7' },                       // mauve
+    ideology: { label: 'Ideology', color: '#89b4fa' },                          // blue
+    complicity: { label: 'Complicity', color: '#a6e3a1' }                       // green
 };
 
 // Breakdown checklist component
@@ -189,12 +189,12 @@ export const DetailedAnalysis = (analysis, breakdowns, rationales) => {
         </div>
     `).join('');
 
-    // Build breakdown categories
+    // Build breakdown categories (Catppuccin Mocha)
     const categoryMeta = {
-        systematic_intensity: { label: 'Systematic Intensity', color: '#ef4444' },
-        profit: { label: 'Profit Motive', color: '#a78bfa' },
-        ideology: { label: 'Ideology', color: '#38bdf8' },
-        complicity: { label: 'Complicity', color: '#4ade80' }
+        systematic_intensity: { label: 'Systematic Intensity', color: '#f38ba8' },  // red
+        profit: { label: 'Profit Motive', color: '#cba6f7' },                       // mauve
+        ideology: { label: 'Ideology', color: '#89b4fa' },                          // blue
+        complicity: { label: 'Complicity', color: '#a6e3a1' }                       // green
     };
 
     const formatKey = (key) => {

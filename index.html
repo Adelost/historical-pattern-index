@@ -175,11 +175,11 @@
         * { box-sizing: border-box; }
 
         body {
-            background-color: var(--bg-dark);
+            background-color: var(--ctp-base);
             background-image:
-                linear-gradient(rgba(11, 17, 32, 0.95), rgba(11, 17, 32, 0.9)),
-                linear-gradient(#1e293b 1px, transparent 1px),
-                linear-gradient(90deg, #1e293b 1px, transparent 1px);
+                linear-gradient(rgba(17, 17, 27, 0.95), rgba(17, 17, 27, 0.9)),
+                linear-gradient(var(--ctp-surface0) 1px, transparent 1px),
+                linear-gradient(90deg, var(--ctp-surface0) 1px, transparent 1px);
             background-size: 100% 100%, 40px 40px, 40px 40px;
             color: var(--text-main);
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -194,7 +194,7 @@
 
         /* --- Typography --- */
         header { text-align: center; margin-bottom: 2rem; margin-top: 2rem; }
-        h1 { font-size: 2.5rem; margin: 0; letter-spacing: -0.03em; background: linear-gradient(to right, #f1f5f9, #94a3b8); -webkit-background-clip: text; color: transparent; }
+        h1 { font-size: 2.5rem; margin: 0; letter-spacing: -0.03em; background: linear-gradient(to right, var(--ctp-text), var(--ctp-subtext)); -webkit-background-clip: text; color: transparent; }
         .subtitle { color: var(--text-muted); font-size: 1rem; font-weight: 300; margin-top: 0.5rem; }
 
         /* --- Insights Banner --- */
@@ -216,7 +216,7 @@
         .insight-card .number {
             font-size: 2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--accent), #a78bfa);
+            background: linear-gradient(135deg, var(--ctp-blue), var(--ctp-mauve));
             -webkit-background-clip: text;
             color: transparent;
         }
@@ -228,12 +228,12 @@
         }
 
         .insight-card.highlight {
-            border-color: #ef4444;
-            background: rgba(239, 68, 68, 0.1);
+            border-color: var(--ctp-red);
+            background: rgba(243, 139, 168, 0.1);
         }
 
         .insight-card.highlight .number {
-            background: linear-gradient(135deg, #ef4444, #f97316);
+            background: linear-gradient(135deg, var(--ctp-red), var(--ctp-peach));
             -webkit-background-clip: text;
         }
 
@@ -581,16 +581,16 @@
         }
 
         .leaflet-popup-content-wrapper {
-            background: #1e293b;
+            background: var(--ctp-surface0);
             color: var(--text-main);
             border-radius: 8px;
         }
 
-        .leaflet-popup-tip { background: #1e293b; }
+        .leaflet-popup-tip { background: var(--ctp-surface0); }
 
         .map-popup h4 { margin: 0 0 0.5rem 0; font-size: 1rem; }
         .map-popup .meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-        .map-popup .deaths { font-size: 0.9rem; font-weight: 600; color: #ef4444; }
+        .map-popup .deaths { font-size: 0.9rem; font-weight: 600; color: var(--ctp-red); }
 
         /* --- Timeline --- */
         .timeline-container {
@@ -963,8 +963,8 @@
         .denied-tag {
             font-size: 0.6rem;
             font-weight: 700;
-            color: #ef4444;
-            background: rgba(239, 68, 68, 0.15);
+            color: var(--ctp-red);
+            background: rgba(243, 139, 168, 0.15);
             padding: 0.15rem 0.4rem;
             border-radius: 3px;
         }
@@ -977,7 +977,7 @@
         .cell-deaths {
             font-size: 0.95rem;
             font-weight: 700;
-            color: #ef4444;
+            color: var(--ctp-red);
         }
 
         .cell-region {
@@ -1059,7 +1059,7 @@
 
         .details-note {
             font-size: 0.9rem;
-            color: #cbd5e1;
+            color: var(--ctp-subtext);
             font-style: italic;
             line-height: 1.6;
             padding: 1rem;
@@ -1067,13 +1067,13 @@
 
         .details-erasure {
             font-size: 0.85rem;
-            color: #f59e0b;
+            color: var(--ctp-yellow);
             line-height: 1.5;
             margin: 0.75rem 1rem;
             padding: 0.75rem 1rem;
-            background: rgba(245, 158, 11, 0.1);
+            background: rgba(249, 226, 175, 0.1);
             border-radius: 6px;
-            border-left: 3px solid #f59e0b;
+            border-left: 3px solid var(--ctp-yellow);
         }
 
         .details-wiki {
@@ -1214,7 +1214,7 @@
         .death-count {
             font-size: 1.5rem;
             font-weight: 800;
-            color: #ef4444;
+            color: var(--ctp-red);
         }
 
         .death-label {
@@ -1291,7 +1291,7 @@
 
         .score-bar {
             height: 6px;
-            background: #1e293b;
+            background: var(--ctp-mantle);
             border-radius: 3px;
             overflow: hidden;
         }
@@ -1302,10 +1302,10 @@
             transition: width 0.5s ease-out;
         }
 
-        .score-fill.systematic { background: linear-gradient(90deg, #f97316, #ef4444); }
-        .score-fill.profit { background: linear-gradient(90deg, #a78bfa, #8b5cf6); }
-        .score-fill.ideology { background: linear-gradient(90deg, #38bdf8, #0ea5e9); }
-        .score-fill.complicity { background: linear-gradient(90deg, #4ade80, #22c55e); }
+        .score-fill.systematic { background: linear-gradient(90deg, var(--ctp-peach), var(--ctp-red)); }
+        .score-fill.profit { background: linear-gradient(90deg, var(--ctp-lavender), var(--ctp-mauve)); }
+        .score-fill.ideology { background: linear-gradient(90deg, var(--ctp-sapphire), var(--ctp-blue)); }
+        .score-fill.complicity { background: linear-gradient(90deg, var(--ctp-teal), var(--ctp-green)); }
 
         /* Metrics */
         .metrics-row {
@@ -1318,8 +1318,8 @@
         .metric { font-size: 0.75rem; color: var(--text-muted); }
         .metric b { display: block; font-size: 1rem; color: var(--text-main); font-weight: 700; margin-bottom: 2px; }
 
-        .note { font-size: 0.85rem; color: #cbd5e1; font-style: italic; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem; }
-        .erasure-note { font-size: 0.85rem; color: #f59e0b; line-height: 1.5; margin-top: 0.75rem; padding: 0.5rem; background: rgba(245, 158, 11, 0.1); border-radius: 4px; }
+        .note { font-size: 0.85rem; color: var(--ctp-subtext); font-style: italic; line-height: 1.5; border-top: 1px solid var(--border-light); padding-top: 0.75rem; }
+        .erasure-note { font-size: 0.85rem; color: var(--ctp-yellow); line-height: 1.5; margin-top: 0.75rem; padding: 0.5rem; background: rgba(249, 226, 175, 0.1); border-radius: 4px; }
 
         .wiki-link {
             display: inline-block;
@@ -1346,13 +1346,13 @@
         }
 
         .denial-badge.denied {
-            background: rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
+            background: rgba(243, 139, 168, 0.2);
+            color: var(--ctp-maroon);
         }
 
         .denial-badge.partial {
-            background: rgba(234, 179, 8, 0.2);
-            color: #fcd34d;
+            background: rgba(249, 226, 175, 0.2);
+            color: var(--ctp-yellow);
         }
 
         .status-badge {
@@ -1365,8 +1365,8 @@
         }
 
         .status-badge.ongoing {
-            background: rgba(59, 130, 246, 0.2);
-            color: #93c5fd;
+            background: rgba(137, 180, 250, 0.2);
+            color: var(--ctp-blue);
             animation: pulse 2s infinite;
         }
 
@@ -1458,11 +1458,11 @@
         }
 
         .breakdown-item.checked .breakdown-check {
-            color: #4ade80;
+            color: var(--ctp-green);
         }
 
         .breakdown-item:not(.checked) .breakdown-check {
-            color: #64748b;
+            color: var(--ctp-overlay0);
         }
 
         .breakdown-rationale {
@@ -1487,7 +1487,7 @@
             justify-content: space-between;
             cursor: pointer;
             font-size: 0.8rem;
-            color: #fbbf24;
+            color: var(--ctp-yellow);
             padding: 0.5rem;
             border-radius: 6px;
             transition: all 0.2s;
@@ -1498,7 +1498,7 @@
         .causes-toggle::-webkit-details-marker { display: none; }
 
         .causes-toggle:hover {
-            background: rgba(251, 191, 36, 0.1);
+            background: rgba(249, 226, 175, 0.1);
         }
 
         .causes-toggle .chevron {
@@ -1526,8 +1526,8 @@
         }
 
         .warning-signs {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid rgba(251, 191, 36, 0.2);
+            background: rgba(249, 226, 175, 0.1);
+            border: 1px solid rgba(249, 226, 175, 0.2);
             border-radius: 8px;
             padding: 0.75rem;
         }
@@ -1546,12 +1546,12 @@
         }
 
         .warning-icon {
-            color: #fbbf24;
+            color: var(--ctp-yellow);
             flex-shrink: 0;
         }
 
         .root-causes {
-            background: rgba(148, 163, 184, 0.1);
+            background: rgba(166, 173, 200, 0.1);
             border-radius: 8px;
             padding: 0.75rem;
         }
@@ -1572,9 +1572,9 @@
 
         /* Error & Loading */
         .error-message {
-            background: rgba(239, 68, 68, 0.1);
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            color: #fca5a5;
+            background: rgba(243, 139, 168, 0.1);
+            border: 1px solid rgba(243, 139, 168, 0.3);
+            color: var(--ctp-maroon);
             padding: 2rem;
             border-radius: 12px;
             text-align: center;
@@ -1706,7 +1706,7 @@
 
             .mobile-deaths {
                 display: inline;
-                color: #ef4444;
+                color: var(--ctp-red);
                 font-weight: 700;
                 margin-left: auto;
             }
@@ -1763,8 +1763,8 @@
         }
 
         .knowledge-count {
-            background: rgba(239, 68, 68, 0.2);
-            color: #ef4444;
+            background: rgba(243, 139, 168, 0.2);
+            color: var(--ctp-red);
             padding: 0.25rem 0.75rem;
             border-radius: 100px;
             font-size: 0.85rem;
@@ -1821,8 +1821,8 @@
         }
 
         .knowledge-count.saved {
-            background: rgba(34, 197, 94, 0.2);
-            color: #22c55e;
+            background: rgba(166, 227, 161, 0.2);
+            color: var(--ctp-green);
         }
 
         /* Timeline */
@@ -1887,12 +1887,12 @@
             transform: translateX(-50%);
         }
 
-        /* Driver colors */
-        .driver-religious { background: #ef4444; color: #ef4444; }
-        .driver-conquest { background: #64748b; color: #64748b; }
-        .driver-ethnic { background: #a855f7; color: #a855f7; }
-        .driver-political { background: #f97316; color: #f97316; }
-        .driver-economic { background: #22c55e; color: #22c55e; }
+        /* Driver colors - Catppuccin Mocha */
+        .driver-religious { background: var(--ctp-red); color: var(--ctp-red); }
+        .driver-conquest { background: var(--ctp-overlay0); color: var(--ctp-overlay0); }
+        .driver-ethnic { background: var(--ctp-mauve); color: var(--ctp-mauve); }
+        .driver-political { background: var(--ctp-peach); color: var(--ctp-peach); }
+        .driver-economic { background: var(--ctp-green); color: var(--ctp-green); }
 
         /* Knowledge Cards */
         .knowledge-cards {
@@ -2120,19 +2120,19 @@
                 </summary>
                 <div class="scores-grid">
                     <div class="score-explain">
-                        <h4><span class="dot" style="background: #ef4444;"></span>Systematic Intensity</h4>
+                        <h4><span class="dot" style="background: var(--ctp-red);"></span>Systematic Intensity</h4>
                         <p>Organization, infrastructure, state involvement. How bureaucratically planned was it?</p>
                     </div>
                     <div class="score-explain">
-                        <h4><span class="dot" style="background: #a78bfa;"></span>Profit Motive</h4>
+                        <h4><span class="dot" style="background: var(--ctp-mauve);"></span>Profit Motive</h4>
                         <p>Economic extraction as primary driver. Was wealth the goal?</p>
                     </div>
                     <div class="score-explain">
-                        <h4><span class="dot" style="background: #38bdf8;"></span>Ideology</h4>
+                        <h4><span class="dot" style="background: var(--ctp-blue);"></span>Ideology</h4>
                         <p>Ethnic, religious, or political "purification" as goal. Was purity the vision?</p>
                     </div>
                     <div class="score-explain">
-                        <h4><span class="dot" style="background: #4ade80;"></span>Complicity</h4>
+                        <h4><span class="dot" style="background: var(--ctp-green);"></span>Complicity</h4>
                         <p>How society enabled it. Did ordinary people benefit or look away?</p>
                     </div>
                 </div>
@@ -2262,11 +2262,11 @@
                 <div class="knowledge-header">
                     <p class="knowledge-tagline">Same forces that kill people also kill knowledge</p>
                     <div class="knowledge-legend">
-                        <span class="legend-item"><span class="legend-dot" style="background: #ef4444;"></span>Religious</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: #64748b;"></span>Conquest</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: #a855f7;"></span>Ethnic</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: #f97316;"></span>Political</span>
-                        <span class="legend-item"><span class="legend-dot" style="background: #22c55e;"></span>Economic</span>
+                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-red);"></span>Religious</span>
+                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-overlay0);"></span>Conquest</span>
+                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-mauve);"></span>Ethnic</span>
+                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-peach);"></span>Political</span>
+                        <span class="legend-item"><span class="legend-dot" style="background: var(--ctp-green);"></span>Economic</span>
                     </div>
                 </div>
 
@@ -2295,7 +2295,7 @@
 
         <footer>
             <p>Open-source project. <a href="https://github.com/adelost/historical-pattern-index">GitHub</a> · <a href="https://github.com/adelost/historical-pattern-index/blob/master/METHODOLOGY.md">Methodology</a></p>
-            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: #64748b;">Data remembers what narrative forgets.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--ctp-overlay0);">Data remembers what narrative forgets.</p>
         </footer>
     </div><!-- /mainContent -->
 
