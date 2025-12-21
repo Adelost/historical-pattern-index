@@ -3,7 +3,7 @@
  */
 
 import { Utils, DRIVERS, DOT_STYLE } from './utils.js';
-import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard, EventTooltip } from './components.js';
+import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard, EventTooltip, Dot } from './components.js';
 
 // --- APP LOGIC (State & Effects) ---
 const App = {
@@ -11,7 +11,6 @@ const App = {
         events: [],
         knowledgeLost: [],
         knowledgeSaved: [],
-        chart: null,
         map: null,
         markers: [],
         currentView: localStorage.getItem('hpi-view') || 'cards',
@@ -263,10 +262,7 @@ const App = {
 
             return `
                 <span class="timeline-year" style="left: ${x}px;">${event.period.start}</span>
-                <div class="timeline-dot"
-                     style="left: ${x}px; background: ${color};"
-                     data-id="${event.id}">
-                </div>
+                ${Dot({ id: event.id, color, x, unit: 'px' })}
                 <span class="timeline-label" style="left: ${x}px;">${shortName}</span>`;
         }).join('');
 
@@ -544,130 +540,137 @@ const App = {
     },
 
     updateChart(events) {
-        const ctx = document.getElementById('hpiChart').getContext('2d');
-        // Filter out events with unknown/zero deaths - they can't be meaningfully plotted on mortality axis
+        const container = document.getElementById('chartContainer');
+
+        // Filter out events with unknown/zero deaths
         const chartEvents = events.filter(e => e.metrics.mortality.max > 0);
-        const data = chartEvents.map(e => ({
-            x: e.metrics.mortality.max,
-            y: e.metrics.scores.systematic_intensity,
-            tier: e.analysis.tier,
-            raw: e
-        }));
 
-        if (this.state.chart) {
-            this.state.chart.data.datasets[0].data = data;
-            this.state.chart.update();
-        } else {
-            this.state.chart = new Chart(ctx, {
-                type: 'scatter',
-                data: {
-                    datasets: [{
-                        data: data,
-                        backgroundColor: (ctx) => Utils.getTheme(ctx.raw?.tier).color,
-                        pointRadius: DOT_STYLE.size / 2,
-                        pointHoverRadius: DOT_STYLE.size / 2 * DOT_STYLE.hoverScale,
-                        borderWidth: DOT_STYLE.border / 2,
-                        borderColor: DOT_STYLE.borderColor,
-                        // Hover glow effect (matches timeline)
-                        hoverBorderWidth: DOT_STYLE.border,
-                        hoverBorderColor: 'rgba(255,255,255,0.8)',
-                        pointHoverBackgroundColor: (ctx) => Utils.getTheme(ctx.raw?.tier).color
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    onHover: (evt, elements) => {
-                        evt.native.target.style.cursor = elements.length ? 'pointer' : 'default';
-                    },
-                    onClick: (evt, elements) => {
-                        if (elements.length > 0) {
-                            const event = elements[0].element.$context.raw.raw;
-                            this.switchView('cards');
-                            setTimeout(() => {
-                                const row = document.querySelector(`.table-row[data-id="${event.id}"]`);
-                                if (row) {
-                                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                    row.click();
-                                }
-                            }, 100);
-                        }
-                    },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            enabled: false,
-                            external: (context) => {
-                                // Get or create tooltip element
-                                let tooltip = document.getElementById('chart-tooltip');
-                                if (!tooltip) {
-                                    tooltip = document.createElement('div');
-                                    tooltip.id = 'chart-tooltip';
-                                    tooltip.className = 'chart-tooltip';
-                                    document.body.appendChild(tooltip);
-                                }
+        // Chart dimensions
+        const margin = { top: 20, right: 30, bottom: 50, left: 60 };
+        const width = container.clientWidth;
+        const height = container.clientHeight || 400;
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
 
-                                // Hide if no tooltip
-                                if (context.tooltip.opacity === 0) {
-                                    tooltip.style.opacity = 0;
-                                    return;
-                                }
+        // Log scale for X axis (mortality)
+        const xMin = Math.min(...chartEvents.map(e => e.metrics.mortality.max)) * 0.5;
+        const xMax = Math.max(...chartEvents.map(e => e.metrics.mortality.max)) * 1.5;
+        const logScale = (val) => {
+            const logMin = Math.log10(xMin);
+            const logMax = Math.log10(xMax);
+            return ((Math.log10(val) - logMin) / (logMax - logMin)) * plotWidth;
+        };
 
-                                // Get data
-                                const dataPoint = context.tooltip.dataPoints?.[0];
-                                if (!dataPoint) return;
+        // Linear scale for Y axis (0-100%)
+        const yScale = (val) => plotHeight - (val / 100) * plotHeight;
 
-                                const event = dataPoint.raw.raw;
-                                tooltip.innerHTML = EventTooltip(event);
-
-                                // Position tooltip
-                                const { offsetLeft, offsetTop } = context.chart.canvas;
-                                tooltip.style.opacity = 1;
-                                tooltip.style.left = offsetLeft + context.tooltip.caretX + 'px';
-                                tooltip.style.top = offsetTop + context.tooltip.caretY - 10 + 'px';
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            type: 'logarithmic',
-                            grid: {
-                                color: 'rgba(69, 71, 90, 0.5)',
-                                drawBorder: false
-                            },
-                            ticks: {
-                                color: '#6c7086',
-                                font: { size: 11 }
-                            },
-                            title: {
-                                display: true,
-                                text: 'Mortality (Log Scale)',
-                                color: '#a6adc8',
-                                font: { size: 12, weight: 500 }
-                            }
-                        },
-                        y: {
-                            min: 0,
-                            max: 105,
-                            grid: {
-                                color: 'rgba(69, 71, 90, 0.5)',
-                                drawBorder: false
-                            },
-                            ticks: {
-                                color: '#6c7086',
-                                font: { size: 11 }
-                            },
-                            title: {
-                                display: true,
-                                text: 'Systematic Intensity (%)',
-                                color: '#a6adc8',
-                                font: { size: 12, weight: 500 }
-                            }
-                        }
-                    }
-                }
-            });
+        // Generate X axis ticks (powers of 10)
+        const logMin = Math.floor(Math.log10(xMin));
+        const logMax = Math.ceil(Math.log10(xMax));
+        const xTicks = [];
+        for (let i = logMin; i <= logMax; i++) {
+            const val = Math.pow(10, i);
+            if (val >= xMin && val <= xMax) {
+                xTicks.push(val);
+            }
         }
+
+        // Y axis ticks
+        const yTicks = [0, 20, 40, 60, 80, 100];
+
+        // Format large numbers
+        const formatTick = (n) => {
+            if (n >= 1000000) return (n / 1000000) + 'M';
+            if (n >= 1000) return (n / 1000) + 'k';
+            return n;
+        };
+
+        // Build SVG
+        const svg = `
+            <svg class="chart-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+                <!-- Grid lines -->
+                <g class="chart-grid" transform="translate(${margin.left}, ${margin.top})">
+                    ${yTicks.map(t => `<line x1="0" y1="${yScale(t)}" x2="${plotWidth}" y2="${yScale(t)}"/>`).join('')}
+                    ${xTicks.map(t => `<line x1="${logScale(t)}" y1="0" x2="${logScale(t)}" y2="${plotHeight}"/>`).join('')}
+                </g>
+
+                <!-- X axis ticks -->
+                <g transform="translate(${margin.left}, ${margin.top + plotHeight + 15})">
+                    ${xTicks.map(t => `<text class="chart-tick" x="${logScale(t)}" text-anchor="middle">${formatTick(t)}</text>`).join('')}
+                </g>
+
+                <!-- X axis label -->
+                <text class="chart-axis-label" x="${margin.left + plotWidth / 2}" y="${height - 10}" text-anchor="middle">Mortality (Log Scale)</text>
+
+                <!-- Y axis ticks -->
+                <g transform="translate(${margin.left - 10}, ${margin.top})">
+                    ${yTicks.map(t => `<text class="chart-tick" x="0" y="${yScale(t) + 4}" text-anchor="end">${t}%</text>`).join('')}
+                </g>
+
+                <!-- Y axis label -->
+                <text class="chart-axis-label" x="${15}" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90, 15, ${margin.top + plotHeight / 2})">Systematic Intensity</text>
+
+                <!-- Data points (using shared Dot component) -->
+                <g transform="translate(${margin.left}, ${margin.top})">
+                    ${chartEvents.map(e => {
+                        const { color } = Utils.getTheme(e.analysis.tier);
+                        const x = logScale(e.metrics.mortality.max);
+                        const y = yScale(e.metrics.scores.systematic_intensity);
+                        return Dot({ id: e.id, color, x, y, svg: true });
+                    }).join('')}
+                </g>
+            </svg>
+        `;
+
+        container.innerHTML = svg;
+
+        // Bind events to dots
+        this.bindChartEvents(chartEvents);
+    },
+
+    bindChartEvents(events) {
+        const container = document.getElementById('chartContainer');
+        const dots = container.querySelectorAll('.chart-dot');
+
+        // Get or create tooltip
+        let tooltip = document.getElementById('chart-tooltip');
+        if (!tooltip) {
+            tooltip = document.createElement('div');
+            tooltip.id = 'chart-tooltip';
+            tooltip.className = 'chart-tooltip';
+            document.body.appendChild(tooltip);
+        }
+
+        dots.forEach(dot => {
+            const event = events.find(e => e.id === dot.dataset.id);
+            if (!event) return;
+
+            // Hover - show tooltip
+            dot.addEventListener('mouseenter', (e) => {
+                tooltip.innerHTML = EventTooltip(event);
+                tooltip.style.opacity = 1;
+
+                const rect = dot.getBoundingClientRect();
+                tooltip.style.left = rect.left + rect.width / 2 + 'px';
+                tooltip.style.top = rect.top - 10 + 'px';
+            });
+
+            dot.addEventListener('mouseleave', () => {
+                tooltip.style.opacity = 0;
+            });
+
+            // Click - navigate to table
+            dot.addEventListener('click', () => {
+                this.switchView('cards');
+                setTimeout(() => {
+                    const row = document.querySelector(`.table-row[data-id="${event.id}"]`);
+                    if (row) {
+                        row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        row.click();
+                    }
+                }, 100);
+            });
+        });
     },
 
     renderKnowledge() {
@@ -732,11 +735,7 @@ const App = {
 
                 return `
                     <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
-                    <div class="timeline-dot"
-                         style="left: ${x}%; background: ${driver.color};"
-                         data-id="${entry.id}"
-                         title="${entry.name}">
-                    </div>
+                    ${Dot({ id: entry.id, color: driver.color, x, unit: '%' })}
                     <span class="timeline-label" style="left: ${x}%;">${shortName}</span>
                 `;
             }).join('');

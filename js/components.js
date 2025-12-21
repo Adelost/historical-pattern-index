@@ -2,9 +2,22 @@
  * HPI Components - Pure HTML generator functions
  */
 
-import { Utils, DRIVERS } from './utils.js';
+import { Utils, DRIVERS, DOT_STYLE } from './utils.js';
 
 // --- COMPONENTS (HTML Generators) ---
+
+// Shared Dot component - used by Timeline, Knowledge, and Chart
+// Single source of truth for dot styling
+export const Dot = ({ id, color, x, y = null, unit = 'px', svg = false }) => {
+    if (svg) {
+        // SVG circle for chart
+        return `<circle class="dot chart-dot" cx="${x}" cy="${y}" r="${DOT_STYLE.size / 2}"
+                    fill="${color}" stroke="var(--bg-dark)" stroke-width="${DOT_STYLE.border}"
+                    style="color: ${color};" data-id="${id}"/>`;
+    }
+    // HTML div for timeline
+    return `<div class="dot timeline-dot" style="left: ${x}${unit}; background: ${color}; color: ${color};" data-id="${id}"></div>`;
+};
 
 export const Icon = (path) =>
     `<svg style="width:16px; height:16px; fill:currentColor" viewBox="0 0 24 24">${path}</svg>`;

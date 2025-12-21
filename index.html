@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Using SVG chart for unified styling with timeline -->
     <style>
         /* --- Design System (Catppuccin Mocha) --- */
         :root {
@@ -603,7 +603,7 @@
 
         .map-popup h4 { margin: 0 0 0.5rem 0; font-size: 1rem; }
         .map-popup .meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; }
-        .map-popup .deaths { font-size: 0.9rem; font-weight: 600; color: var(--ctp-red); }
+        .map-popup .deaths { font-size: 0.9rem; font-weight: 600; /* color set inline by tier */ }
 
         /* --- Timeline --- */
         .timeline-container {
@@ -709,29 +709,21 @@
             background: var(--ctp-surface1);
         }
 
-        /* Unified timeline dot (used by both main and knowledge timelines) */
+        /* Timeline dot positioning (uses shared .dot base) */
         .timeline-dot {
             position: absolute;
             top: 20px;
-            width: var(--dot-size);
-            height: var(--dot-size);
-            border-radius: 50%;
-            cursor: pointer;
             transform: translateX(-50%);
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: var(--dot-border) solid var(--bg-dark);
             z-index: 2;
         }
 
         .timeline-dot:hover {
             transform: translateX(-50%) scale(var(--dot-hover-scale));
-            box-shadow: 0 0 12px currentColor;
             z-index: 100;
         }
 
         .timeline-dot.selected {
             transform: translateX(-50%) scale(calc(var(--dot-hover-scale) + 0.1));
-            box-shadow: 0 0 16px currentColor;
         }
 
         .timeline-year {
@@ -753,10 +745,60 @@
             font-weight: 500;
         }
 
-        /* --- Chart --- */
+        /* --- Shared Dot Base (used by timeline and chart) --- */
+        .dot {
+            width: var(--dot-size);
+            height: var(--dot-size);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s, filter 0.2s;
+            border: var(--dot-border) solid var(--bg-dark);
+        }
+
+        .dot:hover {
+            filter: drop-shadow(0 0 12px currentColor);
+        }
+
+        .dot.selected {
+            filter: drop-shadow(0 0 16px currentColor);
+        }
+
+        /* --- Chart (SVG-based) --- */
         .chart-wrapper {
             height: 400px;
             margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .chart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .chart-axis-label {
+            fill: var(--ctp-subtext);
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .chart-tick {
+            fill: var(--ctp-overlay0);
+            font-size: 11px;
+        }
+
+        .chart-grid {
+            stroke: rgba(69, 71, 90, 0.5);
+            stroke-width: 1;
+        }
+
+        /* Chart dot positioning (uses shared .dot base) */
+        .chart-dot {
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        .chart-dot:hover {
+            transform: scale(var(--dot-hover-scale));
         }
 
         /* Chart tooltip (matches timeline style) */
@@ -797,8 +839,8 @@
         }
 
         .chart-tooltip-deaths {
-            color: var(--ctp-red);
             font-weight: 600;
+            /* color set inline by tier */
         }
 
         .chart-tooltip-tier {
@@ -1391,7 +1433,7 @@
         .death-count {
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--ctp-red);
+            color: var(--tier-color);
         }
 
         .death-label {
@@ -2384,9 +2426,7 @@
         </div>
 
         <div id="chartView" class="view">
-            <div class="chart-wrapper">
-                <canvas id="hpiChart"></canvas>
-            </div>
+            <div class="chart-wrapper" id="chartContainer"></div>
         </div>
 
         <div id="knowledgeView" class="view">
