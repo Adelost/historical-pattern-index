@@ -112,12 +112,29 @@ def generate_summary(events, stats):
     return f"{stats['count']} events. {stats['year_span']:,} years of history ({year_start}–present). {format_millions(stats['deaths_min'])}-{format_millions(stats['deaths_max'])} documented deaths."
 
 
+def get_primary_driver(event):
+    """Determine primary driver (Profit vs Ideology) from scores."""
+    scores = event.get("metrics", {}).get("scores", {})
+    profit = scores.get("profit", 0)
+    ideology = scores.get("ideology", 0)
+
+    if profit > ideology:
+        return "Profit"
+    elif ideology > profit:
+        return "Ideology"
+    else:
+        # If equal, look at which is non-zero, or default to Mixed
+        if profit > 0 or ideology > 0:
+            return "Mixed"
+        return "—"
+
+
 def generate_events_table(events):
     """Generate main events table."""
     # Sort chronologically (by start year) to show historical patterns
     sorted_events = sorted(events, key=lambda e: e.get("period", {}).get("start", 0))
 
-    lines = ["| Event | Period | Deaths | Tier | Denied? |", "|-------|--------|--------|------|---------|"]
+    lines = ["| Event | Period | Deaths | Driver | Systematic | Denied? |", "|-------|--------|--------|--------|------------|---------|"]
 
     for e in sorted_events:
         name = e.get("name", "Unknown")
@@ -127,14 +144,12 @@ def generate_events_table(events):
         mortality = e.get("metrics", {}).get("mortality", {})
         deaths = format_deaths(mortality.get("min", 0), mortality.get("max", 0))
 
-        tier = e.get("analysis", {}).get("tier", "Unknown")
-        tier_short = {
-            "TOTAL ERASURE": "Erasure",
-            "INDUSTRIAL MEGA-EVENT": "Industrial",
-            "CONTINENTAL COLLAPSE": "Collapse",
-            "PROFIT-DRIVEN ATTRITION": "Profit",
-            "CHAOTIC ATROCITY": "Chaotic"
-        }.get(tier, tier)
+        driver = get_primary_driver(e)
+
+        # Get systematic intensity score as percentage
+        scores = e.get("metrics", {}).get("scores", {})
+        systematic = scores.get("systematic_intensity", 0)
+        systematic_str = f"{systematic}%"
 
         denial = e.get("denial_status", "unknown")
         denial_str = {
@@ -145,7 +160,7 @@ def generate_events_table(events):
             "suppressed": "Suppressed"
         }.get(denial, denial)
 
-        lines.append(f"| {name} | {period_str} | {deaths} | {tier_short} | {denial_str} |")
+        lines.append(f"| {name} | {period_str} | {deaths} | {driver} | {systematic_str} | {denial_str} |")
 
     return "\n".join(lines)
 

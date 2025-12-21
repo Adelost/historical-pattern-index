@@ -682,11 +682,28 @@
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border-light);
+            position: relative;
         }
 
-        /* Shift map tiles toward Catppuccin Mocha tones (markers unaffected) */
+        /* Tint map tiles toward Catppuccin Mocha blue-purple */
+        #mapCanvas::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(137, 180, 250, 0.15),  /* ctp-blue */
+                rgba(180, 190, 254, 0.12)   /* ctp-lavender */
+            );
+            mix-blend-mode: color;
+            pointer-events: none;
+            z-index: 401; /* Above tiles, below markers */
+            border-radius: 16px;
+        }
+
+        /* Desaturate and darken base tiles, then shift hue toward blue */
         #mapCanvas .leaflet-tile-pane {
-            filter: hue-rotate(220deg) saturate(0.7) brightness(0.85);
+            filter: saturate(0.3) brightness(0.7) sepia(0.2) hue-rotate(180deg);
         }
 
         /* Make map markers match timeline dot style */
