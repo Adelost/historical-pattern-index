@@ -15,10 +15,10 @@ The same drivers that destroy knowledge also threaten it:
 <!-- STATS:SAVED_DRIVER_SUMMARY -->
 | Driver | Lost | Rescued | Recovered |
 |--------|------|---------|-----------|
-| religious_ideology | Library of Alexandria, Nalanda University | Timbuktu Manuscripts | Nag Hammadi Library |
+| religious_ideology | Inca Quipus, Library of Alexandria | Timbuktu Manuscripts | Nag Hammadi Library |
 | ethnic_ideology | Tasmanian Languages, Yiddish Libraries and Publishing | Armenian Manuscripts (Matenadaran), Sarajevo Haggadah | — |
 | political_ideology | Institut für Sexualwissenschaft | Tibetan Buddhist Texts | — |
-| conquest | Library of Carthage, House of Wisdom (Baghdad) | Iraqi Jewish Archive | Dead Sea Scrolls |
+| conquest | Druidic Knowledge System, Library of Carthage | Iraqi Jewish Archive | Dead Sea Scrolls |
 | economic_exploitation | Silphium Extinction | — | — |
 <!-- /STATS:SAVED_DRIVER_SUMMARY -->
 

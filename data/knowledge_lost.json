@@ -1,5 +1,33 @@
 [
   {
+    "id": "druidic_knowledge",
+    "name": "Druidic Knowledge System",
+    "year": -50,
+    "year_end": 400,
+    "type": "cultural",
+    "driver": "conquest",
+    "driver_note": "Roman conquest banned Druids, Christianity finished suppression. Same pattern as other conquest + religious destruction.",
+    "what_lost": "Astronomy, law, philosophy, medicine, religious practices, oral histories",
+    "quantity": "Entire knowledge system of Celtic peoples",
+    "recoverable": false,
+    "connected_event": null,
+    "description": "The Druids maintained an extensive oral tradition across the Celtic world — Britain, Gaul, Ireland. They deliberately refused to write, believing sacred knowledge should be memorized. Training took up to 20 years. Julius Caesar banned them in Gaul. Roman emperors outlawed them in Britain. Christianity suppressed the remnants. Unlike burned libraries, oral traditions leave no fragments. When the last trained Druids died, the knowledge died with them."
+  },
+  {
+    "id": "inca_quipus",
+    "name": "Inca Quipus",
+    "year": 1532,
+    "year_end": 1600,
+    "type": "cultural",
+    "driver": "religious_ideology",
+    "driver_note": "Spanish Catholic destruction of 'idolatrous' records. Same pattern as Aztec and Maya codex burnings.",
+    "what_lost": "Historical records, census data, accounting, possibly narratives and literature",
+    "quantity": "Thousands of quipus destroyed. ~600 survive, mostly undeciphered.",
+    "recoverable": false,
+    "connected_event": "spanish_americas_1492",
+    "description": "The Inca had no writing system but used quipus — knotted strings encoding information through colors, knot types, and positions. Spanish colonizers destroyed thousands as 'works of the devil.' The few who could read them died without passing on the knowledge. About 600 quipus survive in museums. We can decode simple numerical data but the full system — possibly including histories, songs, and laws — remains undeciphered. The key died with the quipucamayocs (quipu keepers)."
+  },
+  {
     "id": "carthage",
     "name": "Library of Carthage",
     "year": -146,

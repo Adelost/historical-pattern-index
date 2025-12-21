@@ -24,8 +24,8 @@ Only events where:
 <!-- STATS:LOST_DRIVER_TABLE -->
 | Driver | Count | Genocide parallel |
 |--------|-------|-------------------|
-| religious_ideology | 4 | Religious purification genocides |
-| conquest | 3 | Territorial conquest atrocities |
+| religious_ideology | 5 | Religious purification genocides |
+| conquest | 4 | Territorial conquest atrocities |
 | ethnic_ideology | 3 | Ethnic cleansing |
 | economic_exploitation | 1 | Profit-driven atrocities |
 | political_ideology | 1 | Ideological purges |
@@ -39,12 +39,14 @@ Only events where:
 | Event | Year | Driver | What was lost | Quantity |
 |-------|------|--------|---------------|----------|
 | Library of Carthage | 146 BCE | conquest | Punic literature, history, navigation, agriculture, Mago's treatises | 500,000 volumes (reported) |
+| Druidic Knowledge System | 50 BCE-400 | conquest | Astronomy, law, philosophy, medicine, religious practices, oral histories | Entire knowledge system of Celtic peoples |
 | Library of Alexandria | 48 BCE-642 | religious_ideology | Ancient science, literature, philosophy | 40,000-400,000 scrolls |
 | Silphium Extinction | 100 | economic_exploitation | Contraceptive, abortifacient, digestive medicine | 1 species |
 | Nalanda University | 1193 | religious_ideology | Buddhist philosophy, logic, mathematics, astronomy, medicine | Millions of manuscripts (9 million according to some sources) |
 | House of Wisdom (Baghdad) | 1258 | conquest | Islamic Golden Age science, mathematics, astronomy, medicine, philosophy | Unknown (500 years of scholarship) |
 | Imperial Library of Constantinople | 1453 | conquest | Greco-Roman manuscripts, Byzantine scholarship | 120,000 volumes (at peak, before earlier fires) |
 | Aztec Codices | 1521-1600 | religious_ideology | History, astronomy, tribute records, religious texts, poetry | ~500 → 2-16 pre-conquest survive |
+| Inca Quipus | 1532-1600 | religious_ideology | Historical records, census data, accounting, possibly narratives and literature | Thousands of quipus destroyed. ~600 survive, mostly undeciphered. |
 | Maya Codices (Maní) | 1562 | religious_ideology | Astronomy, mathematics, history, religion | 5,000+ codices → 4 survive |
 | Tasmanian Languages | 1803-1905 | ethnic_ideology | 8+ complete languages, 35,000 years of ecological knowledge | All speakers dead |
 | Institut für Sexualwissenschaft | 1933 | political_ideology | Gender and sexuality research, medical records, patient files | 20,000+ books, 35,000 photographs, patient records |
@@ -223,6 +225,7 @@ Many knowledge destruction events connect to genocides in the main index:
 <!-- STATS:LOST_CONNECTION_TABLE -->
 | Knowledge lost | Connected genocide |
 |----------------|-------------------|
+| Inca Quipus | Colonization of the Americas |
 | Library of Carthage | Destruction of Carthage |
 | House of Wisdom (Baghdad) | Mongol Sack of Baghdad |
 | Aztec Codices | Colonization of the Americas |
