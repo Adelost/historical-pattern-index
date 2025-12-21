@@ -2,7 +2,7 @@
  * HPI App - Main application logic
  */
 
-import { Utils, DRIVERS } from './utils.js';
+import { Utils, DRIVERS, DOT_STYLE } from './utils.js';
 import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard } from './components.js';
 
 // --- APP LOGIC (State & Effects) ---
@@ -546,10 +546,10 @@ const App = {
                     datasets: [{
                         data: data,
                         backgroundColor: (ctx) => Utils.getTheme(ctx.raw?.tier).color,
-                        pointRadius: 8,
-                        pointHoverRadius: 12,
-                        borderWidth: 1,
-                        borderColor: 'rgba(255,255,255,0.3)'
+                        pointRadius: DOT_STYLE.size / 2,
+                        pointHoverRadius: DOT_STYLE.size / 2 * DOT_STYLE.hoverScale,
+                        borderWidth: DOT_STYLE.border / 2,
+                        borderColor: DOT_STYLE.borderColor
                     }]
                 },
                 options: {

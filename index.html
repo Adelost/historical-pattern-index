@@ -21,6 +21,11 @@
             --accent: #89b4fa;
             --tier-color: #89b4fa;
 
+            /* Shared dot styling (sync with DOT_STYLE in utils.js) */
+            --dot-size: 16px;
+            --dot-border: 2px;
+            --dot-hover-scale: 1.3;
+
             /* Catppuccin Mocha palette */
             --ctp-base: #1e1e2e;
             --ctp-mantle: #181825;
@@ -708,24 +713,24 @@
         .timeline-dot {
             position: absolute;
             top: 20px;
-            width: 16px;
-            height: 16px;
+            width: var(--dot-size);
+            height: var(--dot-size);
             border-radius: 50%;
             cursor: pointer;
             transform: translateX(-50%);
             transition: transform 0.2s, box-shadow 0.2s;
-            border: 2px solid var(--bg-dark);
+            border: var(--dot-border) solid var(--bg-dark);
             z-index: 2;
         }
 
         .timeline-dot:hover {
-            transform: translateX(-50%) scale(1.3);
+            transform: translateX(-50%) scale(var(--dot-hover-scale));
             box-shadow: 0 0 12px currentColor;
             z-index: 100;
         }
 
         .timeline-dot.selected {
-            transform: translateX(-50%) scale(1.4);
+            transform: translateX(-50%) scale(calc(var(--dot-hover-scale) + 0.1));
             box-shadow: 0 0 16px currentColor;
         }
 

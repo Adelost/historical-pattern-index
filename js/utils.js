@@ -4,6 +4,14 @@
 
 // --- DATA DICTIONARY (Single Source of Truth) ---
 
+// Shared dot styling (used by timeline and chart)
+export const DOT_STYLE = {
+    size: 16,
+    border: 2,
+    hoverScale: 1.3,
+    borderColor: 'rgba(255,255,255,0.3)'
+};
+
 // Driver colors for Knowledge Lost/Saved (Catppuccin Mocha)
 export const DRIVERS = {
     'religious_ideology': { label: 'Religious', color: '#f38ba8' },  // red
