@@ -568,6 +568,11 @@
         .view { display: none; }
         .view.active { display: block; }
 
+        /* Shared view content base */
+        .view-content {
+            padding: 1rem 0;
+        }
+
         /* --- Map --- */
         #mapCanvas {
             height: 500px;
@@ -590,7 +595,6 @@
 
         /* --- Timeline --- */
         .timeline-container {
-            padding: 1rem 0;
             overflow-x: auto;
             position: relative;
         }
@@ -1684,9 +1688,7 @@
         }
 
         /* --- Knowledge Lost View --- */
-        .knowledge-container {
-            padding: 1rem 0;
-        }
+        /* knowledge-container: uses .view-content base */
 
         .knowledge-header {
             text-align: center;
@@ -2194,7 +2196,7 @@
         </div>
 
         <div id="timelineView" class="view">
-            <div class="timeline-container">
+            <div class="timeline-container view-content">
                 <div id="timeline" class="timeline"></div>
             </div>
             <div id="timelineRows" class="event-table" style="margin-top: 1.5rem;"></div>
@@ -2207,7 +2209,7 @@
         </div>
 
         <div id="knowledgeView" class="view">
-            <div class="knowledge-container">
+            <div class="knowledge-container view-content">
                 <div class="knowledge-header">
                     <p class="knowledge-tagline">Same forces that kill people also kill knowledge</p>
                 </div>
