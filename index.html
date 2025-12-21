@@ -628,6 +628,15 @@
             opacity: 0;
         }
 
+        .timeline-container {
+            cursor: grab;
+        }
+
+        .timeline-container.dragging {
+            cursor: grabbing;
+            user-select: none;
+        }
+
         .timeline {
             position: relative;
             min-height: 120px;
