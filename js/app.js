@@ -159,13 +159,10 @@ const App = {
 
         // Hide/show filter bar based on view (not relevant for Knowledge Lost)
         const filterBar = document.querySelector('.filter-bar');
-        const toolbar = document.querySelector('.toolbar-compact');
         if (view === 'knowledge') {
             filterBar.classList.add('hidden');
-            toolbar.classList.add('hidden');
         } else {
             filterBar.classList.remove('hidden');
-            toolbar.classList.remove('hidden');
         }
 
         // Handle map view special case
