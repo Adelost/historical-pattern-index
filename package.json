@@ -4,7 +4,9 @@
   "description": "An index of historical atrocities, genocides, and knowledge destruction events",
   "scripts": {
     "start": "npx serve .",
-    "update": "python3 scripts/update_readme.py"
+    "update:readme": "python3 scripts/update_readme.py",
+    "update:index": "python3 scripts/update_index.py",
+    "update": "npm run update:index && npm run update:readme"
   },
   "keywords": ["history", "genocide", "knowledge-loss"],
   "license": "MIT"

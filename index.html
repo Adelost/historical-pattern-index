@@ -542,6 +542,66 @@
             background: var(--bg-dark);
         }
 
+        .tier-filters-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tier-info-btn {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid var(--border-light);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .tier-info-btn:hover,
+        .tier-info-btn.active {
+            background: var(--ctp-surface0);
+            color: var(--text-main);
+        }
+
+        .tier-legend {
+            display: none;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.75rem;
+            padding: 0.75rem;
+            background: var(--ctp-mantle);
+            border-radius: 8px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .tier-legend.visible {
+            display: flex;
+        }
+
+        .tier-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tier-legend-item b {
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .legend-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
         .tier-pill[data-tier="all"] {
             --pill-color: var(--accent);
         }
@@ -622,6 +682,21 @@
             border-radius: 16px;
             overflow: hidden;
             border: 1px solid var(--border-light);
+        }
+
+        /* Shift map tiles toward Catppuccin Mocha tones (markers unaffected) */
+        #mapCanvas .leaflet-tile-pane {
+            filter: hue-rotate(220deg) saturate(0.7) brightness(0.85);
+        }
+
+        /* Make map markers match timeline dot style */
+        .leaflet-interactive {
+            transition: transform 0.2s, filter 0.2s;
+        }
+
+        .leaflet-interactive:hover {
+            transform: scale(1.3);
+            filter: drop-shadow(0 0 8px currentColor);
         }
 
         .leaflet-popup-content-wrapper {
@@ -2375,13 +2450,23 @@
 
             <!-- Tier Filters -->
             <div class="filter-section" data-views="cards map timeline chart">
-                <div class="tier-filters">
-                    <button class="tier-pill active" data-tier="all">All</button>
-                    <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: var(--ctp-red);">Erasure</button>
-                    <button class="tier-pill" data-tier="INDUSTRIAL MEGA-EVENT" style="--pill-color: var(--ctp-peach);">Industrial</button>
-                    <button class="tier-pill" data-tier="PROFIT-DRIVEN ATTRITION" style="--pill-color: var(--ctp-yellow);">Profit</button>
-                    <button class="tier-pill" data-tier="CONTINENTAL COLLAPSE" style="--pill-color: var(--ctp-sapphire);">Collapse</button>
-                    <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: var(--ctp-lavender);">Chaotic</button>
+                <div class="tier-filters-row">
+                    <div class="tier-filters">
+                        <button class="tier-pill active" data-tier="all">All</button>
+                        <button class="tier-pill" data-tier="TOTAL ERASURE" style="--pill-color: var(--ctp-red);">Erasure</button>
+                        <button class="tier-pill" data-tier="INDUSTRIAL MEGA-EVENT" style="--pill-color: var(--ctp-peach);">Industrial</button>
+                        <button class="tier-pill" data-tier="PROFIT-DRIVEN ATTRITION" style="--pill-color: var(--ctp-yellow);">Profit</button>
+                        <button class="tier-pill" data-tier="CONTINENTAL COLLAPSE" style="--pill-color: var(--ctp-sapphire);">Collapse</button>
+                        <button class="tier-pill" data-tier="CHAOTIC ATROCITY" style="--pill-color: var(--ctp-lavender);">Chaotic</button>
+                    </div>
+                    <button class="tier-info-btn" id="tierInfoBtn" title="What do these mean?">?</button>
+                </div>
+                <div class="tier-legend" id="tierLegend">
+                    <div class="tier-legend-item"><span class="legend-dot" style="background: var(--ctp-red);"></span><b>Erasure</b> — Deliberate elimination of entire peoples</div>
+                    <div class="tier-legend-item"><span class="legend-dot" style="background: var(--ctp-peach);"></span><b>Industrial</b> — State infrastructure for mass killing</div>
+                    <div class="tier-legend-item"><span class="legend-dot" style="background: var(--ctp-yellow);"></span><b>Profit</b> — Death through economic extraction</div>
+                    <div class="tier-legend-item"><span class="legend-dot" style="background: var(--ctp-sapphire);"></span><b>Collapse</b> — Conquest and civilizational destruction</div>
+                    <div class="tier-legend-item"><span class="legend-dot" style="background: var(--ctp-lavender);"></span><b>Chaotic</b> — Opportunistic mass violence</div>
                 </div>
             </div>
 

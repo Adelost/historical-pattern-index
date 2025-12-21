@@ -86,6 +86,28 @@ export const Utils = {
 
     getTheme: (tierName) => THEME.tiers[tierName] || THEME.default,
 
+    // Get short name for timeline labels
+    getShortName: (name, maxLen = 10) => {
+        // 1. If parentheses exist, use what's inside (e.g., "Baghdad", "Avesta")
+        const parenMatch = name.match(/\(([^)]+)\)/);
+        if (parenMatch) {
+            const inner = parenMatch[1].split(' ')[0];
+            return inner.length > maxLen ? inner.substring(0, maxLen - 1) + '…' : inner;
+        }
+
+        // 2. If "X of Y", use Y (e.g., "Alexandria", "Constantinople")
+        if (name.includes(' of ')) {
+            const afterOf = name.split(' of ').pop().split(' ')[0];
+            return afterOf.length > maxLen ? afterOf.substring(0, maxLen - 1) + '…' : afterOf;
+        }
+
+        // 3. Otherwise use first significant word (skip articles)
+        const words = name.split(' ');
+        const skipWords = ['The', 'A', 'An'];
+        const firstWord = skipWords.includes(words[0]) && words.length > 1 ? words[1] : words[0];
+        return firstWord.length > maxLen ? firstWord.substring(0, maxLen - 1) + '…' : firstWord;
+    },
+
     // Logic for filtering
     matches: (event, filters) => {
         const { period, tier, denial } = filters;

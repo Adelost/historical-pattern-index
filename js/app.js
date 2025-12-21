@@ -105,6 +105,16 @@ const App = {
             });
         });
 
+        // Tier Info Toggle
+        const tierInfoBtn = document.getElementById('tierInfoBtn');
+        const tierLegend = document.getElementById('tierLegend');
+        if (tierInfoBtn && tierLegend) {
+            tierInfoBtn.addEventListener('click', () => {
+                tierInfoBtn.classList.toggle('active');
+                tierLegend.classList.toggle('visible');
+            });
+        }
+
         // View Tabs
         document.querySelectorAll('.view-tab').forEach(tab => {
             tab.addEventListener('click', () => {
@@ -255,10 +265,7 @@ const App = {
             const { color } = Utils.getTheme(event.analysis.tier);
 
             // Short name for label
-            let shortName = event.name.replace(/\s*\([^)]+\)/, '').trim();
-            if (shortName.length > 12) {
-                shortName = shortName.substring(0, 11) + '…';
-            }
+            const shortName = Utils.getShortName(event.name, 12);
 
             return `
                 <span class="timeline-year" style="left: ${x}px;">${event.period.start}</span>
@@ -674,18 +681,6 @@ const App = {
     },
 
     renderKnowledge() {
-        // Helper: get short name for timeline labels
-        const getShortName = (name) => {
-            let shortName = name.replace(/\s*\([^)]+\)/, '').trim();
-            if (shortName.includes(' of ')) {
-                shortName = shortName.split(' of ').pop().split(' ')[0];
-            } else if (shortName.includes(' für ')) {
-                shortName = shortName.split(' ')[0];
-            } else {
-                shortName = shortName.split(' ')[0];
-            }
-            return shortName.length > 10 ? shortName.substring(0, 9) + '…' : shortName;
-        };
 
         // Filter knowledge entries
         const filterEntries = (entries) => {
@@ -731,7 +726,7 @@ const App = {
 
                 const driver = Utils.getDriver(entry.driver);
                 const yearLabel = Utils.formatYear(entry.year);
-                const shortName = getShortName(entry.name);
+                const shortName = Utils.getShortName(entry.name);
 
                 return `
                     <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
