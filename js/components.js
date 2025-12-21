@@ -458,7 +458,7 @@ export const TableRow = (event) => {
         <div class="table-cell cell-name">
             <span class="event-name">${event.name}</span>
             <span class="event-meta">
-                <span class="tier-label">${shortLabel}</span>
+                <span class="tier-label">${shortLabel} · ${scores.systematic_intensity}%</span>
                 ${denialStatus === 'denied' ? '<span class="denied-tag">DENIED</span>' : ''}
                 <span class="mobile-deaths">${Utils.formatDeaths(deaths.min, deaths.max)}</span>
             </span>
