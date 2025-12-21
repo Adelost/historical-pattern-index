@@ -224,15 +224,14 @@ const App = {
         // Sort by start year
         const sorted = [...events].sort((a, b) => a.period.start - b.period.start);
 
-        // Use equal spacing (like Knowledge timeline) to avoid stacking
-        const padding = 3;
-        const usableWidth = 100 - (padding * 2);
+        // Fixed spacing per event (pixels) - allows horizontal scroll
+        const pxPerEvent = 90;
+        const padding = 40;
+        const totalWidth = Math.max(sorted.length * pxPerEvent + padding * 2, timeline.parentElement.clientWidth);
 
-        // Create events with equal spacing and year labels
+        // Create events with fixed pixel spacing
         const eventHtml = sorted.map((event, index) => {
-            const x = sorted.length > 1
-                ? padding + (index / (sorted.length - 1)) * usableWidth
-                : 50;
+            const x = padding + index * pxPerEvent;
 
             const { color } = Utils.getTheme(event.analysis.tier);
             const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
@@ -245,17 +244,18 @@ const App = {
 
             return `
                 <div class="timeline-event"
-                     style="left: ${x}%; background: ${color};"
+                     style="left: ${x}px; background: ${color};"
                      data-id="${event.id}">
                     <div class="timeline-tooltip">
                         <strong>${event.name}</strong><br>
                         ${event.period.start}–${event.period.end} · ${deaths} deaths
                     </div>
                 </div>
-                <span class="timeline-year-label" style="left: ${x}%;">${event.period.start}</span>
-                <span class="timeline-name-label" style="left: ${x}%;">${shortName}</span>`;
+                <span class="timeline-year-label" style="left: ${x}px;">${event.period.start}</span>
+                <span class="timeline-name-label" style="left: ${x}px;">${shortName}</span>`;
         }).join('');
 
+        timeline.style.width = `${totalWidth}px`;
         timeline.innerHTML = `
             <div class="timeline-axis"></div>
             ${eventHtml}
