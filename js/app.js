@@ -262,16 +262,12 @@ const App = {
             }
 
             return `
-                <div class="timeline-event"
+                <span class="timeline-year" style="left: ${x}px;">${event.period.start}</span>
+                <div class="timeline-dot"
                      style="left: ${x}px; background: ${color};"
                      data-id="${event.id}">
-                    <div class="timeline-tooltip">
-                        <strong>${event.name}</strong><br>
-                        ${event.period.start}–${event.period.end}
-                    </div>
                 </div>
-                <span class="timeline-year-label" style="left: ${x}px;">${event.period.start}</span>
-                <span class="timeline-name-label" style="left: ${x}px;">${shortName}</span>`;
+                <span class="timeline-label" style="left: ${x}px;">${shortName}</span>`;
         }).join('');
 
         timeline.style.width = `${totalWidth}px`;
@@ -307,7 +303,7 @@ const App = {
         let startX, scrollLeft;
 
         container.addEventListener('mousedown', (e) => {
-            if (e.target.closest('.timeline-event')) return;
+            if (e.target.closest('.timeline-dot')) return;
             isDragging = true;
             container.classList.add('dragging');
             startX = e.pageX - container.offsetLeft;
@@ -336,7 +332,7 @@ const App = {
     bindTimelineRowEvents() {
         const container = document.getElementById('timelineRows');
         const timeline = document.getElementById('timeline');
-        const dots = timeline.querySelectorAll('.timeline-event');
+        const dots = timeline.querySelectorAll('.timeline-dot');
 
         this.bindExpandableRows({
             container,
@@ -669,12 +665,12 @@ const App = {
                 const shortName = getShortName(entry.name);
 
                 return `
+                    <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
                     <div class="timeline-dot"
-                         style="left: calc(${x}% - 8px); background: ${driver.color};"
+                         style="left: ${x}%; background: ${driver.color};"
                          data-id="${entry.id}"
                          title="${entry.name}">
                     </div>
-                    <span class="timeline-year" style="left: ${x}%;">${yearLabel}</span>
                     <span class="timeline-label" style="left: ${x}%;">${shortName}</span>
                 `;
             }).join('');

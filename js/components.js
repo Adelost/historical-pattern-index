@@ -336,25 +336,6 @@ export const MapPopup = (event) => {
     </div>`;
 };
 
-// Timeline event
-export const TimelineEvent = (event, x, row) => {
-    const { color } = Utils.getTheme(event.analysis.tier);
-    const y = 41 + (row * 50);
-    return `
-    <div class="timeline-event"
-         style="left: ${x}%; top: ${y}px; background: ${color};"
-         data-id="${event.id}">
-        <div class="timeline-tooltip">
-            <strong>${event.name}</strong><br>
-            ${event.period.start}–${event.period.end}<br>
-            ${Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max)} deaths
-        </div>
-    </div>
-    <div class="timeline-label" style="left: ${x}%; top: ${y + 20}px;">
-        ${event.name.length > 20 ? event.name.substring(0, 18) + '…' : event.name}
-    </div>`;
-};
-
 // Table Row Component
 export const TableRow = (event) => {
     const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
