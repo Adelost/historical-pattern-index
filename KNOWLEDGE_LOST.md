@@ -176,6 +176,30 @@ This is the epistemological problem: we know things were lost, but we don't know
 
 The heart symbol ♥ may derive from silphium's seed shape. If true, we use a 2,000-year-old symbol of something we destroyed.
 
+### Druidic Knowledge System (50 BCE - 400 CE)
+
+- **Location**: Celtic world — Gaul, Britain, Ireland
+- **Tradition**: Deliberately oral. Sacred knowledge was memorized, not written.
+- **Training**: Up to 20 years to become a Druid
+- **Suppression**: Julius Caesar banned Druids in Gaul. Roman emperors outlawed them in Britain. Christianity suppressed the remnants.
+- **Content**: Astronomy, law, philosophy, medicine, religious practices, oral histories
+
+Unlike burned libraries, oral traditions leave no fragments. We have Roman descriptions of what Druids knew, but the knowledge itself — the astronomical calculations, the legal codes, the philosophical frameworks — died with the last trained practitioners.
+
+Caesar wrote that Druids "know much about the stars and celestial motions, and about the size of the earth and universe." We don't know what they knew. We only know they knew it.
+
+### Inca Quipus (1532-1600)
+
+- **Location**: Inca Empire (Peru, Ecuador, Bolivia, Chile)
+- **System**: Knotted strings encoding information through colors, knot types, and positions
+- **Keepers**: Quipucamayocs (trained specialists)
+- **Destroyed**: Thousands burned by Spanish as "works of the devil"
+- **Surviving**: ~600 quipus in museums worldwide
+
+The Inca had no writing system as we understand it. Instead, they used quipus — an entirely different approach to recording information. Spanish colonizers destroyed thousands. The quipucamayocs who could read them were killed or died without passing on the knowledge.
+
+We can decode simple numerical data (census counts, tribute records). But many quipus contain patterns that suggest narrative content — histories, songs, laws. The key to reading them died with the keepers.
+
 ### Maya Codices (1562)
 
 - **Location**: Maní, Yucatán
