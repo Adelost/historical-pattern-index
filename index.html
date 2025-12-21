@@ -220,7 +220,6 @@
         .insight-card .number {
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--text-main);
         }
 
         .insight-card .label {
@@ -230,9 +229,11 @@
             letter-spacing: 0.05em;
         }
 
-        .insight-card.highlight .number {
-            color: var(--ctp-red);
-        }
+        /* Stat colors */
+        .insight-card:nth-child(1) .number { color: var(--ctp-blue); }      /* Events */
+        .insight-card:nth-child(2) .number { color: var(--ctp-maroon); }    /* Deaths */
+        .insight-card:nth-child(3) .number { color: var(--ctp-teal); }      /* Years */
+        .insight-card:nth-child(4) .number { color: var(--ctp-red); }       /* Denied */
 
         /* --- About Scores (Subtle) --- */
         .about-scores {
@@ -685,25 +686,15 @@
             position: relative;
         }
 
-        /* Tint map tiles toward Catppuccin Mocha blue-purple */
-        #mapCanvas::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                135deg,
-                rgba(137, 180, 250, 0.15),  /* ctp-blue */
-                rgba(180, 190, 254, 0.12)   /* ctp-lavender */
-            );
-            mix-blend-mode: color;
-            pointer-events: none;
-            z-index: 401; /* Above tiles, below markers */
-            border-radius: 16px;
+        /* Match map to Catppuccin Mocha theme */
+        #mapCanvas {
+            background: var(--ctp-crust); /* Ocean = page background */
         }
 
-        /* Desaturate and darken base tiles, then shift hue toward blue */
+        /* Darken tiles so ocean fades to background, land stays subtle */
         #mapCanvas .leaflet-tile-pane {
-            filter: saturate(0.3) brightness(0.7) sepia(0.2) hue-rotate(180deg);
+            filter: brightness(0.4) saturate(0.2) contrast(1.2);
+            opacity: 0.7;
         }
 
         /* Make map markers match timeline dot style */
