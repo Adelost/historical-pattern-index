@@ -2,7 +2,7 @@
  * HPI Components - Pure HTML generator functions
  */
 
-import { Utils, DRIVERS, DOT_STYLE } from './utils.js';
+import { Utils, DRIVERS, DOT_STYLE, SCORE_INFO } from './utils.js';
 
 // --- COMPONENTS (HTML Generators) ---
 
@@ -408,6 +408,7 @@ const ExpandableScoreBar = (label, value, type, breakdown, rationale) => {
         </div>
         ${breakdown ? `
         <div class="score-breakdown" id="${breakdownId}">
+            <p class="score-description">${SCORE_INFO[type]?.description || ''}</p>
             <div class="breakdown-chips">${breakdownHtml}</div>
             ${rationale ? `<p class="breakdown-rationale">${rationale}</p>` : ''}
         </div>
@@ -501,7 +502,17 @@ export const TableRow = (event) => {
                 "${event.analysis.pattern_note}"
             </div>
 
-            ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">Read more on Wikipedia →</a>` : ''}
+            <div class="details-sources">
+                ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">📖 Read more on Wikipedia →</a>` : ''}
+                ${event.sources && event.sources.length > 0 ? `
+                <details class="academic-sources">
+                    <summary>📚 Academic Sources (${event.sources.length})</summary>
+                    <ul class="sources-list">
+                        ${event.sources.map(s => `<li>${s.author ? `${s.author}, ` : ''}<em>${s.title}</em>${s.year ? ` (${s.year})` : ''}</li>`).join('')}
+                    </ul>
+                </details>
+                ` : ''}
+            </div>
         </div>
     </div>`;
 };

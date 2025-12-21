@@ -59,6 +59,26 @@ export const THEME = {
     default: { color: '#a6adc8', shortLabel: 'Unknown', description: '', icon: '' }
 };
 
+// Score descriptions (shown in expanded score bars)
+export const SCORE_INFO = {
+    systematic: {
+        label: 'Systematic',
+        description: 'Organization, infrastructure, state involvement. How planned was it?'
+    },
+    profit: {
+        label: 'Profit',
+        description: 'Economic extraction as driver. Was wealth the goal?'
+    },
+    ideology: {
+        label: 'Ideology',
+        description: 'Ethnic/religious "purification" as goal. Was purity the vision?'
+    },
+    complicity: {
+        label: 'Complicity',
+        description: 'How society enabled it. Did ordinary people benefit or look away?'
+    }
+};
+
 // --- UTILS (Pure Functions) ---
 export const Utils = {
     formatNum: (n) => n ? n.toLocaleString() : 'N/A',

@@ -235,81 +235,6 @@
         .insight-card:nth-child(3) .number { color: var(--ctp-teal); }      /* Years */
         .insight-card:nth-child(4) .number { color: var(--ctp-red); }       /* Denied */
 
-        /* --- About Scores (Subtle) --- */
-        .about-scores {
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .about-scores details {
-            display: inline-block;
-        }
-
-        .about-scores summary {
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            list-style: none;
-            border-radius: 100px;
-            transition: all 0.2s;
-        }
-
-        .about-scores summary::-webkit-details-marker { display: none; }
-
-        .about-scores summary:hover {
-            color: var(--text-main);
-            background: rgba(255,255,255,0.05);
-        }
-
-        .about-scores .chevron {
-            transition: transform 0.2s;
-            width: 16px;
-            height: 16px;
-        }
-
-        .about-scores details[open] .chevron {
-            transform: rotate(180deg);
-        }
-
-        .about-scores .scores-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0.75rem;
-            max-width: 900px;
-            margin: 0.75rem auto 0;
-            padding: 0 1.25rem 1.25rem;
-        }
-
-        .about-scores .score-explain {
-            padding: 0.75rem;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .about-scores .score-explain h4 {
-            margin: 0 0 0.25rem 0;
-            font-size: 0.85rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .about-scores .score-explain .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-        }
-
-        .about-scores .score-explain p {
-            margin: 0;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
         /* --- View Tabs --- */
         .view-tabs {
             display: flex;
@@ -1353,6 +1278,13 @@
             display: block;
         }
 
+        .score-description {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0 0 0.75rem 0;
+            font-style: italic;
+        }
+
         .breakdown-chips {
             display: flex;
             flex-wrap: wrap;
@@ -1419,15 +1351,59 @@
             border-left: 3px solid var(--ctp-yellow);
         }
 
+        .details-sources {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
         .details-wiki {
             font-size: 0.85rem;
             color: var(--accent);
             text-decoration: none;
-            align-self: flex-start;
         }
 
         .details-wiki:hover {
             text-decoration: underline;
+        }
+
+        .academic-sources {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .academic-sources summary {
+            cursor: pointer;
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+
+        .academic-sources summary:hover {
+            color: var(--text-main);
+        }
+
+        .academic-sources[open] summary {
+            margin-bottom: 0.5rem;
+        }
+
+        .sources-list {
+            margin: 0;
+            padding-left: 1.5rem;
+            list-style: none;
+        }
+
+        .sources-list li {
+            position: relative;
+            margin-bottom: 0.35rem;
+            line-height: 1.4;
+        }
+
+        .sources-list li::before {
+            content: '–';
+            position: absolute;
+            left: -1rem;
+            color: var(--text-muted);
         }
 
         /* Detailed Analysis Collapse */
@@ -2387,36 +2363,6 @@
                 <div class="number" id="stat-denied">--</div>
                 <div class="label">Still Officially Denied</div>
             </div>
-        </div>
-
-        <!-- About Scores -->
-        <div class="about-scores">
-            <details>
-                <summary>
-                    <span>How are events scored?</span>
-                    <svg class="chevron" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-                    </svg>
-                </summary>
-                <div class="scores-grid">
-                    <div class="score-explain">
-                        <h4><span class="dot" style="background: var(--ctp-red);"></span>Systematic Intensity</h4>
-                        <p>Organization, infrastructure, state involvement. How bureaucratically planned was it?</p>
-                    </div>
-                    <div class="score-explain">
-                        <h4><span class="dot" style="background: var(--ctp-mauve);"></span>Profit Motive</h4>
-                        <p>Economic extraction as primary driver. Was wealth the goal?</p>
-                    </div>
-                    <div class="score-explain">
-                        <h4><span class="dot" style="background: var(--ctp-blue);"></span>Ideology</h4>
-                        <p>Ethnic, religious, or political "purification" as goal. Was purity the vision?</p>
-                    </div>
-                    <div class="score-explain">
-                        <h4><span class="dot" style="background: var(--ctp-green);"></span>Complicity</h4>
-                        <p>How society enabled it. Did ordinary people benefit or look away?</p>
-                    </div>
-                </div>
-            </details>
         </div>
 
         <!-- View Tabs -->
