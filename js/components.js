@@ -475,6 +475,10 @@ export const TableRow = (event) => {
     </div>
     <div class="table-row-details expandable-row-details" data-for="${event.id}">
         <div class="details-inner">
+            <div class="tier-badge" style="--tier-color: ${color}">
+                <span class="tier-badge-label">${shortLabel}</span>
+                <span class="tier-badge-desc">${Utils.getTheme(event.analysis.tier).description}</span>
+            </div>
             ${event.description ? `<p class="details-description">${event.description}</p>` : ''}
 
             ${WhySection(event.analysis)}

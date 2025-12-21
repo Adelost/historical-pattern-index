@@ -432,8 +432,8 @@
             flex-wrap: wrap;
         }
 
+        /* Era pills - neutral, no colors (just chronological filters) */
         .era-pill {
-            --pill-color: var(--text-muted);
             padding: 0.35rem 0.75rem;
             border-radius: 100px;
             border: 1px solid var(--border-light);
@@ -443,47 +443,17 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
-            position: relative;
-        }
-
-        .era-pill::before {
-            content: '';
-            position: absolute;
-            left: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--pill-color);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
-
-        .era-pill:not([data-period="all"])::before {
-            opacity: 1;
-        }
-
-        .era-pill:not([data-period="all"]) {
-            padding-left: 1.75rem;
         }
 
         .era-pill:hover {
-            background: color-mix(in srgb, var(--pill-color), transparent 90%);
+            border-color: var(--text-muted);
+            color: var(--text-main);
         }
 
         .era-pill.active {
-            background: var(--pill-color);
-            color: var(--bg-dark);
-            border-color: var(--pill-color);
-        }
-
-        .era-pill.active::before {
-            background: var(--bg-dark);
-        }
-
-        .era-pill[data-period="all"] {
-            --pill-color: var(--accent);
+            background: var(--ctp-surface0);
+            color: var(--text-main);
+            border-color: var(--ctp-surface1);
         }
 
         /* --- Tier Filter Pills (Minimal) --- */
@@ -1199,6 +1169,30 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
+        }
+
+        .tier-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 3px solid var(--tier-color);
+            border-radius: 0 8px 8px 0;
+            width: fit-content;
+        }
+
+        .tier-badge-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: var(--tier-color);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tier-badge-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
         }
 
         .details-description {
@@ -2003,13 +1997,11 @@
                 font-size: 0.7rem;
             }
 
-            .tier-pill:not([data-tier="all"]),
-            .era-pill:not([data-period="all"]) {
+            .tier-pill:not([data-tier="all"]) {
                 padding-left: 0.5rem;
             }
 
-            .tier-pill::before,
-            .era-pill::before {
+            .tier-pill::before {
                 display: none;
             }
 
@@ -2477,11 +2469,11 @@
             <div class="filter-section" data-views="cards map timeline chart">
                 <span class="filter-label">Era</span>
                 <div class="era-filters">
-                    <button class="era-pill active" data-period="all">All Time</button>
-                    <button class="era-pill" data-period="ancient" style="--pill-color: var(--ctp-rosewater);">Ancient</button>
-                    <button class="era-pill" data-period="medieval" style="--pill-color: var(--ctp-mauve);">Medieval</button>
-                    <button class="era-pill" data-period="colonial" style="--pill-color: var(--ctp-teal);">Colonial</button>
-                    <button class="era-pill" data-period="modern" style="--pill-color: var(--ctp-blue);">Modern</button>
+                    <button class="era-pill active" data-period="all">All Eras</button>
+                    <button class="era-pill" data-period="ancient">Ancient</button>
+                    <button class="era-pill" data-period="medieval">Medieval</button>
+                    <button class="era-pill" data-period="colonial">Colonial</button>
+                    <button class="era-pill" data-period="modern">Modern</button>
                 </div>
             </div>
 
