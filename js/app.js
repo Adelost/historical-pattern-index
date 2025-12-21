@@ -3,7 +3,7 @@
  */
 
 import { Utils, DRIVERS, DOT_STYLE } from './utils.js';
-import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard } from './components.js';
+import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard, EventTooltip } from './components.js';
 
 // --- APP LOGIC (State & Effects) ---
 const App = {
@@ -618,19 +618,7 @@ const App = {
                                 if (!dataPoint) return;
 
                                 const event = dataPoint.raw.raw;
-                                const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
-                                const year = `${event.period.start}–${event.period.end}`;
-                                const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
-
-                                // Build tooltip content (matches timeline style)
-                                tooltip.innerHTML = `
-                                    <div class="chart-tooltip-year">${year}</div>
-                                    <div class="chart-tooltip-name">${event.name}</div>
-                                    <div class="chart-tooltip-meta">
-                                        <span class="chart-tooltip-deaths">${deaths}</span>
-                                        <span class="chart-tooltip-tier" style="color: ${color}">${shortLabel}</span>
-                                    </div>
-                                `;
+                                tooltip.innerHTML = EventTooltip(event);
 
                                 // Position tooltip
                                 const { offsetLeft, offsetTop } = context.chart.canvas;

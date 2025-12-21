@@ -9,6 +9,22 @@ import { Utils, DRIVERS } from './utils.js';
 export const Icon = (path) =>
     `<svg style="width:16px; height:16px; fill:currentColor" viewBox="0 0 24 24">${path}</svg>`;
 
+// Chart/Timeline tooltip (shared format)
+export const EventTooltip = (event) => {
+    const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
+    const year = `${event.period.start}–${event.period.end}`;
+    const deaths = Utils.formatDeaths(event.metrics.mortality.min, event.metrics.mortality.max);
+
+    return `
+        <div class="chart-tooltip-year">${year}</div>
+        <div class="chart-tooltip-name">${event.name}</div>
+        <div class="chart-tooltip-meta">
+            <span class="chart-tooltip-deaths" style="color: ${color}">${deaths}</span>
+            <span class="chart-tooltip-tier" style="color: ${color}">${shortLabel}</span>
+        </div>
+    `;
+};
+
 export const Badge = (tierName) => {
     const { icon, shortLabel } = Utils.getTheme(tierName);
     return `<div class="badge">${Icon(icon)} ${shortLabel || tierName}</div>`;
@@ -327,12 +343,13 @@ export const Card = (event) => {
 
 // Map popup
 export const MapPopup = (event) => {
+    const { color } = Utils.getTheme(event.analysis.tier);
     const deaths = event.metrics.mortality;
     return `
     <div class="map-popup">
         <h4>${event.name}</h4>
         <div class="meta">${event.period.start}–${event.period.end}</div>
-        <div class="deaths">${Utils.formatDeaths(deaths.min, deaths.max)} deaths</div>
+        <div class="deaths" style="color: ${color}">${Utils.formatDeaths(deaths.min, deaths.max)} deaths</div>
     </div>`;
 };
 
