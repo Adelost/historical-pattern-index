@@ -336,12 +336,83 @@ export const MapPopup = (event) => {
     </div>`;
 };
 
+// Expandable Score Bar - click to show breakdown
+const ExpandableScoreBar = (label, value, type, breakdown, rationale) => {
+    const breakdownId = `breakdown-${type}-${Math.random().toString(36).substr(2, 9)}`;
+
+    // Format breakdown key to readable label
+    const formatKey = (key) => {
+        const labels = {
+            policy: 'Official Policy', state_involvement: 'State Involvement',
+            infrastructure: 'Dedicated Infrastructure', propaganda: 'Propaganda Campaign',
+            generational_targeting: 'Generational Targeting', cultural_ban: 'Cultural/Religious Ban',
+            property_seizure: 'Property Seizure', identification: 'Identification System',
+            deliberate_deprivation: 'Deliberate Deprivation', duration_over_5y: 'Duration > 5 Years',
+            direct_revenue: 'Direct Revenue', resource_extraction: 'Resource Extraction',
+            forced_labor: 'Forced Labor', economic_dependence: 'Economic Dependence',
+            market_integration: 'Market Integration', purity_ideal: 'Purity Ideal',
+            dehumanization: 'Dehumanization', mass_mobilization: 'Mass Mobilization',
+            existential_threat: 'Existential Threat', utopianism: 'Utopian Vision',
+            distance: 'Geographic Distance', benefit: 'Benefiting Population',
+            euphemisms: 'Euphemistic Language', diffused_responsibility: 'Diffused Responsibility',
+            silence: 'Institutional Silence'
+        };
+        return labels[key] || key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    };
+
+    const breakdownHtml = breakdown ? Object.entries(breakdown).map(([key, val]) => `
+        <span class="breakdown-chip ${val ? 'checked' : ''}">${val ? '✓' : '✗'} ${formatKey(key)}</span>
+    `).join('') : '';
+
+    return `
+    <div class="score-row" data-breakdown="${breakdownId}">
+        <div class="score-row-header">
+            <span class="score-label">${label}</span>
+            <div class="score-bar-wrap">
+                <div class="score-bar">
+                    <div class="score-fill ${type}" style="width: ${value}%"></div>
+                </div>
+                <span class="score-value">${value}%</span>
+            </div>
+            ${breakdown ? `<svg class="score-expand-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>` : ''}
+        </div>
+        ${breakdown ? `
+        <div class="score-breakdown" id="${breakdownId}">
+            <div class="breakdown-chips">${breakdownHtml}</div>
+            ${rationale ? `<p class="breakdown-rationale">${rationale}</p>` : ''}
+        </div>
+        ` : ''}
+    </div>`;
+};
+
+// Why Section - warning signs + root causes
+const WhySection = (analysis) => {
+    const signs = analysis.warning_signs || [];
+    const causes = analysis.root_causes || '';
+
+    if (!signs.length && !causes) return '';
+
+    const signsList = signs.map(sign => `
+        <div class="why-sign">
+            <span class="why-icon">⚠</span>
+            <span>${sign}</span>
+        </div>
+    `).join('');
+
+    return `
+    <div class="why-section">
+        <div class="section-label">Why This Happened</div>
+        ${signs.length ? `<div class="why-signs">${signsList}</div>` : ''}
+        ${causes ? `<p class="why-causes">${causes}</p>` : ''}
+    </div>`;
+};
+
 // Table Row Component
 export const TableRow = (event) => {
     const { color, shortLabel } = Utils.getTheme(event.analysis.tier);
     const deaths = event.metrics.mortality;
     const scores = event.metrics.scores;
-    const breakdowns = event.metrics.breakdowns;
+    const breakdowns = event.metrics.breakdowns || {};
     const rationales = event.metrics.rationales || {};
     const denialStatus = event.denial_status || 'acknowledged';
     const period = `${event.period.start}–${event.period.end}`;
@@ -376,20 +447,25 @@ export const TableRow = (event) => {
         <div class="details-inner">
             ${event.description ? `<p class="details-description">${event.description}</p>` : ''}
 
-            <div class="details-scores">
-                ${ScoreBar('Systematic', scores.systematic_intensity, 'systematic')}
-                ${ScoreBar('Profit', scores.profit, 'profit')}
-                ${ScoreBar('Ideology', scores.ideology, 'ideology')}
-                ${ScoreBar('Complicity', scores.complicity, 'complicity')}
+            ${WhySection(event.analysis)}
+
+            ${event.erasure_note ? `
+            <div class="erasure-section">
+                <div class="section-label">Beyond the Death Toll</div>
+                <p class="erasure-text">${event.erasure_note}</p>
+            </div>
+            ` : ''}
+
+            <div class="scores-section">
+                ${ExpandableScoreBar('Systematic', scores.systematic_intensity, 'systematic', breakdowns.systematic_intensity, rationales.systematic_intensity)}
+                ${ExpandableScoreBar('Profit', scores.profit, 'profit', breakdowns.profit, rationales.profit)}
+                ${ExpandableScoreBar('Ideology', scores.ideology, 'ideology', breakdowns.ideology, rationales.ideology)}
+                ${ExpandableScoreBar('Complicity', scores.complicity, 'complicity', breakdowns.complicity, rationales.complicity)}
             </div>
 
-            <div class="details-note">
+            <div class="pattern-note">
                 "${event.analysis.pattern_note}"
             </div>
-
-            ${event.erasure_note ? `<div class="details-erasure"><strong>Beyond death toll:</strong> ${event.erasure_note}</div>` : ''}
-
-            ${DetailedAnalysis(event.analysis, breakdowns, rationales)}
 
             ${event.wikipedia_url ? `<a href="${event.wikipedia_url}" target="_blank" rel="noopener" class="details-wiki">Read more on Wikipedia →</a>` : ''}
         </div>

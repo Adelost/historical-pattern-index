@@ -991,6 +991,196 @@
             padding: 0 1rem;
         }
 
+        /* --- Section Labels --- */
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        /* --- Why Section --- */
+        .why-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .why-signs {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .why-sign {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .why-icon {
+            color: var(--ctp-yellow);
+            flex-shrink: 0;
+        }
+
+        .why-causes {
+            font-size: 0.9rem;
+            color: var(--ctp-subtext);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* --- Erasure Section --- */
+        .erasure-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .erasure-section .section-label {
+            color: var(--ctp-yellow);
+            border-bottom-color: rgba(249, 226, 175, 0.3);
+        }
+
+        .erasure-text {
+            font-size: 0.9rem;
+            color: var(--ctp-yellow);
+            line-height: 1.6;
+            margin: 0;
+            opacity: 0.9;
+        }
+
+        /* --- Scores Section (new expandable) --- */
+        .scores-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .score-row {
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .score-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .score-row-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .score-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            width: 80px;
+            flex-shrink: 0;
+        }
+
+        .score-bar-wrap {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .score-bar {
+            flex: 1;
+            height: 8px;
+            background: var(--ctp-mantle);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .score-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.5s ease-out;
+        }
+
+        .score-fill.systematic { background: linear-gradient(90deg, var(--ctp-peach), var(--ctp-red)); }
+        .score-fill.profit { background: linear-gradient(90deg, var(--ctp-lavender), var(--ctp-mauve)); }
+        .score-fill.ideology { background: linear-gradient(90deg, var(--ctp-sapphire), var(--ctp-blue)); }
+        .score-fill.complicity { background: linear-gradient(90deg, var(--ctp-teal), var(--ctp-green)); }
+
+        .score-value {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            width: 35px;
+            text-align: right;
+        }
+
+        .score-expand-icon {
+            width: 16px;
+            height: 16px;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .score-row.expanded .score-expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .score-breakdown {
+            display: none;
+            padding: 0.75rem 0.5rem 0.75rem 90px;
+        }
+
+        .score-row.expanded .score-breakdown {
+            display: block;
+        }
+
+        .breakdown-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .breakdown-chip {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 100px;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-muted);
+        }
+
+        .breakdown-chip.checked {
+            background: rgba(166, 227, 161, 0.15);
+            color: var(--ctp-green);
+        }
+
+        .breakdown-rationale {
+            font-size: 0.8rem;
+            color: var(--ctp-subtext);
+            font-style: italic;
+            line-height: 1.5;
+            margin: 0.5rem 0 0 0;
+        }
+
+        /* --- Pattern Note --- */
+        .pattern-note {
+            font-size: 0.9rem;
+            color: var(--ctp-subtext);
+            font-style: italic;
+            line-height: 1.6;
+            padding: 1rem;
+            border-top: 1px solid var(--border-light);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Legacy styles kept for Card component */
         .details-scores {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -1672,6 +1862,35 @@
 
             .details-scores {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            /* Score rows mobile */
+            .score-row-header {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .score-label {
+                width: 70px;
+                font-size: 0.75rem;
+            }
+
+            .score-bar-wrap {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .score-breakdown {
+                padding-left: 0.5rem;
+            }
+
+            .breakdown-chips {
+                gap: 0.3rem;
+            }
+
+            .breakdown-chip {
+                font-size: 0.65rem;
+                padding: 0.2rem 0.4rem;
             }
         }
 

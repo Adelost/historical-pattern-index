@@ -341,6 +341,9 @@ const App = {
             dots,
             autoExpand: true
         });
+
+        // Score row click to expand breakdown
+        this.bindScoreRowEvents(container);
     },
 
     getFilteredEvents() {
@@ -466,6 +469,21 @@ const App = {
                 this.render();
             });
         });
+
+        // Score row click to expand breakdown
+        this.bindScoreRowEvents(table);
+    },
+
+    bindScoreRowEvents(container) {
+        container.querySelectorAll('.score-row').forEach(row => {
+            const header = row.querySelector('.score-row-header');
+            if (!header) return;
+
+            header.addEventListener('click', (e) => {
+                e.stopPropagation(); // Don't bubble up to parent row
+                row.classList.toggle('expanded');
+            });
+        });
     },
 
     render() {
@@ -571,9 +589,15 @@ const App = {
                     plugins: {
                         legend: { display: false },
                         tooltip: {
-                            backgroundColor: '#181825',  // ctp-mantle
-                            titleColor: '#cdd6f4',       // ctp-text
-                            bodyColor: '#a6adc8',        // ctp-subtext
+                            backgroundColor: '#181825',
+                            titleColor: '#cdd6f4',
+                            bodyColor: '#a6adc8',
+                            borderColor: '#313244',
+                            borderWidth: 1,
+                            cornerRadius: 8,
+                            padding: 12,
+                            titleFont: { size: 13, weight: 600 },
+                            bodyFont: { size: 12 },
                             callbacks: {
                                 label: (c) => c.raw.raw.name,
                                 afterLabel: (c) => [
@@ -587,16 +611,38 @@ const App = {
                     scales: {
                         x: {
                             type: 'logarithmic',
-                            grid: { color: '#45475a' },   // ctp-surface1
-                            ticks: { color: '#6c7086' },  // ctp-overlay0
-                            title: { display: true, text: 'Mortality (Log Scale)', color: '#a6adc8' }
+                            grid: {
+                                color: 'rgba(69, 71, 90, 0.5)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#6c7086',
+                                font: { size: 11 }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Mortality (Log Scale)',
+                                color: '#a6adc8',
+                                font: { size: 12, weight: 500 }
+                            }
                         },
                         y: {
                             min: 0,
                             max: 105,
-                            grid: { color: '#45475a' },   // ctp-surface1
-                            ticks: { color: '#6c7086' },  // ctp-overlay0
-                            title: { display: true, text: 'Systematic Intensity (%)', color: '#a6adc8' }
+                            grid: {
+                                color: 'rgba(69, 71, 90, 0.5)',
+                                drawBorder: false
+                            },
+                            ticks: {
+                                color: '#6c7086',
+                                font: { size: 11 }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Systematic Intensity (%)',
+                                color: '#a6adc8',
+                                font: { size: 12, weight: 500 }
+                            }
                         }
                     }
                 }
