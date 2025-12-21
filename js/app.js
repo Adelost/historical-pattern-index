@@ -2,8 +2,8 @@
  * HPI App - Main application logic
  */
 
-import { Utils } from './utils.js';
-import { Card, MapPopup, TableRow, TableHeader } from './components.js';
+import { Utils, DRIVERS } from './utils.js';
+import { Card, MapPopup, TableRow, TableHeader, KnowledgeCard } from './components.js';
 
 // --- APP LOGIC (State & Effects) ---
 const App = {
@@ -560,13 +560,17 @@ const App = {
     },
 
     renderKnowledge() {
-        // Driver color mapping
-        const driverColors = {
-            'religious_ideology': { class: 'driver-religious', label: 'Religious', color: '#ef4444' },
-            'conquest': { class: 'driver-conquest', label: 'Conquest', color: '#64748b' },
-            'ethnic_ideology': { class: 'driver-ethnic', label: 'Ethnic', color: '#a855f7' },
-            'political_ideology': { class: 'driver-political', label: 'Political', color: '#f97316' },
-            'economic_exploitation': { class: 'driver-economic', label: 'Economic', color: '#22c55e' }
+        // Helper: get short name for timeline labels
+        const getShortName = (name) => {
+            let shortName = name.replace(/\s*\([^)]+\)/, '').trim();
+            if (shortName.includes(' of ')) {
+                shortName = shortName.split(' of ').pop().split(' ')[0];
+            } else if (shortName.includes(' für ')) {
+                shortName = shortName.split(' ')[0];
+            } else {
+                shortName = shortName.split(' ')[0];
+            }
+            return shortName.length > 10 ? shortName.substring(0, 9) + '…' : shortName;
         };
 
         // Render a section (timeline + cards)
@@ -584,24 +588,12 @@ const App = {
                     ? padding + (index / (sorted.length - 1)) * usableWidth
                     : 50;
 
-                const driver = driverColors[entry.driver] || driverColors['conquest'];
-                const yearLabel = entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year;
-
-                // Smart short name extraction
-                let shortName = entry.name.replace(/\s*\([^)]+\)/, '').trim();
-                if (shortName.includes(' of ')) {
-                    shortName = shortName.split(' of ').pop().split(' ')[0];
-                } else if (shortName.includes(' für ')) {
-                    shortName = shortName.split(' ')[0];
-                } else {
-                    shortName = shortName.split(' ')[0];
-                }
-                if (shortName.length > 10) {
-                    shortName = shortName.substring(0, 9) + '…';
-                }
+                const driver = Utils.getDriver(entry.driver);
+                const yearLabel = Utils.formatYear(entry.year);
+                const shortName = getShortName(entry.name);
 
                 return `
-                    <div class="timeline-dot ${driver.class}"
+                    <div class="timeline-dot"
                          style="left: calc(${x}% - 8px); background: ${driver.color};"
                          data-id="${entry.id}"
                          title="${entry.name}">
@@ -618,50 +610,13 @@ const App = {
                 </div>
             `;
 
-            // Cards
+            // Cards - using KnowledgeCard component (same pattern as TableRow)
             const cardsEl = document.getElementById(cardsId);
             const cardsHtml = sorted.map(entry => {
-                const driver = driverColors[entry.driver] || driverColors['conquest'];
-                const yearLabel = entry.year_end
-                    ? `${entry.year < 0 ? Math.abs(entry.year) + ' BCE' : entry.year} - ${entry.year_end}`
-                    : (entry.year < 0 ? `${Math.abs(entry.year)} BCE` : entry.year);
-
-                // Connected event link
-                let connectedHtml = '';
-                if (entry.connected_event) {
-                    const connected = this.state.events.find(e => e.id === entry.connected_event);
-                    if (connected) {
-                        connectedHtml = `
-                            <a href="#" class="knowledge-card-link" data-event-id="${connected.id}">
-                                ↳ Connected: ${connected.name}
-                            </a>
-                        `;
-                    }
-                }
-
-                // Different content for saved vs lost
-                const contentField = isSaved ? entry.saved_how : entry.what_lost;
-                const quantityField = isSaved ? entry.quantity_threatened : entry.quantity;
-
-                return `
-                    <div class="knowledge-card" data-id="${entry.id}">
-                        <div class="knowledge-card-header">
-                            <h3 class="knowledge-card-title">${entry.name}</h3>
-                            <span class="knowledge-card-year">${yearLabel}</span>
-                        </div>
-                        <div class="knowledge-card-meta">
-                            <span class="knowledge-badge driver" style="color: ${driver.color}; border: 1px solid ${driver.color}40;">
-                                ${driver.label}
-                            </span>
-                            <span class="knowledge-badge type">${entry.type}</span>
-                            <span class="knowledge-badge quantity">${quantityField || ''}</span>
-                        </div>
-                        <div class="knowledge-card-what">${contentField || ''}</div>
-                        <div class="knowledge-card-driver-note">"${entry.driver_note}"</div>
-                        <div class="knowledge-card-description">${entry.description || entry.threat || ''}</div>
-                        ${connectedHtml}
-                    </div>
-                `;
+                const connectedEvent = entry.connected_event
+                    ? this.state.events.find(e => e.id === entry.connected_event)
+                    : null;
+                return KnowledgeCard(entry, isSaved, connectedEvent);
             }).join('');
 
             cardsEl.innerHTML = cardsHtml;
@@ -682,47 +637,51 @@ const App = {
     },
 
     bindKnowledgeEvents() {
-        const cards = document.querySelectorAll('.knowledge-card');
+        const rows = document.querySelectorAll('.knowledge-row');
         const dots = document.querySelectorAll('.knowledge-timeline .timeline-dot');
 
-        // Card click to expand/highlight
-        cards.forEach(card => {
-            card.addEventListener('click', () => {
-                const id = card.dataset.id;
-                const isActive = card.classList.contains('active');
+        // Row click to expand/collapse (same pattern as TableRow)
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                const id = row.dataset.id;
+                const details = document.querySelector(`.knowledge-row-details[data-for="${id}"]`);
+                if (!details) return;
 
-                // Remove active from all
-                cards.forEach(c => c.classList.remove('active'));
+                const isExpanded = row.classList.contains('expanded');
+
+                // Close all other rows
+                rows.forEach(r => {
+                    r.classList.remove('expanded');
+                    const d = document.querySelector(`.knowledge-row-details[data-for="${r.dataset.id}"]`);
+                    if (d) d.classList.remove('expanded');
+                });
                 dots.forEach(d => d.classList.remove('active'));
 
-                if (!isActive) {
-                    card.classList.add('active');
+                // Toggle this row
+                if (!isExpanded) {
+                    row.classList.add('expanded');
+                    details.classList.add('expanded');
                     const dot = document.querySelector(`.timeline-dot[data-id="${id}"]`);
                     if (dot) dot.classList.add('active');
                 }
             });
         });
 
-        // Dot click to scroll to card
+        // Dot click to scroll to row and expand
         dots.forEach(dot => {
             dot.addEventListener('click', () => {
                 const id = dot.dataset.id;
-                const card = document.querySelector(`.knowledge-card[data-id="${id}"]`);
+                const row = document.querySelector(`.knowledge-row[data-id="${id}"]`);
 
-                // Remove active from all
-                cards.forEach(c => c.classList.remove('active'));
-                dots.forEach(d => d.classList.remove('active'));
-
-                if (card) {
-                    dot.classList.add('active');
-                    card.classList.add('active');
-                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (row) {
+                    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => row.click(), 300);
                 }
             });
         });
 
         // Connected event links
-        document.querySelectorAll('.knowledge-card-link[data-event-id]').forEach(link => {
+        document.querySelectorAll('.knowledge-link[data-event-id]').forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
@@ -739,6 +698,11 @@ const App = {
                 }, 100);
             });
         });
+
+        // Auto-expand first row
+        if (rows.length > 0) {
+            rows[0].click();
+        }
     }
 };
 

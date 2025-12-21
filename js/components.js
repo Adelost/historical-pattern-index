@@ -2,7 +2,7 @@
  * HPI Components - Pure HTML generator functions
  */
 
-import { Utils } from './utils.js';
+import { Utils, DRIVERS } from './utils.js';
 
 // --- COMPONENTS (HTML Generators) ---
 
@@ -437,3 +437,74 @@ export const TableHeader = () => `
         </div>
         <div class="table-cell cell-expand"></div>
     </div>`;
+
+// Knowledge Card - used for Knowledge Lost/Saved entries
+// Follows same pattern as TableRow: row → expandable details
+export const KnowledgeCard = (entry, isSaved = false, connectedEvent = null) => {
+    const driver = Utils.getDriver(entry.driver);
+    const yearLabel = Utils.formatYear(entry.year, entry.year_end);
+
+    // Main content differs between lost and saved
+    const mainContent = isSaved ? entry.saved_how : entry.what_lost;
+    const quantity = isSaved ? entry.quantity_threatened : entry.quantity;
+
+    // Connected event link
+    const connectedHtml = connectedEvent ? `
+        <a href="#" class="knowledge-link" data-event-id="${connectedEvent.id}">
+            ↳ Connected: ${connectedEvent.name}
+        </a>
+    ` : '';
+
+    return `
+    <div class="knowledge-row" data-id="${entry.id}" style="--driver-color: ${driver.color}">
+        <div class="knowledge-row-header">
+            <span class="knowledge-dot"></span>
+            <div class="knowledge-info">
+                <span class="knowledge-name">${entry.name}</span>
+                <span class="knowledge-meta">
+                    <span class="knowledge-year">${yearLabel}</span>
+                    <span class="knowledge-driver" style="color: ${driver.color}">${driver.label}</span>
+                    <span class="knowledge-type">${entry.type}</span>
+                </span>
+            </div>
+            <div class="knowledge-expand">
+                <span class="expand-hint">Details</span>
+                <svg class="expand-icon" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="knowledge-row-details" data-for="${entry.id}">
+        <div class="details-inner">
+            ${entry.description ? `<p class="details-description">${entry.description}</p>` : ''}
+
+            <div class="knowledge-facts">
+                ${quantity ? `<div class="knowledge-fact"><strong>${isSaved ? 'Threatened:' : 'Lost:'}</strong> ${quantity}</div>` : ''}
+                ${mainContent ? `<div class="knowledge-fact"><strong>${isSaved ? 'How saved:' : 'What was lost:'}</strong> ${mainContent}</div>` : ''}
+            </div>
+
+            <div class="details-note">
+                "${entry.driver_note}"
+            </div>
+
+            ${connectedHtml}
+
+            ${entry.sources ? `
+                <details class="detailed-analysis">
+                    <summary class="analysis-toggle">
+                        <span>Sources</span>
+                        <svg class="chevron" viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                        </svg>
+                    </summary>
+                    <div class="analysis-content">
+                        <ul class="knowledge-sources">
+                            ${entry.sources.map(s => `<li>${s}</li>`).join('')}
+                        </ul>
+                    </div>
+                </details>
+            ` : ''}
+        </div>
+    </div>`;
+};

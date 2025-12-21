@@ -3,6 +3,16 @@
  */
 
 // --- DATA DICTIONARY (Single Source of Truth) ---
+
+// Driver colors for Knowledge Lost/Saved
+export const DRIVERS = {
+    'religious_ideology': { label: 'Religious', color: '#ef4444' },
+    'conquest': { label: 'Conquest', color: '#64748b' },
+    'ethnic_ideology': { label: 'Ethnic', color: '#a855f7' },
+    'political_ideology': { label: 'Political', color: '#f97316' },
+    'economic_exploitation': { label: 'Economic', color: '#22c55e' }
+};
+
 // Semantic colors: Profit=Gold, Ideology=Red, Collapse=SlateBlue
 export const THEME = {
     tiers: {
@@ -56,6 +66,14 @@ export const Utils = {
         if (years === 1) return '1 year';
         return `${years} years`;
     },
+
+    formatYear: (year, yearEnd = null) => {
+        const fmt = (y) => y < 0 ? `${Math.abs(y)} BCE` : y;
+        if (yearEnd) return `${fmt(year)} – ${fmt(yearEnd)}`;
+        return fmt(year);
+    },
+
+    getDriver: (driverName) => DRIVERS[driverName] || DRIVERS['conquest'],
 
     getTheme: (tierName) => THEME.tiers[tierName] || THEME.default,
 
