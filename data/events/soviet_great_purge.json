@@ -1,6 +1,7 @@
 {
   "id": "soviet_great_purge_1936",
   "name": "Soviet Great Purge (Great Terror)",
+  "description": "Stalin's campaign of political repression from 1936-38. Show trials condemned party leaders as traitors; the NKVD executed or imprisoned millions. Anyone could be denounced; fear paralyzed society. Approximately 750,000 were executed; millions more sent to Gulag camps.",
   "status": "historic",
   "period": {
     "start": 1936,

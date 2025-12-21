@@ -1,6 +1,7 @@
 {
   "id": "great_famine_ireland_1845",
   "name": "Great Famine (Ireland)",
+  "description": "The Irish Potato Famine caused by potato blight and British policies prioritizing free-market ideology over relief. Despite Ireland exporting food throughout the crisis, a million died of starvation and disease while another million emigrated. Ireland's population never recovered.",
   "status": "historic",
   "period": {
     "start": 1845,

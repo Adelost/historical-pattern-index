@@ -1,6 +1,7 @@
 {
   "id": "native_american_genocide_1830",
   "name": "Native American Genocide (US Indian Wars & Removal)",
+  "description": "The systematic destruction of Indigenous peoples in North America through warfare, forced removal, intentional starvation, and cultural erasure. From colonial massacres through the reservation system, Native American populations declined by 90%. Policies explicitly aimed at elimination.",
   "status": "historic",
   "period": {
     "start": 1830,

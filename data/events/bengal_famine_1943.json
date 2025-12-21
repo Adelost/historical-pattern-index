@@ -1,6 +1,7 @@
 {
   "id": "bengal_famine_1943",
   "name": "Bengal Famine of 1943",
+  "description": "A catastrophic famine in British-ruled Bengal caused by wartime policies, including rice exports and denial of food imports. Winston Churchill's War Cabinet prioritized military needs over famine relief. Three million Bengalis died while food stocks existed elsewhere in the empire.",
   "status": "historic",
   "period": {
     "start": 1943,

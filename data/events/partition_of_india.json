@@ -1,6 +1,7 @@
 {
   "id": "partition_of_india_1947",
   "name": "Partition of India",
+  "description": "The chaotic division of British India into India and Pakistan in 1947. Hastily drawn borders triggered massive population transfers and communal violence. Hindus, Muslims, and Sikhs massacred each other across Punjab and Bengal. Up to two million died; 15 million became refugees.",
   "status": "historic",
   "period": {
     "start": 1947,

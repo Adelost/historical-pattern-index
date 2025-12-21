@@ -1,6 +1,7 @@
 {
   "id": "east_timor_genocide_1975",
   "name": "East Timor Genocide",
+  "description": "Indonesia's brutal occupation of East Timor following its 1975 invasion. Military operations, forced starvation, and massacres killed up to 180,000 people—about a quarter of the population. The occupation lasted until 1999 when East Timor gained independence.",
   "status": "historic",
   "period": {
     "start": 1975,

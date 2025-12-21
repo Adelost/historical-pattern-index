@@ -1,6 +1,7 @@
 {
   "id": "rwandan_genocide_1994",
   "name": "Rwandan Genocide",
+  "description": "The systematic slaughter of 800,000 Tutsis and moderate Hutus in 100 days. Hutu extremists used radio propaganda to mobilize ordinary citizens as killers. The international community and UN peacekeepers failed to intervene. The genocide ended when the Rwandan Patriotic Front took power.",
   "status": "historic",
   "period": {
     "start": 1994,

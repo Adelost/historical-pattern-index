@@ -1,6 +1,7 @@
 {
   "id": "spanish_americas_1492",
   "name": "Colonization of the Americas (Initial Phase)",
+  "description": "Spain's conquest and colonization of the Americas, which killed 90% of the indigenous population within a century. Warfare, enslavement in mines and plantations, and epidemic diseases devastated Native American civilizations. The encomienda system institutionalized exploitation.",
   "status": "historic",
   "period": {
     "start": 1492,

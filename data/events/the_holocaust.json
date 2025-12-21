@@ -1,6 +1,7 @@
 {
   "id": "the_holocaust_1941",
   "name": "The Holocaust",
+  "description": "Nazi Germany's systematic murder of six million Jews and millions of others deemed 'undesirable.' Industrial killing centers like Auschwitz used gas chambers and crematoria. The Holocaust was history's most systematic genocide, implemented with bureaucratic precision across occupied Europe.",
   "status": "historic",
   "period": {
     "start": 1941,

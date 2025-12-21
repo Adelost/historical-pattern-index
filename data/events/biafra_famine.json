@@ -1,6 +1,7 @@
 {
   "id": "biafra_famine_1967",
   "name": "Biafra War & Famine (Nigerian Civil War)",
+  "description": "The deliberate starvation of the Igbo people during Nigeria's civil war against the secessionist Republic of Biafra. The Nigerian government blockaded food and medicine, causing mass starvation that killed up to two million people, mostly children.",
   "status": "historic",
   "period": {
     "start": 1967,

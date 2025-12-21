@@ -1,6 +1,7 @@
 {
   "id": "napoleon_haiti_1801",
   "name": "Napoleonic Haiti Campaign (Saint-Domingue)",
+  "description": "Napoleon's attempt to restore slavery in Haiti and crush the revolution that had freed enslaved people. French forces under Leclerc used mass executions, deportations, and chemical warfare (sulfur dioxide). The campaign failed; Haiti became the first free Black republic, but France extracted crippling reparations.",
   "status": "historic",
   "period": {
     "start": 1801,

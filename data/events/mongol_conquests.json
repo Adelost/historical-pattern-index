@@ -1,6 +1,7 @@
 {
   "id": "mongol_conquests_1206",
   "name": "Mongol Conquests",
+  "description": "The Mongol Empire's expansion under Genghis Khan and successors, destroying cities and killing populations across Asia and Eastern Europe. Cities that resisted faced complete annihilation. The conquests caused demographic collapse in Central Asia, Persia, and China.",
   "status": "historic",
   "period": {
     "start": 1206,

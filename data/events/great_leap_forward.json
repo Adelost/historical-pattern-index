@@ -1,6 +1,7 @@
 {
   "id": "great_leap_forward_1958",
   "name": "Great Leap Forward (Chinese Famine)",
+  "description": "Mao Zedong's catastrophic industrialization campaign that caused history's deadliest famine. Forced collectivization, impossible grain quotas, and the diversion of agricultural labor to steel production led to 15-55 million deaths while officials reported false harvests.",
   "status": "historic",
   "period": {
     "start": 1958,
