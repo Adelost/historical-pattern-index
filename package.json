@@ -1,0 +1,11 @@
+{
+  "name": "historical-pattern-index",
+  "version": "1.0.0",
+  "description": "An index of historical atrocities, genocides, and knowledge destruction events",
+  "scripts": {
+    "start": "npx serve .",
+    "update": "python3 scripts/update_readme.py"
+  },
+  "keywords": ["history", "genocide", "knowledge-loss"],
+  "license": "MIT"
+}
