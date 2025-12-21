@@ -290,6 +290,21 @@ const App = {
                 infoPanel.classList.add('visible');
             });
         });
+
+        // Scroll indicator handling
+        const container = timeline.parentElement;
+        const updateScrollState = () => {
+            const canScroll = container.scrollWidth > container.clientWidth;
+            const scrolled = container.scrollLeft > 10;
+            const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+
+            container.classList.toggle('can-scroll', canScroll && !scrolled);
+            container.classList.toggle('scrolled', scrolled);
+            container.classList.toggle('at-end', atEnd);
+        };
+
+        container.addEventListener('scroll', updateScrollState);
+        updateScrollState();
     },
 
     getFilteredEvents() {

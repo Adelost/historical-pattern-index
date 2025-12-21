@@ -576,6 +576,56 @@
             border-radius: 16px;
             padding: 2rem;
             overflow-x: auto;
+            position: relative;
+        }
+
+        .timeline-container.can-scroll::after {
+            content: 'scroll →';
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            opacity: 0.7;
+            animation: pulse-fade 2s ease-in-out infinite;
+        }
+
+        .timeline-container.scrolled::after {
+            display: none;
+        }
+
+        @keyframes pulse-fade {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.8; }
+        }
+
+        .timeline-scroll-fade {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 60px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .timeline-scroll-fade.left {
+            left: 0;
+            background: linear-gradient(to right, var(--bg-card), transparent);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .timeline-scroll-fade.right {
+            right: 0;
+            background: linear-gradient(to left, var(--bg-card), transparent);
+        }
+
+        .timeline-container.scrolled .timeline-scroll-fade.left {
+            opacity: 1;
+        }
+
+        .timeline-container.at-end .timeline-scroll-fade.right {
+            opacity: 0;
         }
 
         .timeline {
