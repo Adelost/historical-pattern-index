@@ -778,6 +778,50 @@
             margin-bottom: 1.5rem;
         }
 
+        /* --- Expandable Row (Shared Base) --- */
+        .expandable-row {
+            border-bottom: 1px solid var(--border-light);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .expandable-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .expandable-row.expanded {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .expandable-row .expand-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--text-muted);
+            transition: transform 0.3s, color 0.2s;
+        }
+
+        .expandable-row:hover .expand-icon {
+            color: var(--text-main);
+        }
+
+        .expandable-row.expanded .expand-icon {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        .expandable-row-details {
+            max-height: 0;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid transparent;
+            transition: max-height 0.3s ease;
+        }
+
+        .expandable-row-details.expanded {
+            max-height: 2000px;
+            border-bottom-color: var(--border-light);
+        }
+
         /* --- Event Table --- */
         .event-table {
             overflow: hidden;
@@ -830,9 +874,6 @@
             display: grid;
             grid-template-columns: 40px 1fr 100px 100px 140px 40px;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid var(--border-light);
-            cursor: pointer;
-            transition: background 0.2s, border-color 0.2s;
             position: relative;
         }
 
@@ -848,21 +889,13 @@
             transition: opacity 0.2s;
         }
 
-        .table-row:hover {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .table-row:hover::before {
+        .table-row:hover::before,
+        .table-row.expanded::before {
             opacity: 1;
         }
 
         .table-row.expanded {
-            background: rgba(255, 255, 255, 0.05);
             border-bottom-color: transparent;
-        }
-
-        .table-row.expanded::before {
-            opacity: 1;
         }
 
         .table-cell {
@@ -956,35 +989,7 @@
             opacity: 0;
         }
 
-        .expand-icon {
-            width: 20px;
-            height: 20px;
-            color: var(--text-muted);
-            transition: transform 0.3s, color 0.2s;
-        }
-
-        .table-row:hover .expand-icon {
-            color: var(--text-main);
-        }
-
-        .table-row.expanded .expand-icon {
-            transform: rotate(180deg);
-            color: var(--accent);
-        }
-
-        /* Expandable Details */
-        .table-row-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid transparent;
-        }
-
-        .table-row-details.expanded {
-            max-height: 2000px;
-            border-bottom-color: var(--border-light);
-        }
+        /* table-row-details: uses .expandable-row-details base */
 
         .details-inner {
             padding: 1.5rem 1.25rem 1.5rem 55px;
@@ -1892,17 +1897,9 @@
             display: flex;
             align-items: center;
             padding: 0.75rem 1rem;
-            border-bottom: 1px solid var(--border-light);
-            cursor: pointer;
-            transition: background 0.15s;
-        }
-
-        .knowledge-row:hover {
-            background: rgba(255, 255, 255, 0.03);
         }
 
         .knowledge-row.expanded {
-            background: rgba(56, 189, 248, 0.05);
             border-left: 3px solid var(--driver-color, var(--accent));
         }
 
@@ -1957,29 +1954,7 @@
             font-size: 0.8rem;
         }
 
-        .knowledge-expand .expand-icon {
-            width: 20px;
-            height: 20px;
-            transition: transform 0.2s;
-        }
-
-        .knowledge-row.expanded .expand-icon {
-            transform: rotate(180deg);
-        }
-
-        /* Knowledge Row Details */
-        .knowledge-row-details {
-            max-height: 0;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.2);
-            border-bottom: 1px solid transparent;
-            transition: max-height 0.3s ease, border-color 0.3s;
-        }
-
-        .knowledge-row-details.expanded {
-            max-height: 2000px;
-            border-bottom-color: var(--border-light);
-        }
+        /* knowledge-row-details: uses .expandable-row-details base */
 
         .knowledge-facts {
             display: flex;

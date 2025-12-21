@@ -369,7 +369,7 @@ export const TableRow = (event) => {
     const region = event.geography.region.split('(')[0].split(',')[0].trim();
 
     return `
-    <div class="table-row" data-id="${event.id}" style="--tier-color: ${color}">
+    <div class="table-row expandable-row" data-id="${event.id}" style="--tier-color: ${color}">
         <div class="table-cell cell-tier">
             <span class="tier-dot"></span>
         </div>
@@ -391,7 +391,7 @@ export const TableRow = (event) => {
             </svg>
         </div>
     </div>
-    <div class="table-row-details" data-for="${event.id}">
+    <div class="table-row-details expandable-row-details" data-for="${event.id}">
         <div class="details-inner">
             ${event.description ? `<p class="details-description">${event.description}</p>` : ''}
 
@@ -456,7 +456,7 @@ export const KnowledgeCard = (entry, isSaved = false, connectedEvent = null) => 
     ` : '';
 
     return `
-    <div class="knowledge-row" data-id="${entry.id}" style="--driver-color: ${driver.color}">
+    <div class="knowledge-row expandable-row" data-id="${entry.id}" style="--driver-color: ${driver.color}">
         <div class="knowledge-row-header">
             <span class="knowledge-dot"></span>
             <div class="knowledge-info">
@@ -475,7 +475,7 @@ export const KnowledgeCard = (entry, isSaved = false, connectedEvent = null) => 
             </div>
         </div>
     </div>
-    <div class="knowledge-row-details" data-for="${entry.id}">
+    <div class="knowledge-row-details expandable-row-details" data-for="${entry.id}">
         <div class="details-inner">
             ${entry.description ? `<p class="details-description">${entry.description}</p>` : ''}
 
