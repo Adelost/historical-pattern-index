@@ -288,7 +288,27 @@ Genocide kills people. Epistemicide kills their knowledge. Often the same perpet
 
 ---
 
-## Sources
+## Sources (Per Entry)
+
+<!-- STATS:LOST_SOURCES -->
+- **Zoroastrian Texts (Avesta)**: Denkard (9th century Zoroastrian encyclopedia); Zoroastrianism: An Introduction (Jenny Rose, 2011); Arrian, Anabasis of Alexander
+- **Library of Carthage**: Pliny, Natural History XVIII.22-23; Appian, Punic Wars; Carthage Must Be Destroyed (Richard Miles, 2010)
+- **Druidic Knowledge System**: Caesar, Gallic Wars VI.13-14; The Druids (Stuart Piggott, 1968); The World of the Druids (Miranda Green, 1997)
+- **Library of Alexandria**: The Rise and Fall of the Library of Alexandria (Mostafa El-Abbadi, 1990); Plutarch, Life of Caesar; The Vanished Library (Luciano Canfora, 1989)
+- **Silphium Extinction**: Pliny, Natural History XIX.15, XXII.100-106; Theophrastus, Enquiry into Plants; Eve's Herbs (John Riddle, 1997)
+- **Nalanda University**: Tabaqat-i-Nasiri (Minhaj-i-Siraj, 1260); Xuanzang's Great Tang Records on the Western Regions (7th century); A History of Nalanda (H.D. Sankalia, 1934)
+- **House of Wisdom (Baghdad)**: Jami al-Tawarikh (Rashid al-Din, 1307); The House of Wisdom (Jim Al-Khalili, 2011); Lost Enlightenment (S. Frederick Starr, 2013)
+- **Imperial Library of Constantinople**: Byzantium: The Decline and Fall (John Julius Norwich, 1995); The Fall of Constantinople 1453 (Steven Runciman, 1965); Zonaras, Epitome Historiarum
+- **Aztec Codices**: Florentine Codex (Bernardino de Sahagún, 1540-1585); The Aztecs (Michael E. Smith, 2012); Burning of the Books in the Aztec and Maya World (Hanns Prem, 2008)
+- **Inca Quipus**: Signs of the Inka Khipu (Gary Urton, 2003); The Khipu Database Project (Harvard); Third Council of Lima decrees (1583)
+- **Maya Codices (Maní)**: Relación de las cosas de Yucatán (Diego de Landa, 1566); Breaking the Maya Code (Michael Coe, 1992); The Dresden Codex (Thompson facsimile, 1972)
+- **Tasmanian Languages**: The Aboriginal Tasmanians (Lyndall Ryan, 1996); Fanny Cochrane Smith recordings (Tasmanian Museum, 1899); Extinction: A Very Short Introduction (Paul Wignall, 2019)
+- **Institut für Sexualwissenschaft**: Magnus Hirschfeld: A Portrait (Charlotte Wolff, 1986); Sexuality and German Fascism (Dagmar Herzog, 2005); USHMM: Nazi Book Burning
+- **Yiddish Libraries and Publishing**: YIVO Encyclopedia of Jews in Eastern Europe; Outwitting History (Aaron Lansky, 2004); The Yiddish Book Center archives
+- **National Library of Sarajevo**: The Destruction of Memory (Robert Bevan, 2006); Killing Memory: The Targeting of Bosnia's Cultural Heritage (András Riedlmayer, 1994); ICTY tribunal records
+<!-- /STATS:LOST_SOURCES -->
+
+## General Sources
 
 - Canfora, Luciano. *The Vanished Library* (1989)
 - Báez, Fernando. *A Universal History of the Destruction of Books* (2008)

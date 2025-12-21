@@ -458,14 +458,14 @@ export const TableRow = (event) => {
         <div class="table-cell cell-name">
             <span class="event-name">${event.name}</span>
             <span class="event-meta">
-                <span class="tier-label">${shortLabel} · ${scores.systematic_intensity}%</span>
+                <span class="tier-label">${shortLabel}</span>
                 ${denialStatus === 'denied' ? '<span class="denied-tag">DENIED</span>' : ''}
                 <span class="mobile-deaths">${Utils.formatDeaths(deaths.min, deaths.max)}</span>
             </span>
         </div>
         <div class="table-cell cell-period">${period}</div>
         <div class="table-cell cell-deaths">${Utils.formatDeaths(deaths.min, deaths.max)}</div>
-        <div class="table-cell cell-region">${region}</div>
+        <div class="table-cell cell-region">${scores.systematic_intensity}%</div>
         <div class="table-cell cell-expand">
             <span class="expand-hint">Details</span>
             <svg class="expand-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -518,8 +518,8 @@ export const TableHeader = () => `
             Deaths
             <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
         </div>
-        <div class="table-cell cell-region" data-sort="region">
-            Region
+        <div class="table-cell cell-region" data-sort="systematic">
+            Organized
             <svg class="sort-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M7 10l5 5 5-5z"/></svg>
         </div>
         <div class="table-cell cell-expand"></div>

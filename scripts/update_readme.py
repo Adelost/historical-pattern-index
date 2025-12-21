@@ -378,6 +378,34 @@ def generate_lost_connection_table(lost_entries, events):
     return "\n".join(lines)
 
 
+def generate_lost_sources(lost_entries):
+    """Generate sources section for KNOWLEDGE_LOST.md."""
+    lines = []
+
+    for entry in sorted(lost_entries, key=lambda x: x.get("year", 0)):
+        sources = entry.get("sources", [])
+        if sources:
+            name = entry.get("name", "Unknown")
+            sources_str = "; ".join(sources)
+            lines.append(f"- **{name}**: {sources_str}")
+
+    return "\n".join(lines) if lines else "No sources available."
+
+
+def generate_saved_sources(saved_entries):
+    """Generate sources section for KNOWLEDGE_SAVED.md."""
+    lines = []
+
+    for entry in sorted(saved_entries, key=lambda x: x.get("year", 0)):
+        sources = entry.get("sources", [])
+        if sources:
+            name = entry.get("name", "Unknown")
+            sources_str = "; ".join(sources)
+            lines.append(f"- **{name}**: {sources_str}")
+
+    return "\n".join(lines) if lines else "No sources available."
+
+
 def generate_saved_driver_summary(lost_entries, saved_entries):
     """Generate driver summary table for KNOWLEDGE_SAVED.md (cross-reference)."""
     # Group entries by driver
@@ -497,6 +525,7 @@ def update_knowledge_lost(content, lost_entries, events):
         "LOST_DATA_TABLE": lambda: generate_lost_data_table(lost_entries),
         "LOST_CONNECTION_TABLE": lambda: generate_lost_connection_table(lost_entries, events),
         "LOST_COUNT": lambda: str(len(lost_entries)),
+        "LOST_SOURCES": lambda: generate_lost_sources(lost_entries),
     }
     return update_markdown(content, generators)
 
@@ -511,6 +540,7 @@ def update_knowledge_saved(content, lost_entries, saved_entries, events):
         "SAVED_COUNT": lambda: str(len(saved_entries)),
         "SAVED_RESCUED_COUNT": lambda: str(len([e for e in saved_entries if e.get("saved_by") != "hidden_and_recovered"])),
         "SAVED_RECOVERED_COUNT": lambda: str(len([e for e in saved_entries if e.get("saved_by") == "hidden_and_recovered"])),
+        "SAVED_SOURCES": lambda: generate_saved_sources(saved_entries),
     }
     return update_markdown(content, generators)
 

@@ -887,6 +887,35 @@
         }
 
         /* --- Chart (SVG-based) --- */
+        .chart-modes {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .chart-mode {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--border-light);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 999px;
+            transition: all 0.2s;
+        }
+
+        .chart-mode:hover {
+            color: var(--text-main);
+            border-color: var(--text-muted);
+        }
+
+        .chart-mode.active {
+            background: var(--accent);
+            color: var(--bg-dark);
+            border-color: var(--accent);
+        }
+
         .chart-wrapper {
             height: 400px;
             margin-bottom: 1.5rem;
@@ -2548,6 +2577,10 @@
         </div>
 
         <div id="chartView" class="view">
+            <div class="chart-modes">
+                <button class="chart-mode active" data-mode="systematic">Deaths vs Organized</button>
+                <button class="chart-mode" data-mode="driver">Profit vs Ideology</button>
+            </div>
             <div class="chart-wrapper" id="chartContainer"></div>
         </div>
 

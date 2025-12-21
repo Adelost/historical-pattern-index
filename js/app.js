@@ -17,6 +17,7 @@ const App = {
         filters: { period: 'all', tier: 'all', denial: 'all' },
         search: '',
         sort: JSON.parse(localStorage.getItem('hpi-sort')) || { field: 'period', direction: 'asc' },
+        chartMode: 'systematic', // 'systematic' or 'driver'
         // Knowledge filters
         knowledgeSearch: '',
         knowledgeDriver: 'all'
@@ -150,6 +151,19 @@ const App = {
                 pill.classList.add('active');
 
                 this.renderKnowledge();
+            });
+        });
+
+        // Chart Mode Toggle
+        document.querySelectorAll('.chart-mode').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const mode = btn.dataset.mode;
+                this.state.chartMode = mode;
+
+                document.querySelectorAll('.chart-mode').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                this.updateView();
             });
         });
     },
@@ -383,6 +397,8 @@ const App = {
                     return modifier * (a.period.start - b.period.start);
                 case 'deaths':
                     return modifier * ((a.metrics.mortality.max || 0) - (b.metrics.mortality.max || 0));
+                case 'systematic':
+                    return modifier * ((a.metrics.scores.systematic_intensity || 0) - (b.metrics.scores.systematic_intensity || 0));
                 case 'region':
                     return modifier * a.geography.region.localeCompare(b.geography.region);
                 default:
@@ -547,6 +563,14 @@ const App = {
     },
 
     updateChart(events) {
+        if (this.state.chartMode === 'driver') {
+            this.renderDriverChart(events);
+        } else {
+            this.renderSystematicChart(events);
+        }
+    },
+
+    renderSystematicChart(events) {
         const container = document.getElementById('chartContainer');
 
         // Filter out events with unknown/zero deaths
@@ -630,8 +654,89 @@ const App = {
         `;
 
         container.innerHTML = svg;
+        this.bindChartEvents(chartEvents);
+    },
 
-        // Bind events to dots
+    renderDriverChart(events) {
+        const container = document.getElementById('chartContainer');
+
+        // Filter out events with unknown/zero deaths
+        const chartEvents = events.filter(e => e.metrics.mortality.max > 0);
+
+        // Chart dimensions
+        const margin = { top: 20, right: 30, bottom: 50, left: 60 };
+        const width = container.clientWidth;
+        const height = container.clientHeight || 400;
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+
+        // Linear scales for both axes (0-100%)
+        const xScale = (val) => (val / 100) * plotWidth;
+        const yScale = (val) => plotHeight - (val / 100) * plotHeight;
+
+        // Axis ticks
+        const ticks = [0, 20, 40, 60, 80, 100];
+
+        // Calculate dot size based on mortality (scaled)
+        const maxDeaths = Math.max(...chartEvents.map(e => e.metrics.mortality.max));
+        const minDeaths = Math.min(...chartEvents.map(e => e.metrics.mortality.max));
+        const getDotSize = (deaths) => {
+            const logMin = Math.log10(minDeaths);
+            const logMax = Math.log10(maxDeaths);
+            const normalized = (Math.log10(deaths) - logMin) / (logMax - logMin);
+            return 6 + normalized * 14; // 6px to 20px
+        };
+
+        // Build SVG
+        const svg = `
+            <svg class="chart-svg" viewBox="0 0 ${width} ${height}" preserveAspectRatio="xMidYMid meet">
+                <!-- Grid lines -->
+                <g class="chart-grid" transform="translate(${margin.left}, ${margin.top})">
+                    ${ticks.map(t => `<line x1="0" y1="${yScale(t)}" x2="${plotWidth}" y2="${yScale(t)}"/>`).join('')}
+                    ${ticks.map(t => `<line x1="${xScale(t)}" y1="0" x2="${xScale(t)}" y2="${plotHeight}"/>`).join('')}
+                </g>
+
+                <!-- Diagonal line (equal Profit/Ideology) -->
+                <line class="chart-grid" stroke-dasharray="5,5" opacity="0.5"
+                    x1="${margin.left}" y1="${margin.top + plotHeight}"
+                    x2="${margin.left + plotWidth}" y2="${margin.top}"/>
+
+                <!-- X axis ticks -->
+                <g transform="translate(${margin.left}, ${margin.top + plotHeight + 15})">
+                    ${ticks.map(t => `<text class="chart-tick" x="${xScale(t)}" text-anchor="middle">${t}%</text>`).join('')}
+                </g>
+
+                <!-- X axis label -->
+                <text class="chart-axis-label" x="${margin.left + plotWidth / 2}" y="${height - 10}" text-anchor="middle">Profit Score</text>
+
+                <!-- Y axis ticks -->
+                <g transform="translate(${margin.left - 10}, ${margin.top})">
+                    ${ticks.map(t => `<text class="chart-tick" x="0" y="${yScale(t) + 4}" text-anchor="end">${t}%</text>`).join('')}
+                </g>
+
+                <!-- Y axis label -->
+                <text class="chart-axis-label" x="${15}" y="${margin.top + plotHeight / 2}" text-anchor="middle" transform="rotate(-90, 15, ${margin.top + plotHeight / 2})">Ideology Score</text>
+
+                <!-- Quadrant labels -->
+                <text class="chart-tick" x="${margin.left + plotWidth * 0.25}" y="${margin.top + 15}" text-anchor="middle" opacity="0.5">Pure Ideology</text>
+                <text class="chart-tick" x="${margin.left + plotWidth * 0.75}" y="${margin.top + plotHeight - 10}" text-anchor="middle" opacity="0.5">Pure Profit</text>
+
+                <!-- Data points (dot size = mortality) -->
+                <g transform="translate(${margin.left}, ${margin.top})">
+                    ${chartEvents.map(e => {
+                        const { color } = Utils.getTheme(e.analysis.tier);
+                        const x = xScale(e.metrics.scores.profit);
+                        const y = yScale(e.metrics.scores.ideology);
+                        const r = getDotSize(e.metrics.mortality.max);
+                        return `<circle class="dot chart-dot" cx="${x}" cy="${y}" r="${r}"
+                                    fill="${color}" stroke="var(--bg-dark)" stroke-width="2"
+                                    style="color: ${color}; opacity: 0.8;" data-id="${e.id}"/>`;
+                    }).join('')}
+                </g>
+            </svg>
+        `;
+
+        container.innerHTML = svg;
         this.bindChartEvents(chartEvents);
     },
 

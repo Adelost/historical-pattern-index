@@ -223,7 +223,22 @@ The difference between KNOWLEDGE_LOST and KNOWLEDGE_SAVED is often one person, o
 
 ---
 
-## Sources
+## Sources (Per Entry)
+
+<!-- STATS:SAVED_SOURCES -->
+- **Egyptian Hieroglyphics**: The Rosetta Stone (British Museum); Cracking Codes: The Rosetta Stone (Richard Parkinson)
+- **Mesopotamian Cuneiform Tablets**: The Epic of Gilgamesh (Andrew George translation); The Buried Book (David Damrosch)
+- **Armenian Manuscripts (Matenadaran)**: Matenadaran Institute; Armenian Genocide Museum-Institute
+- **Polish Libraries (WWII)**: Library & Information History journal; Books on Fire (Polastron, 2007)
+- **Nag Hammadi Library**: The Nag Hammadi Scriptures (Marvin Meyer); The Gnostic Gospels (Elaine Pagels)
+- **Dead Sea Scrolls**: The Dead Sea Scrolls (Geza Vermes); The Complete Dead Sea Scrolls in English (Penguin)
+- **Tibetan Buddhist Texts**: The Dragon in the Land of Snows (Tsering Shakya, 1999)
+- **Sarajevo Haggadah**: People of the Book (Geraldine Brooks, 2008); Sarajevo Museum
+- **Iraqi Jewish Archive**: National Archives (archives.gov); New Yorker coverage (2015)
+- **Timbuktu Manuscripts**: The Bad-Ass Librarians of Timbuktu (Joshua Hammer, 2016)
+<!-- /STATS:SAVED_SOURCES -->
+
+## General Sources
 
 - Vermes, Geza. *The Dead Sea Scrolls* (multiple editions)
 - Pagels, Elaine. *The Gnostic Gospels* (1979)
