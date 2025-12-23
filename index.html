@@ -15,9 +15,7 @@
     <!-- App Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Alpine.js + Plugins -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.3/dist/cdn.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+    <!-- Alpine.js (loaded as ES module to control init order) -->
 
     <style>
         /* Hide Alpine elements until loaded */
@@ -580,6 +578,28 @@
     </script>
 
     <!-- App Entry Point -->
-    <script type="module" src="src/app/main.js"></script>
+    <script type="module">
+        // Import Alpine and plugins as ES modules
+        import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/+esm';
+        import collapse from 'https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.3/+esm';
+
+        // Import our app
+        import { initApp } from './src/app/main.js';
+
+        // Register collapse plugin
+        Alpine.plugin(collapse);
+
+        // Initialize our app (registers store + components)
+        await initApp(Alpine);
+
+        // Make Alpine available globally for debugging
+        window.Alpine = Alpine;
+
+        // Start Alpine
+        Alpine.start();
+
+        // Load data after Alpine is started
+        Alpine.store('hpi').init();
+    </script>
 </body>
 </html>

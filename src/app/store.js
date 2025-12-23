@@ -310,9 +310,4 @@ export function getEntryDriver(entry) {
   return getDriver(entry?.driver);
 }
 
-// Auto-initialize if Alpine is available
-if (typeof window !== 'undefined' && window.Alpine) {
-  document.addEventListener('alpine:init', () => {
-    initStore(window.Alpine);
-  });
-}
+// Note: initStore is called explicitly from main.js

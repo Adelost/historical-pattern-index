@@ -145,15 +145,5 @@ function registerHPIComponents(Alpine) {
   }));
 }
 
-// Auto-initialize
-if (typeof window !== 'undefined') {
-  document.addEventListener('alpine:init', () => {
-    initApp(window.Alpine);
-  });
-
-  // Initialize store after Alpine loads
-  document.addEventListener('alpine:initialized', () => {
-    // Start loading data
-    window.Alpine.store('hpi').init();
-  });
-}
+// Note: initApp is called explicitly from index.html before Alpine.start()
+// Data loading is triggered after Alpine starts via Alpine.effect or manually
