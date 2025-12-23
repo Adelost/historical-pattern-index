@@ -1,6 +1,7 @@
 {
   "id": "soviet_deportations_1943",
   "name": "Soviet Ethnic Deportations",
+  "short_name": "Deportations",
   "description": "Stalin's forced relocation of entire ethnic groups to Siberia and Central Asia, accused of collaboration with Nazi Germany. Chechens, Crimean Tatars, Volga Germans, and others were deported in cattle cars. Hundreds of thousands died during transport and in exile.",
   "status": "historic",
   "period": {

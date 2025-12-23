@@ -1,6 +1,7 @@
 {
   "id": "jewish_roman_wars_66",
   "name": "Jewish-Roman Wars",
+  "short_name": "Jewish-Roman",
   "description": "Three major Roman military campaigns to suppress Jewish revolts in Judea. The First Jewish-Roman War (66-73 CE) ended with Jerusalem's destruction and the Temple's fall. The Bar Kokhba revolt (132-136 CE) resulted in Jews being banned from Jerusalem and Judea renamed Palestine.",
   "status": "historic",
   "period": {

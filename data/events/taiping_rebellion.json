@@ -1,6 +1,7 @@
 {
   "id": "taiping_rebellion_1850",
   "name": "Taiping Rebellion",
+  "short_name": "Taiping",
   "description": "A massive civil war in Qing China led by Hong Xiuquan, who claimed to be Jesus's brother. The Taiping established a rival state based on a syncretic Christian ideology. The 14-year conflict killed 20-30 million people, making it one of the deadliest wars in history.",
   "status": "historic",
   "period": {

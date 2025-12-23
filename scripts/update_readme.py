@@ -112,21 +112,14 @@ def generate_summary(events, stats):
     return f"{stats['count']} events. {stats['year_span']:,} years of history ({year_start}–present). {format_millions(stats['deaths_min'])}-{format_millions(stats['deaths_max'])} documented deaths."
 
 
-def get_primary_driver(event):
-    """Determine primary driver (Profit vs Ideology) from scores."""
+def calc_index(event):
+    """Calculate Index = average of all 4 scores."""
     scores = event.get("metrics", {}).get("scores", {})
+    systematic = scores.get("systematic_intensity", 0)
     profit = scores.get("profit", 0)
     ideology = scores.get("ideology", 0)
-
-    if profit > ideology:
-        return "Profit"
-    elif ideology > profit:
-        return "Ideology"
-    else:
-        # If equal, look at which is non-zero, or default to Mixed
-        if profit > 0 or ideology > 0:
-            return "Mixed"
-        return "—"
+    complicity = scores.get("complicity", 0)
+    return round((systematic + profit + ideology + complicity) / 4)
 
 
 def generate_events_table(events):
@@ -134,7 +127,7 @@ def generate_events_table(events):
     # Sort chronologically (by start year) to show historical patterns
     sorted_events = sorted(events, key=lambda e: e.get("period", {}).get("start", 0))
 
-    lines = ["| Event | Period | Deaths | Driver | Systematic | Denied? |", "|-------|--------|--------|--------|------------|---------|"]
+    lines = ["| Event | Period | Deaths | Index | Denied? |", "|-------|--------|--------|-------|---------|"]
 
     for e in sorted_events:
         name = e.get("name", "Unknown")
@@ -144,12 +137,8 @@ def generate_events_table(events):
         mortality = e.get("metrics", {}).get("mortality", {})
         deaths = format_deaths(mortality.get("min", 0), mortality.get("max", 0))
 
-        driver = get_primary_driver(e)
-
-        # Get systematic intensity score as percentage
-        scores = e.get("metrics", {}).get("scores", {})
-        systematic = scores.get("systematic_intensity", 0)
-        systematic_str = f"{systematic}%"
+        index = calc_index(e)
+        index_str = f"{index}%"
 
         denial = e.get("denial_status", "unknown")
         denial_str = {
@@ -160,7 +149,7 @@ def generate_events_table(events):
             "suppressed": "Suppressed"
         }.get(denial, denial)
 
-        lines.append(f"| {name} | {period_str} | {deaths} | {driver} | {systematic_str} | {denial_str} |")
+        lines.append(f"| {name} | {period_str} | {deaths} | {index_str} | {denial_str} |")
 
     return "\n".join(lines)
 

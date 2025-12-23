@@ -1,6 +1,7 @@
 {
   "id": "the_holocaust_1941",
   "name": "The Holocaust",
+  "short_name": "Holocaust",
   "description": "Nazi Germany's systematic murder of six million Jews and millions of others deemed 'undesirable.' Industrial killing centers like Auschwitz used gas chambers and crematoria. The Holocaust was history's most systematic genocide, implemented with bureaucratic precision across occupied Europe.",
   "status": "historic",
   "period": {
@@ -39,7 +40,7 @@
     "scores": {
       "systematic_intensity": 100,
       "profit": 60,
-      "ideology": 80,
+      "ideology": 100,
       "complicity": 80
     },
     "breakdowns": {
@@ -64,7 +65,7 @@
       "ideology": {
         "purity_ideal": true,
         "dehumanization": true,
-        "mass_mobilization": false,
+        "mass_mobilization": true,
         "existential_threat": true,
         "utopianism": true
       },
@@ -79,7 +80,7 @@
     "rationales": {
       "systematic_intensity": "Nuremberg Laws, ghettos, Einsatzgruppen, death camps. Maximum bureaucratic organization of murder.",
       "profit": "Seized Jewish assets, forced labor, but extermination prioritized over exploitation.",
-      "ideology": "Racial antisemitism as core Nazi ideology. Jews as existential threat requiring elimination.",
+      "ideology": "Racial antisemitism as core Nazi ideology. Jews as existential threat requiring elimination. Mass civilian participation through denunciations, collaborators in occupied territories (Jedwabne, Vichy France), and local auxiliary units.",
       "complicity": "German society benefited from seized property. Collaborators across Europe. Most documented genocide."
     }
   },
@@ -91,7 +92,7 @@
   "denial_status": "acknowledged",
   "analysis": {
     "tier": "INDUSTRIAL MEGA-EVENT",
-    "pattern_note": "The reference point for maximum systematic intensity. 90% score due to duration being <5 years, but intensity was absolute.",
+    "pattern_note": "The reference point for maximum systematic intensity and ideological genocide. The benchmark against which all other events are calibrated.",
     "warning_signs": [
       "Scapegoating minorities for national problems",
       "Dehumanizing propaganda ('vermin', 'parasites')",

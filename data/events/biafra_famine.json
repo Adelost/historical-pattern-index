@@ -1,6 +1,7 @@
 {
   "id": "biafra_famine_1967",
   "name": "Biafra War & Famine (Nigerian Civil War)",
+  "short_name": "Biafra",
   "description": "The deliberate starvation of the Igbo people during Nigeria's civil war against the secessionist Republic of Biafra. The Nigerian government blockaded food and medicine, causing mass starvation that killed up to two million people, mostly children.",
   "status": "historic",
   "period": {
@@ -34,7 +35,7 @@
       "note": "Most deaths from starvation during Nigerian blockade. Images of starving Biafran children shocked the world. Federal policy: 'Starvation is a legitimate weapon of war.' UK and Soviet Union backed Nigeria; France backed Biafra."
     },
     "scores": {
-      "systematic_intensity": 66,
+      "systematic_intensity": 77,
       "profit": 60,
       "ideology": 40,
       "complicity": 100
@@ -49,7 +50,7 @@
         "cultural_ban": false,
         "property_seizure": true,
         "identification": true,
-        "deliberate_deprivation": false
+        "deliberate_deprivation": true
       },
       "profit": {
         "direct_revenue": true,

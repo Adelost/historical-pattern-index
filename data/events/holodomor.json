@@ -1,6 +1,7 @@
 {
   "id": "holodomor_1932",
   "name": "Holodomor (Ukrainian Famine)",
+  "short_name": "Holodomor",
   "description": "The Soviet-engineered famine in Ukraine caused by forced collectivization and grain requisitions. Stalin's policies deliberately targeted Ukrainian peasants, confiscating all food and blocking relief. An estimated 3.5-7 million Ukrainians starved to death in 1932-33.",
   "status": "historic",
   "period": {

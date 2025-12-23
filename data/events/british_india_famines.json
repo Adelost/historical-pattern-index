@@ -1,6 +1,7 @@
 {
   "id": "british_india_famines_1876",
   "name": "British India Famines (Late Victorian Holocausts)",
+  "short_name": "India Famines",
   "description": "A series of devastating famines under British colonial rule in India, caused by exploitative economic policies, forced crop exports, and inadequate relief. The famines of 1876-78, 1896-97, and others killed tens of millions while India exported grain to Britain.",
   "status": "historic",
   "period": {
@@ -100,7 +101,7 @@
     "pattern_tags": [
       "DELIBERATE_STARVATION",
       "ECONOMIC_CRISIS",
-      "ETHNIC_NATIONALISM",
+      "COLONIAL_JUSTIFICATION",
       "INTERNATIONAL_INACTION",
       "SCAPEGOATING"
     ]

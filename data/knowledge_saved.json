@@ -14,7 +14,8 @@
     "saved_how": "Rosetta Stone found during Napoleon's Egyptian campaign (1799). Jean-François Champollion deciphered hieroglyphics (1822) using Greek parallel text.",
     "connected_event": null,
     "what_remains_at_risk": "Fully recovered. Hieroglyphics now taught in universities. Thousands of texts translated.",
-    "sources": ["The Rosetta Stone (British Museum)", "Cracking Codes: The Rosetta Stone (Richard Parkinson)"]
+    "sources": ["The Rosetta Stone (British Museum)", "Cracking Codes: The Rosetta Stone (Richard Parkinson)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs"
   },
   {
     "id": "mesopotamian_tablets",
@@ -31,7 +32,8 @@
     "saved_how": "Clay tablets preserved by fire and burial. Excavated by Layard, Rassam and others (1840s-1850s). Cuneiform deciphered by Rawlinson, Hincks, and others.",
     "connected_event": null,
     "what_remains_at_risk": "Massive backlog of untranslated tablets. Ongoing looting of Iraqi sites. ISIS destroyed some sites but tablets in museums are safe.",
-    "sources": ["The Epic of Gilgamesh (Andrew George translation)", "The Buried Book (David Damrosch)"]
+    "sources": ["The Epic of Gilgamesh (Andrew George translation)", "The Buried Book (David Damrosch)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Library_of_Ashurbanipal"
   },
   {
     "id": "dead_sea_scrolls",
@@ -48,7 +50,8 @@
     "saved_how": "Bedouin shepherd found first scrolls in cave (1947). Archaeological excavations recovered more (1947-1956). Fragments still being pieced together.",
     "connected_event": "jewish_roman_wars_66",
     "what_remains_at_risk": "Some fragments in private hands. Ongoing disputes over access and publication. Climate-controlled storage essential.",
-    "sources": ["The Dead Sea Scrolls (Geza Vermes)", "The Complete Dead Sea Scrolls in English (Penguin)"]
+    "sources": ["The Dead Sea Scrolls (Geza Vermes)", "The Complete Dead Sea Scrolls in English (Penguin)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Dead_Sea_Scrolls"
   },
   {
     "id": "nag_hammadi",
@@ -65,7 +68,8 @@
     "saved_how": "Egyptian farmer found sealed jar while digging (1945). Texts eventually reached scholars. Published 1970s-80s.",
     "connected_event": null,
     "what_remains_at_risk": "Now preserved. Transformed understanding of early Christianity and Gnosticism.",
-    "sources": ["The Nag Hammadi Scriptures (Marvin Meyer)", "The Gnostic Gospels (Elaine Pagels)"]
+    "sources": ["The Nag Hammadi Scriptures (Marvin Meyer)", "The Gnostic Gospels (Elaine Pagels)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nag_Hammadi_library"
   },
   {
     "id": "timbuktu_manuscripts",
@@ -82,7 +86,8 @@
     "saved_how": "Librarians and locals smuggled 350,000+ manuscripts to Bamako in rice sacks, donkey carts, and river boats before and during occupation.",
     "connected_event": null,
     "what_remains_at_risk": "Many manuscripts still in private family collections. Digitization incomplete. Climate and insects threaten unpreserved texts.",
-    "sources": ["The Bad-Ass Librarians of Timbuktu (Joshua Hammer, 2016)"]
+    "sources": ["The Bad-Ass Librarians of Timbuktu (Joshua Hammer, 2016)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Timbuktu_Manuscripts_Project"
   },
   {
     "id": "tibetan_texts",
@@ -99,7 +104,8 @@
     "saved_how": "Monks fleeing to India carried texts. Dalai Lama established Library of Tibetan Works and Archives in Dharamsala (1970). Some texts memorized and reconstructed.",
     "connected_event": "cultural_revolution_1966",
     "what_remains_at_risk": "Tibetan Buddhism still suppressed in China. Oral lineages depend on aging teachers in exile.",
-    "sources": ["The Dragon in the Land of Snows (Tsering Shakya, 1999)"]
+    "sources": ["The Dragon in the Land of Snows (Tsering Shakya, 1999)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tibetan_Buddhist_canon"
   },
   {
     "id": "iraqi_jewish_archive",
@@ -116,7 +122,8 @@
     "saved_how": "US forces discovered and evacuated archive. Freeze-dried and restored by National Archives in Washington. Digitized.",
     "connected_event": null,
     "what_remains_at_risk": "Diplomatic dispute over return to Iraq vs. giving to Jewish diaspora. Original community (150,000 in 1948) now ~4 people in Iraq.",
-    "sources": ["National Archives (archives.gov)", "New Yorker coverage (2015)"]
+    "sources": ["National Archives (archives.gov)", "New Yorker coverage (2015)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Iraqi_Jewish_Archive"
   },
   {
     "id": "armenian_matenadaran",
@@ -133,7 +140,8 @@
     "saved_how": "Matenadaran collection in Yerevan (now 23,000+ manuscripts) preserved pre-genocide collection. Some manuscripts smuggled out by survivors.",
     "connected_event": "armenian_genocide_1915",
     "what_remains_at_risk": "Armenian heritage sites in Turkey deteriorating. No access for preservation.",
-    "sources": ["Matenadaran Institute", "Armenian Genocide Museum-Institute"]
+    "sources": ["Matenadaran Institute", "Armenian Genocide Museum-Institute"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Matenadaran"
   },
   {
     "id": "sarajevo_haggadah",
@@ -150,7 +158,8 @@
     "saved_how": "Museum curator Enver Imamović and police officer hid it in bank vault under cover of darkness. Kept secret location until war ended.",
     "connected_event": "bosnian_genocide_1992",
     "what_remains_at_risk": "Now displayed in Sarajevo. Symbolic of Bosnian multiculturalism that survived ethnic cleansing.",
-    "sources": ["People of the Book (Geraldine Brooks, 2008)", "Sarajevo Museum"]
+    "sources": ["People of the Book (Geraldine Brooks, 2008)", "Sarajevo Museum"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Sarajevo_Haggadah"
   },
   {
     "id": "polish_libraries_wwii",
@@ -167,6 +176,7 @@
     "saved_how": "Underground libraries. Books hidden in walls, buried. Illegal lending networks. Some collections evacuated east.",
     "connected_event": "the_holocaust_1941",
     "what_remains_at_risk": "30% survived. Reconstruction ongoing. Some looted books still in Russian collections.",
-    "sources": ["Library & Information History journal", "Books on Fire (Polastron, 2007)"]
+    "sources": ["Library & Information History journal", "Books on Fire (Polastron, 2007)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Destruction_of_Poland%27s_libraries_(1939%E2%80%931945)"
   }
 ]

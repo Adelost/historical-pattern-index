@@ -1,6 +1,7 @@
 {
   "id": "darfur_genocide_2003",
   "name": "Darfur Genocide",
+  "short_name": "Darfur",
   "description": "The Sudanese government's campaign against non-Arab ethnic groups in Darfur, using Janjaweed militias for systematic killings, rape, and village destruction. The conflict displaced millions and killed an estimated 300,000 people while the international community debated intervention.",
   "status": "historic",
   "period": {

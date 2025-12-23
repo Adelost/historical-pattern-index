@@ -1,6 +1,7 @@
 {
   "id": "banda_islands_massacre_1621",
   "name": "Banda Islands Massacre (Dutch VOC)",
+  "short_name": "Banda",
   "description": "The Dutch East India Company's extermination of the Bandanese people to monopolize the nutmeg trade. VOC forces killed or enslaved nearly the entire population of approximately 15,000 people, replacing them with Dutch planters and imported slaves.",
   "status": "historic",
   "period": {
@@ -96,7 +97,8 @@
     ],
     "root_causes": "Nutmeg monopoly worth killing for, VOC corporate structure with military power, no accountability to local population, European demand for spices",
     "pattern_tags": [
-      "ETHNIC_NATIONALISM"
+      "COLONIAL_JUSTIFICATION",
+      "INTERNATIONAL_INACTION"
     ]
   },
   "sources": [

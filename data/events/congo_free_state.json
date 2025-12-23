@@ -1,6 +1,7 @@
 {
   "id": "congo_free_state_1885",
   "name": "Congo Free State",
+  "short_name": "Congo Free",
   "description": "King Leopold II's personal colony in Congo, run as a forced labor camp to extract rubber. Workers who failed to meet quotas had their hands cut off. Systematic brutality, hostage-taking, and punitive expeditions killed approximately ten million Congolese.",
   "status": "historic",
   "period": {
@@ -95,7 +96,6 @@
     "root_causes": "Personal greed (Leopold II), rubber demand, lack of international accountability",
     "pattern_tags": [
       "COLONIAL_JUSTIFICATION",
-      "ETHNIC_NATIONALISM",
       "INTERNATIONAL_INACTION",
       "MILITIA_VIOLENCE"
     ]

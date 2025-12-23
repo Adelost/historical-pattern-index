@@ -1,6 +1,7 @@
 {
   "id": "cultural_revolution_1966",
   "name": "Cultural Revolution",
+  "short_name": "Cultural Rev",
   "description": "Mao Zedong's decade-long campaign to purge 'counter-revolutionary' elements from Chinese society. Red Guards terrorized 'class enemies,' destroyed cultural artifacts, and sent millions to labor camps. The chaos caused economic collapse and between 1-2 million deaths.",
   "status": "historic",
   "period": {
@@ -101,7 +102,7 @@
     ],
     "root_causes": "Mao's power consolidation, ideological fanaticism, generational mobilization",
     "pattern_tags": [
-      "DELIBERATE_STARVATION",
+      "DEHUMANIZATION",
       "ECONOMIC_CRISIS",
       "FORCED_DISPLACEMENT",
       "MEDIA_INCITEMENT",

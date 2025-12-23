@@ -1,6 +1,7 @@
 {
   "id": "anfal_genocide_1986",
   "name": "Anfal Campaign (Kurdish Genocide)",
+  "short_name": "Anfal",
   "description": "Saddam Hussein's systematic campaign against Iraqi Kurds, using chemical weapons, mass executions, and forced displacement. The operation destroyed thousands of villages and killed up to 182,000 civilians. The 1988 Halabja chemical attack became an enduring symbol of the genocide.",
   "status": "historic",
   "period": {

@@ -1,6 +1,7 @@
 {
   "id": "dirty_war_argentina_1976",
   "name": "Dirty War (Argentina)",
+  "short_name": "Argentina",
   "description": "Argentina's military junta's campaign against suspected leftists and dissidents from 1976-83. Security forces kidnapped, tortured, and 'disappeared' up to 30,000 people. Victims were drugged and thrown from planes into the ocean. Children of the disappeared were given to military families.",
   "status": "historic",
   "period": {
@@ -101,8 +102,9 @@
     ],
     "root_causes": "Cold War ideology, military authoritarianism, US support for anti-communist regimes",
     "pattern_tags": [
-      "ETHNIC_NATIONALISM",
-      "FORCED_DISPLACEMENT"
+      "EMERGENCY_LAWS",
+      "FORCED_DISPLACEMENT",
+      "SCAPEGOATING"
     ]
   },
   "sources": [

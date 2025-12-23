@@ -12,7 +12,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The Druids maintained an extensive oral tradition across the Celtic world — Britain, Gaul, Ireland. They deliberately refused to write, believing sacred knowledge should be memorized. Training took up to 20 years. Julius Caesar banned them in Gaul. Roman emperors outlawed them in Britain. Christianity suppressed the remnants. Unlike burned libraries, oral traditions leave no fragments. When the last trained Druids died, the knowledge died with them.",
-    "sources": ["Caesar, Gallic Wars VI.13-14", "The Druids (Stuart Piggott, 1968)", "The World of the Druids (Miranda Green, 1997)"]
+    "sources": ["Caesar, Gallic Wars VI.13-14", "The Druids (Stuart Piggott, 1968)", "The World of the Druids (Miranda Green, 1997)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Druid"
   },
   {
     "id": "inca_quipus",
@@ -27,7 +28,8 @@
     "recoverable": false,
     "connected_event": "spanish_americas_1492",
     "description": "The Inca had no writing system but used quipus — knotted strings encoding information through colors, knot types, and positions. Spanish colonizers destroyed thousands as 'works of the devil.' The few who could read them died without passing on the knowledge. About 600 quipus survive in museums. We can decode simple numerical data but the full system — possibly including histories, songs, and laws — remains undeciphered. The key died with the quipucamayocs (quipu keepers).",
-    "sources": ["Signs of the Inka Khipu (Gary Urton, 2003)", "The Khipu Database Project (Harvard)", "Third Council of Lima decrees (1583)"]
+    "sources": ["Signs of the Inka Khipu (Gary Urton, 2003)", "The Khipu Database Project (Harvard)", "Third Council of Lima decrees (1583)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Quipu"
   },
   {
     "id": "zoroastrian_texts",
@@ -42,7 +44,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The Zoroastrian scriptures (Avesta) were kept in the royal library at Persepolis. When Alexander burned the city in 330 BCE, much was destroyed. The remaining texts were further damaged during the Arab conquest of Persia (7th century CE). The original Avesta reportedly contained 21 nasks (volumes) covering cosmology, law, medicine, and astronomy. Only about a quarter survives. Zoroastrian priests preserved what they could through memorization, but the scientific and astronomical treatises were largely lost.",
-    "sources": ["Denkard (9th century Zoroastrian encyclopedia)", "Zoroastrianism: An Introduction (Jenny Rose, 2011)", "Arrian, Anabasis of Alexander"]
+    "sources": ["Denkard (9th century Zoroastrian encyclopedia)", "Zoroastrianism: An Introduction (Jenny Rose, 2011)", "Arrian, Anabasis of Alexander"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Avesta"
   },
   {
     "id": "carthage",
@@ -57,7 +60,8 @@
     "recoverable": false,
     "connected_event": "destruction_of_carthage_146bc",
     "description": "When Rome destroyed Carthage in 146 BCE, they burned one of antiquity's great libraries. Carthage was a major Mediterranean power with advanced navigation and agriculture. Mago's 28-volume treatise on agriculture was so valued that the Roman Senate ordered it translated before the burning. Almost nothing else survived. The city was razed, the ground salted.",
-    "sources": ["Pliny, Natural History XVIII.22-23", "Appian, Punic Wars", "Carthage Must Be Destroyed (Richard Miles, 2010)"]
+    "sources": ["Pliny, Natural History XVIII.22-23", "Appian, Punic Wars", "Carthage Must Be Destroyed (Richard Miles, 2010)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Siege_of_Carthage_(Third_Punic_War)"
   },
   {
     "id": "alexandria",
@@ -72,7 +76,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The accumulated knowledge of the ancient world. Multiple destruction events: Caesar's fire (48 BCE), Christian destruction (391 CE), Arab conquest (642 CE). Lost works include most of Aristotle, most Greek dramatists, scientific treatises we only know by name.",
-    "sources": ["The Rise and Fall of the Library of Alexandria (Mostafa El-Abbadi, 1990)", "Plutarch, Life of Caesar", "The Vanished Library (Luciano Canfora, 1989)"]
+    "sources": ["The Rise and Fall of the Library of Alexandria (Mostafa El-Abbadi, 1990)", "Plutarch, Life of Caesar", "The Vanished Library (Luciano Canfora, 1989)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Library_of_Alexandria"
   },
   {
     "id": "silphium",
@@ -87,7 +92,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The most valuable plant in the ancient Mediterranean. Worth its weight in silver. Overharvested to extinction by ~100 CE. For nearly 2,000 years after (until the 1960s), no reliable contraceptive existed. We don't know what species it was. We can't recreate it.",
-    "sources": ["Pliny, Natural History XIX.15, XXII.100-106", "Theophrastus, Enquiry into Plants", "Eve's Herbs (John Riddle, 1997)"]
+    "sources": ["Pliny, Natural History XIX.15, XXII.100-106", "Theophrastus, Enquiry into Plants", "Eve's Herbs (John Riddle, 1997)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Silphium"
   },
   {
     "id": "nalanda",
@@ -102,7 +108,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "The world's first residential university. Attracted scholars from across Asia for 700 years. Destroyed by Turkic invaders in 1193. The library reportedly burned for three months. Virtually forgotten until rediscovered in the 19th century. Monks who escaped carried fragments to Tibet, preserving some texts.",
-    "sources": ["Tabaqat-i-Nasiri (Minhaj-i-Siraj, 1260)", "Xuanzang's Great Tang Records on the Western Regions (7th century)", "A History of Nalanda (H.D. Sankalia, 1934)"]
+    "sources": ["Tabaqat-i-Nasiri (Minhaj-i-Siraj, 1260)", "Xuanzang's Great Tang Records on the Western Regions (7th century)", "A History of Nalanda (H.D. Sankalia, 1934)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Nalanda"
   },
   {
     "id": "house_of_wisdom",
@@ -117,7 +124,8 @@
     "recoverable": false,
     "connected_event": "sack_of_baghdad_1258",
     "description": "Destroyed by Mongols in 1258. The Tigris reportedly ran black with ink from books thrown in the river. 500 years of Islamic Golden Age scholarship lost. Mathematics, astronomy, medicine, philosophy.",
-    "sources": ["Jami al-Tawarikh (Rashid al-Din, 1307)", "The House of Wisdom (Jim Al-Khalili, 2011)", "Lost Enlightenment (S. Frederick Starr, 2013)"]
+    "sources": ["Jami al-Tawarikh (Rashid al-Din, 1307)", "The House of Wisdom (Jim Al-Khalili, 2011)", "Lost Enlightenment (S. Frederick Starr, 2013)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/House_of_Wisdom"
   },
   {
     "id": "constantinople",
@@ -132,7 +140,8 @@
     "recoverable": false,
     "connected_event": null,
     "description": "Last major repository of Greco-Roman knowledge. Survived 1,000 years after Alexandria. Damaged by fire in 473 CE (120,000 documents lost), looted in Fourth Crusade (1204), final destruction when Ottomans conquered Constantinople in 1453. Some scholars fled to Italy, sparking the Renaissance. Most was lost.",
-    "sources": ["Byzantium: The Decline and Fall (John Julius Norwich, 1995)", "The Fall of Constantinople 1453 (Steven Runciman, 1965)", "Zonaras, Epitome Historiarum"]
+    "sources": ["Byzantium: The Decline and Fall (John Julius Norwich, 1995)", "The Fall of Constantinople 1453 (Steven Runciman, 1965)", "Zonaras, Epitome Historiarum"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Imperial_Library_of_Constantinople"
   },
   {
     "id": "aztec_codices",
@@ -147,7 +156,8 @@
     "recoverable": false,
     "connected_event": "spanish_americas_1492",
     "description": "Moctezuma's palace held extensive libraries of painted books. After the conquest of Tenochtitlan (1521), Spanish friars systematically destroyed codices as works of the devil. Of perhaps 500 pre-conquest codices, only 2-16 are considered genuine pre-Hispanic. The Florentine Codex (1540-1585) was compiled from elder memories of what was burned.",
-    "sources": ["Florentine Codex (Bernardino de Sahagún, 1540-1585)", "The Aztecs (Michael E. Smith, 2012)", "Burning of the Books in the Aztec and Maya World (Hanns Prem, 2008)"]
+    "sources": ["Florentine Codex (Bernardino de Sahagún, 1540-1585)", "The Aztecs (Michael E. Smith, 2012)", "Burning of the Books in the Aztec and Maya World (Hanns Prem, 2008)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Aztec_codices"
   },
   {
     "id": "maya_codices",
@@ -162,7 +172,8 @@
     "recoverable": false,
     "connected_event": "spanish_conquest_yucatan_1562",
     "description": "Bishop Diego de Landa burned 5,000+ Maya books: 'We found a large number of books... and as they contained nothing but superstition and lies of the devil, we burned them all.' The 4 survivors contain sophisticated astronomical calculations. The Dresden Codex has Venus tables accurate to within 2 hours over 500 years.",
-    "sources": ["Relación de las cosas de Yucatán (Diego de Landa, 1566)", "Breaking the Maya Code (Michael Coe, 1992)", "The Dresden Codex (Thompson facsimile, 1972)"]
+    "sources": ["Relación de las cosas de Yucatán (Diego de Landa, 1566)", "Breaking the Maya Code (Michael Coe, 1992)", "The Dresden Codex (Thompson facsimile, 1972)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Maya_codices"
   },
   {
     "id": "tasmanian_languages",
@@ -177,7 +188,8 @@
     "recoverable": false,
     "connected_event": "tasmania_black_war_1824",
     "description": "8+ distinct languages. All extinct. Last fluent speaker (Fanny Cochrane Smith) died 1905. These contained names for plants and animals unknown to science, ecological knowledge accumulated over 35,000 years, oral histories we'll never hear. When the last speaker dies, the library burns.",
-    "sources": ["The Aboriginal Tasmanians (Lyndall Ryan, 1996)", "Fanny Cochrane Smith recordings (Tasmanian Museum, 1899)", "Extinction: A Very Short Introduction (Paul Wignall, 2019)"]
+    "sources": ["The Aboriginal Tasmanians (Lyndall Ryan, 1996)", "Fanny Cochrane Smith recordings (Tasmanian Museum, 1899)", "Extinction: A Very Short Introduction (Paul Wignall, 2019)"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Tasmanian_languages"
   },
   {
     "id": "sexualwissenschaft",
@@ -192,7 +204,8 @@
     "recoverable": false,
     "connected_event": "the_holocaust_1941",
     "description": "Founded 1919 by Magnus Hirschfeld. Pioneering research on gender and sexuality. On May 6, 1933, Nazi students stormed the institute. On May 10, the contents were publicly burned. The famous photographs of Nazi book burnings are mostly of this library. Research set back decades. Patient records destroyed, endangering those documented.",
-    "sources": ["Magnus Hirschfeld: A Portrait (Charlotte Wolff, 1986)", "Sexuality and German Fascism (Dagmar Herzog, 2005)", "USHMM: Nazi Book Burning"]
+    "sources": ["Magnus Hirschfeld: A Portrait (Charlotte Wolff, 1986)", "Sexuality and German Fascism (Dagmar Herzog, 2005)", "USHMM: Nazi Book Burning"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Institut_f%C3%BCr_Sexualwissenschaft"
   },
   {
     "id": "yiddish_libraries",
@@ -207,7 +220,8 @@
     "recoverable": false,
     "connected_event": "the_holocaust_1941",
     "description": "Before the Holocaust, Yiddish was spoken by 11 million Jews across Europe. The genocide destroyed not just speakers but the entire cultural infrastructure: libraries, publishing houses, newspapers, theaters, schools. The language survived in Hasidic communities, but millions of books and unique manuscripts were burned. Less than 5% of published Yiddish books have been translated.",
-    "sources": ["YIVO Encyclopedia of Jews in Eastern Europe", "Outwitting History (Aaron Lansky, 2004)", "The Yiddish Book Center archives"]
+    "sources": ["YIVO Encyclopedia of Jews in Eastern Europe", "Outwitting History (Aaron Lansky, 2004)", "The Yiddish Book Center archives"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/Yiddish_literature"
   },
   {
     "id": "sarajevo_library",
@@ -222,6 +236,7 @@
     "recoverable": false,
     "connected_event": "bosnian_genocide_1992",
     "description": "Deliberately targeted with incendiary shells (August 25-26, 1992). Firefighters who tried to save it were shot at by snipers. Unique records of Bosnian Muslim, Croat, and Serb coexistence. The destruction of shared history was part of ethnic cleansing.",
-    "sources": ["The Destruction of Memory (Robert Bevan, 2006)", "Killing Memory: The Targeting of Bosnia's Cultural Heritage (András Riedlmayer, 1994)", "ICTY tribunal records"]
+    "sources": ["The Destruction of Memory (Robert Bevan, 2006)", "Killing Memory: The Targeting of Bosnia's Cultural Heritage (András Riedlmayer, 1994)", "ICTY tribunal records"],
+    "wikipedia_url": "https://en.wikipedia.org/wiki/National_and_University_Library_of_Bosnia_and_Herzegovina"
   }
 ]

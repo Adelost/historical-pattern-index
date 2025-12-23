@@ -22,85 +22,85 @@ Why? Because narrative often overrides numbers. This project indexes the silent 
 
 ### Highlights
 
-| Event | Deaths | Driver | Why it matters |
-|-------|--------|--------|----------------|
-| **Great Leap Forward** | 15M-55M | Ideology | Largest death toll. Still suppressed in China. |
-| **Colonization of the Americas** | 50M-56M | Profit | 90% population collapse. Disease + extraction. |
-| **Congo Free State** | 8M-13M | Profit | Corporate genocide for rubber. Leopold's private colony. |
-| **The Holocaust** | 6M | Ideology | Industrial killing. The benchmark for systematic genocide. |
-| **Holodomor** | 4M-8M | Ideology | Man-made famine. **Still denied by Russia.** |
-| **Armenian Genocide** | 1M-2M | Ideology | First modern genocide. **Still denied by Turkey.** |
-| **Rwandan Genocide** | 500k-1M | Ideology | 70% killed in 100 days. Machetes, not gas chambers. |
-| **Second Congo War** | 3M-5M | Profit | Deadliest war since WW2. Almost unknown in the West. |
-| **Trans-Atlantic Slave Trade** | 2M+ | Profit | Deaths in transit only. Plantation deaths uncounted. |
-| **British India Famines** | 12M-29M | Profit | Exposed grain during starvation. Policy, not drought. |
+| Event | Deaths | Index | Why it matters |
+|-------|--------|-------|----------------|
+| **Great Leap Forward** | 15M-55M | 82% | Largest death toll. Still suppressed in China. |
+| **Colonization of the Americas** | 50M-56M | 64% | 90% population collapse. Disease + extraction. |
+| **Congo Free State** | 8M-13M | 56% | Corporate genocide for rubber. Leopold's private colony. |
+| **The Holocaust** | 6M | 80% | Industrial killing. The benchmark for systematic genocide. |
+| **Holodomor** | 4M-8M | 77% | Man-made famine. **Still denied by Russia.** |
+| **Armenian Genocide** | 1M-2M | 75% | First modern genocide. **Still denied by Turkey.** |
+| **Rwandan Genocide** | 500k-1M | 62% | 70% killed in 100 days. Machetes, not gas chambers. |
+| **Second Congo War** | 3M-5M | 82% | Deadliest war since WW2. Almost unknown in the West. |
+| **Trans-Atlantic Slave Trade** | 2M+ | 69% | Deaths in transit only. Plantation deaths uncounted. |
+| **British India Famines** | 12M-29M | 59% | Exported grain during starvation. Policy, not drought. |
 
 <details>
-<summary>📊 <strong>View all 55 events</strong></summary>
+<summary><strong>All 55 events</strong></summary>
 
 <!-- STATS:EVENTS_TABLE -->
-| Event | Period | Deaths | Driver | Systematic | Denied? |
-|-------|--------|--------|--------|------------|---------|
-| Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | Mixed | 77% | No |
-| Jewish-Roman Wars | 66-136 | 1M-2M | Profit | 66% | No |
-| An Lushan Rebellion | 755-763 | 13M-36M | Profit | 44% | No |
-| Mongol Conquests | 1206-1368 | 30M-40M | Profit | 44% | No |
-| Mongol Sack of Baghdad | 1258-1258 | 200k-2M | Profit | 66% | No |
-| Timur's Conquests | 1370-1405 | 15M-20M | Profit | 44% | No |
-| Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | Profit | 55% | Partial |
-| Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | Profit | 77% | No |
-| Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | Profit | 55% | Partial |
-| Banda Islands Massacre (Dutch VOC) | 1621-1621 | 13k-15k | Profit | 55% | No |
-| Khmelnytsky Uprising (Jewish Massacres) | 1648-1657 | 100k-200k | Ideology | 77% | No |
-| Swedish Deluge (Potop) | 1655-1660 | 3M-4M | Profit | 55% | No |
-| Fall of Nojpetén (Last Maya Kingdom) | 1697-1697 | 2k-10k | Profit | 55% | No |
-| Dzungar Genocide | 1755-1758 | 480k-600k | Ideology | 88% | **Denied** |
-| Napoleonic Haiti Campaign (Saint-Domingue) | 1801-1803 | 100k-150k | Profit | 66% | Partial |
-| Mfecane (Southern African Wars) | 1815-1840 | 1M-2M | Profit | 33% | Disputed |
-| The Black War (Tasmania) | 1824-1831 | 6k-9k | Profit | 66% | No |
-| French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | Profit | 77% | Partial |
-| Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | Ideology | 88% | Partial |
-| British Opium Trade in China | 1839-1906 | 20k-50k | Profit | 55% | No |
-| Great Famine (Ireland) | 1845-1852 | 1M-2M | Profit | 44% | Disputed |
-| Taiping Rebellion | 1850-1864 | 20M-30M | Ideology | 88% | Suppressed |
-| Circassian Genocide | 1864-1867 | 400k-600k | Ideology | 88% | **Denied** |
-| Paraguayan War (War of the Triple Alliance) | 1864-1870 | 300k-1M | Profit | 44% | No |
-| British India Famines (Late Victorian Holocausts) | 1876-1902 | 12M-29M | Profit | 55% | Disputed |
-| Putumayo Genocide (Amazon Rubber Atrocities) | 1879-1912 | 30k-100k | Profit | 55% | No |
-| Congo Free State | 1885-1908 | 8M-13M | Profit | 44% | No |
-| Herero and Nama Genocide | 1904-1908 | 65k-100k | Profit | 100% | No |
-| Assyrian Genocide (Seyfo) | 1914-1920 | 250k-750k | Ideology | 77% | **Denied** |
-| Greek Genocide (Pontic Greeks) | 1914-1923 | 300k-900k | Ideology | 88% | **Denied** |
-| Armenian Genocide | 1915-1923 | 1M-2M | Ideology | 100% | **Denied** |
-| Holodomor (Ukrainian Famine) | 1932-1933 | 4M-8M | Ideology | 88% | **Denied** |
-| Italian Invasion of Ethiopia | 1935-1941 | 350k-760k | Ideology | 88% | Partial |
-| Soviet Great Purge (Great Terror) | 1936-1938 | 680k-1M | Ideology | 88% | No |
-| Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | Ideology | 44% | Disputed |
-| The Holocaust | 1941-1945 | 6M-6M | Ideology | 100% | No |
-| Bengal Famine of 1943 | 1943-1944 | 2M-3M | Profit | 55% | Disputed |
-| Soviet Ethnic Deportations | 1943-1944 | 200k-400k | Ideology | 88% | No |
-| Nakba (Palestinian Exodus) | 1947-1949 | 10k-15k | Ideology | 66% | Disputed |
-| Partition of India | 1947-1948 | 200k-2M | Ideology | 55% | Partial |
-| Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | Ideology | 88% | Suppressed |
-| Indonesian Mass Killings | 1965-1966 | 500k-1M | Ideology | 77% | Partial |
-| Cultural Revolution | 1966-1976 | 500k-2M | Ideology | 77% | Partial |
-| Biafra War & Famine (Nigerian Civil War) | 1967-1970 | 1M-3M | Profit | 66% | Partial |
-| Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | Ideology | 88% | **Denied** |
-| Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | Ideology | 100% | No |
-| East Timor Genocide | 1975-1999 | 100k-180k | Profit | 77% | No |
-| Dirty War (Argentina) | 1976-1983 | 10k-30k | Ideology | 88% | No |
-| Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | Ideology | 88% | Partial |
-| Anfal Campaign (Kurdish Genocide) | 1986-1989 | 50k-182k | Ideology | 100% | No |
-| Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | Ideology | 88% | No |
-| Rwandan Genocide | 1994-1994 | 500k-1M | Ideology | 66% | No |
-| Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | Profit | 66% | Partial |
-| Darfur Genocide | 2003-2008 | 200k-400k | Ideology | 88% | **Denied** |
-| Yazidi Genocide | 2014-2017 | 5k-10k | Ideology | 88% | No |
+| Event | Period | Deaths | Index | Denied? |
+|-------|--------|--------|-------|---------|
+| Destruction of Carthage (Third Punic War) | -149--146 | 150k-450k | 64% | No |
+| Jewish-Roman Wars | 66-136 | 1M-2M | 56% | No |
+| An Lushan Rebellion | 755-763 | 13M-36M | 51% | No |
+| Mongol Conquests | 1206-1368 | 30M-40M | 66% | No |
+| Mongol Sack of Baghdad | 1258-1258 | 200k-2M | 56% | No |
+| Timur's Conquests | 1370-1405 | 15M-20M | 56% | No |
+| Colonization of the Americas (Initial Phase) | 1492-1600 | 50M-56M | 64% | Partial |
+| Trans-Atlantic Slave Trade | 1501-1867 | 2M-2M | 69% | No |
+| Spanish Conquest of Yucatán (Cultural Erasure) | 1527-1570 | 200k-500k | 59% | Partial |
+| Banda Islands Massacre (Dutch VOC) | 1621-1621 | 13k-15k | 59% | No |
+| Khmelnytsky Uprising (Jewish Massacres) | 1648-1657 | 100k-200k | 69% | No |
+| Swedish Deluge (Potop) | 1655-1660 | 3M-4M | 49% | No |
+| Fall of Nojpetén (Last Maya Kingdom) | 1697-1697 | 2k-10k | 49% | No |
+| Dzungar Genocide | 1755-1758 | 480k-600k | 72% | **Denied** |
+| Napoleonic Haiti Campaign (Saint-Domingue) | 1801-1803 | 100k-150k | 62% | Partial |
+| Mfecane (Southern African Wars) | 1815-1840 | 1M-2M | 38% | Disputed |
+| The Black War (Tasmania) | 1824-1831 | 6k-9k | 66% | No |
+| French Algeria (Conquest & Colonial Rule) | 1830-1962 | 1M-2M | 79% | Partial |
+| Native American Genocide (US Indian Wars & Removal) | 1830-1890 | 1M-2M | 77% | Partial |
+| British Opium Trade in China | 1839-1906 | 20k-50k | 59% | No |
+| Great Famine (Ireland) | 1845-1852 | 1M-2M | 46% | Disputed |
+| Taiping Rebellion | 1850-1864 | 20M-30M | 72% | Suppressed |
+| Circassian Genocide | 1864-1867 | 400k-600k | 72% | **Denied** |
+| Paraguayan War (War of the Triple Alliance) | 1864-1870 | 300k-1M | 56% | No |
+| British India Famines (Late Victorian Holocausts) | 1876-1902 | 12M-29M | 59% | Disputed |
+| Putumayo Genocide (Amazon Rubber Atrocities) | 1879-1912 | 30k-100k | 69% | No |
+| Congo Free State | 1885-1908 | 8M-13M | 56% | No |
+| Herero and Nama Genocide | 1904-1908 | 65k-100k | 70% | No |
+| Assyrian Genocide (Seyfo) | 1914-1920 | 250k-750k | 69% | **Denied** |
+| Greek Genocide (Pontic Greeks) | 1914-1923 | 300k-900k | 72% | **Denied** |
+| Armenian Genocide | 1915-1923 | 1M-2M | 75% | **Denied** |
+| Holodomor (Ukrainian Famine) | 1932-1933 | 4M-8M | 77% | **Denied** |
+| Italian Invasion of Ethiopia | 1935-1941 | 350k-760k | 72% | Partial |
+| Soviet Great Purge (Great Terror) | 1936-1938 | 680k-1M | 77% | No |
+| Nanking Massacre (Rape of Nanking) | 1937-1938 | 200k-300k | 51% | Disputed |
+| The Holocaust | 1941-1945 | 6M-6M | 85% | No |
+| Bengal Famine of 1943 | 1943-1944 | 2M-3M | 54% | Disputed |
+| Soviet Ethnic Deportations | 1943-1944 | 200k-400k | 67% | No |
+| Nakba (Palestinian Exodus) | 1947-1949 | 10k-15k | 66% | Disputed |
+| Partition of India | 1947-1948 | 200k-2M | 69% | Partial |
+| Great Leap Forward (Chinese Famine) | 1958-1962 | 15M-55M | 82% | Suppressed |
+| Indonesian Mass Killings | 1965-1966 | 500k-1M | 79% | Partial |
+| Cultural Revolution | 1966-1976 | 500k-2M | 69% | Partial |
+| Biafra War & Famine (Nigerian Civil War) | 1967-1970 | 1M-3M | 69% | Partial |
+| Bangladesh Genocide (Operation Searchlight) | 1971-1971 | 300k-3M | 67% | **Denied** |
+| Cambodian Genocide (Khmer Rouge) | 1975-1979 | 2M-2M | 80% | No |
+| East Timor Genocide | 1975-1999 | 100k-180k | 64% | No |
+| Dirty War (Argentina) | 1976-1983 | 10k-30k | 67% | No |
+| Guatemalan Genocide (Maya) | 1981-1983 | 100k-200k | 77% | Partial |
+| Anfal Campaign (Kurdish Genocide) | 1986-1989 | 50k-182k | 70% | No |
+| Bosnian Genocide (including Srebrenica) | 1992-1995 | 100k-110k | 57% | No |
+| Rwandan Genocide | 1994-1994 | 500k-1M | 62% | No |
+| Second Congo War (Africa's World War) | 1998-2003 | 3M-5M | 82% | Partial |
+| Darfur Genocide | 2003-2008 | 200k-400k | 77% | **Denied** |
+| Yazidi Genocide | 2014-2017 | 5k-10k | 72% | No |
 <!-- /STATS:EVENTS_TABLE -->
 
 </details>
 
-> **Driver** = Primary motivation: Profit (extraction) or Ideology (purification). **Systematic** = How organized (0-100%, from binary checklist).
+> **Index** = Average of four scores (Systematic, Profit, Ideology, Complicity). Measures how much of the pattern is present.
 
 **[Explore the interactive version](https://adelost.github.io/historical-pattern-index/)**
 
@@ -142,18 +142,18 @@ Events between 1206 (Mongols) and 1492 (Columbus) are poorly documented. Medieva
 <!-- STATS:PATTERNS_TABLE -->
 | Warning Sign Pattern | Frequency |
 |---------------------|-----------|
-| Nationalist/ethnic purity ideology | 75% (41/55) |
-| Economic crisis exploited | 45% (25/55) |
+| Nationalist/ethnic purity ideology | 60% (33/55) |
+| Economic crisis exploited | 47% (26/55) |
 | Property seizures | 42% (23/55) |
-| Dehumanizing rhetoric | 33% (18/55) |
-| Deliberate starvation | 31% (17/55) |
+| Dehumanizing rhetoric | 31% (17/55) |
+| Colonial 'civilizing' justification | 27% (15/55) |
+| Deliberate starvation | 27% (15/55) |
 | Forced displacement/deportation | 25% (14/55) |
-| Minorities scapegoated | 18% (10/55) |
+| Minorities scapegoated | 22% (12/55) |
+| International inaction | 20% (11/55) |
 | Militias and death squads | 18% (10/55) |
 | Media incitement | 18% (10/55) |
-| International inaction | 18% (10/55) |
-| Colonial 'civilizing' justification | 18% (10/55) |
-| Emergency laws/state of exception | 9% (5/55) |
+| Emergency laws/state of exception | 13% (7/55) |
 <!-- /STATS:PATTERNS_TABLE -->
 
 **6. Different mechanisms, different warning signs.**
@@ -203,12 +203,14 @@ Each event gets four scores (0-100%) based on binary checklists:
 
 | Score | What it measures | Example high-scorer |
 |-------|------------------|---------------------|
-| **Systematic Intensity** | Organization, infrastructure, state involvement | Holocaust (100%) |
+| **Systematic** | Organization, infrastructure, state involvement | Holocaust (100%) |
 | **Profit** | Economic extraction as primary driver | Congo Free State (100%) |
 | **Ideology** | Ethnic/religious "purification" as goal | Rwanda (100%) |
 | **Complicity** | How society enabled it | Second Congo War (100%) |
 
 Each score is calculated from a checklist of 5-9 binary questions. No subjective weighting. If 8 of 9 boxes are checked, the score is 89%.
+
+**The Index** is the average of all four scores. It measures "how much of the pattern is present" — state organization, economic motive, ideological drive, and societal complicity combined.
 
 ### The Hard Questions
 

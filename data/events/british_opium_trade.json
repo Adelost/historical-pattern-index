@@ -1,6 +1,7 @@
 {
   "id": "british_opium_trade_1839",
   "name": "British Opium Trade in China",
+  "short_name": "Opium Trade",
   "description": "Britain's forced export of opium to China, causing widespread addiction and social devastation. When China tried to ban the trade, Britain launched the Opium Wars (1839-42, 1856-60) to force continued imports, eventually seizing Hong Kong and extracting massive reparations.",
   "status": "historic",
   "period": {
@@ -97,7 +98,8 @@
     ],
     "root_causes": "Trade deficit, corporate greed (East India Company), imperial arrogance",
     "pattern_tags": [
-      "ETHNIC_NATIONALISM"
+      "COLONIAL_JUSTIFICATION",
+      "ECONOMIC_CRISIS"
     ]
   },
   "sources": [
