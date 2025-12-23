@@ -8,14 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Component Library Styles -->
-    <link rel="stylesheet" href="lib/styles/base.css">
-    <link rel="stylesheet" href="lib/styles/components.css">
-
     <!-- App Styles -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Alpine.js (loaded as ES module to control init order) -->
+    <!-- App init (must run before Alpine) -->
+    <script type="module">
+        import { initApp } from './src/app/main.js';
+
+        document.addEventListener('alpine:init', () => {
+            initApp(window.Alpine);
+        });
+
+        document.addEventListener('alpine:initialized', () => {
+            window.Alpine.store('hpi').init();
+        });
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.3/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
 
     <style>
         /* Hide Alpine elements until loaded */
@@ -259,7 +270,7 @@
                                      data: $store.hpi.filteredEvents,
                                      expandable: true,
                                      getId: (e) => e.id,
-                                     rowStyle: (e) => ({ '--row-color': HPI.getTier(e.analysis?.tier).color }),
+                                     rowStyle: (e) => ({ '--tier-color': HPI.getTier(e.analysis?.tier).color }),
                                      defaultSort: { field: $store.hpi.sort.field, dir: $store.hpi.sort.direction },
                                      onSortChange: (s) => $store.hpi.setSort(s.field)
                                  })"
@@ -288,7 +299,7 @@
                                 <template x-for="event in sortedData" :key="getId(event)">
                                     <div>
                                         <!-- Row -->
-                                        <div class="table-row"
+                                        <div class="table-row expandable-row"
                                              :class="{ 'expanded': isExpanded(event) }"
                                              :style="getRowStyles(event)"
                                              @click="$store.hpi.toggleEvent(getId(event))">
@@ -299,7 +310,7 @@
                                                 <span class="event-name" x-text="event.name"></span>
                                                 <span class="event-meta">
                                                     <span class="tier-label" x-text="HPI.getTier(event.analysis?.tier).shortLabel"></span>
-                                                    <span x-show="event.denial_status === 'denied'" class="chip" data-variant="danger">DENIED</span>
+                                                    <span x-show="event.denial_status === 'denied'" class="denied-tag">DENIED</span>
                                                 </span>
                                             </div>
                                             <div class="table-cell cell-period" x-text="HPI.formatPeriod(event)"></div>
@@ -314,7 +325,8 @@
                                         </div>
 
                                         <!-- Expanded Details -->
-                                        <div class="table-row-details"
+                                        <div class="table-row-details expandable-row-details"
+                                             :class="{ 'expanded': isExpanded(event) }"
                                              x-show="isExpanded(event)"
                                              x-collapse
                                              x-data="eventDetails(event)">
@@ -330,18 +342,18 @@
                                                 <template x-if="perpetrators.length || victims.length">
                                                     <div class="participants-section">
                                                         <template x-if="perpetrators.length">
-                                                            <div class="participant-group">
-                                                                <span class="participant-label">Perpetrators:</span>
+                                                            <div class="participants-row perpetrators">
+                                                                <span class="participants-label">Perpetrators:</span>
                                                                 <template x-for="p in perpetrators" :key="p">
-                                                                    <span class="chip" x-text="p"></span>
+                                                                    <span class="participant-chip" x-text="p"></span>
                                                                 </template>
                                                             </div>
                                                         </template>
                                                         <template x-if="victims.length">
-                                                            <div class="participant-group">
-                                                                <span class="participant-label">Victims:</span>
+                                                            <div class="participants-row victims">
+                                                                <span class="participants-label">Victims:</span>
                                                                 <template x-for="v in victims" :key="v">
-                                                                    <span class="chip" data-variant="danger" x-text="v"></span>
+                                                                    <span class="participant-chip" x-text="v"></span>
                                                                 </template>
                                                             </div>
                                                         </template>
@@ -351,47 +363,35 @@
                                                 <!-- Scores -->
                                                 <div class="scores-section">
                                                     <template x-for="score in scores" :key="score.key">
-                                                        <div class="score-bar"
-                                                             :data-type="score.type"
-                                                             :style="`--bar-value: ${score.value}%; --bar-color: ${score.color}`"
-                                                             x-data="scoreBar({
-                                                                 value: score.value,
-                                                                 label: score.label,
-                                                                 color: score.color,
-                                                                 type: score.type,
-                                                                 expandable: !!score.breakdown,
-                                                                 breakdown: score.breakdown
-                                                             })">
-                                                            <div class="score-bar-header" @click="toggle()">
-                                                                <span class="score-bar-label" x-text="label"></span>
-                                                                <div class="score-bar-track">
-                                                                    <div class="score-bar-fill"></div>
+                                                        <div class="score-row" x-data="{ expanded: false }">
+                                                            <div class="score-row-header" @click="expanded = !expanded">
+                                                                <span class="score-label" x-text="score.label"></span>
+                                                                <div class="score-bar-wrap">
+                                                                    <div class="score-bar">
+                                                                        <div class="score-fill"
+                                                                             :class="score.type"
+                                                                             :style="`width: ${score.value}%`"></div>
+                                                                    </div>
+                                                                    <span class="score-value" x-text="score.value + '%'"></span>
                                                                 </div>
-                                                                <span class="score-bar-value" x-text="displayValue"></span>
-                                                                <svg x-show="expandable" class="score-bar-expand-icon" viewBox="0 0 24 24" fill="currentColor">
-                                                                    <path d="M7 10l5 5 5-5z"/>
+                                                                <svg x-show="score.breakdown" class="score-expand-icon" :class="{ 'rotated': expanded }" viewBox="0 0 24 24" fill="currentColor">
+                                                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
                                                                 </svg>
                                                             </div>
-                                                            <template x-if="expanded && breakdown">
-                                                                <div class="score-bar-breakdown" x-show="expanded" x-collapse>
-                                                                    <p class="breakdown-desc" x-text="score.description"></p>
-                                                                    <div class="breakdown-chips">
-                                                                        <template x-for="(item, idx) in breakdown.items" :key="item.key">
-                                                                            <span class="breakdown-chip"
-                                                                                  :class="{ 'checked': item.checked }"
-                                                                                  @click="selectChip(idx)"
-                                                                                  x-text="item.label">
-                                                                            </span>
-                                                                        </template>
-                                                                    </div>
-                                                                    <template x-if="activeChipTooltip">
-                                                                        <p class="chip-tooltip" x-text="activeChipTooltip"></p>
-                                                                    </template>
-                                                                    <template x-if="score.rationale">
-                                                                        <p class="breakdown-rationale" x-text="score.rationale"></p>
+                                                            <div class="score-breakdown" x-show="expanded && score.breakdown" x-collapse>
+                                                                <p class="score-description" x-text="score.description"></p>
+                                                                <div class="breakdown-chips">
+                                                                    <template x-for="item in score.breakdown?.items || []" :key="item.key">
+                                                                        <span class="breakdown-chip"
+                                                                              :class="{ 'checked': item.checked }"
+                                                                              x-text="(item.checked ? '✓ ' : '✗ ') + item.label">
+                                                                        </span>
                                                                     </template>
                                                                 </div>
-                                                            </template>
+                                                                <template x-if="score.rationale">
+                                                                    <p class="breakdown-rationale" x-text="score.rationale"></p>
+                                                                </template>
+                                                            </div>
                                                         </div>
                                                     </template>
                                                 </div>
@@ -472,7 +472,7 @@
                         <div class="knowledge-cards">
                             <template x-for="entry in $store.hpi.sortedKnowledgeLost" :key="entry.id">
                                 <div class="table-row"
-                                     :style="`--row-color: ${HPI.getDriver(entry.driver).color}`"
+                                     :style="`--tier-color: ${HPI.getDriver(entry.driver).color}`"
                                      x-data="knowledgeDetails(entry, false)">
                                     <div class="table-cell cell-tier">
                                         <span class="tier-dot"></span>
@@ -499,7 +499,7 @@
                         <div class="knowledge-cards">
                             <template x-for="entry in $store.hpi.sortedKnowledgeSaved" :key="entry.id">
                                 <div class="table-row"
-                                     :style="`--row-color: ${HPI.getDriver(entry.driver).color}`"
+                                     :style="`--tier-color: ${HPI.getDriver(entry.driver).color}`"
                                      x-data="knowledgeDetails(entry, true)">
                                     <div class="table-cell cell-tier">
                                         <span class="tier-dot"></span>
@@ -577,29 +577,5 @@
         })();
     </script>
 
-    <!-- App Entry Point -->
-    <script type="module">
-        // Import Alpine and plugins as ES modules
-        import Alpine from 'https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/+esm';
-        import collapse from 'https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.14.3/+esm';
-
-        // Import our app
-        import { initApp } from './src/app/main.js';
-
-        // Register collapse plugin
-        Alpine.plugin(collapse);
-
-        // Initialize our app (registers store + components)
-        await initApp(Alpine);
-
-        // Make Alpine available globally for debugging
-        window.Alpine = Alpine;
-
-        // Start Alpine
-        Alpine.start();
-
-        // Load data after Alpine is started
-        Alpine.store('hpi').init();
-    </script>
 </body>
 </html>
